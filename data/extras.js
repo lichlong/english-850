@@ -21,19 +21,7 @@ window.EXTRAS = {
           "simple": "They say it is control. It is not. I do not ever let enough time go by to have no memory of what I am doing. That is all."
         }
       ]
-    },
-    "quiz": [
-      {
-        "level": "low",
-        "zh": "空气很冷。",
-        "en": "The air is cold."
-      },
-      {
-        "level": "mid",
-        "zh": "他每天早上在花园里干十分钟活，所以他不累。",
-        "en": "He works in the garden ten minutes every morning, so he is not tired."
-      }
-    ]
+    }
   },
   "u002": {
     "read": {
@@ -55,19 +43,7 @@ window.EXTRAS = {
           "simple": "What keeps you going? He gave a smile. The road did not ever put the question about my years, he said. And it will not do it now."
         }
       ]
-    },
-    "quiz": [
-      {
-        "level": "low",
-        "zh": "路很长。",
-        "en": "The road is long."
-      },
-      {
-        "level": "mid",
-        "zh": "我们走了两个小时，才到那个小镇。",
-        "en": "We went for two hours before we came to the small town."
-      }
-    ]
+    }
   },
   "u003": {
     "read": {
@@ -89,19 +65,7 @@ window.EXTRAS = {
           "simple": "The smallest girl put the question: why? Her mother did not put her eyes up. We keep it, she said, for the days that may come back."
         }
       ]
-    },
-    "quiz": [
-      {
-        "level": "low",
-        "zh": "晚饭很简单。",
-        "en": "The meal is simple."
-      },
-      {
-        "level": "mid",
-        "zh": "我们一个小时不说话，只听父亲讲故事。",
-        "en": "For one hour we do not talk. We only give our attention to my father's story."
-      }
-    ]
+    }
   },
   "u004": {
     "read": {
@@ -123,19 +87,7 @@ window.EXTRAS = {
           "simple": "We were in the cold air twenty minutes and said very little. When we went in, no person put the light on."
         }
       ]
-    },
-    "quiz": [
-      {
-        "level": "low",
-        "zh": "月亮很亮。",
-        "en": "The moon is bright."
-      },
-      {
-        "level": "mid",
-        "zh": "我们在外面站了二十分钟，谁都不想开灯。",
-        "en": "We were out in the cold for twenty minutes, and no person put the light on."
-      }
-    ]
+    }
   },
   "u005": {
     "read": {
@@ -157,19 +109,7 @@ window.EXTRAS = {
           "simple": "When the plates are off the table, no person has memory of the words. They have memory of a full house, and of the cold night at the door."
         }
       ]
-    },
-    "quiz": [
-      {
-        "level": "low",
-        "zh": "屋里很暖。",
-        "en": "The room is warm."
-      },
-      {
-        "level": "mid",
-        "zh": "我们不是为吃的来的，是为坐在桌边的人来的。",
-        "en": "We are not here for the food. We are here for the persons at the table."
-      }
-    ]
+    }
   },
   "u006": {
     "read": {
@@ -191,19 +131,7 @@ window.EXTRAS = {
           "simple": "The shops do not give you a coat only. They give you a feeling: I did one thing well today. That feeling costs more than the coat."
         }
       ]
-    },
-    "quiz": [
-      {
-        "level": "low",
-        "zh": "价格很低。",
-        "en": "The price is low."
-      },
-      {
-        "level": "mid",
-        "zh": "我只买我明年还会用的东西。",
-        "en": "I only get the things I will still be using in one year."
-      }
-    ]
+    }
   },
   "u007": {
     "read": {
@@ -225,19 +153,7 @@ window.EXTRAS = {
           "simple": "When the last bell comes, no person in the building puts the question about how many times she went down. They put the question about how she got up so quickly."
         }
       ]
-    },
-    "quiz": [
-      {
-        "level": "low",
-        "zh": "冰很硬。",
-        "en": "The ice is hard."
-      },
-      {
-        "level": "mid",
-        "zh": "她摔倒了，但在别人到之前就起来了。",
-        "en": "She went down, but she got up before the others came."
-      }
-    ]
+    }
   },
   "u008": {
     "read": {
@@ -259,18 +175,6 @@ window.EXTRAS = {
           "simple": "At the top, no person puts their eyes on the view first. They put their eyes on their hands. Then they give a laugh about how small the fear was."
         }
       ]
-    },
-    "quiz": [
-      {
-        "level": "low",
-        "zh": "楼梯很长。",
-        "en": "The steps are long."
-      },
-      {
-        "level": "mid",
-        "zh": "我不抬头，只看前面那一级。",
-        "en": "I do not put my head up. I put my eyes on the step before me."
-      }
-    ]
+    }
   }
 };

@@ -124,6 +124,29 @@
     return page;
   }
 
+  // 从练习池抽一轮（SPEC §14）。池子跟课时无关，每次打开重新抽。
+  function drawQuiz() {
+    var total = wordTotal();
+    var done = allLearned();
+    var ratio = total ? learnedCount() / total : 0;
+    var res = window.Exercises.draw({
+      levels: window.Exercises.planLevels(ratio, done),
+      learned: window.Exercises.learnedSet(),
+      seen: window.Store.exSeen(),
+      // 未学完 850 却手动切进练习模式：题面收窄到已学词（§11.4）
+      strict: isPracticeMode() && !done
+    });
+    window.Store.setExSeen(res.seen);
+    return res;
+  }
+
+  function fillQuiz(wrap) {
+    var res = drawQuiz();
+    var poolN = (window.EXERCISES || []).length;
+    var info = "本次 " + res.items.length + " 句 · 池内共 " + poolN + " 句";
+    window.Extras.renderQuiz(wrap, res.items, res.notes, info);
+  }
+
   // 课外两块各占一屏：第 3 屏 拓展，第 4 屏 练习
   function buildExtrasPages(unit, practice) {
     var out = [];
@@ -140,14 +163,25 @@
     quizPage.className = "page page-ext";
     var wrap2 = document.createElement("div");
     wrap2.className = "ex-wrap";
-    window.Extras.renderQuiz(wrap2, unit.id, practice);
+    fillQuiz(wrap2);
     quizPage.appendChild(wrap2);
 
     var next = document.createElement("button");
     next.className = "next";
     next.type = "button";
-    next.textContent = practice ? "换一篇" : "再学一篇";
-    next.addEventListener("click", advance);
+    if (practice) {
+      // 练习模式下"换一篇"没意义（池子跟课时无关），改成重抽（SPEC §14.3.1）
+      next.textContent = "换一批";
+      next.addEventListener("click", function () {
+        fillQuiz(wrap2);
+        var pages = document.getElementById("pages");
+        pages.scrollTo({ left: pages.clientWidth, behavior: "smooth" });
+        if (window.Toast) window.Toast("已换一批");
+      });
+    } else {
+      next.textContent = "再学一篇";
+      next.addEventListener("click", advance);
+    }
     quizPage.appendChild(next);
     out.push(quizPage);
 

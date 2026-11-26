@@ -1,5 +1,6 @@
 // 课外拓展 + 课外练习（SPEC §11）
-// 两块各占一屏；答案原位替换、可逆；提示一律页面内，不调用系统弹窗
+// 两块各占一屏；练习句来自练习池（SPEC §14），随机抽取，不再挂在单元下
+// 答案原位替换、可逆；提示一律页面内，不调用系统弹窗
 (function () {
   "use strict";
 
@@ -27,48 +28,7 @@
     }, 2200);
   }
 
-  // ---- 已学词判定（未学完就进练习模式时，题面收窄到已学范围） ----
-  function baseOf(tok) {
-    var w = String(tok).toLowerCase();
-    if (/'s$/.test(w)) w = w.slice(0, -2);
-    else w = w.replace(/'+$/, "");
-    var W = window.WORDS || {}, F = window.WORD_FORMS || {}, D = window.WORD_DEVIATION || {};
-    if (W[w] || D[w]) return w;
-    if (F[w]) {
-      var b = F[w];
-      if (W[b] || D[b]) return b;
-    }
-    var cands = [
-      w.replace(/ies$/, "y"), w.replace(/es$/, ""), w.replace(/s$/, ""),
-      w.replace(/ied$/, "y"), w.replace(/ed$/, ""), w.replace(/ed$/, "e"),
-      w.replace(/ing$/, ""), w.replace(/ing$/, "e"), w.replace(/ly$/, "")
-    ];
-    for (var i = 0; i < cands.length; i++) {
-      if (cands[i] && (W[cands[i]] || D[cands[i]])) return cands[i];
-    }
-    return null;
-  }
-
-  function learnedSet() {
-    var stats = window.Store.wordStats();
-    var set = {};
-    Object.keys(stats).forEach(function (w) {
-      if (stats[w] && stats[w].n > 0) set[w] = 1;
-    });
-    return set;
-  }
-
-  function tokensOf(text) {
-    return String(text).match(/[A-Za-z']+/g) || [];
-  }
-
-  function allKnown(text, learned) {
-    return tokensOf(text).every(function (t) {
-      var b = baseOf(t);
-      return !b || learned[b];
-    });
-  }
-
+  // 未学完就进练习模式时，拓展标题要标「含未学词」（§11.4）
   function strictMode(practiceMode) {
     return practiceMode && window.App && window.App.allLearned && !window.App.allLearned();
   }
@@ -128,12 +88,14 @@
 
     container.appendChild(el("h3", "ex-h", "课外拓展"));
 
-    var learned = learnedSet();
+    var learned = window.Exercises.learnedSet();
     var strict = strictMode(practiceMode);
 
     var titleEl = el("div", "ex-title", data.read.title);
     if (strict) {
-      var simpleAll = data.read.blocks.every(function (b) { return allKnown(b.simple, learned); });
+      var simpleAll = data.read.blocks.every(function (b) {
+        return window.Exercises.allKnown(b.simple, learned);
+      });
       if (!simpleAll) titleEl.appendChild(el("span", "ex-tag", "含未学词"));
     }
     container.appendChild(titleEl);
@@ -152,9 +114,10 @@
     container.appendChild(body);
   }
 
-  // ---- 第二屏：课外练习 ----
+  // ---- 第二屏：课外练习（题来自练习池，一次 1–3 句） ----
   function quizItem(item, i) {
     var wrap = el("div", "ex-item");
+    wrap.setAttribute("data-qid", item.id);
     wrap.appendChild(el("span", "ex-no", i + 1));
 
     var line = el("div", "ex-line");
@@ -173,43 +136,29 @@
       zh.hidden = shown;
       en.hidden = !shown;
       btn.textContent = shown ? "看中文" : "参考答案";
-      window.Store.log(shown ? "quiz_reveal" : "quiz_hide", null, { level: item.level });
+      window.Store.log(shown ? "quiz_reveal" : "quiz_hide", item.id, { level: item.level });
     });
     wrap.appendChild(btn);
     return wrap;
   }
 
-  function renderQuiz(container, unitId, practiceMode) {
-    var data = (window.EXTRAS || {})[unitId];
+  // items: 本轮抽到的题目；notes: 降级/收起说明；info: 池子概况
+  function renderQuiz(container, items, notes, info) {
     container.innerHTML = "";
-    if (!data) {
-      container.appendChild(el("div", "ex-empty", "这一课还没有练习题。"));
-      return;
-    }
-
     container.appendChild(el("h3", "ex-h", "课外练习"));
 
-    var learned = learnedSet();
-    var strict = strictMode(practiceMode);
-    var list = el("div", "ex-quiz");
-    var kept = 0;
-    var dropped = 0;
+    var list = items || [];
+    var box = el("div", "ex-quiz");
+    list.forEach(function (q, i) { box.appendChild(quizItem(q, i)); });
+    container.appendChild(box);
 
-    data.quiz.forEach(function (q) {
-      if (strict && !allKnown(q.en, learned)) {
-        dropped++;
-        return;
-      }
-      list.appendChild(quizItem(q, kept));
-      kept++;
-    });
-    container.appendChild(list);
-
-    if (!kept) {
-      container.appendChild(el("div", "ex-empty", "这几道题用到的词你还没学到，先回学习模式继续读。"));
-    } else if (dropped) {
-      container.appendChild(el("div", "ex-tip", "另有 " + dropped + " 道题含未学词，暂时不显示。"));
+    if (!list.length) {
+      container.appendChild(el("div", "ex-empty", "这一档暂时没有能出的题。先去读几课，再回来看。"));
     }
+    (notes || []).forEach(function (n) {
+      container.appendChild(el("div", "ex-tip", n));
+    });
+    if (info) container.appendChild(el("div", "ex-tip", info));
     container.appendChild(el("div", "ex-tip", "先在心里说一遍，再点参考答案对照。"));
   }
 

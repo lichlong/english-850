@@ -1,54 +1,20 @@
-// 按 SPEC §4.5 的可测指标，量一遍 data/ 里的内容
+// 按 SPEC 的可测指标，量一遍 data/ 里的内容
 // 用法：node tools/measure.js
+// 这是唯一的数字来源。改完内容必须跑，不跑等于没做（HANDOFF §6）。
 const fs = require("fs");
 const path = require("path");
-const vm = require("vm");
+const { ROOT, loadData, wordCount, tokensOf, makeLookup, wordsIn, unitText } = require("./lib/vocab");
 
-const root = path.join(__dirname, "..");
-const sandbox = { window: {}, console };
-sandbox.window.window = sandbox.window;
-vm.createContext(sandbox);
-
-for (const f of ["data/words.js", "data/units.js", "data/extras.js"]) {
-  const code = fs.readFileSync(path.join(root, f), "utf8");
-  vm.runInContext(code, sandbox, { filename: f });
-}
-
-const WORDS = sandbox.window.WORDS || {};
-const FORMS = sandbox.window.WORD_FORMS || {};
-const ALLOWED = sandbox.window.WORD_ALLOWED || {};
-const DEVIATION = sandbox.window.WORD_DEVIATION || {};
-const UNITS = sandbox.window.UNITS || [];
-const EXTRAS = sandbox.window.EXTRAS || {};
-
-const wordCount = (s) => (String(s).match(/[A-Za-z']+/g) || []).length;
-const tokensOf = (s) =>
-  (String(s).match(/[A-Za-z']+/g) || []).map((w) => w.toLowerCase());
-
-// 与 reader.js 的 findWord 保持同一套还原规则
-function lookup(raw) {
-  let w = raw.toLowerCase();
-  if (/'s$/.test(w)) w = w.slice(0, -2); // 所有格 father's → father
-  else w = w.replace(/'+$/, "");
-  if (WORDS[w]) return w;
-  if (ALLOWED[w]) return w; // 原文允许项（代词 / 数字 / 日历 / -ly 派生），不计超纲
-  if (DEVIATION[w]) return w; // 偏离词（用户确认放行），单独计数
-  if (FORMS[w]) {
-    const b = FORMS[w];
-    if (WORDS[b] || DEVIATION[b]) return b;
-  }
-  const cands = [
-    w.replace(/ies$/, "y"), w.replace(/es$/, ""), w.replace(/s$/, ""),
-    w.replace(/ied$/, "y"), w.replace(/ed$/, ""), w.replace(/ed$/, "e"),
-    w.replace(/ing$/, ""), w.replace(/ing$/, "e"), w.replace(/ly$/, ""),
-  ];
-  for (const c of cands) if (c && (WORDS[c] || ALLOWED[c] || DEVIATION[c])) return c;
-  return null;
-}
+const V = loadData();
+const { lookup, WORDS, FORMS, ALLOWED, DEVIATION } = makeLookup(V);
+const UNITS = V.UNITS || [];
+const EXTRAS = V.EXTRAS || {};
+const EXERCISES = V.EXERCISES || [];
 
 let allowedHits = 0;
 let devHits = 0;
 
+// ===================== 1. 单元体检 =====================
 const allMissing = new Map();
 const rows = [];
 
@@ -58,17 +24,14 @@ for (const u of UNITS) {
   const passWords = u.passage.paragraphs.reduce((n, p) => n + wordCount(p.en), 0);
   const total = shortWords + longWords + passWords;
 
-  const toks = []
-    .concat(...u.short.map((s) => tokensOf(s.en)))
-    .concat(...u.long.map((s) => tokensOf(s.en)))
-    .concat(...u.passage.paragraphs.map((p) => tokensOf(p.en)));
+  const toks = tokensOf(unitText(u));
 
   const missing = new Map();
   for (const t of toks) {
     const hit = lookup(t);
     if (!hit) missing.set(t, (missing.get(t) || 0) + 1);
-    else if (ALLOWED[hit]) allowedHits++;
-    else if (DEVIATION[hit]) devHits++;
+    else if (hit.kind === "allowed") allowedHits++;
+    else if (hit.kind === "deviation") devHits++;
   }
   for (const [w, n] of missing) allMissing.set(w, (allMissing.get(w) || 0) + n);
 
@@ -84,7 +47,7 @@ for (const u of UNITS) {
     total,
     uniq: new Set(toks).size,
     missing: missing.size,
-    missingList: [...missing.keys()].sort(),
+    words: wordsIn(unitText(u), { lookup }),
   });
 }
 
@@ -112,30 +75,129 @@ const sorted = [...allMissing.entries()].sort((a, b) => b[1] - a[1]);
 console.log("共", sorted.length, "个：");
 console.log(sorted.map(([w, n]) => `${w}×${n}`).join("  "));
 
-// ===== 课外内容体检（SPEC §11.9 第 6 条）=====
-// 只看"简说"和练习答案；"原文"按文体写，允许超纲
-console.log("\n== 课外内容体检（简说 / 练习答案只用 850 内） ==");
+// ===================== 2. 词覆盖与排程（P0 · SPEC §4.4） =====================
+// 口径：一个词的"首次出现单元"= 它第一次被读到的那个单元，那个单元的新词数就按它算。
+console.log("\n== 词覆盖与排程（SPEC §4.4：每单元新词 20–25） ==");
 {
-  const rows2 = [];
+  const seen = new Set();
+  let bad = 0;
+  for (const r of rows) {
+    const fresh = [...r.words].filter((w) => !seen.has(w));
+    fresh.forEach((w) => seen.add(w));
+    const flag = fresh.length >= 20 && fresh.length <= 25 ? "✓" : `✗ 超出 20–25`;
+    if (flag !== "✓") bad++;
+    console.log(`${r.id} ${r.name}  首次出现 ${String(fresh.length).padStart(2)} 词  去重 ${String(r.words.size).padStart(3)} 词  ${flag}`);
+  }
+  const totalWords = Object.keys(WORDS).length;
+  const pct = totalWords ? Math.round((seen.size / totalWords) * 100) : 0;
+  console.log(`累计覆盖 ${seen.size} / ${totalWords} = ${pct}%   剩余 ${totalWords - seen.size} 词未出现`);
+  console.log(bad ? `有 ${bad} 个单元的新词数不合规（u001–u003 属早期内容，重写时一并修）` : "全部单元新词数合规 ✓");
+
+  // 已覆盖的词按累计出现次数排：用来判断"哪些词该加密、哪些该低频维持"
+  const counter = new Map();
+  for (const u of UNITS) for (const w of wordsIn(unitText(u), { lookup })) {
+    counter.set(w, (counter.get(w) || 0) + 1);
+  }
+  let low = 0, mid = 0, firm = 0;
+  for (const w of seen) {
+    const n = counter.get(w) || 0;
+    if (n <= 4) low++; else if (n <= 14) mid++; else firm++;
+  }
+  console.log(`词状态分布：新词(1–4 次) ${low} · 巩固中(5–14 次) ${mid} · 已巩固(≥15 次) ${firm}`);
+}
+
+// ===================== 3. 下一单元计划核对（P0 · 先定词再写） =====================
+console.log("\n== 下一单元计划核对（tools/next-unit.txt） ==");
+{
+  const p = path.join(ROOT, "tools", "next-unit.txt");
+  if (!fs.existsSync(p)) {
+    console.log("未设定计划。生成方式：node tools/coverage.js --plan");
+  } else {
+    const lines = fs.readFileSync(p, "utf8").split(/\r?\n/);
+    let unit = "", theme = "";
+    const plan = [];
+    for (const raw of lines) {
+      const line = raw.trim();
+      if (!line) continue;
+      if (line.startsWith("#")) {
+        const m = line.match(/unit\s*[:：]\s*(\S+)/i);
+        if (m) unit = m[1];
+        const t = line.match(/theme\s*[:：]\s*(.+)/i);
+        if (t) theme = t[1].trim();
+        continue;
+      }
+      plan.push(line.toLowerCase());
+    }
+    const seenBefore = new Set();
+    for (const r of rows) r.words.forEach((w) => seenBefore.add(w));
+
+    const dupes = plan.filter((w, i) => plan.indexOf(w) !== i);
+    const outside = plan.filter((w) => !WORDS[w]);
+    const reused = plan.filter((w) => seenBefore.has(w));
+    console.log(`单元 ${unit || "(未写)"}　主题 ${theme || "(未写)"}　计划新词 ${plan.length} 个`);
+    console.log(`　数量 20–25：${plan.length >= 20 && plan.length <= 25 ? "✓" : "✗ 实际 " + plan.length}`);
+    console.log(`　都在 850 表内：${outside.length ? "✗ " + outside.join(" ") : "✓"}`);
+    console.log(`　没和已覆盖词重复：${reused.length ? "✗ " + reused.join(" ") : "✓"}`);
+    console.log(`　计划内无重复：${dupes.length ? "✗ " + dupes.join(" ") : "✓"}`);
+    console.log(`　写完后的覆盖率：${seenBefore.size} + ${plan.length - reused.length} = ${seenBefore.size + plan.length - reused.length} / ${Object.keys(WORDS).length}`);
+    console.log("　写完内容后，跑本脚本看该单元「首次出现」是否等于计划数。");
+  }
+}
+
+// ===================== 4. 课外内容体检（SPEC §11.9 第 6 条） =====================
+// 只看"简说"；"原文"按文体写，允许超纲
+console.log("\n== 课外拓展体检（简说只用 850 内） ==");
+{
   const bad = new Map();
   for (const [id, d] of Object.entries(EXTRAS)) {
-    const texts = [].concat(
-      d.read.blocks.map((b) => b.simple),
-      d.quiz.map((q) => q.en)
-    );
     let n = 0;
-    for (const t of texts) {
-      for (const tok of tokensOf(t)) {
+    for (const b of d.read.blocks) {
+      for (const tok of tokensOf(b.simple)) {
         n++;
         if (!lookup(tok)) bad.set(id + ":" + tok, (bad.get(id + ":" + tok) || 0) + 1);
       }
     }
-    rows2.push(`${id} 简说${d.read.blocks.length}段 练习${d.quiz.length}题 用词${n}`);
+    console.log(`${id} 简说${d.read.blocks.length}段 用词${n}`);
   }
-  rows2.forEach((r) => console.log(r));
   if (!bad.size) console.log("结果：超纲 0 ✓");
   else {
     console.log("结果：超纲 " + bad.size + " →");
     console.log([...bad.keys()].join("  "));
   }
+}
+
+// ===================== 5. 练习池体检（SPEC §14） =====================
+console.log("\n== 练习池体检（SPEC §14 / §11.3 档位长度） ==");
+{
+  const LIMIT = {
+    low: { min: 0, max: 8, sent: 1 },
+    mid: { min: 8, max: 18, sent: 2 },
+    high: { min: 20, max: 40, sent: 3 },
+  };
+  const byLevel = { low: 0, mid: 0, high: 0 };
+  const bad = [];
+  const badWords = new Map();
+  const ids = new Set();
+
+  for (const q of EXERCISES) {
+    byLevel[q.level] = (byLevel[q.level] || 0) + 1;
+    if (ids.has(q.id)) bad.push(q.id + " id 重复");
+    ids.add(q.id);
+    const n = wordCount(q.en);
+    const sent = (q.en.match(/[.!?]/g) || []).length;
+    const L = LIMIT[q.level];
+    if (!L) bad.push(q.id + " 无档位");
+    else {
+      if (n < L.min || n > L.max) bad.push(`${q.id}(${q.level}) ${n} 词，应为 ${L.min}–${L.max}`);
+      if (sent > L.sent) bad.push(`${q.id}(${q.level}) ${sent} 句，最多 ${L.sent} 句`);
+    }
+    for (const tok of tokensOf(q.en)) if (!lookup(tok)) badWords.set(tok, (badWords.get(tok) || 0) + 1);
+  }
+
+  const total = EXERCISES.length;
+  console.log(`练习句 ${total} 句（目标 150：低阶 ${byLevel.low}/50 · 当阶 ${byLevel.mid}/50 · 进阶 ${byLevel.high}/50）`);
+  console.log(`一轮抽 3 句 → 约 ${Math.floor(total / 3)} 次打开轮完一遍`);
+  console.log(bad.length ? "档位/编号不合规：" + bad.length + "\n  " + bad.join("\n  ") : "档位与编号合规 ✓");
+  if (!badWords.size) console.log("超纲 0 ✓");
+  else console.log("超纲 " + badWords.size + " → " + [...badWords.keys()].join(" "));
 }

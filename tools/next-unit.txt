@@ -1,0 +1,29 @@
+# 下一单元计划（先定词，再写；写完跑 node tools/measure.js 核对）
+# 用法：node tools/coverage.js --plan 重新生成，或手工改下面的词
+# unit: u009
+# theme: 钱与工作（SPEC §11.7 白名单：工资 / 省钱 / 面试 / 加班）
+# 每行一个词，20–25 个
+
+or
+free
+news
+business
+help
+view
+how
+system
+such
+please
+support
+well
+public
+high
+through
+order
+company
+group
+payment
+# 手改：sex 换 payment（词频稍后，内容更可用；待你确认）
+general
+map
+part

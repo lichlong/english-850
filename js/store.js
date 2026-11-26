@@ -8,6 +8,7 @@
   var K_PROG = "e850.progress";
   var K_MARKS = "e850.marks";
   var K_MODE = "e850.mode";
+  var K_EXQ = "e850.exq"; // 练习池：最近抽到过的句子 id（滑动窗口，SPEC §14.3.2）
 
   var mem = {};
   var usable = (function () {
@@ -151,6 +152,11 @@
       else save(K_MODE, v);
     },
 
+    // ---- 练习池窗口：最近抽到过的句子 id ----
+    exSeen: function () { return load(K_EXQ, []); },
+
+    setExSeen: function (ids) { save(K_EXQ, ids || []); },
+
     // ---- 开发者工具：用来跳到任意学习阶段（?dev=1 才会调用） ----
     devSetReadDays: function (n) {
       var log = {};
@@ -167,7 +173,7 @@
     },
 
     devWipe: function () {
-      var keys = [K_STATS, K_EVENTS, K_READ, K_PROG, K_MARKS, K_MODE, "e850.cur"];
+      var keys = [K_STATS, K_EVENTS, K_READ, K_PROG, K_MARKS, K_MODE, K_EXQ, "e850.cur"];
       keys.forEach(function (k) {
         if (usable) {
           try { localStorage.removeItem(k); } catch (e) {}
