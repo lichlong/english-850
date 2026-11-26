@@ -142,6 +142,8 @@
     line.appendChild(el("span", "ex-no", i + 1));
     var zh = el("span", "ex-zh", item.zh);
     var en = el("span", "ex-en", item.en);
+    // 答案上的喇叭跟着答案一起隐藏：没点「参考答案」就读，等于泄题
+    if (window.Speak) window.Speak.into(en, item.en, "inl", "朗读参考答案");
     en.hidden = true;
     line.appendChild(zh);
     line.appendChild(en);

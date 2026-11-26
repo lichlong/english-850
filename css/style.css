@@ -126,6 +126,50 @@ body { display: flex; justify-content: center; }
 
 .item:last-of-type { border-bottom: 0; }
 
+/* 喇叭（SPEC §11.15）：不支持语音的浏览器不会插入这个元素，所以不用写"隐藏"逻辑 */
+.spk {
+  flex: 0 0 auto;
+  width: 26px;
+  height: 26px;
+  margin: -2px 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  opacity: 0.62;
+}
+.spk svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linejoin: round; }
+.spk:active { opacity: 1; background: var(--soft); }
+
+/* 跟在句子/段落末尾的喇叭：不换行，跟文字同一基线 */
+.spk.inl {
+  display: inline-grid;
+  width: 22px;
+  height: 22px;
+  margin: 0 0 0 4px;
+  vertical-align: -5px;
+}
+.spk.inl svg { width: 14px; height: 14px; }
+
+/* 行内的喇叭（句子条目右侧）：和"英"按钮对齐 */
+.row .spk.row-spk { margin-top: 3px; }
+
+/* 单词弹层里的喇叭 */
+.popup .spk.pop-spk {
+  margin: 0 0 0 -2px;
+  width: 24px;
+  height: 24px;
+  opacity: 0.7;
+}
+.popup .spk.pop-spk svg { width: 14px; height: 14px; }
+
+/* 练习答案里的喇叭：跟着答案一起显示/隐藏 */
+.ex-en .spk.inl { margin-left: 6px; vertical-align: -5px; }
+
 .row {
   display: flex;
   align-items: flex-start;

@@ -232,18 +232,21 @@
     return page;
   }
 
-  function buildPage2(unit, storyNum) {
+  // 第二屏：短文。canAdvance 只在"这一课没有课外内容"时才给按钮（否则最后一屏才有，v9.8）
+  function buildPage2(unit, storyNum, canAdvance) {
     var page = document.createElement("section");
     page.className = "page";
     page.appendChild(window.Reader.storyItem(unit, storyNum));
     page.appendChild(quoteEl(1));
 
-    var next = document.createElement("button");
-    next.className = "next";
-    next.type = "button";
-    next.textContent = "再学一篇";
-    next.addEventListener("click", advance);
-    page.appendChild(next);
+    if (canAdvance) {
+      var next = document.createElement("button");
+      next.className = "next";
+      next.type = "button";
+      next.textContent = "再学一篇";
+      next.addEventListener("click", advance);
+      page.appendChild(next);
+    }
 
     return page;
   }
@@ -393,8 +396,10 @@
       return;
     }
 
+    // 这一课没有课外内容时，短文屏就是最后一屏，按钮留在那儿；有课外内容时按钮跟着最后一屏走
+    var hasExtras = !!(window.EXTRAS && window.EXTRAS[unit.id]);
     pages.appendChild(buildPage1(unit));
-    pages.appendChild(buildPage2(unit, total + 1));
+    pages.appendChild(buildPage2(unit, total + 1, !hasExtras));
 
     var count = 2;
     if (window.EXTRAS && window.EXTRAS[unit.id]) {

@@ -95,6 +95,10 @@
     popup.innerHTML = html;
     document.body.appendChild(popup);
 
+    // 喇叭放在词后面（点了才读，SPEC §11.15）
+    var top = popup.querySelector(".pop-top");
+    if (window.Speak && top) window.Speak.into(top, word, "pop-spk", "朗读这个单词");
+
     var r = popup.getBoundingClientRect();
     var left = x - r.width / 2;
     left = Math.max(10, Math.min(left, window.innerWidth - r.width - 10));
@@ -147,6 +151,7 @@
     var row = el("div", "row");
     row.appendChild(el("span", "num", String(num)));
     row.appendChild(el("p", "txt", tokenize(obj.en)));
+    if (window.Speak) window.Speak.into(row, obj.en, "row-spk", "朗读这句");
     row.appendChild(zhButton(item));
     item.appendChild(row);
 
@@ -169,7 +174,9 @@
 
     unit.passage.paragraphs.forEach(function (p) {
       var para = el("div", "para");
-      para.appendChild(el("p", "en", tokenize(p.en)));
+      var en = el("p", "en", tokenize(p.en));
+      if (window.Speak) window.Speak.into(en, p.en, "inl", "朗读这段");
+      para.appendChild(en);
       para.appendChild(el("p", "zh", esc(p.zh)));
       item.appendChild(para);
     });
@@ -192,7 +199,9 @@
 
   // 通用可点文本块：课外拓展的原文与简说都用它，交给全局 .w 点击处理查词
   function textBlock(text, cls) {
-    return el("p", cls || "en", tokenize(text));
+    var p = el("p", cls || "en", tokenize(text));
+    if (window.Speak) window.Speak.into(p, text, "inl", "朗读这句");
+    return p;
   }
 
   window.Reader = {
