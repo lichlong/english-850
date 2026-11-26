@@ -1,0 +1,11 @@
+const {loadData,makeLookup,wordsIn,unitText}=require('./lib/vocab');
+const V=loadData();const lk=makeLookup(V);
+const id=process.argv[2];
+const idx=V.UNITS.findIndex(u=>u.id===id);
+const before=new Set();
+for(let i=0;i<idx;i++) wordsIn(unitText(V.UNITS[i]),lk).forEach(w=>before.add(w));
+const fresh=[...wordsIn(unitText(V.UNITS[idx]),lk)].filter(w=>!before.has(w));
+console.log(id+' 新词 '+fresh.length+': '+fresh.join(' '));
+const u=V.UNITS[idx];
+console.log('--- passage ---');
+u.passage.paragraphs.forEach((p,i)=>console.log('P'+(i+1)+' ['+p.en.split(/\s+/).length+'] '+p.en));
