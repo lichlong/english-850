@@ -528,5 +528,49 @@ window.EXTRAS = {
           }
         ]
       }
+    },
+    "u023": {
+      "read": {
+        "title": "The Ticket",
+        "blocks": [
+          {
+            "std": "You take the six train. You don't look at any person, you don't say your name, and you forget this room before the bridge.",
+            "zh": "你坐六点那班车。别看的谁，别说你的名字，过桥之前就把这间屋子忘了。",
+            "simple": "You take the six train. You have no eyes for any person, you don't say your name, and you put this room out of your mind before the bridge."
+          },
+          {
+            "std": "He had a secret that was not worth much and cost him everything, which is the way with most secrets in small towns.",
+            "zh": "他有个秘密，本身不值什么，却让他付出了一切——小地方的秘密多半是这样。",
+            "simple": "He had a secret that had not much value and took all things from him. That is the way with most secrets in small towns."
+          },
+          {
+            "std": "Rail officials said the line would be closed for three days after a truck brought down a part of the wire near the dry river.",
+            "zh": "铁路方面说，一辆货车在干涸的河段附近刮倒了一段电线，线路将停运三天。",
+            "simple": "The rail office said that the line would be shut for three days after a cart put a part of the wire down near the dry river."
+          }
+        ]
+      }
+    },
+    "u024": {
+      "read": {
+        "title": "The Clock in the Kitchen",
+        "blocks": [
+          {
+            "std": "You can't cook with a clock. You cook with your nose, your hand, and about forty years of getting it wrong.",
+            "zh": "做菜不靠钟。靠鼻子、靠手，还有四十年做错的经验。",
+            "simple": "You don't cook with a clock. You cook with your nose, your hand, and about forty years of doing it wrong."
+          },
+          {
+            "std": "The kitchen smelled of salt and wet cotton, and the clock on the wall had stopped at the hour his sister left, which nobody had the heart to wind.",
+            "zh": "厨房里有盐和湿棉布的气味；墙上那只钟停在他姐姐离开的时刻，谁也没忍心去上弦。",
+            "simple": "The room had the smell of salt and wet cotton, and the clock on the wall had come to a stop at the hour his sister went out. No person had the heart to make it go again."
+          },
+          {
+            "std": "Cooks at the hospital said the new menu would cut salt by a third, after doctors linked it to heart trouble in older patients.",
+            "zh": "医院厨房说新菜单会把盐减少三分之一——此前医生把盐和老年病人的心脏问题联系起来。",
+            "simple": "The cooks at the medical building said that the new food list would have less salt. The medical persons had said that salt is a cause of heart trouble in older persons."
+          }
+        ]
+      }
     }
 };

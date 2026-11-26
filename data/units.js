@@ -3131,5 +3131,294 @@ window.UNITS = [
       "but",
       "book"
     ]
+  },
+{
+    "id": "u023",
+    "mnemonic": "一张火车票",
+    "short": [
+      {
+        "en": "The train is waiting on the dry line.",
+        "zh": "火车停在干燥的线上等着。"
+      },
+      {
+        "en": "The wire is broken, and the light is out.",
+        "zh": "电线断了，灯也不亮。"
+      },
+      {
+        "en": "Her daughter has a red dress.",
+        "zh": "她女儿有一条红裙子。"
+      },
+      {
+        "en": "The door is automatic, so keep back.",
+        "zh": "这门是自动的，往后站。"
+      },
+      {
+        "en": "A fly is on the window.",
+        "zh": "窗上有一只苍蝇。"
+      }
+    ],
+    "long": [
+      {
+        "en": "The judge has a ticket for the train, and he keeps it in the pocket of his coat.",
+        "zh": "法官有一张火车票，放在外套口袋里。"
+      },
+      {
+        "en": "The fight was about a broken window, and the representative of the company gave a comfort to the family.",
+        "zh": "那场争执是为了一扇破窗，公司的代表给了那家人一点安慰。"
+      },
+      {
+        "en": "There's acid from the mine in a glass, and no person may take it on the train.",
+        "zh": "矿上用的酸装在一个杯子里，谁也不许把它带上火车。"
+      }
+    ],
+    "passage": {
+      "title": "The Ticket",
+      "paragraphs": [
+        {
+          "en": "The train comes at six, and the line is dry and bright. The judge is married, has one daughter, and is not late, ever.",
+          "zh": "火车六点到，那条线又干又亮。法官结了婚，有一个女儿，从不迟到。"
+        },
+        {
+          "en": "This morning the wire is broken and the waiting room has no light. He puts his ticket on the table and gives a blow on his hands to keep them warm.",
+          "zh": "今早电线断了，候车室没有灯。他把票放在桌上，往手上吹气取暖。"
+        },
+        {
+          "en": "A young man and a small number of friends are at the back. They have no ticket, and one of them has acid for the mine where he works. The man is not healthy, and he says a bath and a bed are the first things he has need of.",
+          "zh": "后面坐着一个年轻人和几个朋友。他们没有票，其中一个带着矿上用的酸。这个人身体不好，他说首先需要的是洗个澡、睡一觉。"
+        },
+        {
+          "en": "The judge says nothing about the acid, but he gives the young man his ticket and takes the train tomorrow. Roll the paper, he says, and say no word about it. The secret is between the two of them, and the train is on time.",
+          "zh": "法官对那瓶酸一个字没提，只把自己的票给了年轻人，自己明天再走。他说：把纸卷起来，一个字也别说。这个秘密只在两个人之间，火车准点开了。"
+        }
+      ]
+    },
+    "words": [
+      "the",
+      "train",
+      "be",
+      "waiting",
+      "on",
+      "dry",
+      "line",
+      "wire",
+      "broken",
+      "and",
+      "light",
+      "out",
+      "daughter",
+      "have",
+      "a",
+      "red",
+      "dress",
+      "door",
+      "automatic",
+      "so",
+      "keep",
+      "back",
+      "fly",
+      "window",
+      "judge",
+      "ticket",
+      "for",
+      "he",
+      "in",
+      "pocket",
+      "of",
+      "coat",
+      "fight",
+      "about",
+      "representative",
+      "company",
+      "give",
+      "comfort",
+      "to",
+      "family",
+      "acid",
+      "from",
+      "mine",
+      "glass",
+      "no",
+      "person",
+      "may",
+      "take",
+      "come",
+      "at",
+      "bright",
+      "married",
+      "not",
+      "late",
+      "ever",
+      "this",
+      "morning",
+      "room",
+      "put",
+      "table",
+      "blow",
+      "hand",
+      "warm",
+      "young",
+      "man",
+      "small",
+      "number",
+      "friend",
+      "where",
+      "work",
+      "healthy",
+      "say",
+      "bath",
+      "bed",
+      "first",
+      "thing",
+      "need",
+      "but",
+      "tomorrow",
+      "roll",
+      "paper",
+      "word",
+      "secret",
+      "between",
+      "time"
+    ]
+  },
+{
+    "id": "u024",
+    "mnemonic": "厨房里的钟",
+    "short": [
+      {
+        "en": "The clock in the back room is slow.",
+        "zh": "后面那间屋里的钟慢了。"
+      },
+      {
+        "en": "Her sister has a hat of cotton.",
+        "zh": "她姐姐有一顶棉布帽子。"
+      },
+      {
+        "en": "There's a hole in the wheel.",
+        "zh": "轮子上有个洞。"
+      },
+      {
+        "en": "The salt is wet, and the fruit is bad.",
+        "zh": "盐潮了，水果也坏了。"
+      },
+      {
+        "en": "He has a feeling about this attempt.",
+        "zh": "他对这一次尝试有种感觉。"
+      }
+    ],
+    "long": [
+      {
+        "en": "The cook makes a sharp cut in the food and puts salt and a mixed oil on it.",
+        "zh": "厨子在食物上划了一道利口，撒上盐和一种调好的油。"
+      },
+      {
+        "en": "There's a pin in the cotton, and the ink from the pen is on the table near the mouth of the glass.",
+        "zh": "棉布上别着一根针，笔里的墨就在玻璃杯口边那张桌上。"
+      },
+      {
+        "en": "The trouble with the gun is the circle of the wave: it comes back on the person who makes it.",
+        "zh": "枪的麻烦在那道波的圆：它回到放它的人身上。"
+      }
+    ],
+    "passage": {
+      "title": "The Clock in the Kitchen",
+      "paragraphs": [
+        {
+          "en": "The clock in the back room is slow by ten minutes, and every person in the house knows it. It has a round face and one slow hand. The cook says the clock is right and the day is wrong.",
+          "zh": "后面那间屋里的钟慢十分钟，屋里每个人都知道。它有一张圆脸，一根慢吞吞的针。厨子说钟是对的，是日子错了。"
+        },
+        {
+          "en": "There's a hole in one wheel of the cart, and a pin in the cotton of her sister's hat. The salt is wet, and the fruit has gone over.",
+          "zh": "车的一个轮子上有个洞，她姐姐帽子上的棉布别着一根针。盐潮了，水果也坏了。"
+        },
+        {
+          "en": "The cook makes a sharp cut and puts a mixed oil on the food. He has a feeling about the attempt: the first time is not the good one.",
+          "zh": "厨子利落地切下去，往食物上浇一种调好的油。他对这次尝试有种感觉：头一回从来不算好。"
+        },
+        {
+          "en": "At six the clock is still slow, and the wave of heat from the fire has gone down. He puts the gun back in the box, puts ink on the page, and says: tomorrow we do it again.",
+          "zh": "到六点，钟还是慢的，火的那阵热浪也落下去了。他把枪放回盒子，在纸上落墨，说：明天再来一次。"
+        }
+      ]
+    },
+    "words": [
+      "the",
+      "clock",
+      "in",
+      "back",
+      "room",
+      "be",
+      "slow",
+      "sister",
+      "have",
+      "a",
+      "hat",
+      "of",
+      "cotton",
+      "hole",
+      "wheel",
+      "salt",
+      "wet",
+      "and",
+      "fruit",
+      "bad",
+      "he",
+      "feeling",
+      "about",
+      "this",
+      "attempt",
+      "cook",
+      "make",
+      "sharp",
+      "cut",
+      "food",
+      "put",
+      "mixed",
+      "oil",
+      "on",
+      "pin",
+      "ink",
+      "from",
+      "pen",
+      "table",
+      "near",
+      "mouth",
+      "glass",
+      "trouble",
+      "with",
+      "gun",
+      "circle",
+      "wave",
+      "come",
+      "person",
+      "who",
+      "by",
+      "minute",
+      "every",
+      "house",
+      "round",
+      "face",
+      "hand",
+      "say",
+      "right",
+      "day",
+      "wrong",
+      "cart",
+      "go",
+      "over",
+      "first",
+      "time",
+      "not",
+      "good",
+      "at",
+      "still",
+      "heat",
+      "fire",
+      "down",
+      "box",
+      "page",
+      "tomorrow",
+      "do",
+      "again"
+    ]
   }
 ];
