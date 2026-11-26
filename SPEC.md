@@ -1266,3 +1266,10 @@ window.EXERCISES = [{ id, zh, en, level: "low|mid|high", tags: ["daily","money"]
 
 **为什么不做"工作台直接改文件"**：浏览器没有写本地文件的权限，硬做要么拉起一个本地服务（多一层要维护的东西），要么导出片段让人手工粘贴（多一步粘贴，但零风险）。第二阶段选后者。
 
+
+
+## 附录：事故记录
+
+| 日期 | 事故 | 级别 | 复盘 |
+|---|---|---|---|
+| 2026-11-26 | 先写完 u009–u035，再回头修前 8 课，导致词序牵动全表 | A | [docs/incidents/2026-11-26-foundation-order.md](docs/incidents/2026-11-26-foundation-order.md) |
