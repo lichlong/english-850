@@ -440,5 +440,49 @@ window.EXTRAS = {
           }
         ]
       }
+    },
+    "u019": {
+      "read": {
+        "title": "Deep in the Mountain",
+        "blocks": [
+          {
+            "std": "Nobody here is poor. We've got wood, we've got water, and my father could put a fish on the table out of a river that isn't even on the map.",
+            "zh": "这里没人是穷的。我们有柴、有水，我爸还能从一条地图上都没有的河里弄条鱼上桌。",
+            "simple": "No person here is poor. We have wood, we have water, and my father was able to put a fish on the table out of a river that isn't even on the map."
+          },
+          {
+            "std": "The mountain had taught him what no school could: that a man is small, that the weather is not personal, and that patience is a kind of work.",
+            "zh": "这座山教了他学校教不了的东西：人是小的；天气不是冲你来的；忍耐也是一种干活。",
+            "simple": "The mountain had given him the knowledge that no school gives: a person is small, the weather is not about you, and waiting is a sort of work."
+          },
+          {
+            "std": "The farm's apples will be late this year, the farm group said, after a cold spring cut the fruit by a third across the valley.",
+            "zh": "合作社说，今春低温让整个山谷的果子少了三分之一，农场的苹果今年会晚。",
+            "simple": "The apple of the farm will be late this year, the farm group said. A cold spring took a great part of the fruit from all the farms in the mountain."
+          }
+        ]
+      }
+    },
+    "u020": {
+      "read": {
+        "title": "The File on the Table",
+        "blocks": [
+          {
+            "std": "Don't put that on my desk. Take it to the chief, and if he asks who sent you, say it came from the square.",
+            "zh": "别把这东西放我桌上。拿去给首长；他要是问谁送来的，就说是广场上来的。",
+            "simple": "Don't put that on my table. Take it to the chief, and if he puts the question about who sent you, say it came from the square."
+          },
+          {
+            "std": "He had spent thirty years in that office, and the only thing he had ever taken home was the habit of reading every page twice.",
+            "zh": "他在那间办公室待了三十年，唯一带回家的，是把每一页都读两遍的习惯。",
+            "simple": "He had been thirty years in that room, and the only thing he ever took to his house was the way of reading every page two times."
+          },
+          {
+            "std": "The ministry said the new rail line would cut the journey to the coast by two hours, and that work would start in the spring.",
+            "zh": "部里说新铁路会把去海岸的行程缩短两小时，工程春季开工。",
+            "simple": "The chief office said that the new rail line would take two hours off the journey to the sea, and that the work would be starting in the spring."
+          }
+        ]
+      }
     }
 };

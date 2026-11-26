@@ -2516,5 +2516,307 @@ window.UNITS = [
       "keep",
       "eye"
     ]
+  },
+{
+    "id": "u019",
+    "mnemonic": "山里的农场",
+    "short": [
+      {
+        "en": "The farm is deep in the mountain.",
+        "zh": "农场在山的深处。"
+      },
+      {
+        "en": "There's fish in the river here.",
+        "zh": "这条河里有鱼。"
+      },
+      {
+        "en": "He has a sense of what to plant.",
+        "zh": "他知道该种什么。"
+      },
+      {
+        "en": "The apple tree is dead.",
+        "zh": "那棵苹果树死了。"
+      },
+      {
+        "en": "The wood is wrong for this fire.",
+        "zh": "这木头不适合烧这个火。"
+      }
+    ],
+    "long": [
+      {
+        "en": "The stage in the town is made of steel and wood, and every match of the summer is played there.",
+        "zh": "镇上的台子是用钢和木头做的，夏天每场比赛都在那儿打。"
+      },
+      {
+        "en": "His debt to the plant store is small, but he has respect for the fact that it's a debt.",
+        "zh": "他欠苗圃店的账不多，可他敬重一个事实：那毕竟是笔债。"
+      },
+      {
+        "en": "The theory is simple: poor earth makes a fat price for good food, and peace comes from a full store.",
+        "zh": "道理很简单：地薄，好粮就贵；仓满，日子才太平。"
+      }
+    ],
+    "passage": {
+      "title": "Deep in the Mountain",
+      "paragraphs": [
+        {
+          "en": "The farm is deep in the mountain, and the road to it is a line of wood and stone. In spring he plants what his father planted, and the apple trees are the same trees.",
+          "zh": "农场在山的深处，上山的路是一条木头和石头。春天他种他父亲种过的东西，苹果树还是那几棵。"
+        },
+        {
+          "en": "He has a sense of the weather that no book gives. When the cold comes from the north he puts the fish under the stone, and when it comes from the sea he lets the sun work.",
+          "zh": "他对天气有种书本给不了的感觉。寒气从北边来，他就把鱼压在石头下；从海上来，他就让太阳去晒。"
+        },
+        {
+          "en": "There's a stage of the work he doesn't like: the rest of the field is poor, and the electric line is far. Some years the debt is more than the apple.",
+          "zh": "活儿里有一段他不喜欢：剩下的地薄，电线又远。有些年份，债比苹果还多。"
+        },
+        {
+          "en": "But he has respect for the mountain, and peace with the fat years and the thin ones. He has no time for fiction: the mountain is the only story he keeps. He says: a man who plants a tree is not wrong, even when the tree is dead.",
+          "zh": "可他敬这座山，丰年和瘦年都过得下去。他没空看虚构的东西：这座山就是他唯一留着的故事。他说：种树的人不算错，哪怕那棵树死了。"
+        }
+      ]
+    },
+    "words": [
+      "the",
+      "farm",
+      "be",
+      "deep",
+      "in",
+      "mountain",
+      "fish",
+      "river",
+      "here",
+      "he",
+      "have",
+      "a",
+      "sense",
+      "of",
+      "to",
+      "plant",
+      "apple",
+      "tree",
+      "dead",
+      "wood",
+      "wrong",
+      "for",
+      "this",
+      "fire",
+      "stage",
+      "town",
+      "make",
+      "steel",
+      "and",
+      "every",
+      "match",
+      "summer",
+      "play",
+      "there",
+      "debt",
+      "store",
+      "small",
+      "but",
+      "respect",
+      "fact",
+      "that",
+      "theory",
+      "simple",
+      "poor",
+      "earth",
+      "fat",
+      "price",
+      "good",
+      "food",
+      "peace",
+      "come",
+      "from",
+      "full",
+      "road",
+      "line",
+      "stone",
+      "spring",
+      "father",
+      "same",
+      "weather",
+      "no",
+      "book",
+      "give",
+      "when",
+      "cold",
+      "north",
+      "put",
+      "under",
+      "sea",
+      "let",
+      "sun",
+      "work",
+      "like",
+      "rest",
+      "field",
+      "electric",
+      "far",
+      "some",
+      "year",
+      "much",
+      "than",
+      "with",
+      "thin",
+      "on",
+      "time",
+      "fiction",
+      "only",
+      "story",
+      "keep",
+      "say",
+      "man",
+      "who",
+      "not",
+      "even"
+    ]
+  },
+{
+    "id": "u020",
+    "mnemonic": "秘书与一份文件",
+    "short": [
+      {
+        "en": "The cat is on the edge of the table.",
+        "zh": "猫在桌子边上。"
+      },
+      {
+        "en": "The secretary keeps every detail.",
+        "zh": "秘书把每个细节都记着。"
+      },
+      {
+        "en": "The square is full of persons today.",
+        "zh": "今天广场上全是人。"
+      },
+      {
+        "en": "The wind takes the leather coat.",
+        "zh": "风把皮外套吹跑了。"
+      },
+      {
+        "en": "A small chance; I will jump at it.",
+        "zh": "机会不大，可我要扑上去抓住它。"
+      }
+    ],
+    "long": [
+      {
+        "en": "The chief of the army has no motion to make on the transport question.",
+        "zh": "军队的首长在运输这件事上没有提案。"
+      },
+      {
+        "en": "The scale of the work is complex, and the balance of it is in the hands of one secretary.",
+        "zh": "这活儿的规模很复杂，平衡全在一个秘书手里。"
+      },
+      {
+        "en": "The attention of the nation is on the square, where the army has put a new frame round the old door.",
+        "zh": "全国的注意力都在广场上，军队给老门加了一道新框。"
+      }
+    ],
+    "passage": {
+      "title": "The File on the Table",
+      "paragraphs": [
+        {
+          "en": "The office of the chief is one room with one window. On the table there's a book of papers, and every page has a number at the top.",
+          "zh": "首长的办公室只有一间屋、一扇窗。桌上放着一本书一样的公事纸，每页顶上都有个号码。"
+        },
+        {
+          "en": "The secretary has the balance of the work: one part is the army, the other part is the transport of food. She keeps clean hands and a clear scale of what is more important.",
+          "zh": "这活儿的平衡在秘书手里：一部分是军队，一部分是运粮。她手很干净，轻重也分得清。"
+        },
+        {
+          "en": "The detail no person sees is this: the root of the question is a name on the last page, and the pain of it is that no person says the name. The wind takes the paper from the frame, and the cat on the edge of the table puts a foot on it.",
+          "zh": "没人看见的那个细节是：问题的根子在最后一页的一个名字上，难受的地方在于没人提这个名字。风把纸从窗框边吹开，桌上那只猫把爪子按了上去。"
+        },
+        {
+          "en": "In the morning the chief gives the papers back with one word. There's no motion, no jump, and no chance of a change. The nation keeps its peace, and the office keeps its window.",
+          "zh": "早上首长把纸退回来，只说了一个词。没有提案，没有变化，也没有可能。国家照旧太平，办公室照旧留着那扇窗。"
+        }
+      ]
+    },
+    "words": [
+      "the",
+      "cat",
+      "be",
+      "on",
+      "edge",
+      "of",
+      "table",
+      "secretary",
+      "keep",
+      "every",
+      "detail",
+      "square",
+      "full",
+      "person",
+      "wind",
+      "take",
+      "leather",
+      "coat",
+      "a",
+      "small",
+      "chance",
+      "i",
+      "will",
+      "jump",
+      "at",
+      "chief",
+      "army",
+      "have",
+      "no",
+      "motion",
+      "to",
+      "make",
+      "transport",
+      "question",
+      "scale",
+      "work",
+      "complex",
+      "and",
+      "balance",
+      "in",
+      "hand",
+      "attention",
+      "nation",
+      "where",
+      "put",
+      "new",
+      "frame",
+      "round",
+      "old",
+      "door",
+      "office",
+      "room",
+      "with",
+      "window",
+      "book",
+      "paper",
+      "page",
+      "number",
+      "top",
+      "part",
+      "other",
+      "food",
+      "clean",
+      "clear",
+      "much",
+      "important",
+      "see",
+      "this",
+      "root",
+      "name",
+      "last",
+      "pain",
+      "that",
+      "say",
+      "from",
+      "foot",
+      "morning",
+      "give",
+      "back",
+      "word",
+      "change",
+      "peace"
+    ]
   }
 ];

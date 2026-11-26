@@ -1,28 +1,28 @@
 # 下一单元计划（先定词，再写；写完跑 node tools/measure.js 核对）
 # 用法：node tools/coverage.js --plan 重新生成，或手工改下面的词
-# unit: u019
+# unit: u021
 # theme: （从 SPEC §11.7 常青白名单里选一个）
 # 每行一个词，20–25 个
 
-mountain
-match
-deep
-rest
-plant
-fish
-sense
-stage
-debt
-wood
-apple
-theory
-steel
-wrong
-fat
-electric
-dead
-respect
-poor
-farm
-peace
-fiction
+waste
+shirt
+mass
+crime
+religion
+driving
+heat
+chemical
+soft
+flight
+pocket
+argument
+competition
+hearing
+serious
+limit
+expert
+drop
+solid
+branch
+birth
+separate
