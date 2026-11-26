@@ -3420,5 +3420,313 @@ window.UNITS = [
       "do",
       "again"
     ]
+  },
+{
+    "id": "u025",
+    "mnemonic": "一次发现",
+    "short": [
+      {
+        "en": "The rice is in a liquid of milk and sugar.",
+        "zh": "米泡在牛奶和糖的液体里。"
+      },
+      {
+        "en": "He pulls the boot off with a push.",
+        "zh": "他使劲一推把靴子脱下来。"
+      },
+      {
+        "en": "The pump is smooth, and the lock is new.",
+        "zh": "泵很顺，锁是新的。"
+      },
+      {
+        "en": "My dear friend, I have a doubt.",
+        "zh": "我亲爱的朋友，我有个疑问。"
+      },
+      {
+        "en": "The paint on the stick is still wet.",
+        "zh": "棍子上的漆还没干。"
+      }
+    ],
+    "long": [
+      {
+        "en": "The discovery was a small one: the relation between the muscle and the journey is the same in every person.",
+        "zh": "这个发现不大：肌肉和路程的关系，在每个人身上都一样。"
+      },
+      {
+        "en": "The expansion of the business is dependent on one instrument, and that instrument is a pump.",
+        "zh": "生意要扩大，全指着一件工具，那件工具就是一台泵。"
+      },
+      {
+        "en": "I don't hate the work, but I have no love for a person who has to be dependent on the money of other persons.",
+        "zh": "我不恨这活儿，可我看不上一个非得靠别人钱过日子的人。"
+      }
+    ],
+    "passage": {
+      "title": "A Small Discovery",
+      "paragraphs": [
+        {
+          "en": "The man puts milk, rice and a little sugar in a glass and lets it come together. He says the discovery is in the waiting, and not in the material. A small thing, he says, but it takes an hour.",
+          "zh": "那个人把牛奶、米和一点糖放进杯子里，让它自己融到一起。他说发现就在等里头，不在材料里。这是件小事，可要一个钟头。"
+        },
+        {
+          "en": "He has a bad boot and a stick with wet paint on it. The pump in the back is smooth after twenty years, and the lock on the door is the only new thing in the house.",
+          "zh": "他一只靴子坏了，一根棍子上还带着湿漆。后面那台泵用了二十年，早已顺滑；门上的锁是这屋里唯一的新东西。"
+        },
+        {
+          "en": "His journey is the same every day: pull the water, push the cart, put the boot by the fire. The muscle in his arm knows the road better than he does.",
+          "zh": "他每天的路线都一样：打水、推车、把靴子放到火边。他胳膊上的肌肉比他本人更认得这条路。"
+        },
+        {
+          "en": "My dear friend, he says, I have a doubt about the expansion of this work. It's dependent on one thing, and that thing is a person who may not be here tomorrow.",
+          "zh": "他说：我亲爱的朋友，这份活儿要不要扩，我心里有个疑问。它全靠一样东西，而那样东西是一个明天可能就不在的人。"
+        }
+      ]
+    },
+    "words": [
+      "the",
+      "rice",
+      "be",
+      "in",
+      "a",
+      "liquid",
+      "of",
+      "milk",
+      "and",
+      "sugar",
+      "he",
+      "pull",
+      "boot",
+      "off",
+      "with",
+      "push",
+      "pump",
+      "smooth",
+      "lock",
+      "new",
+      "dear",
+      "friend",
+      "i",
+      "have",
+      "doubt",
+      "paint",
+      "on",
+      "stick",
+      "still",
+      "wet",
+      "discovery",
+      "small",
+      "relation",
+      "between",
+      "muscle",
+      "journey",
+      "same",
+      "every",
+      "person",
+      "expansion",
+      "business",
+      "dependent",
+      "instrument",
+      "that",
+      "hate",
+      "work",
+      "but",
+      "no",
+      "love",
+      "for",
+      "who",
+      "to",
+      "money",
+      "other",
+      "man",
+      "put",
+      "little",
+      "glass",
+      "let",
+      "come",
+      "together",
+      "say",
+      "waiting",
+      "not",
+      "material",
+      "thing",
+      "take",
+      "hour",
+      "bad",
+      "back",
+      "after",
+      "year",
+      "door",
+      "only",
+      "house",
+      "day",
+      "water",
+      "cart",
+      "by",
+      "fire",
+      "arm",
+      "road",
+      "good",
+      "than",
+      "do",
+      "about",
+      "this",
+      "may",
+      "here",
+      "tomorrow"
+    ]
+  },
+{
+    "id": "u026",
+    "mnemonic": "一块蛋糕",
+    "short": [
+      {
+        "en": "The cake is on a narrow plate.",
+        "zh": "蛋糕放在一只窄盘子上。"
+      },
+      {
+        "en": "The seed is tight in the earth.",
+        "zh": "种子紧紧埋在土里。"
+      },
+      {
+        "en": "He has a taste for cheese and smoke.",
+        "zh": "他喜欢奶酪和烟熏的味儿。"
+      },
+      {
+        "en": "The bird has one wing down.",
+        "zh": "那只鸟一边翅膀垂着。"
+      },
+      {
+        "en": "It's a small pleasure, but it's mine.",
+        "zh": "这是小小的享受，可它是我的。"
+      }
+    ],
+    "long": [
+      {
+        "en": "The plane comes in at a narrow angle, and the reaction of the persons near the road is a sound like a wing.",
+        "zh": "飞机以很窄的角度进场，路边那些人的反应像一阵翅膀的声音。"
+      },
+      {
+        "en": "There's a bottle of milk, a bit of meat, and a bone for the dog on the table.",
+        "zh": "桌上有瓶牛奶、一点肉，还有一根给狗的骨头。"
+      },
+      {
+        "en": "His desire is simple: a warm neck, a soft bed, and a parallel line of days with no crack in them.",
+        "zh": "他要的很简单：暖和的脖子、软和的床，还有一排平齐、没有裂缝的日子。"
+      }
+    ],
+    "passage": {
+      "title": "A Piece of Cake",
+      "paragraphs": [
+        {
+          "en": "The cake is on a narrow plate by the window, and the smell of it goes through the house. There's cheese, milk, and a little meat on the table; the dog has a bone and no interest in the rest. There's sand on the step by the door.",
+          "zh": "蛋糕放在窗边一只窄盘子上，香味穿过整间屋子。桌上有奶酪、牛奶和一点肉；狗有一根骨头，对别的没兴趣。门边的台阶上有沙。"
+        },
+        {
+          "en": "She cuts it at a slow angle, the way her mother did, and puts the first part on a plate for the person who has been in the cold all morning.",
+          "zh": "她像她母亲那样，慢慢地切一个角，把第一块放进盘子，给那个在冷里待了一上午的人。"
+        },
+        {
+          "en": "The humor of the house is in small things: a tight cover, a seed in the wrong glass, the smoke from the fire going the wrong way till the wind changes.",
+          "zh": "这屋子的笑点都在小事上：一个拧不开的盖、种错杯子的种子、烟一直往错的方向走，直到风变了。"
+        },
+        {
+          "en": "His taste for pleasure is small, and his desire is a parallel line of quiet days. He says: a warm neck and a soft bed are enough for me.",
+          "zh": "他对享受的口味不大，想要的是排得平齐的安静日子。他说：一个暖和的脖子、一张软床，对我就够了。"
+        }
+      ]
+    },
+    "words": [
+      "the",
+      "cake",
+      "be",
+      "on",
+      "a",
+      "narrow",
+      "plate",
+      "seed",
+      "tight",
+      "in",
+      "earth",
+      "he",
+      "have",
+      "taste",
+      "for",
+      "cheese",
+      "and",
+      "smoke",
+      "bird",
+      "wing",
+      "down",
+      "small",
+      "pleasure",
+      "but",
+      "mine",
+      "plane",
+      "come",
+      "at",
+      "angle",
+      "reaction",
+      "of",
+      "person",
+      "near",
+      "road",
+      "sound",
+      "like",
+      "bottle",
+      "milk",
+      "bit",
+      "meat",
+      "bone",
+      "dog",
+      "table",
+      "desire",
+      "simple",
+      "warm",
+      "neck",
+      "soft",
+      "bed",
+      "parallel",
+      "line",
+      "day",
+      "with",
+      "no",
+      "crack",
+      "by",
+      "window",
+      "smell",
+      "go",
+      "through",
+      "house",
+      "little",
+      "interest",
+      "rest",
+      "sand",
+      "step",
+      "door",
+      "cut",
+      "slow",
+      "way",
+      "mother",
+      "do",
+      "put",
+      "first",
+      "part",
+      "who",
+      "cold",
+      "all",
+      "morning",
+      "humor",
+      "thing",
+      "cover",
+      "wrong",
+      "glass",
+      "from",
+      "fire",
+      "till",
+      "wind",
+      "change",
+      "quiet",
+      "say",
+      "enough"
+    ]
   }
 ];

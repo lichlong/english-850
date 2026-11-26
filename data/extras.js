@@ -572,5 +572,49 @@ window.EXTRAS = {
           }
         ]
       }
+    },
+    "u025": {
+      "read": {
+        "title": "A Small Discovery",
+        "blocks": [
+          {
+            "std": "You want to know what I found? Nothing. I just stopped moving for an hour, and the answer came and sat down next to me.",
+            "zh": "你想知道我发现了什么？什么也没有。我不过是一个小时没动，答案自己过来坐在我旁边。",
+            "simple": "You have a need to be clear about what I saw? Nothing. I only kept still for an hour, and the answer came and took a seat by me."
+          },
+          {
+            "std": "The road had been in his muscle for so long that he no longer needed to look at it, which is how a man gets free and keeps a prison at the same time.",
+            "zh": "那条路在他肌肉里待得太久，他已经不必再看；人就是这样，一边自由，一边还是囚着。",
+            "simple": "The road had been in his body for so long that he had no more need to put his eyes on it. That is the way a person gets free and keeps a prison at the same time."
+          },
+          {
+            "std": "The company said the expansion would add a second line at the plant, lifting what the plant makes by a fifth and cutting the price of the liquid.",
+            "zh": "公司说扩建会在厂里加第二条线，产量提高五分之一，液体价格下降。",
+            "simple": "The company said that the expansion would put a second line in the building. It would make one more part in five of the liquid, and the price would come down."
+          }
+        ]
+      }
+    },
+    "u026": {
+      "read": {
+        "title": "A Piece of Cake",
+        "blocks": [
+          {
+            "std": "Sit down. There's cake, and there's no reason to say a word about the day you have had. My mother used to say that a cake does the talking.",
+            "zh": "坐下。有蛋糕，你今天过得怎么样也不必提。我母亲以前说，蛋糕会替你说话。",
+            "simple": "Take a seat. There's cake, and there's no reason to say a word about the day you have had. My mother said that a cake does the talking."
+          },
+          {
+            "std": "The taste of that cheese came back to him years later in a city he could not name, and with it the exact angle of the light on the table.",
+            "zh": "多年以后，在一个他叫不出名字的城市里，那奶酪的味道又回来了，连同桌上光线的确切角度。",
+            "simple": "The taste of that cheese came back to him after many years, in a town with a name he didn't have, and with it the true angle of the light on the table."
+          },
+          {
+            "std": "Bakers said the price of a cake would rise before the winter holidays, after the cost of butter and sugar climbed for a third month.",
+            "zh": "面包师说，黄油和糖的价格已连涨三个月，节前的蛋糕价格还要涨。",
+            "simple": "The persons who make bread said that the price of a cake would go up before the winter, after the price of butter and sugar went up for three months."
+          }
+        ]
+      }
     }
 };
