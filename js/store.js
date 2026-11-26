@@ -7,6 +7,7 @@
   var K_READ = "e850.read";
   var K_PROG = "e850.progress";
   var K_MARKS = "e850.marks";
+  var K_MODE = "e850.mode";
 
   var mem = {};
   var usable = (function () {
@@ -132,6 +133,45 @@
       if (p.done.indexOf(id) === -1) p.done.push(id);
       save(K_PROG, p);
       return p;
+    },
+
+    doneList: function () {
+      return load(K_PROG, { done: [] }).done || [];
+    },
+
+    // ---- 模式：null=自动（读完自动进练习模式） / "learn" / "practice" ----
+    modeOverride: function () {
+      return load(K_MODE, null);
+    },
+
+    setModeOverride: function (v) {
+      if (v === null) save(K_MODE, null);
+      else save(K_MODE, v);
+    },
+
+    // ---- 开发者工具：用来跳到任意学习阶段（?dev=1 才会调用） ----
+    devSetReadDays: function (n) {
+      var log = {};
+      var base = new Date();
+      for (var i = 0; i < n; i++) {
+        var d = new Date(base.getTime() - i * 86400000);
+        log[todayKey(d)] = 240;
+      }
+      save(K_READ, log);
+    },
+
+    devMarkAllDone: function (ids) {
+      save(K_PROG, { done: ids.slice() });
+    },
+
+    devWipe: function () {
+      var keys = [K_STATS, K_EVENTS, K_READ, K_PROG, K_MARKS, K_MODE, "e850.cur"];
+      keys.forEach(function (k) {
+        if (usable) {
+          try { localStorage.removeItem(k); } catch (e) {}
+        }
+        delete mem[k];
+      });
     }
   };
 })();

@@ -13,6 +13,30 @@
   var current = 0;
   var index = {};
 
+  // 课外练习解锁门槛：读满 5 天（SPEC §11.2）。只调这一个数。
+  var EXTRAS_START_DAYS = 5;
+  // 与 progress.js 的 TARGET 保持一致：一天读满 3 分钟才算"读过一天"
+  var DAY_TARGET_SEC = 180;
+
+  function readDays() {
+    var log = window.Store.readLog();
+    return Object.keys(log).filter(function (k) {
+      return log[k] >= DAY_TARGET_SEC;
+    }).length;
+  }
+
+  function extrasUnlocked() {
+    return readDays() >= EXTRAS_START_DAYS;
+  }
+
+  function isPracticeMode() {
+    var override = window.Store.modeOverride();
+    if (override === "practice") return true;
+    if (override === "learn") return false;
+    // 自动：所有单元都读完就进练习模式
+    return units.length > 0 && window.Store.doneList().length >= units.length;
+  }
+
   function buildIndex() {
     units.forEach(function (u) {
       u.short.forEach(function (s, i) {
@@ -82,6 +106,25 @@
     return page;
   }
 
+  function buildExtrasPage(unit, practice) {
+    var page = document.createElement("section");
+    page.className = "page page-ext";
+
+    var wrap = document.createElement("div");
+    wrap.className = "ex-wrap";
+    window.Extras.render(wrap, unit.id, practice);
+    page.appendChild(wrap);
+
+    var next = document.createElement("button");
+    next.className = "next";
+    next.type = "button";
+    next.textContent = practice ? "换一篇" : "再学一篇";
+    next.addEventListener("click", advance);
+    page.appendChild(next);
+
+    return page;
+  }
+
   function renderDots(count) {
     var dots = document.getElementById("dots");
     dots.innerHTML = "";
@@ -110,14 +153,32 @@
     var unit = units[current];
     if (!unit) return;
 
+    var practice = isPracticeMode();
     var total = unit.short.length + unit.long.length;
     var pages = document.getElementById("pages");
     pages.innerHTML = "";
+
+    if (practice) {
+      // 练习模式：整屏只有「课外拓展 + 课外练习」
+      pages.appendChild(buildExtrasPage(unit, true));
+      renderDots(1);
+      pages.scrollLeft = 0;
+      document.getElementById("idx").textContent = "练习";
+      document.getElementById("eta").textContent = "";
+      return;
+    }
+
     pages.appendChild(buildPage1(unit));
     pages.appendChild(buildPage2(unit, total + 1));
-    pages.scrollLeft = 0;
 
-    renderDots(2);
+    var count = 2;
+    if (extrasUnlocked() && window.EXTRAS && window.EXTRAS[unit.id]) {
+      pages.appendChild(buildExtrasPage(unit, false));
+      count = 3;
+    }
+
+    pages.scrollLeft = 0;
+    renderDots(count);
 
     var min = Math.max(3, Math.round(countWords(unit) / 90));
     document.getElementById("idx").textContent = (current + 1) + " / " + units.length;
@@ -125,6 +186,7 @@
   }
 
   function advance() {
+    if (units[current]) window.Store.markDone(units[current].id);
     current = (current + 1) % units.length;
     window.Store.setCur(current);
     render();
@@ -211,6 +273,16 @@
     document.getElementById("sub").classList.add("on");
   }
 
+  // 「我的」里的模式开关：显示当前状态
+  function syncModeRow() {
+    var row = document.getElementById("row-mode");
+    var label = document.getElementById("mode-state");
+    if (!row) return;
+    var on = isPracticeMode();
+    row.classList.toggle("on", on);
+    if (label) label.textContent = on ? "开" : "关";
+  }
+
   function boot() {
     if (!window.Store.storageOK) {
       var warn = document.getElementById("warn");
@@ -251,10 +323,23 @@
 
     document.getElementById("cal-wrap").addEventListener("click", openCal);
 
+    var rowMode = document.getElementById("row-mode");
+    if (rowMode) {
+      rowMode.addEventListener("click", function () {
+        var on = isPracticeMode();
+        window.Store.setModeOverride(on ? "learn" : "practice");
+        syncModeRow();
+        render();
+      });
+    }
+    syncModeRow();
+
     var rows = document.querySelectorAll(".row-link");
     Array.prototype.forEach.call(rows, function (r) {
+      var kind = r.getAttribute("data-list");
+      if (!kind) return; // 模式开关那行没有 data-list，交给上面的处理
       r.addEventListener("click", function () {
-        openList(r.getAttribute("data-list"));
+        openList(kind);
       });
     });
 
@@ -262,6 +347,15 @@
     window.Progress.start();
     window.Store.log("open", units[current] ? units[current].id : null);
   }
+
+  window.App = {
+    refresh: function () {
+      syncModeRow();
+      render();
+    },
+    isPracticeMode: isPracticeMode,
+    units: units
+  };
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", boot);

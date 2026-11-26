@@ -621,3 +621,172 @@ body { display: flex; justify-content: center; }
   border-radius: 8px;
   transition: background 0.4s;
 }
+
+/* ===== 课外拓展 + 课外练习（SPEC §11） ===== */
+.page-ext { padding-bottom: 24px; }
+
+.ex-wrap { padding: 4px 0 8px; }
+
+.ex-h {
+  margin: 20px 0 8px;
+  font-size: 12px;
+  letter-spacing: .12em;
+  font-weight: 600;
+  color: var(--muted);
+}
+.ex-h:first-child { margin-top: 0; }
+
+.ex-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+
+.ex-read p {
+  margin: 0 0 12px;
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--ink);
+}
+
+.ex-item {
+  border-top: 1px dashed var(--line);
+  padding: 12px 0;
+}
+.ex-item:first-child { border-top: 0; }
+
+.ex-no {
+  display: inline-block;
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.ex-line {
+  font-size: 16px;
+  line-height: 1.8;
+  min-height: 26px;
+}
+.ex-zh { color: var(--ink); }
+.ex-en { color: var(--accent); }
+
+.ex-btn {
+  margin-top: 8px;
+  padding: 7px 14px;
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  cursor: pointer;
+}
+.ex-btn:active { background: var(--soft); }
+
+.ex-tip {
+  margin-top: 14px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.ex-empty {
+  padding: 24px 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* 练习模式顶部提示 */
+.mode-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 0 0 14px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.mode-banner.gone { display: none; }
+.mode-text { flex: 1 1 100%; }
+
+.mode-back {
+  font-family: inherit;
+  font-size: 12px;
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+.mode-close {
+  font-size: 16px;
+  line-height: 1;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0 2px;
+}
+
+/* 「我的」里的模式开关状态 */
+.row-link.on b { color: var(--accent); }
+
+/* ===== 开发者面板（?dev=1） ===== */
+.dev {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  z-index: 9999;
+  width: 268px;
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, .18);
+  font-size: 12px;
+  color: var(--ink);
+}
+.dev-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.dev-x {
+  background: transparent;
+  border: 0;
+  font-size: 16px;
+  color: var(--muted);
+  cursor: pointer;
+}
+.dev-state {
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+.dev-grp {
+  margin: 8px 0 4px;
+  color: var(--muted);
+}
+.dev-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.dev-btn {
+  font-family: inherit;
+  font-size: 12px;
+  padding: 5px 9px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--soft);
+  color: var(--ink);
+  cursor: pointer;
+}

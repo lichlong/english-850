@@ -1,0 +1,56 @@
+# 与原版 Basic English 的偏离清单（SPEC §11.10）
+# STATUS: PENDING        ← 待用户确认。改成 ENABLED 后，tools/gen-words.js 会把这些词并入 WORD_DEVIATION
+# 性质：这些词不在 Ogden 850 原表内。放行 = 可用于内容，但仍不占 850 名额、不计入词表。
+# 格式：word|中文|放行理由
+#
+# —— 以下 50 个原形（54 个词形，76 处）全部来自 u001–u003 的早期内容 ——
+can|能|日常表达必需，原表只有 may/will
+always|总是|原表无频率副词
+bus|公交车|现代交通词，国际词倾向
+home|家|原表只有 house
+know|知道|原表只有 knowledge
+phone|电话|现代器物词
+wait|等|原表只有 waiting（名词性）
+ask|问|原表只有 question
+car|汽车|现代交通词
+coffee|咖啡|国际词
+eat|吃|原表只有 food/meal
+finish|完成|原表只有 end（名词）
+hot|热的|原表只有 boiling/warm
+lot|许多|a lot of 的固定搭配
+shop|商店|原表只有 store
+think|想|原表只有 thought（名词）
+without|没有|原表只有 with
+ago|以前|时间副词
+along|沿着|方位副词
+also|也|连接副词
+big|大的|原表只有 great/wide
+both|两个都|数量限定
+buy|买|原表只有 get/sell 的间接表达
+cost|花费|原表只有 price
+feel|感觉|原表只有 feeling（名词）
+follow|跟随|原表只有 after
+forget|忘记|原表无
+hear|听见|原表只有 hearing（名词）
+hurry|赶快|原表无
+inside|里面|原表只有 in
+learn|学会|原表只有 learning（名词）
+many|许多|原表只有 much
+meet|遇见|原表只有 see
+next|下一个|原表只有 after
+nothing|什么都没有|原表只有 no
+often|经常|原表无频率副词
+people|人们|原表只有 person
+read|读|原表只有 reading（名词）
+remember|记得|原表只有 memory
+sell|卖|原表无直接对应
+sit|坐|原表只有 seat
+sometimes|有时|原表无频率副词
+soon|不久|原表无
+stand|站|原表无
+tea|茶|国际词
+tell|告诉|原表只有 say
+thank|谢|礼貌用语
+today|今天|原表只有 tomorrow/yesterday
+too|太|程度副词
+what|什么|原表只有 how/when/where/why/who

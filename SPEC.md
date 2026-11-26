@@ -252,12 +252,15 @@ english-850/
 ├── icon.svg           图标
 ├── data/
 │   ├── units.js       单元内容
+│   ├── extras.js      课外拓展 + 课外练习（v5 新增）
 │   └── words.js       词表
 ├── css/
 │   └── style.css      外观
 └── js/
-    ├── app.js         主流程（取哪个单元、推进到哪）
+    ├── app.js         主流程（取哪个单元、推进到哪、模式）
     ├── reader.js      渲染 + 点词查义 + 中英切换
+    ├── extras.js      课外两块渲染 + 答案原位替换（v5 新增）
+    ├── dev.js         开发者面板，仅 ?dev=1 生效（v5 新增）
     ├── actions.js     点赞 / 收藏
     ├── progress.js    使用记录（3 分钟心跳、热力图）
     └── store.js       数据读写
@@ -371,6 +374,8 @@ english-850/
 - **不给用户看"你掌握了哪些词 / 多少个"**——无感，不做掌握度提示
 - 原则：已掌握的词汇已经可以轻松成句
 - 取值：**第 5 天**开始出现（届时累计约 100–110 词，Operations 100 基本齐，骨架够用）
+- **"第 5 天"= 已读天数满 5 天**（一天读满 3 分钟算一天），不是真实日历差。
+  理由：断更不该自动解锁，跟 §4.7「按序号推进」一致。要改口径只改 `js/app.js` 里的 `EXTRAS_START_DAYS`
 - 该值做成常量放一处，只调一处
 - 后期可选（现在不做）：850 词总表 + 按掌握频率绘制的全词汇热点图
 
@@ -393,9 +398,13 @@ english-850/
 
 ### 11.4 学完 850 之后：练习模式
 
-- 学完全部 850 词 → 直接进入只含「课外拓展」+「课外练习」的模式
-- **名称待定**，候选：「850 模式」/「只说模式」/「用起来」（你定）
-- 该模式不显示阅读推进、不显示新词
+- **只在彻底学完所有词汇后才出现**，不做更早的入口
+- **不另起名字、不做独立标题页**：页面依然是「课外拓展」+「课外练习」两块
+- 每次打开，顶部一行提示：**「您已学完所有词汇，默认开启练习模式」**
+  - 提示句末两个按钮：`×`（关掉这次提示，仅当次有效）和 `返回学习模式`
+  - 点 `返回学习模式` 要弹**确认框**，确认后才切回学习模式
+- 「我的」面板里加一个**手动开关**：练习模式 开 / 关，随时可切
+- 判定：全部单元读完 → 自动进入；用户手动切过就以手动为准（存 `e850.mode`）
 
 ### 11.5 判定：不判错，不评分，不输入
 
@@ -449,6 +458,22 @@ english-850/
 
 **结论：钱不是瓶颈，审校才是。** 超纲词可以由脚本自动挡，但"事实错 / 不合时宜 / 不好笑"挡不住，必须人看一眼。所以先走 A（可抽检），C 等节奏稳定再上。
 
+### 11.7.1 A 方案的操作规程（已定，按这个走）
+
+| 方式 | 怎么做 | 谁动手 |
+|---|---|---|
+| **手动（默认）** | 你对我说「生成下一周」→ 我按 §4.2 两步写法产出 7 天内容 → 跑 `node tools/measure.js` 自检 → 提交推送 | 你说一句，其余我做 |
+| 自动定时（可选） | 挂一个每周任务，到点我自动生成并提交 | 一次性挂上，之后不用管 |
+| 全自动（C 方案） | GitHub Actions 定时跑生成脚本 → 自动 commit → Pages 自动发布 | 需要配 Secrets，二期 |
+
+**每周要做的三件事**（其余不用管）：
+
+1. 定主题：从这周的热点里挑 5–7 个，报给我或让我挑
+2. 跑自检：`node tools/measure.js`，超纲必须为 0
+3. 看一遍：抽查 2 个单元，读着别扭就退回去重写
+
+**要不要手动**：不手动也能跑（挂定时），但**抽查不能省**。内容错进仓库，Pages 会立刻发布出去。
+
 ### 11.8 30 组的用途（澄清）
 
 - 30 组**只服务算法**，不等于"每天一组"
@@ -463,3 +488,89 @@ english-850/
 4. 答案里的词全部属于该用户"已学词"（脚本可查，应为 0 例外）
 5. 第 5 天之前不出现「课外练习」；第 5 天起出现，题量符合 §11.3
 6. 「课外拓展」内容不含超纲词（按 §11.6 口径），版权来源合规（§8 末）
+
+### 11.10 与原版 Basic English 的偏离（本项目自定口径）
+
+> **性质**：以下词**不在 Ogden 850 原表内**，但现有内容用了。经你确认后放行，
+> 放行即意味着"可用于内容"，但仍**不占 850 名额、不计入词表**。
+> **这是本项目与原版 Basic English 的细微区别**——原版更严格，本项目为了行文自然做了一点让步。
+
+**放行状态**：⬜ 待你确认（确认后改为 ✅ 已放行，并在 `tools/basic-850-deviation.txt` 落地）
+
+| # | 词（含变形） | 出现次数 | 意思 | 改写时可用替身 |
+|---|---|---|---|---|
+| 1 | can / could | 5 | 能 | is able to（`able` 在表内） |
+| 2 | always | 3 | 总是 | every time |
+| 3 | bus | 3 | 公交车 | carriage |
+| 4 | home | 3 | 家 | house |
+| 5 | know | 3 | 知道 | have knowledge of |
+| 6 | phone | 3 | 电话 / 手机 | the small machine |
+| 7 | wait | 3 | 等 | be waiting（`waiting` 在表内） |
+| 8 | ask / asked | 2 | 问 | put a question |
+| 9 | car | 2 | 汽车 | carriage / machine |
+| 10 | coffee | 2 | 咖啡 | （国际词，无替身） |
+| 11 | eat / ate / eating | 2 | 吃 | have a meal |
+| 12 | finish / finished | 2 | 完成 | come to an end |
+| 13 | hot | 2 | 热的 | boiling / warm |
+| 14 | lot | 2 | 许多 | a great number of |
+| 15 | shop | 2 | 商店 | store（在表内） |
+| 16 | think | 2 | 想 | have the idea |
+| 17 | without | 2 | 没有 | with no |
+| 18 | ago | 1 | 以前 | before |
+| 19 | along | 1 | 沿着 | by the side of |
+| 20 | also | 1 | 也 | and / as well |
+| 21 | big | 1 | 大的 | great / wide |
+| 22 | both | 1 | 两个都 | the two |
+| 23 | buy / bought | 1 | 买 | get for money |
+| 24 | cost | 1 | 花费 | the price is |
+| 25 | feel | 1 | 感觉 | have the feeling |
+| 26 | follow / follows | 1 | 跟随 | come after |
+| 27 | forget / forgot | 1 | 忘记 | keep no memory of |
+| 28 | hear / heard | 1 | 听见 | have hearing |
+| 29 | hurry | 1 | 赶快 | go quickly |
+| 30 | inside | 1 | 里面 | in |
+| 31 | learn / learned | 1 | 学会 | get knowledge |
+| 32 | many | 1 | 许多 | much |
+| 33 | meet | 1 | 遇见 | see / come together with |
+| 34 | next | 1 | 下一个 | the one after |
+| 35 | nothing | 1 | 什么都没有 | no thing |
+| 36 | often | 1 | 经常 | at frequent times |
+| 37 | people | 1 | 人们 | persons |
+| 38 | read | 1 | 读 | do reading（`reading` 在表内） |
+| 39 | remember / remembered | 1 | 记得 | keep in mind |
+| 40 | sell / selling | 1 | 卖 | give for money |
+| 41 | sit | 1 | 坐 | take a seat（`seat` 在表内） |
+| 42 | sometimes | 1 | 有时 | at some times |
+| 43 | soon | 1 | 不久 | in a little time |
+| 44 | stand / standing | 1 | 站 | be upright（`upright` 不在表内，暂用 be on foot） |
+| 45 | tea | 1 | 茶 | （国际词，无替身） |
+| 46 | tell / told | 1 | 告诉 | say to |
+| 47 | thank | 1 | 谢 | say "thank you" |
+| 48 | today | 1 | 今天 | this day |
+| 49 | too | 1 | 太 | very / more than enough |
+| 50 | what | 1 | 什么 | the thing that |
+
+合计：**50 个原形 / 54 个词形 / 76 处**，全部集中在 u001–u003 这三篇早期内容里。
+
+### 11.11 开发者面板（验收工具）
+
+新功能没法等 30 天才能验，所以给一个后门，**正常用户看不到**：
+
+- 打开方式：网址后面加 `?dev=1`（本地 `index.html?dev=1`，线上 `…/english-850/?dev=1`）
+- 右下角出现面板，可以做：
+  - 把"已读天数"设成 0 / 4 / 5 / 30 → 验 §11.2 的解锁门槛
+  - 把单元进度标成全部读完 / 清空 → 验 §11.4 的练习模式
+  - 强制练习 / 强制学习 / 回自动 → 验模式覆盖
+  - 清空全部本地数据 → 回到初始态
+- 面板只读写浏览器本地存储，不动仓库，不算产品功能
+
+### 11.12 上线方式（与第一次完全一致）
+
+**就是 `git push`，没有第二种方式。**
+
+| 阶段 | 命令 | 之后发生什么 |
+|---|---|---|
+| 第一次 | `git push -u origin main` | 只是把内容送上去，线上还没有网站 |
+| 现在起 | `git push` | 送上去 + Pages 自动重建（约 1 分钟）→ 线上地址直接变新 |
+
+区别只有一个：**开过 Pages 之后，推送会自动触发重新发布**，不用再去 Settings 点任何东西。命令本身一模一样。
