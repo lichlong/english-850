@@ -2360,5 +2360,161 @@ window.UNITS = [
       "some",
       "other"
     ]
+  },
+{
+    "id": "u018",
+    "mnemonic": "海上的一台手术",
+    "short": [
+      {
+        "en": "The ship is a long distance from land.",
+        "zh": "船离陆地很远。"
+      },
+      {
+        "en": "Her skin is cold, and her blood is not quick.",
+        "zh": "她皮肤发凉，血也流得不快。"
+      },
+      {
+        "en": "The cut is small, but the disease isn't.",
+        "zh": "伤口不大，病却不小。"
+      },
+      {
+        "en": "He has a strong opinion about the sea.",
+        "zh": "他对海有很硬的看法。"
+      },
+      {
+        "en": "The wine is quite good for the price.",
+        "zh": "这酒就这个价来说相当不错。"
+      }
+    ],
+    "long": [
+      {
+        "en": "There's no hospital on the ship, and the connection to the land is bad, so the operation is done by one person.",
+        "zh": "船上没有医院，和陆地的联系又差，所以这台手术只有一个人做。"
+      },
+      {
+        "en": "The owner of the horse has the authority to say how far the animal may go in a day.",
+        "zh": "马的主人有权力说这牲口一天能走多远。"
+      },
+      {
+        "en": "Teaching is a regular sort of work: one hour forward, one hour back, and no normal day.",
+        "zh": "教书是种很规律的活儿：往前一小时，往回一小时，没有正常的一天。"
+      }
+    ],
+    "passage": {
+      "title": "A Long Way from Land",
+      "paragraphs": [
+        {
+          "en": "The ship is six days out, and the sea has no end. The man with the ring on his hand is the only one with medical knowledge, and the distance from land makes every hour long.",
+          "zh": "船出来六天了，海没有尽头。手上戴戒指的那个人是唯一懂医的，离陆地这么远，每一个钟头都很长。"
+        },
+        {
+          "en": "A young woman has a cut on her arm, and by day three the skin round it is red. There's no hospital nearer than a week, and the ship has no connection with the land.",
+          "zh": "一个年轻女人胳膊上有道口子，到第三天，伤口周围的皮肤红了。最近的医院也在一个星期以外，船上和陆地没有联系。"
+        },
+        {
+          "en": "He puts the small table under the strong light and makes the cut safe. It's an operation of twenty minutes, and the blood on his hands is the only color in the room.",
+          "zh": "他把小桌子挪到强光下，把伤口处理干净。这是二十分钟的手术，他手上的血是屋里唯一的颜色。"
+        },
+        {
+          "en": "In the morning she says it isn't so bad. The man with the ring says nothing, but he puts his opinion in the book: the disease was near, and we were far. Then he goes forward to the front of the ship and keeps his eyes on the sea.",
+          "zh": "早上她说没那么难受了。戴戒指的人什么也没说，只把自己的看法写进本子：病在近处，我们在远处。然后他往船头走，眼睛一直看着海。"
+        }
+      ]
+    },
+    "words": [
+      "the",
+      "ship",
+      "be",
+      "a",
+      "long",
+      "distance",
+      "from",
+      "land",
+      "skin",
+      "cold",
+      "and",
+      "blood",
+      "not",
+      "quick",
+      "cut",
+      "small",
+      "but",
+      "disease",
+      "he",
+      "have",
+      "strong",
+      "opinion",
+      "about",
+      "sea",
+      "wine",
+      "quite",
+      "good",
+      "for",
+      "price",
+      "no",
+      "hospital",
+      "on",
+      "connection",
+      "to",
+      "bad",
+      "so",
+      "operation",
+      "do",
+      "by",
+      "person",
+      "owner",
+      "of",
+      "horse",
+      "authority",
+      "say",
+      "how",
+      "far",
+      "animal",
+      "may",
+      "go",
+      "in",
+      "day",
+      "teaching",
+      "regular",
+      "sort",
+      "work",
+      "hour",
+      "forward",
+      "back",
+      "normal",
+      "out",
+      "end",
+      "man",
+      "with",
+      "ring",
+      "hand",
+      "only",
+      "medical",
+      "knowledge",
+      "make",
+      "every",
+      "young",
+      "woman",
+      "arm",
+      "round",
+      "red",
+      "near",
+      "than",
+      "week",
+      "put",
+      "table",
+      "under",
+      "light",
+      "safe",
+      "minute",
+      "color",
+      "room",
+      "morning",
+      "book",
+      "then",
+      "front",
+      "keep",
+      "eye"
+    ]
   }
 ];

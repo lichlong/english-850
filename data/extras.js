@@ -374,5 +374,71 @@ window.EXTRAS = {
           }
         ]
       }
+    },
+    "u018": {
+      "read": {
+        "title": "A Long Way from Land",
+        "blocks": [
+          {
+            "std": "There's no doctor on this ship. If something goes wrong tonight, we have a book, a lamp, and about six hours before anyone hears us.",
+            "zh": "这条船上没有医生。今晚要是出事，我们只有一本书、一盏灯，和大概六小时——六小时后才有人听得到我们。",
+            "simple": "There's no medical person on this ship. If bad comes tonight, we have a book, a light, and about six hours before any person may take in our words."
+          },
+          {
+            "std": "The sea had been in his family for three generations, and the ring on his hand had been his father's, and his father's before that.",
+            "zh": "他们家三代人都在海上。他手上那枚戒指是他父亲的，父亲之前又是他祖父的。",
+            "simple": "The sea had been in his family for three father-and-son steps, and the ring on his hand was his father's, and his father's before that."
+          },
+          {
+            "std": "The shipping company said the delay was caused by bad weather in the north, and that the cargo would reach the port on Thursday.",
+            "zh": "航运公司说延误是北方恶劣天气造成的，货物将在周四到达港口。",
+            "simple": "The ship company said that the late coming was the effect of bad weather in the north, and that the boxes would come to the harbour on Thursday."
+          }
+        ]
+      }
+    },
+    "u018": {
+      "read": {
+        "title": "A Long Way from Land",
+        "blocks": [
+          {
+            "std": "There's no doctor on this ship. If something goes wrong tonight, we have a book, a lamp, and about six hours before anyone hears us.",
+            "zh": "这条船上没有医生。今晚要是出事，我们只有一本书、一盏灯，和大概六小时——六小时后才有人听得到我们。",
+            "simple": "There's no medical person on this ship. If bad comes in the night, we have a book, a light, and about six hours before any person may take in our words."
+          },
+          {
+            "std": "The sea had been in his family for three generations, and the ring on his hand had been his father's, and his father's before that.",
+            "zh": "他们家三代人都在海上。他手上那枚戒指是他父亲的，父亲之前又是他祖父的。",
+            "simple": "The sea had been in his family for three father-and-son steps, and the ring on his hand was his father's, and his father's before that."
+          },
+          {
+            "std": "The shipping company said the delay was caused by bad weather in the north, and that the cargo would reach the port on Thursday.",
+            "zh": "航运公司说延误是北方恶劣天气造成的，货物将在周四到达港口。",
+            "simple": "The ship company said that the late coming was the effect of bad weather in the north, and that the boxes would come to the harbour on Thursday."
+          }
+        ]
+      }
+    },
+    "u018": {
+      "read": {
+        "title": "A Long Way from Land",
+        "blocks": [
+          {
+            "std": "There's no doctor on this ship. If something goes wrong tonight, we have a book, a lamp, and about six hours before anyone hears us.",
+            "zh": "这条船上没有医生。今晚要是出事，我们只有一本书、一盏灯，和大概六小时——六小时后才有人听得到我们。",
+            "simple": "There's no medical person on this ship. If bad comes in the night, we have a book, a light, and about six hours before any person may take in our words."
+          },
+          {
+            "std": "The sea had been in his family for three generations, and the ring on his hand had been his father's, and his father's before that.",
+            "zh": "他们家三代人都在海上。他手上那枚戒指是他父亲的，父亲之前又是他祖父的。",
+            "simple": "The sea had been in his family for three father-and-son steps, and the ring on his hand was his father's, and his father's before that."
+          },
+          {
+            "std": "The shipping company said the delay was caused by bad weather in the north, and that the cargo would reach the port on Thursday.",
+            "zh": "航运公司说延误是北方恶劣天气造成的，货物将在周四到达港口。",
+            "simple": "The ship company said that the late coming was the effect of bad weather in the north, and that the boxes would come on Thursday."
+          }
+        ]
+      }
     }
 };
