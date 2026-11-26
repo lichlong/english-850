@@ -63,7 +63,7 @@ console.log(
 console.log("允许项出现 " + allowedHits + " 次 · 偏离词出现 " + devHits + " 次（均不计超纲）");
 
 console.log("\n== 单元体检（SPEC §4.1 / §4.5） ==");
-console.log("指标：短句 5–8 / 长句 3–5 / 短文 1 篇 150–250 词 / 单元合计 300–450 词 / 超纲词 0");
+console.log("指标：短句 5–8 / 长句 3–5 / 短文 1 篇 150–180 词（校验 150–250）/ 单元合计 240–300 词（校验 230–350）/ 超纲词 0");
 for (const r of rows) {
   console.log(
     `${r.id} ${r.name}  短${r.short}句(${r.shortWords}词) 长${r.long}句(${r.longWords}词) ` +
@@ -217,7 +217,7 @@ console.log("\n== 练习池体检（SPEC §14 / §11.3 档位长度） ==");
   }
 
   const total = EXERCISES.length;
-  console.log(`练习句 ${total} 句（目标 150：低阶 ${byLevel.low}/50 · 当阶 ${byLevel.mid}/50 · 进阶 ${byLevel.high}/50）`);
+  console.log(`练习句 ${total} 句（目标 300：低阶 ${byLevel.low}/100 · 当阶 ${byLevel.mid}/100 · 进阶 ${byLevel.high}/100）`);
   console.log(`一轮抽 3 句 → 约 ${Math.floor(total / 3)} 次打开轮完一遍`);
   console.log(bad.length ? "档位/编号不合规：" + bad.length + "\n  " + bad.join("\n  ") : "档位与编号合规 ✓");
   if (!badWords.size) console.log("超纲 0 ✓");

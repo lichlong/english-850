@@ -16,8 +16,8 @@
   var UNIT_RULE = {
     short: { min: 5, max: 8 },        // 短句条数
     long: { min: 3, max: 5 },         // 长句条数
-    passage: { min: 150, max: 250 },  // 短文词数
-    total: { min: 300, max: 450 }     // 单元合计词数
+    passage: { min: 150, max: 250 },  // 短文词数（目标 150–180，老内容偏长，先不判死）
+    total: { min: 230, max: 350 }     // 单元合计词数（v10 下调：短文压缩后合计随之下降）
   };
   var FRESH_RULE = { min: 20, max: 25 };  // 每单元新词数
   var LEVEL_RULE = {
@@ -25,7 +25,7 @@
     mid: { min: 8, max: 18, sent: 2 },
     high: { min: 20, max: 40, sent: 3 }
   };
-  var LEVEL_GOAL = { low: 50, mid: 50, high: 50 }; // 练习池目标 150
+  var LEVEL_GOAL = { low: 100, mid: 100, high: 100 }; // 练习池目标 300（v10）
 
   // ---------- 词 ----------
   function wordCount(s) {

@@ -336,7 +336,7 @@ tr.detail[hidden] { display: none; }
 
     function viewUnits() {
       var box = el("div");
-      box.appendChild(el("h2", null, "单元体检", "短句 5–8 · 长句 3–5 · 短文 150–250 词 · 合计 300–450 词 · 超纲 0 · 新词 20–25"));
+      box.appendChild(el("h2", null, "单元体检", "短句 5–8 · 长句 3–5 · 短文目标 150–180 词（校验 150–250）· 合计目标 240–300（校验 230–350）· 超纲 0 · 新词 20–25"));
 
       var wrap = el("div", "tablewrap");
       var t = el("table");
@@ -357,8 +357,8 @@ tr.detail[hidden] { display: none; }
         tr.appendChild(cellNum(r.short, r.short >= 5 && r.short <= 8, "应 5–8"));
         tr.appendChild(cellNum(r.long, r.long >= 3 && r.long <= 5, "应 3–5"));
         tr.appendChild(cellNum(r.para, true));
-        tr.appendChild(cellNum(r.passWords, r.passWords >= 150 && r.passWords <= 250, "应 150–250"));
-        tr.appendChild(cellNum(r.total, r.total >= 300 && r.total <= 450, "应 300–450"));
+        tr.appendChild(cellNum(r.passWords, r.passWords >= 150 && r.passWords <= 250, "目标 150–180"));
+        tr.appendChild(cellNum(r.total, r.total >= 230 && r.total <= 350, "目标 240–300"));
         tr.appendChild(cellNum(r.uniq, true));
         tr.appendChild(cellNum(r.fresh.length, r.fresh.length >= 20 && r.fresh.length <= 25, "应 20–25"));
         tr.appendChild(cellNum(r.missing.length, r.missing.length === 0, r.missing.length ? "要 0" : ""));

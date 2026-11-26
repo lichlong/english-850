@@ -176,5 +176,27 @@ window.EXTRAS = {
         }
       ]
     }
-  }
+  },
+    "u009": {
+      "read": {
+        "title": "Keep the Light On",
+        "blocks": [
+          {
+            "std": "Look, I'm not asking you to keep the shop safe. I'm asking you to keep the light on till Friday. After that, we'll see.",
+            "zh": "听我说，我不是让你保住这家店。我是让你把灯开到周五。之后再说。",
+            "simple": "I am not saying that you have to keep the store safe. I am saying: keep the light on before Friday. After that, we will see."
+          },
+          {
+            "std": "The shop had been his father's before him, and it would be his son's after, or so he had told himself a thousand times in the small room behind the counter.",
+            "zh": "这家店先是他父亲的，之后该是他儿子的——至少在柜台后面那间小屋里，他这样对自己说过一千遍。",
+            "simple": "The store was his father's before him. It will be his son's after him. That is what he said to himself a thousand times in the small room at the back."
+          },
+          {
+            "std": "Small shops in the old town reported a quiet spring. Owners say foot traffic fell by a third, while orders placed online rose.",
+            "zh": "老城区的小店报了一个冷清的春天。店主说客流少了三分之一，线上下的订单却涨了。",
+            "simple": "Small stores in the old town had a quiet spring. The owners say that not as many persons came in, but more orders came through the system."
+          }
+        ]
+      }
+    }
 };

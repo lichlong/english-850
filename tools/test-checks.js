@@ -61,9 +61,9 @@ const U = Checks.checkUnits(V.UNITS || [], clk);
     if (r.fresh.length !== fresh.length) bad++;
     if (r.missing.length !== new Set(tokensOf(unitText(u)).filter((t) => !lk.lookup(t))).size) bad++;
   }
-  ok("8 个单元的词数/去重/新词/超纲 与 node 侧一致", bad === 0, bad ? bad + " 处不一致" : "");
+  ok("9 个单元的词数/去重/新词/超纲 与 node 侧一致", bad === 0, bad ? bad + " 处不一致" : "");
   eq("累计覆盖", U.coveredCount, seen.size);
-  eq("覆盖 = 257（当前实测）", U.coveredCount, 257);
+  eq("覆盖 = 279（当前实测，内容变了要一起改）", U.coveredCount, 279);
   eq("词表总数", U.wordTotal, 850);
   ok("超纲 0", U.rows.every((r) => r.missing.length === 0));
   eq("新词不合规的单元数", U.badFresh.length, 4);
@@ -84,9 +84,9 @@ const E = Checks.checkExercises(V.EXERCISES || [], clk);
     if (!!r.problems.find((p) => p.type === "level") !== shouldFail) bad++;
     if (r.words !== n) bad++;
   }
-  ok("48 句的词数/句数判定与 node 侧一致", bad === 0, bad ? bad + " 处不一致" : "");
-  eq("练习句总数", E.total, 48);
-  eq("低阶 / 当阶 / 进阶", [E.byLevel.low, E.byLevel.mid, E.byLevel.high].join("/"), "16/16/16");
+  ok("96 句的词数/句数判定与 node 侧一致", bad === 0, bad ? bad + " 处不一致" : "");
+  eq("练习句总数", E.total, 96);
+  eq("低阶 / 当阶 / 进阶", [E.byLevel.low, E.byLevel.mid, E.byLevel.high].join("/"), "32/32/32");
   ok("练习超纲 0", E.badWords.length === 0, E.badWords.join(" "));
 }
 
@@ -120,7 +120,7 @@ console.log("\n[5] 规则表");
   eq("规则条数", R.length, 8);
   const byKey = {};
   R.forEach((r) => (byKey[r.key] = r));
-  ok("长度规则：应为不通过（u001–u003 未达 300 词）", byKey["长度"].pass === false, byKey["长度"].detail.join(" | "));
+  ok("长度规则：应为不通过（u001–u003 合计不足 230 词）", byKey["长度"].pass === false, byKey["长度"].detail.join(" | "));
   ok("超纲规则：通过", byKey["超纲"].pass === true);
   ok("新词规则：不通过（4 个单元）", byKey["新词"].pass === false, byKey["新词"].detail.join(" | "));
   ok("档位规则：通过", byKey["档位"].pass === true);

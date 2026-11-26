@@ -101,8 +101,12 @@ console.log("\n[4] 学完后不受课时限制（§14.7）");
 // ---- 5. 前 5 天预览兜底 ----
 console.log("\n[5] 前 5 天预览兜底（§11.2）");
 {
-  // 把 q001 拿掉，第 1 课就没有解锁的题了
-  W.EXERCISES = REAL_POOL.filter((q) => q.id !== "q001");
+  // 把所有"第 1 课就解锁"的 low 题都拿掉（内容一变，能解锁的题也会变，不能写死 q001）
+  const early = new Set(REAL_POOL.filter((q) => {
+    const u = X.unlockIndex(q);
+    return q.level === "low" && u !== null && u <= 0;
+  }).map((q) => q.id));
+  W.EXERCISES = REAL_POOL.filter((q) => !early.has(q.id));
   const r = X.draw({ levels: ["low"], allLearned: false, unitIndex: 0, preview: true });
   const noPrev = X.draw({ levels: ["low"], allLearned: false, unitIndex: 0, preview: false });
   W.EXERCISES = REAL_POOL;

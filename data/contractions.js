@@ -26,5 +26,6 @@ window.CONTRACTIONS = {
   "you're":   { zh: "你是（you are 的缩写）" },
   "he's":     { zh: "他是（he is 的缩写）" },
   "she's":    { zh: "她是（she is 的缩写）" },
-  "let's":    { zh: "让我们（let us 的缩写）" }
+  "let's":    { zh: "让我们（let us 的缩写）" },
+  "we'll":    { zh: "我们会（we will 的缩写）" }
 };

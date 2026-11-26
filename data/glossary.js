@@ -84,5 +84,13 @@ window.GLOSSARY = {
   "wasn't":       { zh: "不是（was not 的缩写，过去时）" },
   "you're":       { zh: "你是（you are 的缩写）" },
   "didn't":       { zh: "没有（did not 的缩写）" },
-  "won't":        { zh: "不会（will not 的缩写）" }
+  "won't":        { zh: "不会（will not 的缩写）" },
+  "behind":       { zh: "在……后面" },
+  "counter":      { zh: "柜台" },
+  "report":       { zh: "报告；报道" },
+  "traffic":      { zh: "交通；人流" },
+  "third":        { zh: "第三；三分之一" },
+  "online":       { zh: "线上的，联网的" },
+  "rise":         { zh: "上升，涨" },
+  "rose":         { zh: "上升了（rise 的过去式）" },
 };

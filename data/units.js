@@ -1005,4 +1005,163 @@ window.UNITS = [
       "cold"
     ]
   }
+,
+{
+    "id": "u009",
+    "mnemonic": "小店与订单",
+    "short": [
+      {
+        "en": "The store is open, but no person comes.",
+        "zh": "店开着，可是没人进来。"
+      },
+      {
+        "en": "Please give me the news about the order.",
+        "zh": "请把订单的消息告诉我。"
+      },
+      {
+        "en": "How much does this business make?",
+        "zh": "这门生意能挣多少？"
+      },
+      {
+        "en": "She does her work well in our group.",
+        "zh": "她在我们这组里干得很好。"
+      },
+      {
+        "en": "The map at the door is free.",
+        "zh": "门口的地图是免费的。"
+      }
+    ],
+    "long": [
+      {
+        "en": "He put a word about his store on the window, but no person came through the door that week.",
+        "zh": "他在窗户上写了句话介绍自己的店，可那一周没有一个人进门。"
+      },
+      {
+        "en": "The company gives help to any person who sends an order through the system before the end of the week.",
+        "zh": "只要在周末前通过系统下订单，公司都会给以帮助。"
+      },
+      {
+        "en": "Such work is not free: you get money for your time, and the company gets your mind for the day.",
+        "zh": "这种活儿不是白干的：你拿钱，公司拿走你这一天的心思。"
+      }
+    ],
+    "passage": {
+      "title": "The Store at the End of the Road",
+      "paragraphs": [
+        {
+          "en": "The store at the end of the road is small, but it is not quiet. The door is open at seven.",
+          "zh": "路尽头那家店很小，却一点也不安静。七点，门就开了。"
+        },
+        {
+          "en": "You may send an order by phone or through the system on his small machine. When it comes, the company gives him help by phone. The group of stores near him does the same, and they give support to each other when a box is late.",
+          "zh": "你可以打电话下单，也可以通过他那台小机器上的系统下单。订单来了，公司会打电话帮他。附近那几家店也一样，谁家的箱子晚了，大家就互相帮一把。"
+        },
+        {
+          "en": "The work is general: open, take money, give change, say please. The list of prices is public, on the wall by the door. The map of the town is at the back for new persons.",
+          "zh": "活儿很杂：开门、收钱、找零、说请。价目表是公开的，贴在门边的墙上。镇上地图放在店后面，给新来的人看。"
+        },
+        {
+          "en": "From the door he has a view of the road. At night he puts the day in a book and looks at the numbers. Some days are high, some low. Most of it goes to the company; a small part is his. Then he says the same word: tomorrow.",
+          "zh": "从门口望出去，他能看见那条路。夜里他把这一天记进本子，看那些数字。有的日子高，有的日子低。大部分给了公司，小部分是他自己的。然后他说同一个词：明天。"
+        }
+      ]
+    },
+    "words": [
+      "the",
+      "store",
+      "be",
+      "open",
+      "but",
+      "no",
+      "person",
+      "come",
+      "please",
+      "give",
+      "news",
+      "about",
+      "order",
+      "how",
+      "much",
+      "do",
+      "this",
+      "business",
+      "make",
+      "work",
+      "well",
+      "in",
+      "group",
+      "map",
+      "at",
+      "door",
+      "free",
+      "he",
+      "put",
+      "a",
+      "word",
+      "on",
+      "window",
+      "through",
+      "that",
+      "week",
+      "company",
+      "help",
+      "to",
+      "any",
+      "who",
+      "send",
+      "system",
+      "before",
+      "end",
+      "of",
+      "such",
+      "not",
+      "you",
+      "get",
+      "money",
+      "for",
+      "time",
+      "and",
+      "mind",
+      "day",
+      "road",
+      "small",
+      "quiet",
+      "may",
+      "by",
+      "or",
+      "machine",
+      "when",
+      "near",
+      "same",
+      "support",
+      "other",
+      "box",
+      "late",
+      "general",
+      "take",
+      "change",
+      "say",
+      "list",
+      "price",
+      "public",
+      "wall",
+      "town",
+      "back",
+      "new",
+      "from",
+      "have",
+      "view",
+      "night",
+      "book",
+      "look",
+      "number",
+      "some",
+      "high",
+      "low",
+      "go",
+      "part",
+      "then",
+      "tomorrow"
+    ]
+  }
 ];
