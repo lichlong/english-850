@@ -140,7 +140,7 @@
 
     if (kind === "word") {
       var w = id.slice(2);
-      var info = (window.WORDS || {})[w];
+      var info = (window.WORDS || {})[w] || (window.WORD_ALLOWED || {})[w];
       color = "var(--story)";
       en = w;
       zh = info ? ((info.ipa ? info.ipa + "\u3000" : "") + info.zh) : "";

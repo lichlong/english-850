@@ -13,6 +13,7 @@
   function findWord(raw) {
     var w = String(raw).toLowerCase();
     if (window.WORDS[w]) return w;
+    if (window.WORD_ALLOWED && window.WORD_ALLOWED[w]) return w;
     if (window.WORD_FORMS[w] && window.WORDS[window.WORD_FORMS[w]]) return window.WORD_FORMS[w];
 
     var cands = [
@@ -61,7 +62,8 @@
 
   function showPopup(word, x, y) {
     closePopup();
-    var info = window.WORDS && window.WORDS[word];
+    var info = (window.WORDS && window.WORDS[word]) ||
+      (window.WORD_ALLOWED && window.WORD_ALLOWED[word]);
     var id = "w:" + word;
     var saved = window.Store.getMark(id, "save");
 

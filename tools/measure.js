@@ -16,6 +16,7 @@ for (const f of ["data/words.js", "data/units.js"]) {
 
 const WORDS = sandbox.window.WORDS || {};
 const FORMS = sandbox.window.WORD_FORMS || {};
+const ALLOWED = sandbox.window.WORD_ALLOWED || {};
 const UNITS = sandbox.window.UNITS || [];
 
 const wordCount = (s) => (String(s).match(/[A-Za-z']+/g) || []).length;
@@ -26,15 +27,18 @@ const tokensOf = (s) =>
 function lookup(raw) {
   const w = raw.toLowerCase();
   if (WORDS[w]) return w;
+  if (ALLOWED[w]) return w; // 原文允许项（代词 / 数字 / 日历 / -ly 派生），不计超纲
   if (FORMS[w] && WORDS[FORMS[w]]) return FORMS[w];
   const cands = [
     w.replace(/ies$/, "y"), w.replace(/es$/, ""), w.replace(/s$/, ""),
     w.replace(/ied$/, "y"), w.replace(/ed$/, ""), w.replace(/ed$/, "e"),
     w.replace(/ing$/, ""), w.replace(/ing$/, "e"), w.replace(/ly$/, ""),
   ];
-  for (const c of cands) if (c && WORDS[c]) return c;
+  for (const c of cands) if (c && (WORDS[c] || ALLOWED[c])) return c;
   return null;
 }
+
+let allowedHits = 0;
 
 const allMissing = new Map();
 const rows = [];
@@ -52,7 +56,9 @@ for (const u of UNITS) {
 
   const missing = new Map();
   for (const t of toks) {
-    if (!lookup(t)) missing.set(t, (missing.get(t) || 0) + 1);
+    const hit = lookup(t);
+    if (!hit) missing.set(t, (missing.get(t) || 0) + 1);
+    else if (ALLOWED[hit]) allowedHits++;
   }
   for (const [w, n] of missing) allMissing.set(w, (allMissing.get(w) || 0) + n);
 
@@ -72,8 +78,13 @@ for (const u of UNITS) {
   });
 }
 
-console.log("== 词表规模 ==");
-console.log("WORDS 条数:", Object.keys(WORDS).length, "| WORD_FORMS:", Object.keys(FORMS).length);
+console.log("\n== 词表规模 ==");
+console.log(
+  "WORDS 条数:", Object.keys(WORDS).length,
+  "| WORD_FORMS:", Object.keys(FORMS).length,
+  "| WORD_ALLOWED:", Object.keys(ALLOWED).length,
+  "（代词/数字/日历/派生，不计超纲）"
+);
 
 console.log("\n== 单元体检（SPEC §4.1 / §4.5） ==");
 console.log("指标：短句 5–8 / 长句 3–5 / 短文 1 篇 150–250 词 / 单元合计 300–450 词 / 超纲词 0");
