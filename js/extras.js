@@ -143,10 +143,10 @@
       if (i > 0) body.appendChild(el("hr", "ex-sep"));
       var block = el("div", "ex-block");
       block.appendChild(el("span", "ex-tag", "原文"));
-      block.appendChild(el("p", "ex-std", b.std));
+      block.appendChild(window.Reader.textBlock(b.std, "ex-std"));
       block.appendChild(el("p", "ex-zh-s", b.zh));
       block.appendChild(el("span", "ex-tag ex-tag-say", "简说"));
-      block.appendChild(el("p", "ex-simple", b.simple));
+      block.appendChild(window.Reader.textBlock(b.simple, "ex-simple"));
       body.appendChild(block);
     });
     container.appendChild(body);

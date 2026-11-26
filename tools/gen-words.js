@@ -132,6 +132,7 @@ const IRREGULAR = {
   good: "better best",
   bad: "worse worst",
   far: "farther further farthest furthest",
+  near: "nearer nearest",
   run: "ran running runs",
   swim: "swam swum swimming",
   drink: "drank drunk drinking",

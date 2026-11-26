@@ -40,6 +40,7 @@ body { display: flex; justify-content: center; }
 .app {
   width: 100%;
   max-width: 480px;
+  height: 100vh;      /* 旧内核兜底：不认 dvh 才会塌 */
   height: 100dvh;
   display: flex;
   flex-direction: column;
@@ -51,6 +52,7 @@ body { display: flex; justify-content: center; }
 @media (min-width: 520px) {
   body { background: var(--soft); align-items: center; }
   .app {
+    height: 88vh;
     height: 88dvh;
     border: 1px solid var(--line);
     border-radius: 20px;
@@ -95,6 +97,7 @@ body { display: flex; justify-content: center; }
 
 .pages {
   flex: 1 1 auto;
+  min-height: 0;   /* 没有它，flex 子项会撑高、滚不动 */
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;

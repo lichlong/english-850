@@ -166,5 +166,34 @@ window.UNITS = [
       "laugh", "hear", "evening", "fix", "cost", "money", "hour", "happy",
       "back", "remember"
     ]
+  },
+  {
+    id: 'u004',
+    mnemonic: '月亮与夜',
+    short: [
+      { en: 'The moon is very bright now.', zh: '月亮现在很亮。' },
+      { en: 'It comes near the earth this week.', zh: '这周它离地球很近。' },
+      { en: 'I go out and look up for a time.', zh: '我出门抬头看了一会儿。' },
+      { en: 'The street is quiet and the air is cold.', zh: '街上很静，空气很冷。' },
+      { en: 'My mother says it is a good night.', zh: '我妈说这是个好夜晚。' }
+    ],
+    long: [
+      { en: 'This is the first of three big moons, and the other two will come in December and in January.', zh: '这是三次大月亮的第一次，另外两次会在十二月和一月。' },
+      { en: 'When the moon is near the earth, it seems greater and brighter than on other nights.', zh: '月亮离地球近的时候，看起来比其他夜晚更大更亮。' },
+      { en: 'I put my hand up, and the moon is almost as wide as my thumb.', zh: '我把手举起来，月亮差不多和我拇指一样宽。' }
+    ],
+    passage: {
+      title: 'A Big Moon',
+      paragraphs: [
+        { en: 'On Monday night the moon came up over the buildings and made the street as bright as day. I went out with my mother because she said this was a special night.', zh: '周一晚上，月亮从楼顶升起来，把街道照得像白天一样亮。我和我妈出门，因为她说这是个特别的夜晚。' },
+        { en: 'An old man and a small boy were near the garden. The boy put his hand up and said the moon was as big as an orange. The old man said it was much greater than that.', zh: '花园旁边有一位老人和一个小男孩。男孩举起手说月亮像个橙子那么大。老人说它比那大得多。' },
+        { en: 'My mother said this was the first of three. The other two would come in December and in January, and all three would be near the earth.', zh: '我妈说这是三次里的第一次。另外两次在十二月和一月，三次都会靠近地球。' },
+        { en: 'We had no camera, and we did not need one. We only put our eyes up and kept them there for a long time, and the cold air made our faces red.', zh: '我们没带相机，也不需要。我们只是抬头，把眼睛放在那里很久，冷空气把我们的脸吹红了。' },
+        { en: 'A woman on the floor over us put her head out of the window. She said the moon was like a great white plate. The man with her said it was more like a ball of fire that had gone cold.', zh: '楼上的一位女士把头探出窗外。她说月亮像一只很大的白盘子。跟她一起的男人说更像一团冷下来的火球。' },
+        { en: 'The boy asked if the moon would be this great tomorrow. No person had a good answer. My mother said it would be smaller, and that this was the reason we were out here now.', zh: '男孩问明天月亮还会不会这么大。没人有个好答案。我妈说会小一些，而这正是我们现在站在外面的原因。' },
+        { en: 'After we came back, I had a warm drink and went to my room. The night was quiet, and I had no questions about it.', zh: '回来后，我喝了点热的，回了房间。那个夜晚很静，我对它没有疑问。' }
+      ]
+    },
+    words: ['moon','bright','night','come','near','earth','week','go','out','look','time','street','quiet','air','cold','mother','say','good','first','big','other','december','january','seem','great','hand','wide','thumb','building','day','special','old','small','boy','garden','orange','much','tell','need','eye','long','face','red','back','drink','room','question']
   }
 ];

@@ -2448,6 +2448,8 @@ window.WORD_FORMS = {
   naturalling:  "natural",
   naturals:     "natural",
   neared:       "near",
+  nearer:       "near",
+  nearest:      "near",
   nearing:      "near",
   nears:        "near",
   necessaries:  "necessary",

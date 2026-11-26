@@ -186,9 +186,15 @@
     if (popup && !popup.contains(t)) closePopup();
   });
 
+  // 通用可点文本块：课外拓展的原文与简说都用它，交给全局 .w 点击处理查词
+  function textBlock(text, cls) {
+    return el("p", cls || "en", tokenize(text));
+  }
+
   window.Reader = {
     sentenceItem: sentenceItem,
     storyItem: storyItem,
+    textBlock: textBlock,
     closePopup: closePopup
   };
 })();
