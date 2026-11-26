@@ -660,5 +660,27 @@ window.EXTRAS = {
           }
         ]
       }
+    },
+    "u029": {
+      "read": {
+        "title": "Morning at the Forge",
+        "blocks": [
+          {
+            "std": "Don't put your hand there. The blade is still hot, and a burn from that will be with you for a month.",
+            "zh": "手别放那儿。刀身还烫着，那么烫一下能跟你一个月。",
+            "simple": "Don't put your hand there. The blade is still hot, and a burn from it will be with you for a month."
+          },
+          {
+            "std": "The steam had made a curve of the whole room, and the canvas on the shelf smelled of coal, and the man at the fire said nothing at all.",
+            "zh": "蒸汽在整间屋子里画出一道弧；架子上的帆布有煤味；火边那个人一句话也没说。",
+            "simple": "The steam had made a curve of the room, the canvas on the shelf had the smell of coal, and the man at the fire said nothing at all."
+          },
+          {
+            "std": "The shop's old forge will shut in the spring, the family said, after ninety years of fire and three years of losses.",
+            "zh": "这家铺子的老炉子春天要熄了——这家人说，烧了九十年火，连亏了三年。",
+            "simple": "The old fire of the shop will be put out in the spring, the family said, after ninety years of work with fire and three years of loss."
+          }
+        ]
+      }
     }
 };

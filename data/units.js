@@ -4024,5 +4024,149 @@ window.UNITS = [
       "start",
       "with"
     ]
+  },
+{
+    "id": "u029",
+    "mnemonic": "打铁铺的早晨",
+    "short": [
+      {
+        "en": "The steam from the basin is rough on the hands.",
+        "zh": "盆里冒出来的汽刮手。"
+      },
+      {
+        "en": "The knife has a rough blade.",
+        "zh": "那把刀的刀身很粗。"
+      },
+      {
+        "en": "There's coal under the shelf.",
+        "zh": "架子底下有煤。"
+      },
+      {
+        "en": "The cord is on the hook by the door.",
+        "zh": "绳子挂在门边的钩子上。"
+      },
+      {
+        "en": "The shop is shut, and the cloud is low.",
+        "zh": "铺子关着，云压得很低。"
+      }
+    ],
+    "long": [
+      {
+        "en": "The curve of the blade is the same as the curve of the tail of the rat that comes at night.",
+        "zh": "刀身的弧度和夜里来那只老鼠尾巴的弧度一样。"
+      },
+      {
+        "en": "He puts the canvas over the stems, and the pipe gives a violent cry of steam.",
+        "zh": "他把帆布盖在那些杆子上，管子就尖叫一声冒出一股汽。"
+      },
+      {
+        "en": "The opposite wall has a shelf for the knife, the cord, and the tin basin.",
+        "zh": "对面那面墙有个架子，放刀、绳子和锡盆。"
+      }
+    ],
+    "passage": {
+      "title": "Morning at the Forge",
+      "paragraphs": [
+        {
+          "en": "The shop is shut from six to seven, and in that hour the fire is the only thing awake. Coal goes in, steam comes up, and the room is rough with heat. The soup for the morning is in the tin basin by the wall.",
+          "zh": "铺子六点到七点是关着的，这一个钟头里只有火醒着。煤进去，汽上来，屋里全是粗粝的热。早上要喝的汤就在墙边的锡盆里。"
+        },
+        {
+          "en": "He puts a knife on the shelf and takes the hook down. The blade has a curve he made himself with one long stretch of the arm; the pipe by it gives a violent motion when the water goes through.",
+          "zh": "他把一把刀放上架子，把钩子取下来。刀身那道弧是他把胳膊长长地一伸打出来的；旁边那根管子在过水的时候晃得厉害。"
+        },
+        {
+          "en": "A rat comes for the soup in the tin basin. He doesn't cry out; he puts the canvas over the basin, and the rat goes by the opposite wall.",
+          "zh": "一只老鼠来吃锡盆里的汤。他没喊；他把帆布盖在盆上，老鼠就顺着对面的墙走了。"
+        },
+        {
+          "en": "By seven the shop is open, and the cloud over the river has gone. The tail of a knife is not a tail, he says, but if you make it well, the hand keeps it like one.",
+          "zh": "到七点铺子开门，河上的云也散了。他说：刀把不是尾巴，可你要是做得好的，手抓起来就跟抓住尾巴一样。"
+        }
+      ]
+    },
+    "words": [
+      "the",
+      "steam",
+      "from",
+      "basin",
+      "be",
+      "rough",
+      "on",
+      "hand",
+      "knife",
+      "have",
+      "a",
+      "blade",
+      "coal",
+      "under",
+      "shelf",
+      "cord",
+      "hook",
+      "by",
+      "door",
+      "shut",
+      "and",
+      "cloud",
+      "low",
+      "curve",
+      "of",
+      "same",
+      "as",
+      "tail",
+      "rat",
+      "that",
+      "come",
+      "at",
+      "night",
+      "he",
+      "put",
+      "canvas",
+      "over",
+      "stem",
+      "pipe",
+      "give",
+      "violent",
+      "cry",
+      "opposite",
+      "wall",
+      "for",
+      "tin",
+      "to",
+      "in",
+      "hour",
+      "fire",
+      "only",
+      "thing",
+      "awake",
+      "go",
+      "up",
+      "room",
+      "with",
+      "heat",
+      "soup",
+      "morning",
+      "take",
+      "down",
+      "make",
+      "long",
+      "stretch",
+      "arm",
+      "motion",
+      "when",
+      "water",
+      "through",
+      "out",
+      "open",
+      "river",
+      "not",
+      "say",
+      "but",
+      "if",
+      "you",
+      "well",
+      "keep",
+      "like"
+    ]
   }
 ];

@@ -172,6 +172,7 @@ window.GLOSSARY = {
   "sill":         { zh: "窗台" },
   "mud":          { zh: "泥" },
   "million":      { zh: "百万" },
+  "forge":        { zh: "铁匠炉，打铁铺" },
   "pole":         { zh: "杆子，电线杆" },
   "plan":         { zh: "计划，图纸" },
   "grow":         { zh: "生长，变得" },

@@ -1,28 +1,28 @@
 # 下一单元计划（先定词，再写；写完跑 node tools/measure.js 核对）
 # 用法：node tools/coverage.js --plan 重新生成，或手工改下面的词
-# unit: u029
+# unit: u030
 # theme: （从 SPEC §11.7 常青白名单里选一个）
 # 每行一个词，20–25 个
 
-opposite
-shut
-coal
-cry
-rough
-blade
-stretch
-hook
-cord
-cloud
-knife
-shelf
-steam
-curve
-canvas
-stem
-tin
-rat
-tail
-violent
-basin
-soup
+nose
+frequent
+grain
+hanging
+arch
+suggestion
+brush
+tongue
+monkey
+skirt
+cloth
+stamp
+butter
+fold
+brake
+nail
+sheep
+paste
+vessel
+swim
+bee
+flame
