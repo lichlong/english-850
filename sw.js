@@ -3,7 +3,7 @@
 // 缓存只是断网时的兜底，不做"缓存优先"那种要等两轮才更新的方案。
 //
 // 改 CACHE 里的版本号 = 换一个缓存空间，旧缓存会在下次激活时自动删掉。
-const CACHE = "e850-v38";
+const CACHE = "e850-v39";
 
 // 只预缓存"第一屏必须有"的几个文件。带 ?v= 的资源由运行时缓存补（见 fetch）
 const PRECACHE = ["./", "./index.html", "./manifest.json", "./icon.svg"];

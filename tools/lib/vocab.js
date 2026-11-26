@@ -6,6 +6,20 @@ const vm = require("vm");
 
 const ROOT = path.join(__dirname, "..", "..");
 
+
+// 功能词：不计入"新词"（排程口径，SPEC §4.4）
+// 理由：the / and / is / that 这类词必然在第 1 课出现，把它们算进"新词 20–25"永远算不平。
+// 新词口径 = 850 词中"首次出现"的**实词**数量。
+const FUNCTION_WORDS = new Set(("the a an and or but if when while than then that this these those there here where how why " +
+  "what who whom whose which i you he she it we they me him her us them my your his its our their mine yours " +
+  "is am are was were be been being do does did done have has had will would shall should can could may might must " +
+  "not no nor so as at by for from in into of off on out over to up with about after before again ever never " +
+  "always only very much more most some any all both each other another such own same too also just even still yet once").split(/\s+/));
+
+function isFunctionWord(w) {
+  return FUNCTION_WORDS.has(String(w).toLowerCase());
+}
+
 const DATA_FILES = ["data/words.js", "data/units.js", "data/extras.js", "data/exercises.js", "data/glossary.js", "data/dict.js", "data/contractions.js", "data/function-words.js"];
 
 // 在沙箱里执行 data/*.js，取回 window 上的表
@@ -94,4 +108,5 @@ function unitText(u) {
     .join(" ");
 }
 
-module.exports = { ROOT, loadData, wordCount, tokensOf, makeLookup, wordsIn, unitText };
+module.exports = {
+  isFunctionWord, FUNCTION_WORDS, ROOT, loadData, wordCount, tokensOf, makeLookup, wordsIn, unitText };

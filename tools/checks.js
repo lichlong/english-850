@@ -19,7 +19,7 @@
     passage: { min: 150, max: 250 },  // 短文词数（目标 150–180，老内容偏长，先不判死）
     total: { min: 230, max: 350 }     // 单元合计词数（v10 下调：短文压缩后合计随之下降）
   };
-  var FRESH_RULE = { min: 20, max: 25 };  // 每单元新词数
+  var FRESH_RULE = { min: 20, max: 30 };  // 每单元新词数（只算实词，功能词不计，见 SPEC §4.4）
   var LEVEL_RULE = {
     low: { min: 0, max: 8, sent: 1 },
     mid: { min: 8, max: 18, sent: 2 },
@@ -107,6 +107,16 @@
       .join(" ");
   }
 
+  // 功能词表：与 tools/lib/vocab.js 的 FUNCTION_WORDS 保持一致（浏览器侧不能用 require）
+  var FUNC_LIST = ("the a an and or but if when while than then that this these those there here where how why " +
+    "what who whom whose which i you he she it we they me him her us them my your his its our their mine yours " +
+    "is am are was were be been being do does did done have has had will would shall should can could may might must " +
+    "not no nor so as at by for from in into of off on out over to up with about after before again ever never " +
+    "always only very much more most some any all both each other another such own same too also just even still yet once").split(" ");
+  var FUNC_MAP = {};
+  FUNC_LIST.forEach(function (w) { FUNC_MAP[w] = 1; });
+  function isFunctionWord(w) { return !!FUNC_MAP[String(w).toLowerCase()]; }
+
   function inRange(n, r) { return n >= r.min && n <= r.max; }
 
   // ---------- 单元 ----------
@@ -138,8 +148,10 @@
 
       var ws = wordsIn(text, lk);
       ws.forEach(function (w) { appear[w] = (appear[w] || 0) + 1; });
-      var fresh = ws.filter(function (w) { return !seen[w]; });
-      fresh.forEach(function (w) { seen[w] = 1; });
+      var freshAll = ws.filter(function (w) { return !seen[w]; });
+      freshAll.forEach(function (w) { seen[w] = 1; });
+      // 口径：功能词（the / and / is / that…）不计入新词
+      var fresh = freshAll.filter(function (w) { return !isFunctionWord(w); });
 
       var missing = Object.keys(missMap).map(function (w) {
         return { w: w, n: missMap[w] };

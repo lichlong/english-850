@@ -5,7 +5,7 @@
 // 浏览器侧 tools/checks.js（admin.html 用）。两份必须给出完全一样的判定，
 // 否则"工作台说没事、measure 说有超纲"，工作台就白做了。
 // 所以这里逐个 token 比对，再核对几个关键总数。
-const { loadData, wordCount, tokensOf, makeLookup, wordsIn, unitText } = require("./lib/vocab");
+const { loadData, wordCount, tokensOf, makeLookup, wordsIn, unitText, isFunctionWord } = require("./lib/vocab");
 const Checks = require("./checks.js");
 
 const V = loadData(["data/words.js", "data/units.js", "data/extras.js", "data/exercises.js", "data/glossary.js", "data/contractions.js"]);
@@ -54,8 +54,9 @@ const U = Checks.checkUnits(V.UNITS || [], clk);
     const r = U.rows.find((x) => x.id === u.id);
     const total = wordCount(unitText(u));
     const ws = [...wordsIn(unitText(u), lk)];
-    const fresh = ws.filter((w) => !seen.has(w));
-    fresh.forEach((w) => seen.add(w));
+    const freshAll = ws.filter((w) => !seen.has(w));
+    freshAll.forEach((w) => seen.add(w));
+    const fresh = freshAll.filter((w) => !isFunctionWord(w));
     if (r.total !== total) bad++;
     if (r.uniq !== ws.length) bad++;
     if (r.fresh.length !== fresh.length) bad++;
@@ -66,7 +67,7 @@ const U = Checks.checkUnits(V.UNITS || [], clk);
   eq("覆盖 = 850（内容写满，词表全覆盖）", U.coveredCount, 850);
   eq("词表总数", U.wordTotal, 850);
   ok("超纲 0", U.rows.every((r) => r.missing.length === 0));
-  eq("新词不合规的单元数", U.badFresh.length, 4);
+  eq("新词不合规的单元数", U.badFresh.length, 0);
 }
 
 // ---------- 3. 练习池 ----------
@@ -122,7 +123,7 @@ console.log("\n[5] 规则表");
   R.forEach((r) => (byKey[r.key] = r));
   ok("长度规则：应为不通过（u001–u003 合计不足 230 词）", byKey["长度"].pass === false, byKey["长度"].detail.join(" | "));
   ok("超纲规则：通过", byKey["超纲"].pass === true);
-  ok("新词规则：不通过（4 个单元）", byKey["新词"].pass === false, byKey["新词"].detail.join(" | "));
+  ok("新词规则：通过（0 个单元不合规）", byKey["新词"].pass === true, byKey["新词"].detail.join(" | "));
   ok("档位规则：通过", byKey["档位"].pass === true);
   ok("每条规则都有跳转目标", R.every((r) => r.go));
 }

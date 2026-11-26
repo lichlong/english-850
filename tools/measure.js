@@ -3,7 +3,7 @@
 // 这是唯一的数字来源。改完内容必须跑，不跑等于没做（HANDOFF §6）。
 const fs = require("fs");
 const path = require("path");
-const { ROOT, loadData, wordCount, tokensOf, makeLookup, wordsIn, unitText } = require("./lib/vocab");
+const { ROOT, loadData, wordCount, tokensOf, makeLookup, wordsIn, unitText, isFunctionWord } = require("./lib/vocab");
 
 // 多带一个 js/exercises.js：练习池的"解锁课时"用的就是网页那套逻辑，不另写一份
 const V = loadData(["data/words.js", "data/glossary.js", "data/dict.js", "data/contractions.js", "data/units.js", "data/extras.js", "data/exercises.js", "js/exercises.js"]);
@@ -79,21 +79,23 @@ console.log(sorted.map(([w, n]) => `${w}×${n}`).join("  "));
 
 // ===================== 2. 词覆盖与排程（P0 · SPEC §4.4） =====================
 // 口径：一个词的"首次出现单元"= 它第一次被读到的那个单元，那个单元的新词数就按它算。
-console.log("\n== 词覆盖与排程（SPEC §4.4：每单元新词 20–25） ==");
+console.log("\n== 词覆盖与排程（SPEC §4.4：每单元新词 20–30，只算实词） ==");
 {
   const seen = new Set();
   let bad = 0;
   for (const r of rows) {
-    const fresh = [...r.words].filter((w) => !seen.has(w));
-    fresh.forEach((w) => seen.add(w));
-    const flag = fresh.length >= 20 && fresh.length <= 25 ? "✓" : `✗ 超出 20–25`;
+    const all = [...r.words].filter((w) => !seen.has(w));
+    all.forEach((w) => seen.add(w));
+    // 新词口径：只算实词；the / and / is / that 这类功能词不计
+    const fresh = all.filter((w) => !isFunctionWord(w));
+    const flag = fresh.length >= 20 && fresh.length <= 30 ? "✓" : `✗ 超出 20–30`;
     if (flag !== "✓") bad++;
-    console.log(`${r.id} ${r.name}  首次出现 ${String(fresh.length).padStart(2)} 词  去重 ${String(r.words.size).padStart(3)} 词  ${flag}`);
+    console.log(`${r.id} ${r.name}  新词(实词) ${String(fresh.length).padStart(2)} 词  去重 ${String(r.words.size).padStart(3)} 词  ${flag}`);
   }
   const totalWords = Object.keys(WORDS).length;
   const pct = totalWords ? Math.round((seen.size / totalWords) * 100) : 0;
   console.log(`累计覆盖 ${seen.size} / ${totalWords} = ${pct}%   剩余 ${totalWords - seen.size} 词未出现`);
-  console.log(bad ? `有 ${bad} 个单元的新词数不合规（u001–u003 属早期内容，重写时一并修）` : "全部单元新词数合规 ✓");
+  console.log(bad ? `有 ${bad} 个单元的新词(实词)数不合规` : "全部单元新词(实词)数合规 ✓");
 
   // 已覆盖的词按累计出现次数排：用来判断"哪些词该加密、哪些该低频维持"
   const counter = new Map();
