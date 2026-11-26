@@ -950,3 +950,97 @@ body { display: flex; justify-content: center; }
 @media (prefers-color-scheme: dark) {
   .toast { background: rgba(231, 228, 222, .94); color: #17191c; }
 }
+
+/* 复健卡（SPEC §13.2 临时方案）：断更回来第一屏顶部的提示 */
+.rehab {
+  margin: 2px 0 18px;
+  padding: 14px 14px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--soft);
+}
+
+.rehab-h {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--accent);
+}
+
+.rehab-p {
+  margin: 7px 0 11px;
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--ink);
+}
+
+.rehab-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.rehab-w {
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 2px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.rehab-tip {
+  margin-top: 9px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* 动作行（导出/导入）：是个动作，不是跳转，所以没有 › */
+.row-act {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 14px 2px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  font-size: 14px;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.row-act b {
+  margin-left: auto;
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 13px;
+}
+.row-act:active { background: var(--soft); }
+
+/* 导入确认 */
+.bk-ask {
+  margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--ink);
+}
+.bk-btn {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.bk-yes {
+  color: var(--accent);
+  border-color: var(--accent);
+  font-weight: 600;
+}

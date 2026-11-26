@@ -195,6 +195,50 @@
     return { items: out, seen: seen, notes: notes };
   }
 
+  // 正文动态句（SPEC §14.9）：按"句子里最薄弱的词"挑一句
+  // opts: { slot: "short" | "long", unitIndex, stats, rand }
+  // 返回 null 表示没有合适的句子（内容没覆盖到），调用方就不插这一句
+  function pickForSlot(opts) {
+    opts = opts || {};
+    var stats = opts.stats || {};
+    var unitIndex = typeof opts.unitIndex === "number" ? opts.unitIndex : 0;
+    var rand = opts.rand || Math.random;
+    var levels = opts.slot === "long" ? ["high", "mid"] : ["low", "mid"];
+    var W = window.WORDS || {};
+
+    var cands = pool().filter(function (q) {
+      if (levels.indexOf(q.level) === -1) return false;
+      var u = unlockIndex(q);
+      return u !== null && u <= unitIndex;
+    });
+    if (!cands.length) return null;
+
+    function effOf(st) {
+      if (!st) return 0;
+      if (window.Store && window.Store.effCount) return window.Store.effCount(st.n, st.last);
+      return st.n || 0;
+    }
+
+    // 每句取"句中最低有效次数"，越低说明越该练
+    var scored = cands.map(function (q) {
+      var toks = tokensOf(q.en);
+      var worst = Infinity;
+      for (var i = 0; i < toks.length; i++) {
+        var b = baseOf(toks[i]);
+        if (!b || !W[b]) continue;
+        var eff = effOf(stats[b]);
+        if (eff < worst) worst = eff;
+      }
+      return { q: q, worst: worst === Infinity ? 999 : worst };
+    });
+    scored.sort(function (x, y) { return x.worst - y.worst; });
+
+    // 只在这一档里随机，避免每次都同一句
+    var floorScore = scored[0].worst;
+    var head = scored.filter(function (x) { return x.worst <= floorScore + 0.5; });
+    return head[Math.floor(rand() * head.length)].q;
+  }
+
   // 诊断：每句解锁在第几课（null = 还没被内容覆盖）
   function unlockTable() {
     return pool().map(function (q) {
@@ -209,6 +253,7 @@
     learnedSet: learnedSet,
     allKnown: allKnown,
     unlockIndex: unlockIndex,
+    pickForSlot: pickForSlot,
     unlockTable: unlockTable,
     draw: draw
   };

@@ -6,7 +6,7 @@ const path = require("path");
 const { ROOT, loadData, wordCount, tokensOf, makeLookup, wordsIn, unitText } = require("./lib/vocab");
 
 // 多带一个 js/exercises.js：练习池的"解锁课时"用的就是网页那套逻辑，不另写一份
-const V = loadData(["data/words.js", "data/glossary.js", "data/units.js", "data/extras.js", "data/exercises.js", "js/exercises.js"]);
+const V = loadData(["data/words.js", "data/glossary.js", "data/contractions.js", "data/units.js", "data/extras.js", "data/exercises.js", "js/exercises.js"]);
 const { lookup, WORDS, FORMS, ALLOWED, DEVIATION } = makeLookup(V);
 const UNITS = V.UNITS || [];
 const EXTRAS = V.EXTRAS || {};

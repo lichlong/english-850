@@ -6,7 +6,7 @@ const vm = require("vm");
 
 const ROOT = path.join(__dirname, "..", "..");
 
-const DATA_FILES = ["data/words.js", "data/units.js", "data/extras.js", "data/exercises.js", "data/glossary.js"];
+const DATA_FILES = ["data/words.js", "data/units.js", "data/extras.js", "data/exercises.js", "data/glossary.js", "data/contractions.js", "data/function-words.js"];
 
 // 在沙箱里执行 data/*.js，取回 window 上的表
 function loadData(files) {
@@ -32,19 +32,23 @@ function makeLookup(V) {
   const ALLOWED = V.WORD_ALLOWED || {};
   const DEVIATION = V.WORD_DEVIATION || {};
   const GLOSSARY = V.GLOSSARY || {};
+  const CONTR = V.CONTRACTIONS || {};
 
   function lookup(raw) {
     let w = String(raw).toLowerCase();
+    if (CONTR[w]) return { base: w, kind: "contraction" }; // 缩写优先于去 's
     if (/'s$/.test(w)) w = w.slice(0, -2); // 所有格 father's → father
     else w = w.replace(/'+$/, "");
     if (WORDS[w]) return { base: w, kind: "word" };
     if (ALLOWED[w]) return { base: w, kind: "allowed" };
     if (DEVIATION[w]) return { base: w, kind: "deviation" };
+    if (CONTR[w]) return { base: w, kind: "contraction" };
     if (GLOSSARY[w]) return { base: w, kind: "glossary" };
     if (FORMS[w]) {
       const b = FORMS[w];
       if (WORDS[b]) return { base: b, kind: "word" };
       if (DEVIATION[b]) return { base: b, kind: "deviation" };
+      if (CONTR[b]) return { base: b, kind: "contraction" };
       if (GLOSSARY[b]) return { base: b, kind: "glossary" };
     }
     const cands = [
@@ -57,12 +61,13 @@ function makeLookup(V) {
       if (WORDS[c]) return { base: c, kind: "word" };
       if (ALLOWED[c]) return { base: c, kind: "allowed" };
       if (DEVIATION[c]) return { base: c, kind: "deviation" };
+      if (CONTR[c]) return { base: c, kind: "contraction" };
       if (GLOSSARY[c]) return { base: c, kind: "glossary" };
     }
     return null;
   }
 
-  return { lookup, WORDS, FORMS, ALLOWED, DEVIATION, GLOSSARY };
+  return { lookup, WORDS, FORMS, ALLOWED, DEVIATION, GLOSSARY, CONTR };
 }
 
 // 一段文本里出现的 850 表内词（已还原、去重）

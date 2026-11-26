@@ -23,7 +23,7 @@ window.UNITS = [
         "zh": "早上我打开窗，冷空气进来，我一下就清醒了。"
       },
       {
-        "en": "He told me that he could not come today because his car was not working.",
+        "en": "He told me that he couldn't come today because his car wasn't working.",
         "zh": "他告诉我他今天来不了，因为他的车坏了。"
       }
     ],
@@ -31,7 +31,7 @@ window.UNITS = [
       "title": "The Old Man's Garden",
       "paragraphs": [
         {
-          "en": "Every morning, an old man works in his garden. He has a small house and a big garden. The garden is full of flowers, and there is one tree near the wall.",
+          "en": "Every morning, an old man works in his garden. He has a small house and a big garden. The garden is full of flowers, and there's one tree near the wall.",
           "zh": "每天早上，一位老人在他的花园里干活。他有一间小房子和一个大花园。花园里开满了花，墙边有一棵树。"
         },
         {
@@ -51,11 +51,11 @@ window.UNITS = [
           "zh": "“对，”他说，“很多年前我一干就是好几个小时，总是很累。后来我明白了一件事：每天做一点，比一天做很多更好。”"
         },
         {
-          "en": "I think about his words for a long time. Now I read ten pages every night before I sleep. It is not much. But after one year, it is a lot.",
+          "en": "I think about his words for a long time. Now I read ten pages every night before I sleep. It isn't much. But after one year, it's a lot.",
           "zh": "我把他的话想了很久。现在每晚睡前我读十页书。不算多。但一年下来就很多了。"
         },
         {
-          "en": "The old man still works in his garden. The flowers are always there. He does not hurry, and he does not stop.",
+          "en": "The old man still works in his garden. The flowers are always there. He doesn't hurry, and he doesn't stop.",
           "zh": "老人如今还在花园里干活。花一直在那里。他不着急，也从不停止。"
         }
       ]
@@ -132,7 +132,7 @@ window.UNITS = [
       "title": "The Long Way Home",
       "paragraphs": [
         {
-          "en": "Last night the bus did not come. I waited for twenty minutes, then I started to walk. My house is far from the station, and the road is long.",
+          "en": "Last night the bus didn't come. I waited for twenty minutes, then I started to walk. My house is far from the station, and the road is long.",
           "zh": "昨晚公交没来。我等了二十分钟，然后开始走。我家离车站很远，路很长。"
         },
         {
@@ -140,7 +140,7 @@ window.UNITS = [
           "zh": "一开始我很生气。脚很冷，手里还拎着一袋吃的。我想着这会儿在家能做的那些事。"
         },
         {
-          "en": "Then I looked up. The street was quiet, and the sky was full of stars. I do not see stars very often, because I am always inside.",
+          "en": "Then I looked up. The street was quiet, and the sky was full of stars. I don't see stars very often, because I'm always inside.",
           "zh": "然后我抬起头。街上很安静，天上满是星星。我不常看到星星，因为我总是在屋里。"
         },
         {
@@ -148,7 +148,7 @@ window.UNITS = [
           "zh": "河边有个女人在卖热食。我买了一些，站在那儿吃完。那是我这一周吃到的最好吃的东西。"
         },
         {
-          "en": "When I got home, it was almost eleven. I was tired, but I was not angry any more. Sometimes a long way home is not a bad thing.",
+          "en": "When I got home, it was almost eleven. I was tired, but I wasn't angry any more. Sometimes a long way home isn't a bad thing.",
           "zh": "到家时快十一点了。我很累，但不再生气了。有时候，回家的路长一点也不是坏事。"
         }
       ]
@@ -209,7 +209,7 @@ window.UNITS = [
     "mnemonic": "手机与晚饭",
     "short": [
       {
-        "en": "My phone is not working.",
+        "en": "My phone isn't working.",
         "zh": "我的手机坏了。"
       },
       {
@@ -223,7 +223,7 @@ window.UNITS = [
     ],
     "long": [
       {
-        "en": "I do not know why he was angry, but I think it was because I forgot his name.",
+        "en": "I don't know why he was angry, but I think it was because I forgot his name.",
         "zh": "我不知道他为什么生气，但我觉得是因为我忘了他的名字。"
       },
       {
@@ -239,15 +239,15 @@ window.UNITS = [
           "zh": "我的手机在某个星期一坏了。我把它放在桌上看了很久，然后没带它就出门了。"
         },
         {
-          "en": "The day was strange. I did not know what time it was. I could not take a picture of the sky. When I waited for the bus, I had nothing to do but look at the people.",
+          "en": "The day was strange. I didn't know what time it was. I couldn't take a picture of the sky. When I waited for the bus, I had nothing to do but look at the people.",
           "zh": "那天很奇怪。我不知道几点了。我没法拍天空。等公交的时候，除了看人，我什么也做不了。"
         },
         {
-          "en": "A man next to me was talking to his son. The boy asked him why the moon follows the car. The man said he did not know, and they both laughed.",
+          "en": "A man next to me was talking to his son. The boy asked him why the moon follows the car. The man said he didn't know, and they both laughed.",
           "zh": "旁边一个男人在跟他儿子说话。男孩问他，为什么月亮会跟着车走。男人说他也不知道，然后两个人都笑了。"
         },
         {
-          "en": "I would not have heard that if my phone was working.",
+          "en": "I wouldn't have heard that if my phone was working.",
           "zh": "如果我手机没坏，我不会听到这段对话。"
         },
         {
@@ -329,7 +329,7 @@ window.UNITS = [
         "zh": "街上很静，空气很冷。"
       },
       {
-        "en": "My mother says it is a good night.",
+        "en": "My mother says it's a good night.",
         "zh": "我妈说这是个好夜晚。"
       }
     ],
@@ -363,7 +363,7 @@ window.UNITS = [
           "zh": "我妈说这是三次里的第一次。另外两次在十二月和一月，三次都会靠近地球。"
         },
         {
-          "en": "We had no camera, and we did not need one. We only put our eyes up and kept them there for a long time, and the cold air made our faces red.",
+          "en": "We had no camera, and we didn't need one. We only put our eyes up and kept them there for a long time, and the cold air made our faces red.",
           "zh": "我们没带相机，也不需要。我们只是抬头，把眼睛放在那里很久，冷空气把我们的脸吹红了。"
         },
         {
@@ -473,11 +473,11 @@ window.UNITS = [
       "title": "One Long Table",
       "paragraphs": [
         {
-          "en": "My house is not great. When all of them come, we put two tables together and take the small seats from the other room. The table is long and the room is full.",
+          "en": "My house isn't great. When all of them come, we put two tables together and take the small seats from the other room. The table is long and the room is full.",
           "zh": "我的房子不大。他们都来的时候，我们把两张桌子拼起来，从另一间屋搬来小椅子。桌子很长，屋子很满。"
         },
         {
-          "en": "My mother gets up at five. She puts the bird in the oven and makes bread with her hands, and she does not let any person come to the food room before ten.",
+          "en": "My mother gets up at five. She puts the bird in the oven and makes bread with her hands, and she doesn't let any person come to the food room before ten.",
           "zh": "我妈五点起床。她把鸟放进烤箱，用手做面包，十点之前不许任何人靠近厨房。"
         },
         {
@@ -489,7 +489,7 @@ window.UNITS = [
           "zh": "一点我们坐下。我们有十四个人，还留着一把小椅子，给那个如今在外地上学的男孩。椅子上没有人，也没人去挪它。"
         },
         {
-          "en": "Before the meal my mother says her one word. She says we are not here for the bird, and she says it quietly, as if it were a small thing.",
+          "en": "Before the meal my mother says her one word. She says we aren't here for the bird, and she says it quietly, as if it were a small thing.",
           "zh": "开饭前我妈说她那句话。她说我们不是为这只鸟来的，说得很轻，像在说一件小事。"
         },
         {
@@ -599,11 +599,11 @@ window.UNITS = [
         "zh": "每年商店都把价格压低一天，每年人也更多。"
       },
       {
-        "en": "I see a woman with three boxes in her arms, and she does not seem happy about them.",
+        "en": "I see a woman with three boxes in her arms, and she doesn't seem happy about them.",
         "zh": "我看见一个女人怀里抱着三个盒子，她看起来并不为它们高兴。"
       },
       {
-        "en": "The question is not what is cheap, but what I will still be using in one year.",
+        "en": "The question isn't what is cheap, but what I will still be using in one year.",
         "zh": "问题不是哪个便宜，而是一年后我还在用哪个。"
       }
     ],
@@ -623,7 +623,7 @@ window.UNITS = [
           "zh": "我从架子上拿了一件外套搭在胳膊上。然后又拿了第二件,因为比第一件还便宜。我朋友往篮子里放了一台机器。"
         },
         {
-          "en": "At the door I put the second coat back. I do not need two coats in one winter. My friend keeps her machine and says she will use it every day.",
+          "en": "At the door I put the second coat back. I don't need two coats in one winter. My friend keeps her machine and says she will use it every day.",
           "zh": "到门口我把第二件放了回去。一个冬天我不需要两件外套。我朋友留了那台机器，说她每天都会用。"
         },
         {
@@ -631,7 +631,7 @@ window.UNITS = [
           "zh": "周日她发给我一张照片，机器还在盒子里，塞在桌子底下。她说她已经想不起为什么买它。"
         },
         {
-          "en": "In the evening I put my one coat on a seat near the door. One coat is enough for this cold. The list is still in my friend bag, and I do not put a new thing on it.",
+          "en": "In the evening I put my one coat on a seat near the door. One coat is enough for this cold. The list is still in my friend bag, and I don't put a new thing on it.",
           "zh": "晚上我把那件外套放在门边的椅子上。一件外套就够过这个冷天。清单还在我朋友的包里,我没再往上加新东西。"
         },
         {
@@ -741,7 +741,7 @@ window.UNITS = [
     ],
     "long": [
       {
-        "en": "The short run on the ice is not about straight lines, but about what you do when the line is gone.",
+        "en": "The short run on the ice isn't about straight lines, but about what you do when the line is gone.",
         "zh": "短道速滑不是关于直线，而是关于线没了以后你怎么办。"
       },
       {
@@ -749,7 +749,7 @@ window.UNITS = [
         "zh": "第一个弯道摔倒的人，夜里最后仍可能是第一。"
       },
       {
-        "en": "What the persons round the ice keep is not the time, but the person who got up.",
+        "en": "What the persons round the ice keep isn't the time, but the person who got up.",
         "zh": "观众记住的不是时间，是那个爬起来的人。"
       }
     ],
@@ -757,27 +757,27 @@ window.UNITS = [
       "title": "Down and Up",
       "paragraphs": [
         {
-          "en": "The ice is not flat like a road. It has a slope on the turns, and the wall is low, so a person who goes down goes down hard. The air in the building is cold and smells of metal.",
+          "en": "The ice isn't flat like a road. It has a slope on the turns, and the wall is low, so a person who goes down goes down hard. The air in the building is cold and smells of metal.",
           "zh": "冰不像路面那样平。弯道有坡度，围栏又矮，摔下去就摔得重。场馆里空气冷，有金属的味道。"
         },
         {
-          "en": "Six persons come out. They are so near that a hand can touch the coat in front. When the bell goes, the first turn comes before a person has time to take a breath.",
+          "en": "Six persons come out. They're so near that a hand can touch the coat in front. When the bell goes, the first turn comes before a person has time to take a breath.",
           "zh": "六个选手出来。他们彼此近到一伸手就能碰到前面那人的衣服。铃一响，第一个弯道在人还没喘上气时就到了。"
         },
         {
-          "en": "On the second turn a girl in blue goes down. She is on the ice for one second, two seconds. The others go past her, and the noise of the building gets greater.",
+          "en": "On the second turn a girl in blue goes down. She's on the ice for one second, two seconds. The others go past her, and the noise of the building gets greater.",
           "zh": "第二个弯道，穿蓝衣的女孩摔了。她在冰上待了一秒、两秒。别人从她身边过去，场馆里的声音更大。"
         },
         {
-          "en": "She gets up before the last of them comes. Her face does not change. She puts her hands down and goes after them, and the line between her and the others gets smaller with every turn.",
+          "en": "She gets up before the last of them comes. Her face doesn't change. She puts her hands down and goes after them, and the line between her and the others gets smaller with every turn.",
           "zh": "在最后一个人来之前她就起来了。她脸上没什么变化。她把手一压追了上去，每个弯道她跟别人的距离都在缩小。"
         },
         {
-          "en": "With two rounds to go she has two persons before her. With one round to go she is second. The person in front has a red face and is looking back, and that is the one thing a person on the ice may not do.",
+          "en": "With two rounds to go she has two persons before her. With one round to go she's second. The person in front has a red face and is looking back, and that's the one thing a person on the ice may not do.",
           "zh": "还剩两圈她第三。还剩一圈她第二。前面那人红着脸回头看，而这是滑冰的人唯一不该做的动作。"
         },
         {
-          "en": "She comes in first by a hand. After the bell she does not put her arms up. She only puts her head down for a time, and then she goes to the girl in blue and says one word to her.",
+          "en": "She comes in first by a hand. After the bell she doesn't put her arms up. She only puts her head down for a time, and then she goes to the girl in blue and says one word to her.",
           "zh": "她以一只手之差第一。铃响后她没举手。她只是低头待了一会儿，然后走到穿蓝衣的女孩那儿，跟她说了一句话。"
         }
       ]
@@ -887,11 +887,11 @@ window.UNITS = [
         "zh": "这楼有一百多层，没有一个人用电梯。"
       },
       {
-        "en": "A man of sixty goes past me on a small turn, and he is not breathing hard.",
+        "en": "A man of sixty goes past me on a small turn, and he isn't breathing hard.",
         "zh": "一个六十岁的男人在一个小拐角超过我，他喘得并不厉害。"
       },
       {
-        "en": "What makes the top possible is not the legs, but the rule of one step at a time.",
+        "en": "What makes the top possible isn't the legs, but the rule of one step at a time.",
         "zh": "让人登顶的不是腿，是「一次只走一级」这条规矩。"
       }
     ],
@@ -899,27 +899,27 @@ window.UNITS = [
       "title": "One Step",
       "paragraphs": [
         {
-          "en": "The line at the door is long. Most of the persons here do not go quickly for a living. There are men with grey hair, women with small bags, and two boys who are not more than twelve.",
+          "en": "The line at the door is long. Most of the persons here don't go quickly for a living. There are men with grey hair, women with small bags, and two boys who aren't more than twelve.",
           "zh": "门口的队伍很长。这里大多数人不是跑者。有灰白头发的男人，背小包的女人，还有两个不超过十二岁的男孩。"
         },
         {
-          "en": "The first ten floors are not hard. Every person talks and laughs, and the steps go by under the feet like nothing. At twenty the talk stops, and the sound is only shoes on stone.",
+          "en": "The first ten floors aren't hard. Every person talks and laughs, and the steps go by under the feet like nothing. At twenty the talk stops, and the sound is only shoes on stone.",
           "zh": "头十层很轻松。人人都说话、笑，台阶在脚下过去像不存在。到二十层话停了，只剩下鞋踩石头的声音。"
         },
         {
-          "en": "At forty I make the one error that most persons make: I put my head up and look for the top. There is no top to see, only more steps, and my legs are hard at the same time.",
+          "en": "At forty I make the one error that most persons make: I put my head up and look for the top. There's no top to see, only more steps, and my legs are hard at the same time.",
           "zh": "到四十层我犯了大多数人都会犯的错：抬头去找顶。看不到顶，只看到更多台阶，腿立刻就沉了。"
         },
         {
-          "en": "So I put my eyes down again and keep them on the step before me. One step, then the one after it. The number on the wall gets greater, and I do not keep it in mind.",
+          "en": "So I put my eyes down again and keep them on the step before me. One step, then the one after it. The number on the wall gets greater, and I don't keep it in mind.",
           "zh": "于是我又把眼睛放低，只盯着眼前那一级。一级，再一级。墙上的数字变大，我不去记它。"
         },
         {
-          "en": "At seventy a man of sixty goes past me. He is not breathing hard. He says one word to me as he goes: slowly. Then he is gone up the turn.",
+          "en": "At seventy a man of sixty goes past me. He isn't breathing hard. He says one word to me as he goes: slowly. Then he's gone up the turn.",
           "zh": "七十层，一个六十岁的男人超过我。他喘得不厉害。经过时对我说了一个词：慢点。然后他就拐上去了。"
         },
         {
-          "en": "At the top the air is cold and the town is small under my feet. I do not put my eyes on it first. I put them on my hands, and then I laugh, because there was so little to have fear of.",
+          "en": "At the top the air is cold and the town is small under my feet. I don't put my eyes on it first. I put them on my hands, and then I laugh, because there was so little to have fear of.",
           "zh": "到顶上空气很冷，城市在我脚下变小。我没先看它。我先看自己的手，然后笑了——原来值得害怕的东西那么少。"
         }
       ]

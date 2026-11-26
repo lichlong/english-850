@@ -10,6 +10,7 @@
   var K_MODE = "e850.mode";
   var K_EXQ = "e850.exq"; // 练习池：最近抽到过的句子 id（滑动窗口，SPEC §14.3.2）
   var K_BANNER = "e850.bannerOff"; // 练习模式提示条关闭的日期（同一天不再弹）
+  var K_REHAB = "e850.rehabAt";   // 上次显示复健卡的日期（同一次断更只提示一次）
 
   var mem = {};
   var usable = (function () {
@@ -168,10 +169,55 @@
       delete mem[K_BANNER];
     },
 
+    // ---- 复健卡：记录显示日期（SPEC §13.2 临时方案） ----
+    rehabAt: function () { return load(K_REHAB, null); },
+
+    setRehabAt: function (d) { save(K_REHAB, d); },
+
     // ---- 练习池窗口：最近抽到过的句子 id ----
     exSeen: function () { return load(K_EXQ, []); },
 
     setExSeen: function (ids) { save(K_EXQ, ids || []); },
+
+    // ---- 备份：整包读写（SPEC §15.3） ----
+    exportAll: function () {
+      var out = {};
+      var ns = "e850.";
+      if (usable) {
+        for (var i = 0; i < localStorage.length; i++) {
+          var k = localStorage.key(i);
+          if (k && k.indexOf(ns) === 0) out[k] = localStorage.getItem(k);
+        }
+      } else {
+        Object.keys(mem).forEach(function (k) { out[k] = JSON.stringify(mem[k]); });
+      }
+      return out;
+    },
+
+    importAll: function (data) {
+      if (!data) return false;
+      var ns = "e850.";
+      // 先清掉旧的，再写入——避免旧单元进度和备份混在一起
+      if (usable) {
+        var drop = [];
+        for (var i = 0; i < localStorage.length; i++) {
+          var k = localStorage.key(i);
+          if (k && k.indexOf(ns) === 0) drop.push(k);
+        }
+        drop.forEach(function (k) { localStorage.removeItem(k); });
+        Object.keys(data).forEach(function (k) {
+          if (k.indexOf(ns) !== 0) return;
+          localStorage.setItem(k, data[k]);
+        });
+      } else {
+        Object.keys(mem).forEach(function (k) { if (k.indexOf(ns) === 0) delete mem[k]; });
+        Object.keys(data).forEach(function (k) {
+          if (k.indexOf(ns) !== 0) return;
+          try { mem[k] = JSON.parse(data[k]); } catch (e) {}
+        });
+      }
+      return true;
+    },
 
     // ---- 开发者工具：用来跳到任意学习阶段（?dev=1 才会调用） ----
     devSetReadDays: function (n) {
@@ -184,12 +230,22 @@
       save(K_READ, log);
     },
 
+    // 造一次断更：只留 n 天前那一天的阅读记录
+    devSetLastReadDays: function (n) {
+      var d = new Date(Date.now() - n * 86400000);
+      var log = {};
+      log[todayKey(d)] = 400;
+      save(K_READ, log);
+      if (usable) { try { localStorage.removeItem(K_REHAB); } catch (e) {} }
+      delete mem[K_REHAB];
+    },
+
     devMarkAllDone: function (ids) {
       save(K_PROG, { done: ids.slice() });
     },
 
     devWipe: function () {
-      var keys = [K_STATS, K_EVENTS, K_READ, K_PROG, K_MARKS, K_MODE, K_EXQ, K_BANNER, "e850.cur"];
+      var keys = [K_STATS, K_EVENTS, K_READ, K_PROG, K_MARKS, K_MODE, K_EXQ, K_BANNER, K_REHAB, "e850.cur"];
       keys.forEach(function (k) {
         if (usable) {
           try { localStorage.removeItem(k); } catch (e) {}

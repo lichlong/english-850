@@ -29,6 +29,18 @@
     return "否";
   }
 
+  // 复健卡要有词可列。词频表空的时候先造一批（取第一个单元的词，次数 1–3）
+  function seedWordsIfEmpty() {
+    var st = window.Store.wordStats();
+    if (Object.keys(st).length) return;
+    var ws = {};
+    var pool = (window.UNITS && window.UNITS[0] && window.UNITS[0].words) || [];
+    pool.forEach(function (w, i) {
+      if (/^[a-z]+$/.test(w)) ws[w] = { n: (i % 3) + 1, last: window.Store.todayKey() };
+    });
+    if (Object.keys(ws).length) window.Store.setWordStats(ws);
+  }
+
   function reload() {
     window.location.reload();
   }
@@ -77,6 +89,12 @@
       ["4 天", function () { window.Store.devSetReadDays(4); }],
       ["5 天", function () { window.Store.devSetReadDays(5); }],
       ["30 天", function () { window.Store.devSetReadDays(30); }]
+    ]);
+
+    group("复健（断更 ≥7 天会出复健卡）", [
+      ["造断更 8 天", function () { seedWordsIfEmpty(); window.Store.devSetLastReadDays(8); }],
+      ["造断更 70 天", function () { seedWordsIfEmpty(); window.Store.devSetLastReadDays(70); }],
+      ["清掉复健记录", function () { window.Store.setRehabAt(null); }]
     ]);
 
     group("词频（850 词全学过才会自动进练习模式）", [

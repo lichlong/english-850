@@ -12,12 +12,15 @@
 
   function findWord(raw) {
     var w = String(raw).toLowerCase();
+    // 先认缩写（it's / let's 这种，去掉 's 就认不出来了）
+    if (window.CONTRACTIONS && window.CONTRACTIONS[w]) return w;
     // 所有格 father's / fathers' → father
     if (/'s$/.test(w)) w = w.slice(0, -2);
     else w = w.replace(/'+$/, "");
     if (window.WORDS[w]) return w;
     if (window.WORD_ALLOWED && window.WORD_ALLOWED[w]) return w;
     if (window.WORD_DEVIATION && window.WORD_DEVIATION[w]) return w;
+    if (window.CONTRACTIONS && window.CONTRACTIONS[w]) return w;
     if (window.WORD_FORMS[w]) {
       var b = window.WORD_FORMS[w];
       if (window.WORDS[b] || (window.WORD_DEVIATION && window.WORD_DEVIATION[b])) return b;
@@ -72,6 +75,7 @@
     var info = (window.WORDS && window.WORDS[word]) ||
       (window.WORD_ALLOWED && window.WORD_ALLOWED[word]) ||
       (window.WORD_DEVIATION && window.WORD_DEVIATION[word]) ||
+      (window.CONTRACTIONS && window.CONTRACTIONS[word]) ||
       (window.GLOSSARY && window.GLOSSARY[word]);
     var id = "w:" + word;
     var saved = window.Store.getMark(id, "save");

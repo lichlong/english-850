@@ -21,3 +21,5 @@ node_modules/
 # 临时测试文件（AI 调试时产生的网页/输出），不要提交
 _*.html
 _*.txt
+_*.py
+_*.json

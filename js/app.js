@@ -98,22 +98,135 @@
     return d;
   }
 
+  // ---- 复健卡（SPEC §13.2 临时落地方案） ----
+  // 触发：距上次阅读 ≥7 天。只提示一次（同一次断更），提示完就照常往下走。
+  // 说明：单元内容是固定的，所以这里只做"先复习哪些词"的提示，
+  //       §13.2 里的"不排新词""退回新词队列"需要动态排词引擎，等那一版再做。
+  var REHAB_GAP_DAYS = 7;
+
+  function lastReadDate() {
+    var log = window.Store.readLog();
+    var keys = Object.keys(log).filter(function (k) { return log[k] > 0; });
+    if (!keys.length) return null;
+    keys.sort();
+    return keys[keys.length - 1];
+  }
+
+  function gapDays(fromKey, toKey) {
+    return Math.round((new Date(toKey) - new Date(fromKey)) / 86400000);
+  }
+
+  function rehabState() {
+    var last = lastReadDate();
+    if (!last) return null;
+    var gap = gapDays(last, window.Store.todayKey());
+    if (gap < REHAB_GAP_DAYS) return null;
+    var shownAt = window.Store.rehabAt();
+    if (shownAt && shownAt >= last) return null; // 这次断更已经提示过了
+
+    var stats = window.Store.wordStats();
+    var FW = window.FUNCTION_WORDS || {};
+    var W = window.WORDS || {};
+    var list = Object.keys(stats).filter(function (w) {
+      // 功能词不入选：它们每句都出现，复习没有意义（SPEC §13.4）
+      return stats[w] && stats[w].n > 0 && W[w] && !FW[w];
+    }).map(function (w) {
+      return {
+        w: w,
+        eff: window.Store.effCount(stats[w].n, stats[w].last),
+        g: (W[w] && W[w].g) || 1
+      };
+    });
+    // 先按有效次数升序；次数相同的，词频越靠后（g 越大）越优先，即"相对低频"的先练
+    list.sort(function (a, b) {
+      if (a.eff !== b.eff) return a.eff - b.eff;
+      return b.g - a.g;
+    });
+    if (!list.length) return null;
+    return {
+      gap: gap,
+      words: list.slice(0, 25).map(function (x) { return x.w; })
+    };
+  }
+
+  function rehabCard(info) {
+    var card = document.createElement("div");
+    card.className = "rehab";
+
+    var h = document.createElement("div");
+    h.className = "rehab-h";
+    h.textContent = "复健 · 距上次 " + info.gap + " 天";
+    card.appendChild(h);
+
+    var p = document.createElement("p");
+    p.className = "rehab-p";
+    p.textContent = info.gap > 60
+      ? "这次断得久，今天只做这一步：把下面这些词过一遍，过完再往下学。读完多少算多少。"
+      : "先把下面这 " + info.words.length + " 个词过一遍，过完了再往下学新的。";
+    card.appendChild(p);
+
+    var box = document.createElement("div");
+    box.className = "rehab-words";
+    info.words.forEach(function (w) {
+      var chip = document.createElement("span");
+      chip.className = "w rehab-w";
+      chip.setAttribute("data-w", w);
+      chip.textContent = w;
+      box.appendChild(chip);
+    });
+    card.appendChild(box);
+
+    var tip = document.createElement("div");
+    tip.className = "rehab-tip";
+    tip.textContent = "点词查看释义";
+    card.appendChild(tip);
+
+    window.Store.setRehabAt(window.Store.todayKey());
+    return card;
+  }
+
+  // 把复健卡插到某个容器最前面（两个模式共用）
+  function attachRehab(container) {
+    var info = rehabState();
+    if (info) container.insertBefore(rehabCard(info), container.firstChild);
+  }
+
+  // 第一屏拼装口径（SPEC §14.9）：2 短固定 + 1 短动态 + 1 长固定 + 1 长动态
+  // 动态句按"最薄弱的词"挑；池子没有合适的句子就不插，不留空位
+  var SHORT_FIXED = 2;
+  var LONG_FIXED = 1;
+
   function buildPage1(unit) {
     var page = document.createElement("section");
     page.className = "page";
 
-    unit.short.forEach(function (s, i) {
-      page.appendChild(window.Reader.sentenceItem(
-        "short", i + 1, s, unit.id + "-s" + (i + 1), { unit: unit.id, kind: "short" }
-      ));
-    });
+    attachRehab(page);
 
-    unit.long.forEach(function (s, i) {
-      page.appendChild(window.Reader.sentenceItem(
-        "long", unit.short.length + i + 1, s, unit.id + "-l" + (i + 1),
-        { unit: unit.id, kind: "long" }
-      ));
+    var stats = window.Store.wordStats();
+    var dynShort = window.Exercises.pickForSlot({ slot: "short", unitIndex: current, stats: stats });
+    var dynLong = window.Exercises.pickForSlot({ slot: "long", unitIndex: current, stats: stats });
+
+    var n = 0;
+    function add(kind, s, id) {
+      n++;
+      page.appendChild(window.Reader.sentenceItem(kind, n, s, id, { unit: unit.id, kind: kind }));
+    }
+
+    unit.short.slice(0, SHORT_FIXED).forEach(function (s, i) {
+      add("short", s, unit.id + "-s" + (i + 1));
     });
+    if (dynShort) {
+      index["dyn:" + dynShort.id] = { kind: "short", en: dynShort.en, zh: dynShort.zh };
+      add("short", dynShort, "dyn:" + dynShort.id);
+    }
+
+    unit.long.slice(0, LONG_FIXED).forEach(function (s, i) {
+      add("long", s, unit.id + "-l" + (i + 1));
+    });
+    if (dynLong) {
+      index["dyn:" + dynLong.id] = { kind: "long", en: dynLong.en, zh: dynLong.zh };
+      add("long", dynLong, "dyn:" + dynLong.id);
+    }
 
     page.appendChild(quoteEl(0));
     return page;
@@ -170,6 +283,8 @@
       lite: false,
       banner: practice && showModeBanner()
     });
+    // 练习模式没有"学习页"，复健卡挂在拓展页顶部
+    if (practice) attachRehab(wrap1);
     readPage.appendChild(wrap1);
     out.push(readPage);
 
@@ -185,13 +300,9 @@
     next.type = "button";
     if (practice) {
       // 练习模式下"换一篇"没意义（池子跟课时无关），改成重抽（SPEC §14.3.1）
-      next.textContent = "换一批";
-      next.addEventListener("click", function () {
-        fillQuiz(wrap2, false);
-        var pages = document.getElementById("pages");
-        pages.scrollTo({ left: pages.clientWidth, behavior: "smooth" });
-        if (window.Toast) window.Toast("已换一批");
-      });
+      // 练习模式：一整天一起换（拓展跟单元走，练习跟池子走，两个都要换）
+      next.textContent = "再学一天";
+      next.addEventListener("click", nextDay);
     } else {
       next.textContent = "再学一篇";
       next.addEventListener("click", advance);
@@ -305,6 +416,15 @@
     document.getElementById("eta").textContent = "约 " + min + " 分钟学完";
   }
 
+  // 练习模式的"再学一天"：换单元 → 拓展和练习一起变；不记"已读单元"、不加词频
+  function nextDay() {
+    current = (current + 1) % units.length;
+    window.Store.setCur(current);
+    render();
+    var pages = document.getElementById("pages");
+    if (pages) pages.scrollLeft = 0;
+  }
+
   function advance() {
     var unit = units[current];
     if (unit) {
@@ -330,7 +450,8 @@
     if (kind === "word") {
       var w = id.slice(2);
       var info = (window.WORDS || {})[w] || (window.WORD_ALLOWED || {})[w] ||
-        (window.WORD_DEVIATION || {})[w] || (window.GLOSSARY || {})[w];
+        (window.WORD_DEVIATION || {})[w] || (window.CONTRACTIONS || {})[w] ||
+        (window.GLOSSARY || {})[w];
       color = "var(--story)";
       en = w;
       zh = info ? info.zh : "";
