@@ -1,28 +1,28 @@
 # 下一单元计划（先定词，再写；写完跑 node tools/measure.js 核对）
 # 用法：node tools/coverage.js --plan 重新生成，或手工改下面的词
-# unit: u027
+# unit: u029
 # theme: （从 SPEC §11.7 常青白名单里选一个）
 # 每行一个词，20–25 个
 
-substance
-pipe
-ill
-dirty
-existence
-prison
-dust
-ear
-shock
-roof
-kiss
-surprise
-copper
-receipt
-throat
-tall
-brass
-toe
-harbor
-thick
-polish
-finger
+opposite
+shut
+coal
+cry
+rough
+blade
+stretch
+hook
+cord
+cloud
+knife
+shelf
+steam
+curve
+canvas
+stem
+tin
+rat
+tail
+violent
+basin
+soup

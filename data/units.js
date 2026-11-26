@@ -3728,5 +3728,301 @@ window.UNITS = [
       "say",
       "enough"
     ]
+  },
+{
+    "id": "u027",
+    "mnemonic": "屋顶上的响声",
+    "short": [
+      {
+        "en": "The roof is thick with dust.",
+        "zh": "屋顶上积了厚厚一层灰。"
+      },
+      {
+        "en": "The pipe is dirty and full of copper.",
+        "zh": "管子又脏，里头全是铜。"
+      },
+      {
+        "en": "He has a receipt in his pocket.",
+        "zh": "他口袋里有一张收据。"
+      },
+      {
+        "en": "Her throat is ill, and her ear is bad.",
+        "zh": "她喉咙不舒服，耳朵也不对。"
+      },
+      {
+        "en": "The brass box has a small finger hole.",
+        "zh": "那个黄铜盒子上有个指头大的孔。"
+      }
+    ],
+    "long": [
+      {
+        "en": "The shock came from the roof: a great thing came down on the pipe and made a sound in the night.",
+        "zh": "响声是从屋顶来的：一样大东西砸在管子上，在夜里发出一声。"
+      },
+      {
+        "en": "His existence in that house was a quiet one, and the surprise of the kiss was the only thing that changed it.",
+        "zh": "他在那屋子里的日子很安静，唯一改变它的，就是那个吻带来的意外。"
+      },
+      {
+        "en": "The substance in the harbor water is a thick polish of oil, and the receipt for the clean-up is not small.",
+        "zh": "港口水里的那种东西是一层厚厚的油污，清理的账单可不小。"
+      }
+    ],
+    "passage": {
+      "title": "A Sound on the Roof",
+      "paragraphs": [
+        {
+          "en": "The house has a thick roof and one dirty pipe that goes down the wall. In the night a great thing comes down on it, and the sound goes through every room. The house is tall and narrow, like the man in it.",
+          "zh": "这屋子屋顶很厚，一根脏管子顺着墙下来。夜里有个大东西砸在管子上，声音穿过每一个房间。房子又高又窄，像住在里头的那个人。"
+        },
+        {
+          "en": "He gets up, puts his toe in a boot, and goes out with a brass light. On the roof there's dust, a broken pipe, and the receipt of a man who did the work ten years ago.",
+          "zh": "他起身，把脚趾塞进靴子，提着一盏黄铜灯出去。屋顶上有灰、一根破管子，还有十年前做这活儿的人留下的一张收据。"
+        },
+        {
+          "en": "His existence here is small and regular: the same walk, the same ear for the wind, the same quiet. The surprise is a kiss on the throat from the woman at the window, and it's the only shock of the week. He says a prison is not a place; it's a way of going about.",
+          "zh": "他在这儿的日子小而规律：同样的路、同样听风的耳朵、同样的安静。意外是窗边那个女人在他喉咙上亲了一下，这是这一周唯一的震动。他说：牢房不是个地方，是一种过日子的方式。"
+        },
+        {
+          "en": "In the morning the substance of the night is a story, and the copper pipe is clean. He puts the receipt back in the box and says: it was ill for ten years, and now it's well.",
+          "zh": "早上，夜里那件事成了一段故事，铜管也擦干净了。他把收据放回盒子，说：它病了十年，现在好了。"
+        }
+      ]
+    },
+    "words": [
+      "the",
+      "roof",
+      "be",
+      "thick",
+      "with",
+      "dust",
+      "pipe",
+      "dirty",
+      "and",
+      "full",
+      "of",
+      "copper",
+      "he",
+      "have",
+      "a",
+      "receipt",
+      "in",
+      "pocket",
+      "throat",
+      "ill",
+      "ear",
+      "bad",
+      "brass",
+      "box",
+      "small",
+      "finger",
+      "hole",
+      "shock",
+      "come",
+      "from",
+      "great",
+      "thing",
+      "down",
+      "on",
+      "make",
+      "sound",
+      "night",
+      "existence",
+      "that",
+      "house",
+      "quiet",
+      "surprise",
+      "kiss",
+      "only",
+      "change",
+      "substance",
+      "harbor",
+      "water",
+      "polish",
+      "oil",
+      "for",
+      "clean",
+      "up",
+      "not",
+      "go",
+      "wall",
+      "through",
+      "every",
+      "room",
+      "tall",
+      "narrow",
+      "like",
+      "man",
+      "get",
+      "put",
+      "toe",
+      "boot",
+      "out",
+      "light",
+      "broken",
+      "who",
+      "do",
+      "work",
+      "year",
+      "here",
+      "regular",
+      "same",
+      "walk",
+      "wind",
+      "woman",
+      "at",
+      "window",
+      "week",
+      "say",
+      "prison",
+      "place",
+      "way",
+      "about",
+      "morning",
+      "story",
+      "back",
+      "now",
+      "well"
+    ]
+  },
+{
+    "id": "u028",
+    "mnemonic": "一块肥皂",
+    "short": [
+      {
+        "en": "The soap is by the wash pot.",
+        "zh": "肥皂在水盆边上。"
+      },
+      {
+        "en": "The leaf is in the chest of the box.",
+        "zh": "叶子放在箱子中间那格里。"
+      },
+      {
+        "en": "It's a wise belief, and an old one.",
+        "zh": "这是个聪明的说法，也很老了。"
+      },
+      {
+        "en": "The grass is wet, so don't slip.",
+        "zh": "草是湿的，别滑倒。"
+      },
+      {
+        "en": "The egg is in the pot of powder.",
+        "zh": "鸡蛋在那罐粉里。"
+      }
+    ],
+    "long": [
+      {
+        "en": "The danger of the loose rod is a burn on the hand, and every person here has one.",
+        "zh": "松了的杆子有危险：会烫到手，这里每个人都有过。"
+      },
+      {
+        "en": "His observation of the town is a sad one: the destruction of the old market, and the attraction of the new road.",
+        "zh": "他对这座城的观察是让人难受的：旧市集被拆了，新马路把人吸走了。"
+      },
+      {
+        "en": "There's a silk dress in the window, and the adjustment of the price is small, but the kick of it is a second thing.",
+        "zh": "橱窗里有条丝裙，价格没怎么动，让人心动的却是另一样东西。"
+      }
+    ],
+    "passage": {
+      "title": "A Piece of Soap",
+      "paragraphs": [
+        {
+          "en": "The wash pot is old and the soap is small, but the water is warm and the dress comes out clean. This is the belief of the house: small things done again are enough.",
+          "zh": "水盆旧了，肥皂也小了，可水是热的，衣服洗出来是干净的。这屋子的信念就是这个：小事一遍遍做，就够了。"
+        },
+        {
+          "en": "There's a loose rod by the fire, and a burn on the hand of every person in this house. They know the danger and they keep the rod where it is.",
+          "zh": "火边有根松了的杆子，这屋每个人手上都烫过。他们知道危险，也还是让那根杆子待在那儿。"
+        },
+        {
+          "en": "On the table there's an egg, a pot of powder, and a leaf from the grass by the door. The light on the leaf is the only attraction in the room.",
+          "zh": "桌上有只鸡蛋、一罐粉，还有门边草地上的一片叶子。叶子上的光是屋里唯一好看的东西。"
+        },
+        {
+          "en": "The observation of the wise woman is this: the destruction of a thing is quick, and the adjustment is slow. She puts the soap down and says: start with the loose rod.",
+          "zh": "那位有见识的妇人这么说：拆掉一样东西很快，调整回来很慢。她把肥皂放下，说：先弄那根松了的杆子。"
+        }
+      ]
+    },
+    "words": [
+      "the",
+      "soap",
+      "be",
+      "by",
+      "wash",
+      "pot",
+      "leaf",
+      "in",
+      "chest",
+      "of",
+      "box",
+      "a",
+      "wise",
+      "belief",
+      "and",
+      "old",
+      "grass",
+      "wet",
+      "so",
+      "slip",
+      "egg",
+      "powder",
+      "danger",
+      "loose",
+      "rod",
+      "burn",
+      "on",
+      "hand",
+      "every",
+      "person",
+      "here",
+      "have",
+      "observation",
+      "town",
+      "sad",
+      "destruction",
+      "market",
+      "attraction",
+      "new",
+      "road",
+      "silk",
+      "dress",
+      "window",
+      "adjustment",
+      "price",
+      "small",
+      "but",
+      "kick",
+      "second",
+      "thing",
+      "water",
+      "warm",
+      "come",
+      "out",
+      "clean",
+      "this",
+      "house",
+      "do",
+      "again",
+      "enough",
+      "fire",
+      "keep",
+      "where",
+      "table",
+      "from",
+      "door",
+      "light",
+      "only",
+      "room",
+      "woman",
+      "quick",
+      "slow",
+      "put",
+      "down",
+      "say",
+      "start",
+      "with"
+    ]
   }
 ];

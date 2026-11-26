@@ -616,5 +616,49 @@ window.EXTRAS = {
           }
         ]
       }
+    },
+    "u027": {
+      "read": {
+        "title": "A Sound on the Roof",
+        "blocks": [
+          {
+            "std": "You hear that? Every night for a week. And every morning I go up there and find nothing, which is worse than finding something.",
+            "zh": "你听见了吗？一连七个晚上。每天早上我上去看，什么都没找到——这比找到东西更糟。",
+            "simple": "You take in that sound? Every night for a week. And every morning I go up there and see nothing, and nothing is worse than a thing."
+          },
+          {
+            "std": "Dust on the roof, dust on the sill, dust in the throat of the man who kept the receipts, and no wind to take any of it away.",
+            "zh": "屋顶上有灰，窗台上有灰，收着收据的那个人喉咙里也有灰；没有风把它们带走。",
+            "simple": "Dust on the roof, dust on the window shelf, dust in the throat of the man who kept the receipts, and no wind to take it out of the house."
+          },
+          {
+            "std": "The harbour office said the oil coming from the old pipe had reached the mud, and that the clean-up would take six weeks.",
+            "zh": "港务办公室说，老管子里漏出的油已经渗到泥里，清理要六个星期，",
+            "simple": "The office by the water said that the oil from the old pipe had come to the earth, and that the cleaning work would take six weeks."
+          }
+        ]
+      }
+    },
+    "u028": {
+      "read": {
+        "title": "A Piece of Soap",
+        "blocks": [
+          {
+            "std": "Wash your hands. Not because I said it — because the water is warm and the soap is there, and that's all a good day needs to start.",
+            "zh": "去洗手。不是因为我这么说，是因为水是热的、肥皂就在那儿——好的一天，开头只要这些。",
+            "simple": "Wash your hands. Not because I said it, but because the water is warm and the soap is there. A good day has need of no more than that at the start."
+          },
+          {
+            "std": "The grass by the door was longer every year, and the rod by the fire was never put right, and the house went on being a house.",
+            "zh": "门边的草一年比一年长，火边那根杆子一直没弄好，房子还是一天天当着房子。",
+            "simple": "The grass by the door was longer every year, and the rod by the fire was not put right, and the house went on being a house."
+          },
+          {
+            "std": "The council said the fire that burned the old market had started in a loose wire, and that the damage would cost more than a million.",
+            "zh": "议会说烧掉旧市集的那场火起于一段松了的电线，损失超过一百万。",
+            "simple": "The group said that the fire in the old market had a start in a loose wire, and that the damage would be a great amount of money."
+          }
+        ]
+      }
     }
 };
