@@ -6,6 +6,43 @@
 
   var APP = "english-850";
   var FORMAT = 1;
+  // 上次导出的日期：这是界面状态，不是学习数据，所以故意用不带点号的键名
+  // （Store.exportAll 只收 "e850." 前缀，所以它不会被打进备份包，也不会被导入覆盖）
+  var K_LAST = "e850ui.backupAt";
+  var memLast = null;
+
+  function lastBackup() {
+    try {
+      return localStorage.getItem(K_LAST) || memLast;
+    } catch (e) {
+      return memLast;
+    }
+  }
+
+  function setLastBackup(v) {
+    memLast = v;
+    try { localStorage.setItem(K_LAST, v); } catch (e) {}
+  }
+
+  // 2026-11-26T08:30:00.000Z → 2026-11-26
+  function dayOf(iso) {
+    if (!iso) return "";
+    var d = new Date(iso);
+    if (isNaN(d.getTime())) return String(iso).slice(0, 10);
+    function p(n) { return n < 10 ? "0" + n : "" + n; }
+    return d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate());
+  }
+
+  // 导出/导入两行的右侧提示
+  function syncHints() {
+    var h = document.getElementById("hint-export");
+    if (h) {
+      var v = lastBackup();
+      h.textContent = v ? "上次备份 " + dayOf(v) : "还没备份过";
+    }
+    var i = document.getElementById("hint-import");
+    if (i) i.textContent = "点击上传备份";
+  }
 
   function el(tag, cls, text) {
     var e = document.createElement(tag);
@@ -24,10 +61,11 @@
   function exportFile() {
     var data = window.Store.exportAll();
     var n = Object.keys(data).length;
+    var now = new Date().toISOString();
     var payload = {
       app: APP,
       format: FORMAT,
-      exportedAt: new Date().toISOString(),
+      exportedAt: now,
       data: data
     };
     var blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
@@ -39,6 +77,8 @@
     a.click();
     a.remove();
     window.setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
+    setLastBackup(now);
+    syncHints();
     if (window.Toast) window.Toast(n ? "已导出 " + n + " 项记录" : "已导出（当前还没有记录）");
   }
 
@@ -114,10 +154,11 @@
         input.value = "";
       });
     }
+    syncHints();
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
   else boot();
 
-  window.Backup = { exportFile: exportFile, handleFile: handleFile };
+  window.Backup = { exportFile: exportFile, handleFile: handleFile, syncHints: syncHints };
 })();
