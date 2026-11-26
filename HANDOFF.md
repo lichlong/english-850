@@ -37,6 +37,8 @@
 | `tools/checks.js` | 工作台的校验内核，与 `lib/vocab.js` 同口径 | 改校验规则时 |
 | `node tools/test-checks.js` | 守两套实现不漂移（21 项） | 改 `checks.js` 后必跑 |
 | `node tools/audit.js` | 内容审计（中英对照 / 句长 / 缩写 / 重复 / 简说压缩） | 每次写完内容必跑 |
+| `node tools/rewrite-check.js <id> <draft>` | 重写单元时查"词序会不会被打乱" | 重写老单元必跑 |
+| `node tools/replace-unit.js <id> <draft>` | 按大括号配对替换单个单元，自动重算 words | 重写落盘用 |
 
 ## 3. 现在的硬数字（2026-11-26）
 
