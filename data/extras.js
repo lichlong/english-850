@@ -184,12 +184,12 @@ window.EXTRAS = {
           {
             "std": "Look, I'm not asking you to keep the shop safe. I'm asking you to keep the light on till Friday. After that, we'll see.",
             "zh": "听我说，我不是让你保住这家店。我是让你把灯开到周五。之后再说。",
-            "simple": "I am not saying that you have to keep the store safe. I am saying: keep the light on before Friday. After that, we will see."
+            "simple": "I'm not saying that you have to keep the store safe. I'm saying: keep the light on before Friday. After that, we will see."
           },
           {
             "std": "The shop had been his father's before him, and it would be his son's after, or so he had told himself a thousand times in the small room behind the counter.",
             "zh": "这家店先是他父亲的，之后该是他儿子的——至少在柜台后面那间小屋里，他这样对自己说过一千遍。",
-            "simple": "The store was his father's before him. It will be his son's after him. That is what he said to himself a thousand times in the small room at the back."
+            "simple": "The store was his father's before him. It will be his son's after him. That's what he said to himself a thousand times in the small room at the back."
           },
           {
             "std": "Small shops in the old town reported a quiet spring. Owners say foot traffic fell by a third, while orders placed online rose.",
@@ -206,12 +206,12 @@ window.EXTRAS = {
           {
             "std": "You want to know why I don't go across here? I've seen what happens when somebody does. Two years now, and the flowers are still on the pole.",
             "zh": "你想知道我为什么不过这儿？我见过有人过的时候出的事。两年了，那根杆子上还有花。",
-            "simple": "You put the question to me about why I do not go over here. I have seen what comes to a person who does. Two years have gone, and the flowers are still there on the wall."
+            "simple": "You put the question to me about why I don't go over here. I have seen what comes to a person who does. Two years have gone, and the flowers are still there on the wall."
           },
           {
             "std": "The town had grown without a plan, as a garden grows when nobody pulls the weeds, and it had the beauty of things that were never meant to be seen.",
             "zh": "这座城没有图纸就长起来了，像没人拔草的花园，带着一种本不该被人看见的美。",
-            "simple": "The town got greater with no design, the way a garden gets greater when no person goes there with a machine. It had a sort of good look that is not made for eyes."
+            "simple": "The town got greater with no design, the way a garden gets greater when no person goes there with a machine. It had a sort of good look that isn't made for eyes."
           },
           {
             "std": "The council said yes to a new rule on Tuesday: from next spring, every new building has to keep a narrow strip of earth for trees.",
@@ -228,12 +228,12 @@ window.EXTRAS = {
           {
             "std": "Nobody reads the small print. That's the whole business: they put their name down, you give a smile, and the number at the end is yours for twenty years.",
             "zh": "没人读那堆小字。生意就是这么做的：他们签下名字，你笑一笑，最下面那个数字就归你二十年。",
-            "simple": "No person puts their eyes on the small print. That is the way the work goes: they put their name down, you give a smile, and the number at the end is yours for twenty years."
+            "simple": "No person puts their eyes on the small print. That's the way the work goes: they put their name down, you give a smile, and the number at the end is yours for twenty years."
           },
           {
-            "std": "He had counted his money so many times that the figures had lost their meaning, and still he counted, as a man touches a wound to be certain it is real.",
+            "std": "He had counted his money so many times that the figures had lost their meaning, and still he counted, as a man touches a wound to be certain it's real.",
             "zh": "他把钱数了太多遍，那些数字已经失去意义，可他还是数——像一个人去摸伤口，好确认它是真的。",
-            "simple": "He had put the number of his money together so many times that the numbers had no more sense for him. He did it again, the way a person puts a hand on a wound to be certain that it is there."
+            "simple": "He had made numbers of his money so many times that they had no sense for him. He did it again, the way a person puts a hand on a wound."
           },
           {
             "std": "Insurance companies say the price of cover will go up again next year, after two hard seasons of claims.",
@@ -250,17 +250,39 @@ window.EXTRAS = {
           {
             "std": "You don't clap for the play. You clap for the fact that forty people came out on a wet night and sat in the dark together.",
             "zh": "你不是为这出戏鼓掌。你鼓掌，是因为四十个人在雨夜出门，一起坐在黑里。",
-            "simple": "You do not put your hands together for the play. You do it because forty persons came out on a wet night and took their seats in the dark together."
+            "simple": "You don't put your hands together for the play. You do it because forty persons came out on a wet night and took their seats in the dark together."
           },
           {
             "std": "The library smelled of dust and rain, and every book in it had been read by someone who is now dead, which is the only kind of company he had ever wanted.",
             "zh": "图书馆里有尘土和雨的气味，每一本书都被一个如今已不在的人读过——他要的就是这种陪伴。",
-            "simple": "The library had the smell of dust and rain. Every book in it had been read by a person who is now dead. That is the only sort of company he ever had need of."
+            "simple": "The library had the smell of dust and rain. Every book in it had been read by a person who is now dead. That's the only sort of company he ever had need of."
           },
           {
             "std": "The market will stay open until ten on weekdays, the town said on Monday, after traders said the early closing had cut their takings by a third.",
             "zh": "市集周一说，工作日将营业到十点——此前商贩反映提前关门让他们少了三分之一收入。",
             "simple": "The market will be open till ten on all days but Sunday, the town said on Monday. Before this, the persons with stores said that the early ending of the day took a great part of their money."
+          }
+        ]
+      }
+    },
+    "u013": {
+      "read": {
+        "title": "The Field in the East",
+        "blocks": [
+          {
+            "std": "You want the field? Take it. In ten years nobody in this town will remember what grass looked like, and they'll call that progress.",
+            "zh": "你想要那块地？拿去。十年后这城里没人记得草长什么样，他们会管这叫进步。",
+            "simple": "You have a need of the field? Take it. After ten years no person in this town will have any memory of grass, and they will say that it's forward motion."
+          },
+          {
+            "std": "He had a respect for land that came from his father, and his father had it from a man who had lost everything in a war and never spoke of it.",
+            "zh": "他对土地的那份敬重是从父亲那儿来的；父亲的敬重又来自一个人——那人在一场战争里丢了一切，从此不提。",
+            "simple": "His respect for land came from his father. The father had it from a man who had nothing after a war, and who did not say a word about it."
+          },
+          {
+            "std": "The committee said on Wednesday that the meeting on the field would be moved to the school hall, after a request from families with small children.",
+            "zh": "委员会周三说，因有带小孩的家庭提出请求，那块地上的集会改到学校礼堂。",
+            "simple": "On Wednesday the committee said that the meeting would be moved to the school room, after a request from families with small persons."
           }
         ]
       }

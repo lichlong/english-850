@@ -1244,7 +1244,7 @@ window.EXERCISES = [{ id, zh, en, level: "low|mid|high", tags: ["daily","money"]
 | 写之前 | 这一课该教哪 22 个词 | `node tools/coverage.js --plan` → `tools/next-unit.txt`（先定词，再写，§14.6） |
 | 写的时候 | 这段英文有没有超纲、够不够长 | 工作台「单元」逐项红/绿；草稿校验（第二阶段） |
 | 写完 | 练习句解锁对不对、原文有没有点不开的词 | 工作台「练习池」「拓展」两个视图 |
-| 收口 | 数字有没有退步 | `node tools/measure.js` + `test-draw.js`，把数字贴进 CHANGELOG |
+| 收口 | 数字有没有退步 | `node tools/measure.js` + `test-draw.js` + **`audit.js`**，把数字贴进 CHANGELOG |
 
 **补内容的标准流程（按这个顺序，不要跳）**：
 
@@ -1252,7 +1252,7 @@ window.EXERCISES = [{ id, zh, en, level: "low|mid|high", tags: ["daily","money"]
 2. 按 §11.1.1 三段结构写（原文 / 中文 / 简说），练习句按 §11.3 档位长度写
 3. 写进 `data/units.js` / `data/exercises.js` / `data/extras.js`
 4. 打开 `admin.html` → 单元视图看「长度 / 新词 / 超纲」，练习池看「档位 / 解锁」，拓展看「简说超纲 / 未注解」
-5. 红的一律改到绿，再跑 `measure.js` 复核，最后提交
+5. 跑 `audit.js` 看内容质量（中英对照 / 句长 / 缩写 / 重复 / 简说压缩），再跑 `measure.js` 复核，最后提交
 
 **为什么不做"工作台直接改文件"**：浏览器没有写本地文件的权限，硬做要么拉起一个本地服务（多一层要维护的东西），要么导出片段让人手工粘贴（多一步粘贴，但零风险）。第二阶段选后者。
 

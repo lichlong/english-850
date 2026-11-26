@@ -1,28 +1,28 @@
 # 下一单元计划（先定词，再写；写完跑 node tools/measure.js 核对）
 # 用法：node tools/coverage.js --plan 重新生成，或手工改下面的词
-# unit: u013
+# unit: u014
 # theme: （从 SPEC §11.7 常青白名单里选一个）
 # 每行一个词，20–25 个
 
-field
-east
-example
-range
-war
-offer
-event
-request
-month
-future
-space
-committee
-sun
-meeting
-interest
-baby
-learning
-net
-color
-self
-discussion
-agreement
+society
+trade
+able
+green
+common
+gold
+natural
+weather
+land
+island
+record
+statement
+ever
+present
+material
+true
+mark
+cover
+fact
+unit
+amount
+watch

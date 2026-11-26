@@ -1041,7 +1041,7 @@ window.UNITS = [
         "zh": "只要在周末前通过系统下订单，公司都会给以帮助。"
       },
       {
-        "en": "Such work is not free: you get money for your time, and the company gets your mind for the day.",
+        "en": "Such work isn't free: you get money for your time, and the company gets your mind for the day.",
         "zh": "这种活儿不是白干的：你拿钱，公司拿走你这一天的心思。"
       }
     ],
@@ -1049,7 +1049,7 @@ window.UNITS = [
       "title": "The Store at the End of the Road",
       "paragraphs": [
         {
-          "en": "The store at the end of the road is small, but it is not quiet. The door is open at seven.",
+          "en": "The store at the end of the road is small, but it isn't quiet. The door is open at seven.",
           "zh": "路尽头那家店很小，却一点也不安静。七点，门就开了。"
         },
         {
@@ -1211,7 +1211,7 @@ window.UNITS = [
           "zh": "每座城都有大小，也有个指路的东西。指路的是办公室里的地图，和路尽头的一块牌子。牌子是黑白的，上面写着这地方的名字。"
         },
         {
-          "en": "The law is not a long book. It says: no person may take your right to walk, or to work, or to take a seat. While you take care, you may be free.",
+          "en": "The law isn't a long book. It says: no person may take your right to walk, or to work, or to take a seat. While you take care, you may be free.",
           "zh": "法律不是一本厚书。它说的是：谁也不能拿走你走路、干活、坐下来歇一歇的权利。你只要当心，就可以自由。"
         },
         {
@@ -1219,7 +1219,7 @@ window.UNITS = [
           "zh": "有些规矩从北边来，有些从南边来，城里的水流慢慢把它们带走。地下的水，比地上的楼更老。"
         },
         {
-          "en": "New design gets every eye, but the control of the town is in the hands of persons who have no time for art. Education is the long road: a development of many years before a place is not the same.",
+          "en": "New design gets every eye, but the control of the town is in the hands of persons who have no time for art. Education is the long road: a development of many years before a place isn't the same.",
           "zh": "新的设计人人都会看，可这座城管在那些没空看艺术的人手里。教育是那条长路：要很多年的发展，一个地方才会不一样。"
         }
       ]
@@ -1333,7 +1333,7 @@ window.UNITS = [
         "zh": "我没有信用卡。"
       },
       {
-        "en": "The rate is not the same every year.",
+        "en": "The rate isn't the same every year.",
         "zh": "这个利率每年都不一样。"
       },
       {
@@ -1343,7 +1343,7 @@ window.UNITS = [
     ],
     "long": [
       {
-        "en": "The government has a board of five persons who keep the level of the rate and make the rules.",
+        "en": "The government has a board of five persons; they keep the level of the rate and make the rules.",
         "zh": "政府设了一个五人委员会，管着利率的高低，也定规矩。"
       },
       {
@@ -1363,15 +1363,15 @@ window.UNITS = [
           "zh": "这个从国家西部来的男人，手里拿着一张表走进办公室。他没有账户，也没有卡。桌边的人说：名字写这儿，印出来的名就够了。"
         },
         {
-          "en": "The rate is on the board. It is not the same every year. One point he does not take in: why the number is not the same. He puts his hand on one line, and the person at the table says yes.",
+          "en": "The rate is on the board. It isn't the same every year. One point he doesn't take in: why the number isn't the same. He puts his hand on one line, and the person at the table says yes.",
           "zh": "利率挂在牌子上。它每年都不一样。有一点他想不通：这个数为什么不一样。他把手放在一行上，桌边的人说可以。"
         },
         {
-          "en": "Science gives the numbers, but the process is old: a name, a value, a private word. The quality of the paper is not good and the print is grey.",
+          "en": "Science gives the numbers, but the process is old: a name, a value, a private word. The quality of the paper isn't good and the print is grey.",
           "zh": "数字是科学给的，可手续是老一套：一个名字、一个数、一句只有你知道的话。纸的质量不好，印出来是灰的。"
         },
         {
-          "en": "At the end he is west of the road with a card in his hand: a small thing, and a new level of care. Insurance is the next form, the person says; he does not join it today. He will come back when the property is his.",
+          "en": "At the end he's west of the road with a card in his hand: a small thing, and a new level of care. Insurance is the next form, the person says; he doesn't join it today. He will come back when the property is his.",
           "zh": "最后他站在路的西边，手里捏着一张卡：小东西，却是一层新的照顾。桌边的人说，下一张表是保险；他今天不参加。等他自己有了房产，他会再来。"
         }
       ]
@@ -1498,11 +1498,11 @@ window.UNITS = [
         "zh": "那个年轻人每天早上上市集，在车上挂一张纸条，写着当天的价钱。"
       },
       {
-        "en": "The medical test is complete, and the answer is good: his body is well.",
+        "en": "The medical test is complete, and the answer is good: his body is in good form.",
         "zh": "体检做完了，结果不错：他的身体没事。"
       },
       {
-        "en": "Against the wall there is a library of small books, and the language in them is not the language of this town.",
+        "en": "Against the wall there's a library of small books, and the language in them isn't the language of this town.",
         "zh": "靠墙有一个小书库，书里的语言不是这座城的语言。"
       }
     ],
@@ -1510,7 +1510,7 @@ window.UNITS = [
       "title": "One Night at the Play",
       "paragraphs": [
         {
-          "en": "At the side of the market there is an old building with a small room for plays. Every week a young group comes there and acts a story; the thread is the same, but the words are new.",
+          "en": "At the side of the market there's an old building with a small room for plays. Every week a young group comes there and acts a story; the thread is the same, but the words are new.",
           "zh": "市集边上有一栋老房子，里面有个演小戏的房间。每周有一群年轻人来演一个故事；线索是老的，词是新的。"
         },
         {
@@ -1518,11 +1518,11 @@ window.UNITS = [
           "zh": "这一夜的故事，讲一个人对灯和水收税。他的朋友说不该，城里人说该，三幕戏就完了。"
         },
         {
-          "en": "The language is simple, the notes of the music are not many, and the bodies of the persons in the room do all the work. No great industry is needed to make a night like this.",
+          "en": "The language is simple, the notes of the music aren't many, and the bodies of the persons in the room do all the work. No great industry is needed to make a night like this.",
           "zh": "台词很简单，音乐只有几个音，全靠屋里这些人的身体在使劲。要造出这样一晚，用不着什么大工业。"
         },
         {
-          "en": "After the play the old man takes a key from his coat and puts the payment in a box. He says: experience is the only test, and that is the important point. Then he puts the light out.",
+          "en": "After the play the old man takes a key from his coat and puts the payment in a box. He says: experience is the only test, and that's the important point. Then he puts the light out.",
           "zh": "散场后老人从外套里摸出钥匙，把票钱放进一个盒子。他说：经验是唯一的考试，要紧的就是这一条。然后他把灯关了。"
         }
       ]
@@ -1624,6 +1624,157 @@ window.UNITS = [
       "point",
       "then",
       "out"
+    ]
+  },
+{
+    "id": "u013",
+    "mnemonic": "东边那块地",
+    "short": [
+      {
+        "en": "The sun is high over the field.",
+        "zh": "太阳高高挂在那块地上头。"
+      },
+      {
+        "en": "The meeting is in the east room.",
+        "zh": "会议在东边的屋子里。"
+      },
+      {
+        "en": "He makes an offer for the field.",
+        "zh": "他为这块地出了个价。"
+      },
+      {
+        "en": "The baby has a coat of bright color.",
+        "zh": "那孩子有一件颜色很亮的外套。"
+      },
+      {
+        "en": "This month the net comes back full.",
+        "zh": "这个月网回来时是满的。"
+      }
+    ],
+    "long": [
+      {
+        "en": "The committee has a request from the town: put the new learning space on the field in the east.",
+        "zh": "委员会收到镇上的一项请求：把新的学习场地放在东边那块地上。"
+      },
+      {
+        "en": "For example, a war takes the future of a town, and no discussion gives it back.",
+        "zh": "比方说，一场战争会拿走一座城的未来，再多讨论也拿不回来。"
+      },
+      {
+        "en": "There is a wide range of interest in the event, and the agreement comes after one month of talks.",
+        "zh": "这件事引起的兴趣范围很宽，而协议是在一个月的商谈之后才成的。"
+      }
+    ],
+    "passage": {
+      "title": "The Field in the East",
+      "paragraphs": [
+        {
+          "en": "The field in the east of the town has no name. For years it was a place for young persons, and for old men who put a seat under the tree.",
+          "zh": "城东那块地没有名字。多年来它是年轻人待的地方，也是老人们在树下摆凳子坐的地方。"
+        },
+        {
+          "en": "This month the committee puts a request on the board: the town has need of a space for learning, and the field is free. A group makes an offer of money and says the work will take one year. No person in the room says it's a small thing.",
+          "zh": "这个月委员会在公告牌上贴出一项请求：城里需要一个学习的地方，这块地是空的。有个团体出了钱，还说工期要一年。屋里没人说这是件小事。"
+        },
+        {
+          "en": "The discussion is long. Some say the field keeps the self of the town in one place. For example, every event of the year takes place there.",
+          "zh": "讨论拖得很长。有人说，这块地让这座城的自己有个落脚处。比方说，一年里每一场活动都在那儿办。"
+        },
+        {
+          "en": "In the future, they say, a young person will come with a book to a warm room near this road. The agreement is signed after one month. The sun goes down on the field, and nothing is the same.",
+          "zh": "他们说，以后会有年轻人带着书，走到这条路边上一间暖和的屋子里。一个月后协议签了。太阳落在田上，什么都不一样了。"
+        }
+      ]
+    },
+    "words": [
+      "the",
+      "sun",
+      "be",
+      "high",
+      "over",
+      "field",
+      "meeting",
+      "in",
+      "east",
+      "room",
+      "he",
+      "make",
+      "a",
+      "offer",
+      "for",
+      "baby",
+      "have",
+      "coat",
+      "of",
+      "bright",
+      "color",
+      "this",
+      "month",
+      "net",
+      "come",
+      "back",
+      "full",
+      "committee",
+      "request",
+      "from",
+      "town",
+      "put",
+      "new",
+      "learning",
+      "space",
+      "on",
+      "example",
+      "war",
+      "take",
+      "future",
+      "and",
+      "no",
+      "discussion",
+      "give",
+      "there",
+      "wide",
+      "range",
+      "interest",
+      "event",
+      "agreement",
+      "after",
+      "talk",
+      "name",
+      "year",
+      "place",
+      "young",
+      "person",
+      "old",
+      "man",
+      "who",
+      "seat",
+      "under",
+      "tree",
+      "board",
+      "need",
+      "free",
+      "group",
+      "money",
+      "say",
+      "work",
+      "will",
+      "small",
+      "thing",
+      "long",
+      "some",
+      "keep",
+      "self",
+      "every",
+      "with",
+      "book",
+      "to",
+      "warm",
+      "near",
+      "road",
+      "sign",
+      "go",
+      "down",
+      "same"
     ]
   }
 ];
