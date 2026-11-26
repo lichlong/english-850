@@ -177,6 +177,12 @@ window.GLOSSARY = {
   "proud":       { zh: "骄傲的，要强的" },
   "county":      { zh: "县" },
   "tool":        { zh: "工具" },
+  "throw":        { zh: "扔，抛（threw / thrown）" },
+  "belong":      { zh: "属于" },
+  "harvest":     { zh: "收成" },
+  "strike":       { zh: "罢工；打击" },
+  "careful":     { zh: "小心的" },
+  "agree":        { zh: "同意，达成一致" },
   "pole":         { zh: "杆子，电线杆" },
   "plan":         { zh: "计划，图纸" },
   "grow":         { zh: "生长，变得" },
@@ -200,4 +206,5 @@ window.GLOSSARY = {
   "closing":      { zh: "关门，结束" },
   "takings":      { zh: "营业收入" },
   "away":         { zh: "离开；在远处" },
+  "farmer":       { zh: "农场主，农人" }
 };

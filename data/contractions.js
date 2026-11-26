@@ -30,5 +30,6 @@ window.CONTRACTIONS = {
   "we'll":    { zh: "我们会（we will 的缩写）" },
   "i've":     { zh: "我已经（I have 的缩写）" },
   "they'll":  { zh: "他们会（they will 的缩写）" },
-  "we've":    { zh: "我们有（we have 的缩写）" }
+  "we've":    { zh: "我们有（we have 的缩写）" },
+  "you'll":   { zh: "你会（you will 的缩写）" }
 };

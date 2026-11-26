@@ -1,28 +1,27 @@
 # 下一单元计划（先定词，再写；写完跑 node tools/measure.js 核对）
 # 用法：node tools/coverage.js --plan 重新生成，或手工改下面的词
-# unit: u032
+# unit: u035
 # theme: （从 SPEC §11.7 常青白名单里选一个）
 # 每行一个词，20–25 个
 
-stomach
-porter
-pig
-shade
-rhythm
-sudden
-shake
-shame
-nerve
-thunder
-wax
-nut
-drain
-potato
-parcel
-ant
-bite
-conscious
-wound
-apparatus
-worm
-needle
+plough
+probable
+prose
+regret
+rub
+scissors
+servant
+smash
+sneeze
+sock
+spade
+sponge
+spoon
+stiff
+stitch
+stocking
+tendency
+trousers
+umbrella
+whip
+whistle

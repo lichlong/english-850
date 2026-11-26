@@ -726,5 +726,93 @@ window.EXTRAS = {
           }
         ]
       }
+    },
+    "u032": {
+      "read": {
+        "title": "Before the Thunder",
+        "blocks": [
+          {
+            "std": "You're not conscious, that's the thing. You think you're awake, and then a parcel comes and you can't remember your own name.",
+            "zh": "你就是不清醒，问题在这儿。你觉得自己醒着，可包裹一送到，你连自己的名字都想不起来。",
+            "simple": "You're not conscious, and that's the point. You have the idea that you're awake, and then a parcel comes and you have no memory of your name."
+          },
+          {
+            "std": "The thunder had gone, the rain had gone, and the only sound left in the street was the rhythm of a pig in the shade.",
+            "zh": "雷走了，雨走了，街上只剩一个声音：阴凉处那头猪的喘息。",
+            "simple": "The thunder had gone, the rain had gone, and the only sound in the street was the rhythm of a pig in the shade."
+          },
+          {
+            "std": "The port said the strike would end on Monday, after the two sides agreed on a new rate for the night work.",
+            "zh": "港口说罢工周一会结束——双方就夜班的新费率达成了一致。",
+            "simple": "The water office said that the stop-work would come to an end on Monday, after the two sides said yes to a new rate for the night work."
+          }
+        ]
+      }
+    },
+    "u033": {
+      "read": {
+        "title": "A Bucket of Water",
+        "blocks": [
+          {
+            "std": "Take care, that's boiling. You put your hand in there and you'll be at the medical room till Sunday.",
+            "zh": "小心，那是滚的。你整只手伸进去，得在医生那儿待到礼拜天。",
+            "simple": "Take care, that's boiling. If you put your hand in there, you will be with the medical person till Sunday."
+          },
+          {
+            "std": "The bucket had been in that family for three generations, and the bent top was the only thing any person made an argument about.",
+            "zh": "那只水桶在那家传了三代，唯一让人争过的就是那个弯了的提手。",
+            "simple": "The bucket had been in that family for three father-and-son steps, and the bent top was the only thing any person made an argument about."
+          },
+          {
+            "std": "The building said the burst pipe had put boiling water into the earth by the door, and that two of the persons who work there were taken to the medical building.",
+            "zh": "工厂说爆裂的管道把滚水喷进了院子，两名工人被送进医院。",
+            "simple": "The building said that the broken pipe had put boiling water on the earth by the door, and that two persons who work there were taken to the medical building."
+          }
+        ]
+      }
+    },
+    "u034": {
+      "read": {
+        "title": "Behind the Curtain",
+        "blocks": [
+          {
+            "std": "Don't move the curtain. There's a cold wind behind it that will put the fire out, and I've had that fire going since April.",
+            "zh": "别动窗帘。那后头有股穿堂风会把火吹灭，我这火从四月烧到现在。",
+            "simple": "Don't move the curtain. There's a cold wind under it that will put the fire out, and I've had that fire going from April."
+          },
+          {
+            "std": "The cup had a crack in it that she was not able to put out of the house, being of that delicate kind that keeps the memory of every hand.",
+            "zh": "那只杯子有道裂，她一直舍不得扔——它细得很，像记得每一双端过它的手。",
+            "simple": "The cup had a crack in it that she was not able to put out of the house. It was of a delicate sort, and it seemed to keep the memory of every hand."
+          },
+          {
+            "std": "The shop said the linen would come on Friday, and that the ornament on the kettle was the only thing in the window nobody had asked the price of.",
+            "zh": "店里说亚麻布周五到；水壶上那件饰物是橱窗里唯一没人问过价的东西。",
+            "simple": "The store said that the linen would come on Friday, and that the ornament on the kettle was the only thing in the window that no person had put a question about the price of."
+          }
+        ]
+      }
+    },
+    "u035": {
+      "read": {
+        "title": "The Last Rain",
+        "blocks": [
+          {
+            "std": "Take the umbrella. It will not rain, and that's the very reason you will have need of it by four.",
+            "zh": "带上伞。不会下雨——正因如此，你四点前一定用得上。",
+            "simple": "Take the umbrella. It will not rain, and that is the very reason you will have need of it by four."
+          },
+          {
+            "std": "The plough had been his father's, the spade had been his grandfather's, and the whistle on the wall was no person's and was not taken down.",
+            "zh": "犁是他父亲的，锹是他祖父的；墙上那哨子不属于谁，也从没被取下来过。",
+            "simple": "The plough was his father's, the spade was his father's father's, and the whistle on the wall was no person's and was not taken down."
+          },
+          {
+            "std": "Farmers said the late rain had cut the probable harvest by a fifth, and that the price of grain would be stiff all winter.",
+            "zh": "农场主们说，雨来得晚，收成大概少了五分之一，整个冬天的粮价都会硬。",
+            "simple": "The farm persons said that the late rain had taken one part of five of the probable grain, and that the price of grain would be high all winter."
+          }
+        ]
+      }
     }
 };

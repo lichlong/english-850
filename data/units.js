@@ -4463,5 +4463,584 @@ window.UNITS = [
       "word",
       "answer"
     ]
+  },
+{
+    "id": "u032",
+    "mnemonic": "雷雨前的包裹",
+    "short": [
+      {
+        "en": "The pig is in the shade.",
+        "zh": "猪在阴凉处。"
+      },
+      {
+        "en": "There's a parcel for the porter.",
+        "zh": "有给搬运工的包裹。"
+      },
+      {
+        "en": "The thunder comes with a sudden shake.",
+        "zh": "雷声一来就是一阵猛晃。"
+      },
+      {
+        "en": "My stomach is not right today.",
+        "zh": "我今天胃不舒服。"
+      },
+      {
+        "en": "The needle is in the wax.",
+        "zh": "针插在蜡里。"
+      }
+    ],
+    "long": [
+      {
+        "en": "The rhythm of the rain on the roof is a thing every person in the town is conscious of.",
+        "zh": "雨打屋顶的节奏，是镇上每个人都觉察得到的东西。"
+      },
+      {
+        "en": "His shame was on his face, and his nerve went when the apparatus gave a bite of electric force.",
+        "zh": "他脸上带着羞，那台仪器一放电咬人，他的胆就没了。"
+      },
+      {
+        "en": "There's a wound on the arm of the porter, a worm in the potato, and a nut by the drain.",
+        "zh": "搬运工胳膊上有伤，土豆里有虫，水沟边有颗坚果。"
+      }
+    ],
+    "passage": {
+      "title": "Before the Thunder",
+      "paragraphs": [
+        {
+          "en": "The pig keeps to the shade, and the porter sits by the drain with a parcel on his knee. The air is thick, and every person in the street is conscious of the weather. An ant goes over the stone and no person puts a foot on it.",
+          "zh": "猪躲在阴凉处，搬运工坐在水沟边，膝盖上放着个包裹。空气很沉，街上每个人都觉出这天气不对。一只蚂蚁从石头上爬过去，谁也没踩它。"
+        },
+        {
+          "en": "The thunder comes with a sudden shake of the windows, and the rhythm of the rain on the roof goes on for the rest of the day.",
+          "zh": "雷声一来，窗子猛晃一下，屋顶上的雨点一直下到天黑。"
+        },
+        {
+          "en": "There's a needle in the wax on the shelf, and an apparatus with a wire that gives a bite. The porter won't put his hand near it: his nerve went years ago, and he has no shame about saying so.",
+          "zh": "架子上蜡里插着针，还有个带电线、会咬人的仪器。搬运工不肯把手靠近：他的胆早就没了，说这话他也不觉得羞。"
+        },
+        {
+          "en": "A worm is in the potato, and a wound on his arm is not clean. Still he takes the parcel in, and the smell of a wet street comes in with him.",
+          "zh": "土豆里有条虫，他胳膊上的伤也不干净。他还是把包裹送了进去，湿街的气味跟着他一起进了屋。"
+        }
+      ]
+    },
+    "words": [
+      "the",
+      "pig",
+      "be",
+      "in",
+      "shade",
+      "a",
+      "parcel",
+      "for",
+      "porter",
+      "thunder",
+      "come",
+      "with",
+      "sudden",
+      "shake",
+      "stomach",
+      "not",
+      "right",
+      "needle",
+      "wax",
+      "rhythm",
+      "of",
+      "rain",
+      "on",
+      "roof",
+      "thing",
+      "every",
+      "person",
+      "town",
+      "conscious",
+      "shame",
+      "face",
+      "and",
+      "nerve",
+      "go",
+      "when",
+      "apparatus",
+      "give",
+      "bite",
+      "electric",
+      "force",
+      "wound",
+      "arm",
+      "worm",
+      "potato",
+      "nut",
+      "by",
+      "drain",
+      "keep",
+      "to",
+      "knee",
+      "air",
+      "thick",
+      "street",
+      "weather",
+      "ant",
+      "over",
+      "stone",
+      "no",
+      "put",
+      "foot",
+      "window",
+      "rest",
+      "day",
+      "shelf",
+      "wire",
+      "that",
+      "hand",
+      "near",
+      "year",
+      "he",
+      "have",
+      "about",
+      "say",
+      "so",
+      "clean",
+      "still",
+      "take",
+      "smell",
+      "wet"
+    ]
+  },
+{
+    "id": "u033",
+    "mnemonic": "一只水桶",
+    "short": [
+      {
+        "en": "The bucket is full of boiling water.",
+        "zh": "桶里全是滚开的水。"
+      },
+      {
+        "en": "The goat is on the sail of the boat.",
+        "zh": "山羊在船的帆上。"
+      },
+      {
+        "en": "Her chin is sticky with chalk.",
+        "zh": "她下巴上沾着粉笔，黏黏的。"
+      },
+      {
+        "en": "The bulb in the hollow is bent.",
+        "zh": "凹处那盏灯泡弯了。"
+      },
+      {
+        "en": "He has a bad cough and a bitter taste.",
+        "zh": "他咳得厉害，嘴里发苦。"
+      }
+    ],
+    "long": [
+      {
+        "en": "The jewel in the comb is a small one, and the tooth of it is bent from years of use.",
+        "zh": "梳子上那颗宝石不大，梳齿用久了都弯了。"
+      },
+      {
+        "en": "The pencil is in the cork, and the carriage has a bucket of water under the seat.",
+        "zh": "铅笔插在软木塞上，马车座位底下有一桶水。"
+      },
+      {
+        "en": "There's a burst of amusement when the goat puts its head in the bucket, and no person is cruel about it.",
+        "zh": "山羊把头伸进桶里，大家笑了一下，没人因此刻薄它。"
+      }
+    ],
+    "passage": {
+      "title": "A Bucket of Water",
+      "paragraphs": [
+        {
+          "en": "The bucket by the door is full of boiling water, and the steam makes the room feel like a wet cloth. She puts chalk on the table and a pencil by the cork board.",
+          "zh": "门边那桶水是滚开的，热气让屋子像一块湿布。她把粉笔放在桌上，把铅笔放在软木牌旁边。"
+        },
+        {
+          "en": "The carriage comes at six with a hollow sound on the stones, and the goat in front of it has a bell that's bent and bitter in the ear.",
+          "zh": "马车六点到，轮子在石头上压出一阵空响；前头那只羊挂的铃弯了，听着刺耳。"
+        },
+        {
+          "en": "There's a jewel on her comb that her mother gave her, and a cough in her chin when she laughs. She says the poison of a bad year is amusement, and no person may take that from her.",
+          "zh": "她梳子上有颗母亲给的宝石；她笑的时候下巴那儿总带着一声咳。她说，坏年份的毒就是笑，这东西谁也别想拿走。"
+        },
+        {
+          "en": "The bulb over the door goes out with a small burst, and the sail of a boat on the wall is bright for a minute. Then it's dark, and the bucket is still full.",
+          "zh": "门上那盏灯啪一声灭了，墙上一幅船帆画亮了一分钟。然后黑了，桶还是满的。"
+        }
+      ]
+    },
+    "words": [
+      "the",
+      "bucket",
+      "be",
+      "full",
+      "of",
+      "boiling",
+      "water",
+      "goat",
+      "on",
+      "sail",
+      "boat",
+      "chin",
+      "sticky",
+      "with",
+      "chalk",
+      "bulb",
+      "in",
+      "hollow",
+      "bent",
+      "he",
+      "have",
+      "a",
+      "bad",
+      "cough",
+      "and",
+      "bitter",
+      "taste",
+      "jewel",
+      "comb",
+      "small",
+      "tooth",
+      "from",
+      "year",
+      "use",
+      "pencil",
+      "cork",
+      "carriage",
+      "under",
+      "seat",
+      "burst",
+      "amusement",
+      "when",
+      "put",
+      "head",
+      "no",
+      "person",
+      "cruel",
+      "about",
+      "by",
+      "door",
+      "steam",
+      "make",
+      "room",
+      "like",
+      "wet",
+      "cloth",
+      "table",
+      "board",
+      "come",
+      "at",
+      "sound",
+      "stone",
+      "front",
+      "bell",
+      "ear",
+      "that",
+      "mother",
+      "give",
+      "laugh",
+      "say",
+      "poison",
+      "may",
+      "take",
+      "over",
+      "go",
+      "out",
+      "wall",
+      "bright",
+      "for",
+      "minute",
+      "then",
+      "dark",
+      "still"
+    ]
+  },
+{
+    "id": "u034",
+    "mnemonic": "窗帘后的水壶",
+    "short": [
+      {
+        "en": "The kettle is under the curtain.",
+        "zh": "水壶在窗帘下面。"
+      },
+      {
+        "en": "The cushion is of linen and feather.",
+        "zh": "靠垫是亚麻布包羽毛的。"
+      },
+      {
+        "en": "There's a knot in the curtain cord.",
+        "zh": "窗帘绳上打了个结。"
+      },
+      {
+        "en": "The insect is in the drawer.",
+        "zh": "抽屉里有只虫。"
+      },
+      {
+        "en": "The mist makes the field fertile.",
+        "zh": "雾气让这块地肥。"
+      }
+    ],
+    "long": [
+      {
+        "en": "She has a glove of delicate linen and a foolish impulse to put an ornament on the kettle.",
+        "zh": "她有一只薄亚麻的手套，还有股傻劲，想给水壶挂个装饰。"
+      },
+      {
+        "en": "The disgust on his face was not for the fowl, but for the feeble way the man put it on the plate.",
+        "zh": "他脸上的嫌恶不是对那只禽，是对那人把东西放上盘子的那副没力气的样子。"
+      },
+      {
+        "en": "The elastic in the curtain is old, and the crush of the cushion is the only soft thing in the room.",
+        "zh": "窗帘的松紧带老了，屋里唯一软的东西就是那靠垫被压出来的松。"
+      }
+    ],
+    "passage": {
+      "title": "Behind the Curtain",
+      "paragraphs": [
+        {
+          "en": "The kettle is under the curtain, and the mist at the window makes the room look like a place under water. An insect goes up the glass, and down again.",
+          "zh": "水壶在窗帘下面，窗上的雾让屋子看着像水底。一只小虫顺着玻璃爬上去，又下来。"
+        },
+        {
+          "en": "She takes the ornament out of the drawer: a small thing of glass on a linen cord, with a knot that took her a winter to make.",
+          "zh": "她从抽屉里拿出那件饰物：一块小玻璃挂在亚麻绳上，那个结她打了一个冬天。"
+        },
+        {
+          "en": "The cushion on the seat is of feather, and the glove by it is of such delicate linen that it seems a foolish thing to put a hand in.",
+          "zh": "座位上的靠垫是羽毛的，旁边那只手套料子太细，看着不像能把手伸进去的。"
+        },
+        {
+          "en": "For the evening there's fowl in a pot and jelly after it. His disgust is not with the food: it's that the man who put it there did it with such feeble hands. Digestion, she says, is not the only purpose of a meal, and a person may take pleasure in a plate.",
+          "zh": "晚上有炖鸡，之后还有果冻。他嫌的不是吃的，是摆盘那人手太软。她说：一顿饭不只是为了消化，一只盘子也能让人高兴。"
+        }
+      ]
+    },
+    "words": [
+      "the",
+      "kettle",
+      "be",
+      "under",
+      "curtain",
+      "cushion",
+      "of",
+      "linen",
+      "and",
+      "feather",
+      "a",
+      "knot",
+      "in",
+      "cord",
+      "insect",
+      "drawer",
+      "mist",
+      "make",
+      "field",
+      "fertile",
+      "have",
+      "glove",
+      "delicate",
+      "foolish",
+      "impulse",
+      "to",
+      "put",
+      "ornament",
+      "on",
+      "disgust",
+      "face",
+      "not",
+      "for",
+      "fowl",
+      "but",
+      "feeble",
+      "way",
+      "man",
+      "plate",
+      "elastic",
+      "old",
+      "crush",
+      "only",
+      "soft",
+      "thing",
+      "room",
+      "at",
+      "window",
+      "look",
+      "like",
+      "place",
+      "water",
+      "go",
+      "up",
+      "glass",
+      "down",
+      "again",
+      "take",
+      "out",
+      "small",
+      "with",
+      "that",
+      "winter",
+      "seat",
+      "by",
+      "such",
+      "seem",
+      "hand",
+      "even",
+      "pot",
+      "jelly",
+      "after",
+      "food",
+      "who",
+      "there",
+      "do",
+      "digestion",
+      "say",
+      "purpose",
+      "meal",
+      "person",
+      "may",
+      "pleasure"
+    ]
+  },
+{
+    "id": "u035",
+    "mnemonic": "最后一场雨",
+    "short": [
+      {
+        "en": "The umbrella is by the spade.",
+        "zh": "伞在铁锹旁边。"
+      },
+      {
+        "en": "He has one sock and no trousers.",
+        "zh": "他只有一只短袜，没穿长裤。"
+      },
+      {
+        "en": "The spoon is in the sponge.",
+        "zh": "勺子插在海绵里。"
+      },
+      {
+        "en": "Her stocking is stiff with wet earth.",
+        "zh": "她的长袜硬邦邦地沾着湿土。"
+      },
+      {
+        "en": "The whistle is on the whip.",
+        "zh": "哨子挂在鞭子上。"
+      }
+    ],
+    "long": [
+      {
+        "en": "The plough is in the field, and its probable use this year is small: the earth is stiff and the rain is late.",
+        "zh": "犁在地里，今年大概用不上几回：土硬，雨又来得晚。"
+      },
+      {
+        "en": "She takes the scissors and makes a stitch in the trousers, and there's a servant at the door with a sneeze and a smile.",
+        "zh": "她拿剪刀在长裤上缝了一针，门口有个仆人打了个喷嚏，笑了笑。"
+      },
+      {
+        "en": "The tendency of the room is to go quiet after a smash of glass, and his regret comes after the rub of his hand on the table.",
+        "zh": "玻璃一碎，屋里的倾向就是安静下来；他的后悔，是在手在桌上蹭过之后才来的。"
+      }
+    ],
+    "passage": {
+      "title": "The Last Rain",
+      "paragraphs": [
+        {
+          "en": "The farm has one plough, one spade, and an umbrella that has been on the same hook for a year. The rain is late, and what a probable year is no person will say.",
+          "zh": "农场有一张犁、一把锹，还有一把在同一个钩子上挂了一年的伞。雨迟迟不来，这一年会怎样，谁也说不出。"
+        },
+        {
+          "en": "In the house a servant puts a spoon by a sponge, and a stocking by a sock, and there's a whistle and a whip on the wall that no person has made use of in years.",
+          "zh": "屋里，仆人把勺子放在海绵边，把长袜放在短袜边；墙上挂着哨子和鞭子，好几年没人用过。"
+        },
+        {
+          "en": "She makes a stitch in the trousers with stiff hands, and the scissors by her knee give a small sound. There's prose in the way she does it: no waste, no hurry.",
+          "zh": "她用僵硬的手在长裤上缝一针，膝盖边的剪刀发出一点响。她做活的法子有种散文的味道：不浪费，也不急。"
+        },
+        {
+          "en": "When the glass comes down with a smash, the room goes quiet, and the tendency of every person is to look at the floor. She rubs her hand on the table and says: it's only a glass, and there's no regret in a thing that can be put together again.",
+          "zh": "玻璃哗啦一下碎了，屋里静下来，每个人的倾向都是往地上看。她把手在桌上蹭了蹭，说：不过是个杯子；能拼回来的东西，不值得后悔。"
+        }
+      ]
+    },
+    "words": [
+      "the",
+      "umbrella",
+      "be",
+      "by",
+      "spade",
+      "he",
+      "have",
+      "sock",
+      "and",
+      "no",
+      "trousers",
+      "spoon",
+      "in",
+      "sponge",
+      "stocking",
+      "stiff",
+      "with",
+      "wet",
+      "earth",
+      "whistle",
+      "on",
+      "whip",
+      "plough",
+      "field",
+      "probable",
+      "use",
+      "this",
+      "year",
+      "small",
+      "rain",
+      "late",
+      "take",
+      "scissors",
+      "make",
+      "a",
+      "stitch",
+      "servant",
+      "at",
+      "door",
+      "sneeze",
+      "smile",
+      "tendency",
+      "of",
+      "room",
+      "to",
+      "go",
+      "quiet",
+      "after",
+      "smash",
+      "glass",
+      "regret",
+      "come",
+      "rub",
+      "hand",
+      "table",
+      "farm",
+      "that",
+      "same",
+      "hook",
+      "for",
+      "person",
+      "will",
+      "say",
+      "house",
+      "put",
+      "wall",
+      "knee",
+      "give",
+      "sound",
+      "prose",
+      "way",
+      "do",
+      "waste",
+      "when",
+      "down",
+      "every",
+      "look",
+      "floor",
+      "only",
+      "thing",
+      "together",
+      "again"
+    ]
   }
 ];

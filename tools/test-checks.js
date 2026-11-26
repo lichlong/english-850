@@ -61,9 +61,9 @@ const U = Checks.checkUnits(V.UNITS || [], clk);
     if (r.fresh.length !== fresh.length) bad++;
     if (r.missing.length !== new Set(tokensOf(unitText(u)).filter((t) => !lk.lookup(t))).size) bad++;
   }
-  ok("31 个单元的词数/去重/新词/超纲 与 node 侧一致", bad === 0, bad ? bad + " 处不一致" : "");
+  ok("35 个单元的词数/去重/新词/超纲 与 node 侧一致", bad === 0, bad ? bad + " 处不一致" : "");
   eq("累计覆盖", U.coveredCount, seen.size);
-  eq("覆盖 = 763（当前实测，内容变了要一起改）", U.coveredCount, 763);
+  eq("覆盖 = 850（内容写满，词表全覆盖）", U.coveredCount, 850);
   eq("词表总数", U.wordTotal, 850);
   ok("超纲 0", U.rows.every((r) => r.missing.length === 0));
   eq("新词不合规的单元数", U.badFresh.length, 4);
