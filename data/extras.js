@@ -484,5 +484,49 @@ window.EXTRAS = {
           }
         ]
       }
+    },
+    "u021": {
+      "read": {
+        "title": "The Race and the Room",
+        "blocks": [
+          {
+            "std": "You want to win? Then stop thinking about the machine. The machine doesn't care. It's the man who has to be ready when the heat comes.",
+            "zh": "你想赢？那就别再想机器。机器不在乎。热来的时候，得是人准备好。",
+            "simple": "You have a need to put the other men on the wrong foot? Then have no more thoughts about the machine. The machine has no care. The man is the one who has to be ready when the heat comes."
+          },
+          {
+            "std": "The race had been run every year since before his father was born, and the serious men of the town still stood at the branch of the road with their hats in their hands.",
+            "zh": "他父亲还没出生，这比赛就年年办；镇上那些正经人到现在还站在岔路口，手里拿着帽子。",
+            "simple": "The competition had been run every year from before his father was a baby, and the serious men of the town were still at the branch of the road with their hats in their hands."
+          },
+          {
+            "std": "A chemical spill was reported near the river on Monday, and the council said drinking water in three villages was being tested.",
+            "zh": "周一有报告说河边发生了化学品泄漏，议会说三个村子的饮用水正在检测。",
+            "simple": "A chemical drop in the river was put in the news on Monday, and the group said that they were testing the drinking water in three small towns."
+          }
+        ]
+      }
+    },
+    "u022": {
+      "read": {
+        "title": "Snow on the Bridge",
+        "blocks": [
+          {
+            "std": "The bridge is closed. Not because of the snow — because of what's under it. Somebody has been cutting for a week.",
+            "zh": "桥封了。不是因为雪，是因为桥底下。有人在那儿切了一个星期了。",
+            "simple": "The bridge is not open. Not because of the snow, but because of what is under it. A person has been cutting there for a week."
+          },
+          {
+            "std": "Winter in that country does not arrive; it takes the place, the way a heavy man takes the only chair, and nobody argues with the weather.",
+            "zh": "那个国家的冬天不是来的，是占位的——像一个壮汉占了唯一的椅子，没人跟天气讲道理。",
+            "simple": "In that country winter does not come. It takes the place, the way a great man takes the only seat, and no person makes an argument with the weather."
+          },
+          {
+            "std": "Two days of snow brought the region to a stop on Tuesday, closing the main bridge and cutting power to forty villages.",
+            "zh": "两天的雪让整个地区周二停摆：主桥封闭，四十个村子断电。",
+            "simple": "Two days of snow put an end to all motion in the north on Tuesday. The great bridge was not open, and forty small places had no electric power."
+          }
+        ]
+      }
     }
 };

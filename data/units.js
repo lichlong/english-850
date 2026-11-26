@@ -2701,7 +2701,7 @@ window.UNITS = [
     ],
     "long": [
       {
-        "en": "The chief of the army has no motion to make on the transport question.",
+        "en": "The chief of the army has no motion to make on the transport question of the north.",
         "zh": "军队的首长在运输这件事上没有提案。"
       },
       {
@@ -2817,6 +2817,319 @@ window.UNITS = [
       "word",
       "change",
       "peace"
+    ]
+  },
+{
+    "id": "u021",
+    "mnemonic": "一场比赛与一次听证",
+    "short": [
+      {
+        "en": "His shirt is soft and very old.",
+        "zh": "他的衬衫很软，也很旧了。"
+      },
+      {
+        "en": "The flight was late by two hours.",
+        "zh": "那班飞机晚了两个小时。"
+      },
+      {
+        "en": "There's a limit to the heat here.",
+        "zh": "这里的热有个限度。"
+      },
+      {
+        "en": "The tree has a solid branch.",
+        "zh": "这棵树有一根结实的枝。"
+      },
+      {
+        "en": "It's a serious argument, not a small thing.",
+        "zh": "这是正经的争论，不是小事。"
+      }
+    ],
+    "long": [
+      {
+        "en": "The competition has a driving force, and the expert says the limit of the machine is near.",
+        "zh": "这场比赛自有一股推力，专家说这台机器的极限快到了。"
+      },
+      {
+        "en": "The hearing on the crime is separate from the birth of the new law, and no person gives a clear answer.",
+        "zh": "关于那桩罪的听证和这条新法的诞生是两回事，也没人给个清楚的说法。"
+      },
+      {
+        "en": "There's a mass of chemical waste in the pocket of land by the river, and the religion of the town says it's wrong.",
+        "zh": "河边那块地的口袋里堆着一大团化学废料，镇上的宗教说这是错的。"
+      }
+    ],
+    "passage": {
+      "title": "The Race and the Room",
+      "paragraphs": [
+        {
+          "en": "The competition is the only thing in town that makes a noise on a Sunday. Two men, one machine, and a branch of the road that no person uses on any other day.",
+          "zh": "比赛是这座镇上礼拜天唯一会吵起来的事。两个人、一台机器，还有一条平时没人走的岔路。"
+        },
+        {
+          "en": "The expert has a shirt with a soft top and a pocket full of numbers. He says the heat is the limit: one more minute and the machine will drop.",
+          "zh": "专家穿了件软领子的衬衫，口袋里塞满数字。他说热就是极限：再多一分钟，机器就得停下。"
+        },
+        {
+          "en": "In the evening there's a hearing in the same room. A person says the competition is a waste and a crime. A second person says the flight of the birds is not the only thing that makes a town.",
+          "zh": "晚上还是这间屋子，开一场听证。有人说这场比赛是浪费、是罪过。第二个人说，鸟飞过不是唯一让一座镇活起来的东西。"
+        },
+        {
+          "en": "The decision is separate from the argument, and the birth of the rule takes a year. In the spring the two men come back with a machine that's solid and quiet, and the town has its Sunday again.",
+          "zh": "决定和争论是两回事，规矩的出生要一年。到春天，那两个人带回来一台结实又安静的机器，镇子又有了它的礼拜天。"
+        }
+      ]
+    },
+    "words": [
+      "shirt",
+      "be",
+      "soft",
+      "and",
+      "very",
+      "old",
+      "the",
+      "flight",
+      "late",
+      "by",
+      "hour",
+      "a",
+      "limit",
+      "to",
+      "heat",
+      "here",
+      "tree",
+      "have",
+      "solid",
+      "branch",
+      "serious",
+      "argument",
+      "not",
+      "small",
+      "thing",
+      "competition",
+      "driving",
+      "force",
+      "expert",
+      "say",
+      "of",
+      "machine",
+      "near",
+      "hearing",
+      "on",
+      "crime",
+      "separate",
+      "from",
+      "birth",
+      "new",
+      "law",
+      "no",
+      "person",
+      "give",
+      "clear",
+      "answer",
+      "mass",
+      "chemical",
+      "waste",
+      "in",
+      "pocket",
+      "land",
+      "river",
+      "religion",
+      "town",
+      "wrong",
+      "only",
+      "that",
+      "make",
+      "noise",
+      "man",
+      "road",
+      "use",
+      "any",
+      "other",
+      "day",
+      "with",
+      "top",
+      "full",
+      "number",
+      "he",
+      "much",
+      "minute",
+      "will",
+      "drop",
+      "even",
+      "same",
+      "room",
+      "second",
+      "bird",
+      "decision",
+      "rule",
+      "take",
+      "year",
+      "spring",
+      "come",
+      "back",
+      "quiet",
+      "again"
+    ]
+  },
+{
+    "id": "u022",
+    "mnemonic": "桥上的雪",
+    "short": [
+      {
+        "en": "The snow is deep on the bridge.",
+        "zh": "桥上的雪很深。"
+      },
+      {
+        "en": "His brother has a small boat.",
+        "zh": "他弟弟有一条小船。"
+      },
+      {
+        "en": "The flag is false to the eye.",
+        "zh": "那面旗子看着不对劲。"
+      },
+      {
+        "en": "We saw him yesterday, by the chain.",
+        "zh": "昨天我们在铁链边看见他了。"
+      },
+      {
+        "en": "It's an equal measure for every person.",
+        "zh": "这对每个人都是同样的标准。"
+      }
+    ],
+    "long": [
+      {
+        "en": "The comparison is clear: a chain of stores makes a profit, and one small farm has to produce food for the town.",
+        "zh": "对比很清楚：连锁店赚钱，一个小农场得给镇上种出吃的来。"
+      },
+      {
+        "en": "The advertisement gives the direction of the wind and the time of the rain; the behavior of the river is in it too.",
+        "zh": "这则告示给出风向和下雨的时间，连河的脾气都写在里头，也没人说它是假的。"
+      },
+      {
+        "en": "The damage to the iron bridge came from the weight of the snow, and the approval for the work came yesterday.",
+        "zh": "铁桥的损坏是雪压出来的，修缮的批准昨天下来了。"
+      }
+    ],
+    "passage": {
+      "title": "Snow on the Bridge",
+      "paragraphs": [
+        {
+          "en": "The bridge over the river is made of iron and stone. In a hard winter the snow comes down on it for three days, and no person goes across.",
+          "zh": "河上那座桥是铁和石头做的。遇上冷冬，雪下三天，没人过桥。"
+        },
+        {
+          "en": "His brother keeps a small boat under the bridge and a chain round it. Yesterday he went out with a light and came back with a fish and a story about the wind; a ray of sun came through the snow as he came near.",
+          "zh": "他弟弟在桥下放了一条小船，用铁链锁着。昨天他带着一盏灯出去，回来时有一条鱼，还有一个关于风的故事；他快走到的时候，一道阳光穿过雪照下来。"
+        },
+        {
+          "en": "The town puts an advertisement in the news: every person who gives a measure of the snow gets a small payment. The comparison of this winter with the last one is on the wall, and no number on it is false.",
+          "zh": "镇上在报纸上登了告示：谁量了积雪，就给一点钱。今年冬天和去年的对比贴在墙上，上面的数字没有一个是假的。"
+        },
+        {
+          "en": "The white flag on the bridge is the sign for a hard night; a quick attack of wind and snow is the thing the flag is for. The damage to the stone is not great, and the approval for the work comes in the spring. The brain of the town is not a person but a book of numbers.",
+          "zh": "桥上的白旗是难熬的一夜的信号；一阵说来就来的风雪，就是这旗子要提醒的事。石头的损伤不重，修缮的批准春天下来。这座城的大脑不是某个人，是一本数字。"
+        }
+      ]
+    },
+    "words": [
+      "the",
+      "snow",
+      "be",
+      "deep",
+      "on",
+      "bridge",
+      "brother",
+      "have",
+      "a",
+      "small",
+      "boat",
+      "flag",
+      "false",
+      "to",
+      "eye",
+      "see",
+      "yesterday",
+      "by",
+      "chain",
+      "equal",
+      "measure",
+      "for",
+      "every",
+      "person",
+      "comparison",
+      "clear",
+      "of",
+      "store",
+      "make",
+      "profit",
+      "and",
+      "farm",
+      "produce",
+      "food",
+      "town",
+      "advertisement",
+      "give",
+      "direction",
+      "wind",
+      "time",
+      "rain",
+      "behavior",
+      "river",
+      "in",
+      "no",
+      "say",
+      "damage",
+      "iron",
+      "come",
+      "from",
+      "weight",
+      "approval",
+      "work",
+      "over",
+      "stone",
+      "hard",
+      "winter",
+      "down",
+      "day",
+      "go",
+      "across",
+      "keep",
+      "under",
+      "round",
+      "he",
+      "out",
+      "with",
+      "light",
+      "back",
+      "fish",
+      "story",
+      "about",
+      "ray",
+      "sun",
+      "through",
+      "as",
+      "near",
+      "put",
+      "news",
+      "who",
+      "get",
+      "payment",
+      "this",
+      "last",
+      "wall",
+      "number",
+      "white",
+      "sign",
+      "night",
+      "quick",
+      "attack",
+      "thing",
+      "not",
+      "great",
+      "spring",
+      "brain",
+      "but",
+      "book"
     ]
   }
 ];
