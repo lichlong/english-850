@@ -3,6 +3,7 @@
 //   1. 不支持就**不显示喇叭**（不报错、不占位），保证 HTML 与小红书沙箱都能跑
 //   2. 只读英文；中文不读（学的是英语，读中文只会打断）
 //   3. 用户点了才出声——iOS 也要求必须由手指触发，正好一致，不需要用户多做任何一步
+//   4. 打开页面就预热（v9.9）：先把语音表要来，再在第一次碰屏幕时静音"空speak"一次解锁 iOS
 (function () {
   "use strict";
 
@@ -28,7 +29,20 @@
     return null;
   }
 
-  // 桌面 Chrome 的语音表是异步到的；iOS 常常第一次点击后才齐
+  // ---- 预热（v9.9）----
+  // 打开页面就把语音表要来，不出声、不占位：
+  //   iOS 的 getVoices() 首次常返回空表（要等浏览器后台加载），
+  //   这里在 0 / 300 / 1200 / 3000ms 各查一次，谁先齐就用谁。
+  //   整个过程没有任何 speak 调用，所以绝对静音。
+  var tries = 0;
+  function warm() {
+    if (!has) return;
+    pick();
+    if (voice || tries >= 4) return;
+    tries++;
+    window.setTimeout(warm, [300, 900, 1800][tries - 1] || 2000);
+  }
+
   if (has) {
     pick();
     try {
@@ -36,6 +50,7 @@
     } catch (e) {
       try { window.speechSynthesis.onvoiceschanged = pick; } catch (e2) {}
     }
+    warm();
   }
 
   function say(text) {
@@ -86,5 +101,12 @@
     return b;
   }
 
-  window.Speak = { ok: has, say: say, button: button, into: into };
+  window.Speak = {
+    ok: has,
+    say: say,
+    button: button,
+    into: into,
+    // 诊断用：拿到的是哪个语音（拿不到返回空串）
+    voiceLang: function () { var v = pick(); return v ? v.lang : ""; }
+  };
 })();
