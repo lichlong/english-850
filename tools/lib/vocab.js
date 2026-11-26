@@ -6,7 +6,7 @@ const vm = require("vm");
 
 const ROOT = path.join(__dirname, "..", "..");
 
-const DATA_FILES = ["data/words.js", "data/units.js", "data/extras.js", "data/exercises.js", "data/glossary.js", "data/contractions.js", "data/function-words.js"];
+const DATA_FILES = ["data/words.js", "data/units.js", "data/extras.js", "data/exercises.js", "data/glossary.js", "data/dict.js", "data/contractions.js", "data/function-words.js"];
 
 // 在沙箱里执行 data/*.js，取回 window 上的表
 function loadData(files) {
@@ -33,7 +33,11 @@ function makeLookup(V) {
   const DEVIATION = V.WORD_DEVIATION || {};
   const GLOSSARY = V.GLOSSARY || {};
   const CONTR = V.CONTRACTIONS || {};
+  const DICT = V.DICT || {};
 
+  // kind 口径：word=850 内；allowed/deviation=允许项；contraction=缩写；
+  //            glossary=手写注解（81 条）；dict=ECDICT 生成的延伸注解（L2）
+  // **单元正文与简说只能用 word/allowed/deviation/contraction，出现 dict 也算超纲**
   function lookup(raw) {
     let w = String(raw).toLowerCase();
     if (CONTR[w]) return { base: w, kind: "contraction" }; // 缩写优先于去 's
@@ -44,12 +48,14 @@ function makeLookup(V) {
     if (DEVIATION[w]) return { base: w, kind: "deviation" };
     if (CONTR[w]) return { base: w, kind: "contraction" };
     if (GLOSSARY[w]) return { base: w, kind: "glossary" };
+    if (DICT[w]) return { base: w, kind: "dict" };
     if (FORMS[w]) {
       const b = FORMS[w];
       if (WORDS[b]) return { base: b, kind: "word" };
       if (DEVIATION[b]) return { base: b, kind: "deviation" };
       if (CONTR[b]) return { base: b, kind: "contraction" };
       if (GLOSSARY[b]) return { base: b, kind: "glossary" };
+      if (DICT[b]) return { base: b, kind: "dict" };
     }
     const cands = [
       w.replace(/ies$/, "y"), w.replace(/es$/, ""), w.replace(/s$/, ""),
@@ -63,11 +69,12 @@ function makeLookup(V) {
       if (DEVIATION[c]) return { base: c, kind: "deviation" };
       if (CONTR[c]) return { base: c, kind: "contraction" };
       if (GLOSSARY[c]) return { base: c, kind: "glossary" };
+      if (DICT[c]) return { base: c, kind: "dict" };
     }
     return null;
   }
 
-  return { lookup, WORDS, FORMS, ALLOWED, DEVIATION, GLOSSARY, CONTR };
+  return { lookup, WORDS, FORMS, ALLOWED, DEVIATION, GLOSSARY, CONTR, DICT };
 }
 
 // 一段文本里出现的 850 表内词（已还原、去重）

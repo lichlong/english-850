@@ -23,10 +23,13 @@ UNITS.forEach((u) => {
 
 const rows = Object.keys(WORDS).sort().map((w) => {
   const n = count.get(w) || 0;
+  const e = WORDS[w] || {};
   return {
     w,
-    zh: (WORDS[w] && WORDS[w].zh) || "",
-    grp: (WORDS[w] && (WORDS[w].group || WORDS[w].g)) || "",
+    zh: e.zh || "",
+    pos: e.pos || "",
+    ipa: e.ipa || "",
+    grp: e.g || "",
     n,
     unit: first.get(w) || "",
     state: n === 0 ? "未出现" : n <= 4 ? "新词" : n <= 14 ? "巩固中" : "已巩固"
@@ -41,12 +44,13 @@ out.push("> 由 `node tools/vocab-report.js` 生成，**不要手改**。改词�
 out.push("");
 out.push(`- 计数口径：出现次数 = 这个词在几个单元里出现过（等于累计接触天数）
 - 词表总数：**${rows.length}**；已出现 **${covered}**，未出现 **${rows.length - covered}**`);
+out.push(`- 有音标 ${rows.filter((r) => r.ipa).length} 个 · 有词性 ${rows.filter((r) => r.pos).length} 个`);
 out.push(`- 允许项 ${Object.keys(ALLOWED).length} 条 / 偏离词 ${Object.keys(DEVIATION).length} 条（单独计，不进本表）`);
 out.push("");
-out.push("| 词 | 中文 | 组 | 出现在几课 | 首次出现 | 状态 |");
-out.push("|---|---|---|---|---|---|");
+out.push("| 词 | 音标 | 词性 | 中文 | 组 | 出现在几课 | 首次出现 | 状态 |");
+out.push("|---|---|---|---|---|---|---|---|");
 rows.forEach((r) => {
-  out.push(`| ${r.w} | ${r.zh} | ${r.grp} | ${r.n} | ${r.unit || "—"} | ${r.state} |`);
+  out.push(`| ${r.w} | ${r.ipa || "—"} | ${r.pos || "—"} | ${r.zh} | ${r.grp} | ${r.n} | ${r.unit || "—"} | ${r.state} |`);
 });
 out.push("");
 

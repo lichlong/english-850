@@ -38,6 +38,14 @@ function loadWordsFile(rel) {
 }
 const old = loadWordsFile("data/words.js");
 
+// 音标 / 词性 / 完整释义：读 tools/vocab-extra.json（由 tools/build-vocab-extra.js 从 ECDICT 生成）
+let vocabExtra = {};
+try {
+  vocabExtra = JSON.parse(fs.readFileSync(path.join(root, "tools", "vocab-extra.json"), "utf8"));
+} catch (e) {
+  vocabExtra = {};
+}
+
 // ---------- 3. 常用度名次 ----------
 let freq = new Map();
 try {
@@ -274,10 +282,15 @@ const KEY_W = 13;
 const fmtEntry = (w) => {
   const o = old.words[w] || {};
   const src = rows.find((r) => r.w === w);
+  const ex = vocabExtra[w] || {};
   const zh = o.zh || src.zh;
+  const ipa = ex.ipa || o.ipa || "";
+  const pos = ex.pos || o.pos || "";
+  const full = ex.full || o.full || "";
   const parts = ["g: " + o.g0 + "", 'zh: "' + zh + '"'];
-  if (o.ipa) parts.push('ipa: "' + o.ipa + '"');
-  if (o.full) parts.push('full: "' + o.full + '"');
+  if (pos) parts.push('pos: "' + pos + '"');
+  if (ipa) parts.push('ipa: "' + ipa + '"');
+  if (full) parts.push('full: "' + full + '"');
   return "  " + (w + ":").padEnd(KEY_W) + " { " + parts.join(", ") + " },";
 };
 
@@ -285,7 +298,7 @@ const out = [];
 out.push("// 词表（自动生成，勿手改）");
 out.push("// 生成方式：node tools/gen-words.js");
 out.push("// 源头：tools/basic-850.txt（Ogden Basic English 850 词，严格口径见 SPEC §11.6）");
-out.push("// 字段：g=组号 1-30（按常用度，只服务排程算法）；zh=释义；ipa=音标；full=完整释义");
+out.push("// 字段：g=组号 1-30（按常用度，只服务排程算法）；zh=释义；pos=词性；ipa=音标；full=完整释义（后三项来自 tools/vocab-extra.json，源 ECDICT）");
 out.push("");
 out.push("window.WORDS = {");
 groups.forEach((g, i) => {

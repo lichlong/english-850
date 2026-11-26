@@ -1053,8 +1053,8 @@ window.UNITS = [
           "zh": "路尽头那家店很小，却一点也不安静。七点，门就开了。"
         },
         {
-          "en": "You may send an order by phone or through the system on his small machine. When it comes, the company gives him help by phone. The group of stores near him does the same, and they give support to each other when a box is late.",
-          "zh": "你可以打电话下单，也可以通过他那台小机器上的系统下单。订单来了，公司会打电话帮他。附近那几家店也一样，谁家的箱子晚了，大家就互相帮一把。"
+          "en": "You may send an order by phone or through the system on his small machine. When it comes, the company gives him help by phone. The group of stores near him does the same, and they give support to the other stores when a box is late.",
+          "zh": "你可以打电话下单，也可以通过他那台小机器上的系统下单。订单来了，公司会打电话帮他。附近那几家店也一样，谁家的箱子晚了，谁家的箱子晚了，别的店就帮一把。"
         },
         {
           "en": "The work is general: open, take money, give change, say please. The list of prices is public, on the wall by the door. The map of the town is at the back for new persons.",
@@ -1162,6 +1162,158 @@ window.UNITS = [
       "part",
       "then",
       "tomorrow"
+    ]
+  },
+{
+    "id": "u010",
+    "mnemonic": "红绿灯与规矩",
+    "short": [
+      {
+        "en": "The sign at the door is black.",
+        "zh": "门边那块牌子是黑的。"
+      },
+      {
+        "en": "Please take care on this road.",
+        "zh": "走这条路请当心。"
+      },
+      {
+        "en": "The water comes from the north.",
+        "zh": "水是从北边来的。"
+      },
+      {
+        "en": "He has an office near the south end.",
+        "zh": "他在南头有一间办公室。"
+      },
+      {
+        "en": "This place has a long history.",
+        "zh": "这地方历史很长。"
+      }
+    ],
+    "long": [
+      {
+        "en": "The law gives every person the right to go on the public road, and no person may take it from them because of sex or money.",
+        "zh": "法律给每个人走上公共道路的权利，谁也不能因为性别或钱把它拿走。"
+      },
+      {
+        "en": "While the town gets new buildings, the old design of the roads is still under the control of a small group.",
+        "zh": "城里起了新楼，可道路的老样子还在一小撮人手里管着。"
+      },
+      {
+        "en": "Education and art have power over the development of a town, but the change takes years and no person sees it in one year.",
+        "zh": "教育和艺术会影响一座城的发展，可变化要很多年，一年里谁也看不出来。"
+      }
+    ],
+    "passage": {
+      "title": "The Rules of a Town",
+      "paragraphs": [
+        {
+          "en": "Every town has a size and a guide. The guide is a map at the office, and a sign at the end of the road. The sign is black and white, and it gives the name of the place.",
+          "zh": "每座城都有大小，也有个指路的东西。指路的是办公室里的地图，和路尽头的一块牌子。牌子是黑白的，上面写着这地方的名字。"
+        },
+        {
+          "en": "The law is not a long book. It says: no person may take your right to walk, or to work, or to take a seat. While you take care, you may be free.",
+          "zh": "法律不是一本厚书。它说的是：谁也不能拿走你走路、干活、坐下来歇一歇的权利。你只要当心，就可以自由。"
+        },
+        {
+          "en": "Some rules come from the north and some from the south, and the current of the town takes them slowly. The water under the road has more history than the buildings over it.",
+          "zh": "有些规矩从北边来，有些从南边来，城里的水流慢慢把它们带走。地下的水，比地上的楼更老。"
+        },
+        {
+          "en": "New design gets every eye, but the control of the town is in the hands of persons who have no time for art. Education is the long road: a development of many years before a place is not the same.",
+          "zh": "新的设计人人都会看，可这座城管在那些没空看艺术的人手里。教育是那条长路：要很多年的发展，一个地方才会不一样。"
+        }
+      ]
+    },
+    "words": [
+      "the",
+      "sign",
+      "at",
+      "door",
+      "be",
+      "black",
+      "please",
+      "take",
+      "care",
+      "on",
+      "this",
+      "road",
+      "water",
+      "come",
+      "from",
+      "north",
+      "he",
+      "have",
+      "a",
+      "office",
+      "near",
+      "south",
+      "end",
+      "place",
+      "long",
+      "history",
+      "law",
+      "give",
+      "every",
+      "person",
+      "right",
+      "to",
+      "go",
+      "public",
+      "and",
+      "no",
+      "may",
+      "because",
+      "of",
+      "sex",
+      "or",
+      "money",
+      "while",
+      "town",
+      "get",
+      "new",
+      "building",
+      "old",
+      "design",
+      "still",
+      "under",
+      "control",
+      "small",
+      "group",
+      "education",
+      "art",
+      "power",
+      "over",
+      "development",
+      "but",
+      "change",
+      "year",
+      "see",
+      "in",
+      "size",
+      "guide",
+      "map",
+      "white",
+      "name",
+      "not",
+      "book",
+      "say",
+      "walk",
+      "work",
+      "seat",
+      "you",
+      "free",
+      "some",
+      "rule",
+      "current",
+      "much",
+      "than",
+      "eye",
+      "hand",
+      "who",
+      "time",
+      "for",
+      "before",
+      "same"
     ]
   }
 ];

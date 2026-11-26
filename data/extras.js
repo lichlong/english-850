@@ -198,5 +198,27 @@ window.EXTRAS = {
           }
         ]
       }
+    },
+    "u010": {
+      "read": {
+        "title": "The Rules of a Town",
+        "blocks": [
+          {
+            "std": "You want to know why I don't go across here? I've seen what happens when somebody does. Two years now, and the flowers are still on the pole.",
+            "zh": "你想知道我为什么不过这儿？我见过有人过的时候出的事。两年了，那根杆子上还有花。",
+            "simple": "You put the question to me about why I do not go over here. I have seen what comes to a person who does. Two years have gone, and the flowers are still there on the wall."
+          },
+          {
+            "std": "The town had grown without a plan, as a garden grows when nobody pulls the weeds, and it had the beauty of things that were never meant to be seen.",
+            "zh": "这座城没有图纸就长起来了，像没人拔草的花园，带着一种本不该被人看见的美。",
+            "simple": "The town got greater with no design, the way a garden gets greater when no person goes there with a machine. It had a sort of good look that is not made for eyes."
+          },
+          {
+            "std": "The council said yes to a new rule on Tuesday: from next spring, every new building has to keep a narrow strip of earth for trees.",
+            "zh": "议会周二通过了一项新规：从明年春天起，每座新楼都必须留出一条窄地来种树。",
+            "simple": "On Tuesday the group said yes to a new rule. From the spring of the coming year, every new building has to keep a small part of the earth for trees."
+          }
+        ]
+      }
     }
 };

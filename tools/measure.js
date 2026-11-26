@@ -6,7 +6,7 @@ const path = require("path");
 const { ROOT, loadData, wordCount, tokensOf, makeLookup, wordsIn, unitText } = require("./lib/vocab");
 
 // 多带一个 js/exercises.js：练习池的"解锁课时"用的就是网页那套逻辑，不另写一份
-const V = loadData(["data/words.js", "data/glossary.js", "data/contractions.js", "data/units.js", "data/extras.js", "data/exercises.js", "js/exercises.js"]);
+const V = loadData(["data/words.js", "data/glossary.js", "data/dict.js", "data/contractions.js", "data/units.js", "data/extras.js", "data/exercises.js", "js/exercises.js"]);
 const { lookup, WORDS, FORMS, ALLOWED, DEVIATION } = makeLookup(V);
 const UNITS = V.UNITS || [];
 const EXTRAS = V.EXTRAS || {};
@@ -30,7 +30,8 @@ for (const u of UNITS) {
   const missing = new Map();
   for (const t of toks) {
     const hit = lookup(t);
-    if (!hit) missing.set(t, (missing.get(t) || 0) + 1);
+    // 单元正文严格 850：dict（延伸注解）与 glossary 都算超纲
+    if (!hit || hit.kind === "dict" || hit.kind === "glossary") missing.set(t, (missing.get(t) || 0) + 1);
     else if (hit.kind === "allowed") allowedHits++;
     else if (hit.kind === "deviation") devHits++;
   }
@@ -155,7 +156,8 @@ console.log("\n== 课外拓展体检（简说只用 850 内） ==");
     for (const b of d.read.blocks) {
       for (const tok of tokensOf(b.simple)) {
         n++;
-        if (!lookup(tok)) bad.set(id + ":" + tok, (bad.get(id + ":" + tok) || 0) + 1);
+        const sh = lookup(tok);
+        if (!sh || sh.kind === "dict" || sh.kind === "glossary") bad.set(id + ":" + tok, (bad.get(id + ":" + tok) || 0) + 1);
       }
     }
     console.log(`${id} 简说${d.read.blocks.length}段 用词${n}`);

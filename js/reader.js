@@ -76,7 +76,8 @@
       (window.WORD_ALLOWED && window.WORD_ALLOWED[word]) ||
       (window.WORD_DEVIATION && window.WORD_DEVIATION[word]) ||
       (window.CONTRACTIONS && window.CONTRACTIONS[word]) ||
-      (window.GLOSSARY && window.GLOSSARY[word]);
+      (window.GLOSSARY && window.GLOSSARY[word]) ||
+      (window.DICT && window.DICT[word]);
     var id = "w:" + word;
     var saved = window.Store.getMark(id, "save");
 

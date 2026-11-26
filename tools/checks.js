@@ -44,6 +44,7 @@
     var DEVIATION = V.WORD_DEVIATION || {};
     var GLOSSARY = V.GLOSSARY || {};
     var CONTR = V.CONTRACTIONS || {};
+    var DICT = V.DICT || {}; // ECDICT 生成的延伸注解（L2）：只给原文用，算超纲
 
     function lookup(raw) {
       var w = String(raw).toLowerCase();
@@ -55,12 +56,14 @@
       if (DEVIATION[w]) return { base: w, kind: "deviation" };
       if (CONTR[w]) return { base: w, kind: "contraction" };
       if (GLOSSARY[w]) return { base: w, kind: "glossary" };
+      if (DICT[w]) return { base: w, kind: "dict" };
       if (FORMS[w]) {
         var b = FORMS[w];
         if (WORDS[b]) return { base: b, kind: "word" };
         if (DEVIATION[b]) return { base: b, kind: "deviation" };
         if (CONTR[b]) return { base: b, kind: "contraction" };
         if (GLOSSARY[b]) return { base: b, kind: "glossary" };
+        if (DICT[b]) return { base: b, kind: "dict" };
       }
       var cands = [
         w.replace(/ies$/, "y"), w.replace(/es$/, ""), w.replace(/s$/, ""),
@@ -75,11 +78,12 @@
         if (DEVIATION[c]) return { base: c, kind: "deviation" };
         if (CONTR[c]) return { base: c, kind: "contraction" };
         if (GLOSSARY[c]) return { base: c, kind: "glossary" };
+        if (DICT[c]) return { base: c, kind: "dict" };
       }
       return null;
     }
 
-    return { lookup: lookup, WORDS: WORDS, FORMS: FORMS, ALLOWED: ALLOWED, DEVIATION: DEVIATION, GLOSSARY: GLOSSARY, CONTR: CONTR };
+    return { lookup: lookup, WORDS: WORDS, FORMS: FORMS, ALLOWED: ALLOWED, DEVIATION: DEVIATION, GLOSSARY: GLOSSARY, CONTR: CONTR, DICT: DICT };
   }
 
   function wordsIn(text, lk) {
@@ -126,7 +130,8 @@
       var allowed = 0, deviation = 0;
       toks.forEach(function (t) {
         var hit = lk.lookup(t);
-        if (!hit) missMap[t] = (missMap[t] || 0) + 1;
+        // 单元正文严格 850：dict（延伸注解）与 glossary 都算超纲
+        if (!hit || hit.kind === "dict" || hit.kind === "glossary") missMap[t] = (missMap[t] || 0) + 1;
         else if (hit.kind === "allowed") allowed++;
         else if (hit.kind === "deviation") deviation++;
       });
@@ -277,9 +282,11 @@
       blocks.forEach(function (b) {
         tokensOf(b.simple).forEach(function (t) {
           simpleWords++;
-          if (!lk.lookup(t)) {
+          var sh = lk.lookup(t);
+          if (!sh || sh.kind === "dict" || sh.kind === "glossary") {
             simpleBad[t] = (simpleBad[t] || 0) + 1;
             if (unitBad.indexOf(t) === -1) unitBad.push(t);
+            return;
           }
         });
         tokensOf(b.std).forEach(function (t) {

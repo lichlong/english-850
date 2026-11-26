@@ -26,3 +26,6 @@ _*.json
 
 # RedSkill 成品包（本地产物，不进仓库；要留档走 GitHub Release）
 dist/
+
+# 外部数据源（体积大，不进仓库；脚本读这里）
+.cache/

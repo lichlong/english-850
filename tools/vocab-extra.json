@@ -1,0 +1,4252 @@
+{
+ "come": {
+  "ipa": "/ˈkəm/",
+  "pos": "",
+  "full": ""
+ },
+ "get": {
+  "ipa": "/ˈɡɛt/",
+  "pos": "",
+  "full": ""
+ },
+ "give": {
+  "ipa": "/ˈɡɪv/",
+  "pos": "",
+  "full": ""
+ },
+ "go": {
+  "ipa": "/ˈɡoʊ/",
+  "pos": "",
+  "full": ""
+ },
+ "keep": {
+  "ipa": "/ˈkip/",
+  "pos": "",
+  "full": ""
+ },
+ "let": {
+  "ipa": "/ˈɫɛt/",
+  "pos": "",
+  "full": ""
+ },
+ "make": {
+  "ipa": "/ˈmeɪk/",
+  "pos": "",
+  "full": ""
+ },
+ "put": {
+  "ipa": "/ˈpʊt/",
+  "pos": "",
+  "full": ""
+ },
+ "seem": {
+  "ipa": "/ˈsim/",
+  "pos": "",
+  "full": ""
+ },
+ "take": {
+  "ipa": "/ˈteɪk/",
+  "pos": "",
+  "full": ""
+ },
+ "be": {
+  "ipa": "/ˈbi/",
+  "pos": "",
+  "full": ""
+ },
+ "do": {
+  "ipa": "/ˈdu/",
+  "pos": "",
+  "full": ""
+ },
+ "have": {
+  "ipa": "/ˈhæv/",
+  "pos": "",
+  "full": ""
+ },
+ "say": {
+  "ipa": "/ˈseɪ/",
+  "pos": "",
+  "full": ""
+ },
+ "see": {
+  "ipa": "/ˈsi/",
+  "pos": "",
+  "full": ""
+ },
+ "send": {
+  "ipa": "/ˈsɛnd/",
+  "pos": "",
+  "full": ""
+ },
+ "may": {
+  "ipa": "/ˈmeɪ/",
+  "pos": "",
+  "full": ""
+ },
+ "will": {
+  "ipa": "/ˈwɪɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "about": {
+  "ipa": "/əˈbaʊt/",
+  "pos": "",
+  "full": ""
+ },
+ "across": {
+  "ipa": "/əˈkɹɔs/",
+  "pos": "",
+  "full": ""
+ },
+ "after": {
+  "ipa": "/ˈæftɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "against": {
+  "ipa": "/əˈɡeɪnst/",
+  "pos": "",
+  "full": ""
+ },
+ "among": {
+  "ipa": "/əˈməŋ/",
+  "pos": "",
+  "full": ""
+ },
+ "at": {
+  "ipa": "/ˈæt/",
+  "pos": "",
+  "full": ""
+ },
+ "before": {
+  "ipa": "/ˌbiˈfɔɹ/",
+  "pos": "",
+  "full": ""
+ },
+ "between": {
+  "ipa": "/bitˈwin/",
+  "pos": "",
+  "full": ""
+ },
+ "by": {
+  "ipa": "/ˈbaɪ/",
+  "pos": "",
+  "full": ""
+ },
+ "down": {
+  "ipa": "/ˈdaʊn/",
+  "pos": "",
+  "full": ""
+ },
+ "from": {
+  "ipa": "/ˈfɹəm/",
+  "pos": "",
+  "full": ""
+ },
+ "in": {
+  "ipa": "/ˈɪn/",
+  "pos": "",
+  "full": ""
+ },
+ "off": {
+  "ipa": "/ˈɔf/",
+  "pos": "",
+  "full": ""
+ },
+ "on": {
+  "ipa": "/ˈɑn/",
+  "pos": "",
+  "full": ""
+ },
+ "over": {
+  "ipa": "/ˈoʊvɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "through": {
+  "ipa": "/ˈθɹu/",
+  "pos": "",
+  "full": ""
+ },
+ "to": {
+  "ipa": "/ˈtu/",
+  "pos": "",
+  "full": ""
+ },
+ "under": {
+  "ipa": "/ˈəndɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "up": {
+  "ipa": "/ˈəp/",
+  "pos": "",
+  "full": ""
+ },
+ "with": {
+  "ipa": "/ˈwɪð/",
+  "pos": "",
+  "full": ""
+ },
+ "as": {
+  "ipa": "/ˈæz/",
+  "pos": "",
+  "full": ""
+ },
+ "for": {
+  "ipa": "/ˈfɔɹ/",
+  "pos": "",
+  "full": ""
+ },
+ "of": {
+  "ipa": "/ˈəv/",
+  "pos": "",
+  "full": ""
+ },
+ "till": {
+  "ipa": "/ˈtɪɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "than": {
+  "ipa": "/ˈðæn/",
+  "pos": "",
+  "full": ""
+ },
+ "a": {
+  "ipa": "/ˈeɪ/",
+  "pos": "",
+  "full": ""
+ },
+ "the": {
+  "ipa": "/ˈðə/",
+  "pos": "",
+  "full": ""
+ },
+ "all": {
+  "ipa": "/ˈɔɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "any": {
+  "ipa": "/ˈɛni/",
+  "pos": "",
+  "full": ""
+ },
+ "every": {
+  "ipa": "/ˈɛvɝi/",
+  "pos": "",
+  "full": ""
+ },
+ "little": {
+  "ipa": "/ˈɫɪtəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "much": {
+  "ipa": "/ˈmətʃ/",
+  "pos": "",
+  "full": ""
+ },
+ "no": {
+  "ipa": "/ˈnoʊ/",
+  "pos": "",
+  "full": ""
+ },
+ "other": {
+  "ipa": "/ˈəðɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "some": {
+  "ipa": "/ˈsəm/",
+  "pos": "",
+  "full": ""
+ },
+ "such": {
+  "ipa": "/ˈsətʃ/",
+  "pos": "",
+  "full": ""
+ },
+ "that": {
+  "ipa": "/ˈðæt/",
+  "pos": "",
+  "full": ""
+ },
+ "this": {
+  "ipa": "/ˈðɪs/",
+  "pos": "",
+  "full": ""
+ },
+ "i": {
+  "ipa": "/ˈaɪ/",
+  "pos": "",
+  "full": ""
+ },
+ "he": {
+  "ipa": "/ˈhi/",
+  "pos": "",
+  "full": ""
+ },
+ "you": {
+  "ipa": "/ˈju/",
+  "pos": "",
+  "full": ""
+ },
+ "who": {
+  "ipa": "/ˈhu/",
+  "pos": "",
+  "full": ""
+ },
+ "and": {
+  "ipa": "/ˈænd/",
+  "pos": "",
+  "full": ""
+ },
+ "because": {
+  "ipa": "/bɪˈkɑz/",
+  "pos": "",
+  "full": ""
+ },
+ "but": {
+  "ipa": "/ˈbət/",
+  "pos": "",
+  "full": ""
+ },
+ "or": {
+  "ipa": "/ˈɔɹ/",
+  "pos": "",
+  "full": ""
+ },
+ "if": {
+  "ipa": "/ˈɪf/",
+  "pos": "",
+  "full": ""
+ },
+ "though": {
+  "ipa": "/ˈðoʊ/",
+  "pos": "",
+  "full": ""
+ },
+ "while": {
+  "ipa": "/ˈhwaɪɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "how": {
+  "ipa": "/ˈhaʊ/",
+  "pos": "",
+  "full": ""
+ },
+ "when": {
+  "ipa": "/ˈhwɛn/",
+  "pos": "",
+  "full": ""
+ },
+ "where": {
+  "ipa": "/ˈhwɛɹ/",
+  "pos": "",
+  "full": ""
+ },
+ "why": {
+  "ipa": "/ˈhwaɪ/",
+  "pos": "",
+  "full": ""
+ },
+ "again": {
+  "ipa": "/əˈɡeɪn/",
+  "pos": "",
+  "full": ""
+ },
+ "ever": {
+  "ipa": "/ˈɛvɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "far": {
+  "ipa": "/ˈfɑɹ/",
+  "pos": "",
+  "full": ""
+ },
+ "forward": {
+  "ipa": "/ˈfɔɹwɝd/",
+  "pos": "",
+  "full": ""
+ },
+ "here": {
+  "ipa": "/ˈhiɹ/",
+  "pos": "",
+  "full": ""
+ },
+ "near": {
+  "ipa": "/ˈnɪɹ/",
+  "pos": "",
+  "full": ""
+ },
+ "now": {
+  "ipa": "/ˈnaʊ/",
+  "pos": "",
+  "full": ""
+ },
+ "out": {
+  "ipa": "/ˈaʊt/",
+  "pos": "",
+  "full": ""
+ },
+ "still": {
+  "ipa": "/ˈstɪɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "then": {
+  "ipa": "/ˈðɛn/",
+  "pos": "",
+  "full": ""
+ },
+ "there": {
+  "ipa": "/ˈðɛɹ/",
+  "pos": "",
+  "full": ""
+ },
+ "together": {
+  "ipa": "/təˈɡɛðɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "well": {
+  "ipa": "/ˈwɛɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "almost": {
+  "ipa": "/ˈɔɫˌmoʊst/",
+  "pos": "",
+  "full": ""
+ },
+ "enough": {
+  "ipa": "/iˈnəf/",
+  "pos": "",
+  "full": ""
+ },
+ "even": {
+  "ipa": "/ˈivɪn/",
+  "pos": "",
+  "full": ""
+ },
+ "not": {
+  "ipa": "/ˈnɑt/",
+  "pos": "",
+  "full": ""
+ },
+ "only": {
+  "ipa": "/ˈoʊnɫi/",
+  "pos": "",
+  "full": ""
+ },
+ "quite": {
+  "ipa": "/ˈkwaɪt/",
+  "pos": "",
+  "full": ""
+ },
+ "so": {
+  "ipa": "/ˈsoʊ/",
+  "pos": "",
+  "full": ""
+ },
+ "very": {
+  "ipa": "/ˈvɛɹi/",
+  "pos": "",
+  "full": ""
+ },
+ "tomorrow": {
+  "ipa": "/təˈmɑˌɹoʊ/",
+  "pos": "",
+  "full": ""
+ },
+ "yesterday": {
+  "ipa": "/ˈjɛstɝˌdeɪ/",
+  "pos": "",
+  "full": ""
+ },
+ "north": {
+  "ipa": "/ˈnɔɹθ/",
+  "pos": "",
+  "full": ""
+ },
+ "south": {
+  "ipa": "/ˈsaʊθ/",
+  "pos": "",
+  "full": ""
+ },
+ "east": {
+  "ipa": "/ˈist/",
+  "pos": "",
+  "full": ""
+ },
+ "west": {
+  "ipa": "/ˈwɛst/",
+  "pos": "",
+  "full": ""
+ },
+ "please": {
+  "ipa": "/ˈpɫiz/",
+  "pos": "",
+  "full": ""
+ },
+ "yes": {
+  "ipa": "/ˈjɛs/",
+  "pos": "",
+  "full": ""
+ },
+ "account": {
+  "ipa": "/əˈkaʊnt/",
+  "pos": "",
+  "full": ""
+ },
+ "act": {
+  "ipa": "/ˈækt/",
+  "pos": "",
+  "full": ""
+ },
+ "addition": {
+  "ipa": "/əˈdɪʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "adjustment": {
+  "ipa": "/əˈdʒəstmənt/",
+  "pos": "",
+  "full": ""
+ },
+ "advertisement": {
+  "ipa": "/ˌædvɝˈtaɪzmənt/",
+  "pos": "",
+  "full": ""
+ },
+ "agreement": {
+  "ipa": "/əˈɡɹimənt/",
+  "pos": "",
+  "full": ""
+ },
+ "air": {
+  "ipa": "/ˈɛɹ/",
+  "pos": "",
+  "full": ""
+ },
+ "amount": {
+  "ipa": "/əˈmaʊnt/",
+  "pos": "",
+  "full": ""
+ },
+ "amusement": {
+  "ipa": "/əmˈjuzmənt/",
+  "pos": "",
+  "full": ""
+ },
+ "animal": {
+  "ipa": "/ˈænəməɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "answer": {
+  "ipa": "/ˈænsɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "apparatus": {
+  "ipa": "/ˌæpɝˈætəs/",
+  "pos": "",
+  "full": ""
+ },
+ "approval": {
+  "ipa": "/əˈpɹuvəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "argument": {
+  "ipa": "/ˈɑɹɡjəmənt/",
+  "pos": "",
+  "full": ""
+ },
+ "art": {
+  "ipa": "/ˈɑɹt/",
+  "pos": "",
+  "full": ""
+ },
+ "attack": {
+  "ipa": "/əˈtæk/",
+  "pos": "",
+  "full": ""
+ },
+ "attempt": {
+  "ipa": "/əˈtɛmpt/",
+  "pos": "",
+  "full": ""
+ },
+ "attention": {
+  "ipa": "/əˈtɛnʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "attraction": {
+  "ipa": "/əˈtɹækʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "authority": {
+  "ipa": "/əˈθɔɹəti/",
+  "pos": "",
+  "full": ""
+ },
+ "back": {
+  "ipa": "/ˈbæk/",
+  "pos": "",
+  "full": ""
+ },
+ "balance": {
+  "ipa": "/ˈbæɫəns/",
+  "pos": "",
+  "full": ""
+ },
+ "base": {
+  "ipa": "/ˈbeɪs/",
+  "pos": "",
+  "full": ""
+ },
+ "behavior": {
+  "ipa": "/bɪˈheɪvjɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "belief": {
+  "ipa": "/bɪˈɫif/",
+  "pos": "",
+  "full": ""
+ },
+ "birth": {
+  "ipa": "/ˈbɝθ/",
+  "pos": "",
+  "full": ""
+ },
+ "bit": {
+  "ipa": "/ˈbɪt/",
+  "pos": "",
+  "full": ""
+ },
+ "bite": {
+  "ipa": "/ˈbaɪt/",
+  "pos": "",
+  "full": ""
+ },
+ "blood": {
+  "ipa": "/ˈbɫəd/",
+  "pos": "",
+  "full": ""
+ },
+ "blow": {
+  "ipa": "/ˈbɫoʊ/",
+  "pos": "",
+  "full": ""
+ },
+ "body": {
+  "ipa": "/ˈbɑdi/",
+  "pos": "",
+  "full": ""
+ },
+ "brass": {
+  "ipa": "/ˈbɹæs/",
+  "pos": "",
+  "full": ""
+ },
+ "bread": {
+  "ipa": "/ˈbɹɛd/",
+  "pos": "",
+  "full": ""
+ },
+ "breath": {
+  "ipa": "/ˈbɹɛθ/",
+  "pos": "",
+  "full": ""
+ },
+ "brother": {
+  "ipa": "/ˈbɹəðɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "building": {
+  "ipa": "/ˈbɪɫdɪŋ/",
+  "pos": "",
+  "full": ""
+ },
+ "burn": {
+  "ipa": "/ˈbɝn/",
+  "pos": "",
+  "full": ""
+ },
+ "burst": {
+  "ipa": "/ˈbɝst/",
+  "pos": "",
+  "full": ""
+ },
+ "business": {
+  "ipa": "/ˈbɪznəs/",
+  "pos": "",
+  "full": ""
+ },
+ "butter": {
+  "ipa": "/ˈbətɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "canvas": {
+  "ipa": "/ˈkænvəs/",
+  "pos": "",
+  "full": ""
+ },
+ "care": {
+  "ipa": "/ˈkɛɹ/",
+  "pos": "",
+  "full": ""
+ },
+ "cause": {
+  "ipa": "/ˈkɑz/",
+  "pos": "",
+  "full": ""
+ },
+ "chalk": {
+  "ipa": "/ˈtʃɑk/",
+  "pos": "",
+  "full": ""
+ },
+ "chance": {
+  "ipa": "/ˈtʃæns/",
+  "pos": "",
+  "full": ""
+ },
+ "change": {
+  "ipa": "/ˈtʃeɪndʒ/",
+  "pos": "",
+  "full": ""
+ },
+ "cloth": {
+  "ipa": "/ˈkɫɔθ/",
+  "pos": "",
+  "full": ""
+ },
+ "coal": {
+  "ipa": "/ˈkoʊɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "color": {
+  "ipa": "/ˈkəɫɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "comfort": {
+  "ipa": "/ˈkəmfɝt/",
+  "pos": "",
+  "full": ""
+ },
+ "committee": {
+  "ipa": "/kəˈmɪti/",
+  "pos": "",
+  "full": ""
+ },
+ "company": {
+  "ipa": "/ˈkəmpəˌni/",
+  "pos": "",
+  "full": ""
+ },
+ "comparison": {
+  "ipa": "/kəmˈpɛɹəsən/",
+  "pos": "",
+  "full": ""
+ },
+ "competition": {
+  "ipa": "/ˌkɑmpəˈtɪʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "condition": {
+  "ipa": "/kənˈdɪʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "connection": {
+  "ipa": "/kəˈnɛkʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "control": {
+  "ipa": "/kənˈtɹoʊɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "cook": {
+  "ipa": "/ˈkʊk/",
+  "pos": "",
+  "full": ""
+ },
+ "copper": {
+  "ipa": "/ˈkɑpɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "copy": {
+  "ipa": "/ˈkɑpi/",
+  "pos": "",
+  "full": ""
+ },
+ "cork": {
+  "ipa": "/ˈkɔɹk/",
+  "pos": "",
+  "full": ""
+ },
+ "cotton": {
+  "ipa": "/ˈkɑtən/",
+  "pos": "",
+  "full": ""
+ },
+ "cough": {
+  "ipa": "/ˈkɑf/",
+  "pos": "",
+  "full": ""
+ },
+ "country": {
+  "ipa": "/ˈkəntɹi/",
+  "pos": "",
+  "full": ""
+ },
+ "cover": {
+  "ipa": "/ˈkəvɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "crack": {
+  "ipa": "/ˈkɹæk/",
+  "pos": "",
+  "full": ""
+ },
+ "credit": {
+  "ipa": "/ˈkɹɛdət/",
+  "pos": "",
+  "full": ""
+ },
+ "crime": {
+  "ipa": "/ˈkɹaɪm/",
+  "pos": "",
+  "full": ""
+ },
+ "crush": {
+  "ipa": "/ˈkɹəʃ/",
+  "pos": "",
+  "full": ""
+ },
+ "cry": {
+  "ipa": "/ˈkɹaɪ/",
+  "pos": "",
+  "full": ""
+ },
+ "current": {
+  "ipa": "/ˈkɑɹənt/",
+  "pos": "",
+  "full": ""
+ },
+ "curve": {
+  "ipa": "/ˈkɝv/",
+  "pos": "",
+  "full": ""
+ },
+ "damage": {
+  "ipa": "/ˈdæmədʒ/",
+  "pos": "",
+  "full": ""
+ },
+ "danger": {
+  "ipa": "/ˈdeɪndʒɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "daughter": {
+  "ipa": "/ˈdɔtɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "day": {
+  "ipa": "/ˈdeɪ/",
+  "pos": "",
+  "full": ""
+ },
+ "death": {
+  "ipa": "/ˈdɛθ/",
+  "pos": "",
+  "full": ""
+ },
+ "debt": {
+  "ipa": "/ˈdɛt/",
+  "pos": "",
+  "full": ""
+ },
+ "decision": {
+  "ipa": "/dɪˈsɪʒən/",
+  "pos": "",
+  "full": ""
+ },
+ "degree": {
+  "ipa": "/dɪˈɡɹi/",
+  "pos": "",
+  "full": ""
+ },
+ "design": {
+  "ipa": "/dɪˈzaɪn/",
+  "pos": "",
+  "full": ""
+ },
+ "desire": {
+  "ipa": "/dɪˈzaɪɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "destruction": {
+  "ipa": "/dɪˈstɹəkʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "detail": {
+  "ipa": "/ˈditeɪɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "development": {
+  "ipa": "/dɪˈvɛɫəpmənt/",
+  "pos": "",
+  "full": ""
+ },
+ "digestion": {
+  "ipa": "/daɪˈdʒɛstʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "direction": {
+  "ipa": "/daɪˈɹɛkʃɪn/",
+  "pos": "",
+  "full": ""
+ },
+ "discovery": {
+  "ipa": "/ˌdɪsˈkəvɹi/",
+  "pos": "",
+  "full": ""
+ },
+ "discussion": {
+  "ipa": "/dɪˈskəʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "disease": {
+  "ipa": "/dɪˈziz/",
+  "pos": "",
+  "full": ""
+ },
+ "disgust": {
+  "ipa": "/dɪsˈɡəst/",
+  "pos": "",
+  "full": ""
+ },
+ "distance": {
+  "ipa": "/ˈdɪstəns/",
+  "pos": "",
+  "full": ""
+ },
+ "distribution": {
+  "ipa": "/ˌdɪstɹəbˈjuʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "division": {
+  "ipa": "/dɪˈvɪʒən/",
+  "pos": "",
+  "full": ""
+ },
+ "doubt": {
+  "ipa": "/ˈdaʊt/",
+  "pos": "",
+  "full": ""
+ },
+ "drink": {
+  "ipa": "/ˈdɹɪŋk/",
+  "pos": "",
+  "full": ""
+ },
+ "driving": {
+  "ipa": "/ˈdɹaɪvɪŋ/",
+  "pos": "",
+  "full": ""
+ },
+ "dust": {
+  "ipa": "/ˈdəst/",
+  "pos": "",
+  "full": ""
+ },
+ "earth": {
+  "ipa": "/ˈɝθ/",
+  "pos": "",
+  "full": ""
+ },
+ "edge": {
+  "ipa": "/ˈɛdʒ/",
+  "pos": "",
+  "full": ""
+ },
+ "education": {
+  "ipa": "/ˌɛdʒəˈkeɪʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "effect": {
+  "ipa": "/ˈifɛkt/",
+  "pos": "",
+  "full": ""
+ },
+ "end": {
+  "ipa": "/ˈɛnd/",
+  "pos": "",
+  "full": ""
+ },
+ "error": {
+  "ipa": "/ˈɛɹɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "event": {
+  "ipa": "/iˈvɛnt/",
+  "pos": "",
+  "full": ""
+ },
+ "example": {
+  "ipa": "/ɪɡˈzæmpəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "exchange": {
+  "ipa": "/ɪksˈtʃeɪndʒ/",
+  "pos": "",
+  "full": ""
+ },
+ "existence": {
+  "ipa": "/ɛɡˈzɪstəns/",
+  "pos": "",
+  "full": ""
+ },
+ "expansion": {
+  "ipa": "/ɪkˈspænʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "experience": {
+  "ipa": "/ɪkˈspɪɹiəns/",
+  "pos": "",
+  "full": ""
+ },
+ "expert": {
+  "ipa": "/ˈɛkspɝt/",
+  "pos": "",
+  "full": ""
+ },
+ "fact": {
+  "ipa": "/ˈfækt/",
+  "pos": "",
+  "full": ""
+ },
+ "fall": {
+  "ipa": "/ˈfɑɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "family": {
+  "ipa": "/ˈfæməɫi/",
+  "pos": "",
+  "full": ""
+ },
+ "father": {
+  "ipa": "/ˈfɑðɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "fear": {
+  "ipa": "/ˈfɪɹ/",
+  "pos": "",
+  "full": ""
+ },
+ "feeling": {
+  "ipa": "/ˈfiɫɪŋ/",
+  "pos": "",
+  "full": ""
+ },
+ "fiction": {
+  "ipa": "/ˈfɪkʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "field": {
+  "ipa": "/ˈfiɫd/",
+  "pos": "",
+  "full": ""
+ },
+ "fight": {
+  "ipa": "/ˈfaɪt/",
+  "pos": "",
+  "full": ""
+ },
+ "fire": {
+  "ipa": "/ˈfaɪɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "flame": {
+  "ipa": "/ˈfɫeɪm/",
+  "pos": "",
+  "full": ""
+ },
+ "flight": {
+  "ipa": "/ˈfɫaɪt/",
+  "pos": "",
+  "full": ""
+ },
+ "flower": {
+  "ipa": "/ˈfɫaʊɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "fold": {
+  "ipa": "/ˈfoʊɫd/",
+  "pos": "",
+  "full": ""
+ },
+ "food": {
+  "ipa": "/ˈfud/",
+  "pos": "",
+  "full": ""
+ },
+ "force": {
+  "ipa": "/ˈfɔɹs/",
+  "pos": "",
+  "full": ""
+ },
+ "form": {
+  "ipa": "/ˈfɔɹm/",
+  "pos": "",
+  "full": ""
+ },
+ "friend": {
+  "ipa": "/ˈfɹɛnd/",
+  "pos": "",
+  "full": ""
+ },
+ "front": {
+  "ipa": "/ˈfɹənt/",
+  "pos": "",
+  "full": ""
+ },
+ "fruit": {
+  "ipa": "/ˈfɹut/",
+  "pos": "",
+  "full": ""
+ },
+ "glass": {
+  "ipa": "/ˈɡɫæs/",
+  "pos": "",
+  "full": ""
+ },
+ "gold": {
+  "ipa": "/ˈɡoʊɫd/",
+  "pos": "",
+  "full": ""
+ },
+ "government": {
+  "ipa": "/ˈɡəvɝmənt/",
+  "pos": "",
+  "full": ""
+ },
+ "grain": {
+  "ipa": "/ˈɡɹeɪn/",
+  "pos": "",
+  "full": ""
+ },
+ "grass": {
+  "ipa": "/ˈɡɹæs/",
+  "pos": "",
+  "full": ""
+ },
+ "grip": {
+  "ipa": "/ˈɡɹɪp/",
+  "pos": "",
+  "full": ""
+ },
+ "group": {
+  "ipa": "/ˈɡɹup/",
+  "pos": "",
+  "full": ""
+ },
+ "growth": {
+  "ipa": "/ˈɡɹoʊθ/",
+  "pos": "",
+  "full": ""
+ },
+ "guide": {
+  "ipa": "/ˈɡaɪd/",
+  "pos": "",
+  "full": ""
+ },
+ "harbor": {
+  "ipa": "/ˈhɑɹbɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "harmony": {
+  "ipa": "/ˈhɑɹməni/",
+  "pos": "",
+  "full": ""
+ },
+ "hate": {
+  "ipa": "/ˈheɪt/",
+  "pos": "",
+  "full": ""
+ },
+ "hearing": {
+  "ipa": "/ˈhiɹɪŋ/",
+  "pos": "",
+  "full": ""
+ },
+ "heat": {
+  "ipa": "/ˈhit/",
+  "pos": "",
+  "full": ""
+ },
+ "help": {
+  "ipa": "/ˈhɛɫp/",
+  "pos": "",
+  "full": ""
+ },
+ "history": {
+  "ipa": "/ˈhɪstɝi/",
+  "pos": "",
+  "full": ""
+ },
+ "hole": {
+  "ipa": "/ˈhoʊɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "hope": {
+  "ipa": "/ˈhoʊp/",
+  "pos": "",
+  "full": ""
+ },
+ "hour": {
+  "ipa": "/ˈaʊɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "humor": {
+  "ipa": "/ˈhjumɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "ice": {
+  "ipa": "/ˈaɪs/",
+  "pos": "",
+  "full": ""
+ },
+ "idea": {
+  "ipa": "/aɪˈdiə/",
+  "pos": "",
+  "full": ""
+ },
+ "impulse": {
+  "ipa": "/ˈɪmpəɫs/",
+  "pos": "",
+  "full": ""
+ },
+ "increase": {
+  "ipa": "/ˈɪnˌkɹis/",
+  "pos": "",
+  "full": ""
+ },
+ "industry": {
+  "ipa": "/ˈɪndəstɹi/",
+  "pos": "",
+  "full": ""
+ },
+ "ink": {
+  "ipa": "/ˈɪŋk/",
+  "pos": "",
+  "full": ""
+ },
+ "insect": {
+  "ipa": "/ˈɪnˌsɛkt/",
+  "pos": "",
+  "full": ""
+ },
+ "instrument": {
+  "ipa": "/ˈɪnstɹəmənt/",
+  "pos": "",
+  "full": ""
+ },
+ "insurance": {
+  "ipa": "/ˌɪnˈʃʊɹəns/",
+  "pos": "",
+  "full": ""
+ },
+ "interest": {
+  "ipa": "/ˈɪntɝəst/",
+  "pos": "",
+  "full": ""
+ },
+ "invention": {
+  "ipa": "/ˌɪnˈvɛnʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "iron": {
+  "ipa": "/ˈaɪɝn/",
+  "pos": "",
+  "full": ""
+ },
+ "jelly": {
+  "ipa": "/ˈdʒɛɫi/",
+  "pos": "",
+  "full": ""
+ },
+ "join": {
+  "ipa": "/ˈdʒɔɪn/",
+  "pos": "",
+  "full": ""
+ },
+ "journey": {
+  "ipa": "/ˈdʒɝni/",
+  "pos": "",
+  "full": ""
+ },
+ "judge": {
+  "ipa": "/ˈdʒədʒ/",
+  "pos": "",
+  "full": ""
+ },
+ "jump": {
+  "ipa": "/ˈdʒəmp/",
+  "pos": "",
+  "full": ""
+ },
+ "kick": {
+  "ipa": "/ˈkɪk/",
+  "pos": "",
+  "full": ""
+ },
+ "kiss": {
+  "ipa": "/ˈkɪs/",
+  "pos": "",
+  "full": ""
+ },
+ "knowledge": {
+  "ipa": "/ˈnɑɫədʒ/",
+  "pos": "",
+  "full": ""
+ },
+ "land": {
+  "ipa": "/ˈɫænd/",
+  "pos": "",
+  "full": ""
+ },
+ "language": {
+  "ipa": "/ˈɫæŋɡwədʒ/",
+  "pos": "",
+  "full": ""
+ },
+ "laugh": {
+  "ipa": "/ˈɫæf/",
+  "pos": "",
+  "full": ""
+ },
+ "law": {
+  "ipa": "/ˈɫɑ/",
+  "pos": "",
+  "full": ""
+ },
+ "lead": {
+  "ipa": "/ˈɫɛd/",
+  "pos": "",
+  "full": ""
+ },
+ "learning": {
+  "ipa": "/ˈɫɝnɪŋ/",
+  "pos": "",
+  "full": ""
+ },
+ "leather": {
+  "ipa": "/ˈɫɛðɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "letter": {
+  "ipa": "/ˈɫɛtɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "level": {
+  "ipa": "/ˈɫɛvəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "lift": {
+  "ipa": "/ˈɫɪft/",
+  "pos": "",
+  "full": ""
+ },
+ "light": {
+  "ipa": "/ˈɫaɪt/",
+  "pos": "",
+  "full": ""
+ },
+ "limit": {
+  "ipa": "/ˈɫɪmət/",
+  "pos": "",
+  "full": ""
+ },
+ "linen": {
+  "ipa": "/ˈɫɪnən/",
+  "pos": "",
+  "full": ""
+ },
+ "liquid": {
+  "ipa": "/ˈɫɪkwəd/",
+  "pos": "",
+  "full": ""
+ },
+ "list": {
+  "ipa": "/ˈɫɪst/",
+  "pos": "",
+  "full": ""
+ },
+ "look": {
+  "ipa": "/ˈɫʊk/",
+  "pos": "",
+  "full": ""
+ },
+ "loss": {
+  "ipa": "/ˈɫɔs/",
+  "pos": "",
+  "full": ""
+ },
+ "love": {
+  "ipa": "/ˈɫəv/",
+  "pos": "",
+  "full": ""
+ },
+ "machine": {
+  "ipa": "/məˈʃin/",
+  "pos": "",
+  "full": ""
+ },
+ "man": {
+  "ipa": "/ˈmæn/",
+  "pos": "",
+  "full": ""
+ },
+ "manager": {
+  "ipa": "/ˈmænədʒɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "mark": {
+  "ipa": "/ˈmɑɹk/",
+  "pos": "",
+  "full": ""
+ },
+ "market": {
+  "ipa": "/ˈmɑɹkət/",
+  "pos": "",
+  "full": ""
+ },
+ "mass": {
+  "ipa": "/ˈmæs/",
+  "pos": "",
+  "full": ""
+ },
+ "meal": {
+  "ipa": "/ˈmiɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "measure": {
+  "ipa": "/ˈmɛʒɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "meat": {
+  "ipa": "/ˈmit/",
+  "pos": "",
+  "full": ""
+ },
+ "meeting": {
+  "ipa": "/ˈmitɪŋ/",
+  "pos": "",
+  "full": ""
+ },
+ "memory": {
+  "ipa": "/ˈmɛmɝi/",
+  "pos": "",
+  "full": ""
+ },
+ "metal": {
+  "ipa": "/ˈmɛtəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "middle": {
+  "ipa": "/ˈmɪdəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "milk": {
+  "ipa": "/ˈmɪɫk/",
+  "pos": "",
+  "full": ""
+ },
+ "mind": {
+  "ipa": "/ˈmaɪnd/",
+  "pos": "",
+  "full": ""
+ },
+ "mine": {
+  "ipa": "/ˈmaɪn/",
+  "pos": "",
+  "full": ""
+ },
+ "minute": {
+  "ipa": "/ˈmɪnət/",
+  "pos": "",
+  "full": ""
+ },
+ "mist": {
+  "ipa": "/ˈmɪst/",
+  "pos": "",
+  "full": ""
+ },
+ "money": {
+  "ipa": "/ˈməni/",
+  "pos": "",
+  "full": ""
+ },
+ "month": {
+  "ipa": "/ˈmənθ/",
+  "pos": "",
+  "full": ""
+ },
+ "morning": {
+  "ipa": "/ˈmɔɹnɪŋ/",
+  "pos": "",
+  "full": ""
+ },
+ "mother": {
+  "ipa": "/ˈməðɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "motion": {
+  "ipa": "/ˈmoʊʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "mountain": {
+  "ipa": "/ˈmaʊntən/",
+  "pos": "",
+  "full": ""
+ },
+ "move": {
+  "ipa": "/ˈmuv/",
+  "pos": "",
+  "full": ""
+ },
+ "music": {
+  "ipa": "/ˈmjuzɪk/",
+  "pos": "",
+  "full": ""
+ },
+ "name": {
+  "ipa": "/ˈneɪm/",
+  "pos": "",
+  "full": ""
+ },
+ "nation": {
+  "ipa": "/ˈneɪʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "need": {
+  "ipa": "/ˈnid/",
+  "pos": "",
+  "full": ""
+ },
+ "news": {
+  "ipa": "/ˈnjuz/",
+  "pos": "",
+  "full": ""
+ },
+ "night": {
+  "ipa": "/ˈnaɪt/",
+  "pos": "",
+  "full": ""
+ },
+ "noise": {
+  "ipa": "/ˈnɔɪz/",
+  "pos": "",
+  "full": ""
+ },
+ "note": {
+  "ipa": "/ˈnoʊt/",
+  "pos": "",
+  "full": ""
+ },
+ "number": {
+  "ipa": "/ˈnəmbɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "observation": {
+  "ipa": "/ˌɑbzɝˈveɪʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "offer": {
+  "ipa": "/ˈɔfɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "oil": {
+  "ipa": "/ˈɔɪɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "operation": {
+  "ipa": "/ˌɑpɝˈeɪʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "opinion": {
+  "ipa": "/əˈpɪnjən/",
+  "pos": "",
+  "full": ""
+ },
+ "order": {
+  "ipa": "/ˈɔɹdɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "organization": {
+  "ipa": "/ˌɔɹɡənəˈzeɪʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "ornament": {
+  "ipa": "/ˈɔɹnəmənt/",
+  "pos": "",
+  "full": ""
+ },
+ "owner": {
+  "ipa": "/ˈoʊnɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "page": {
+  "ipa": "/ˈpeɪdʒ/",
+  "pos": "",
+  "full": ""
+ },
+ "pain": {
+  "ipa": "/ˈpeɪn/",
+  "pos": "",
+  "full": ""
+ },
+ "paint": {
+  "ipa": "/ˈpeɪnt/",
+  "pos": "",
+  "full": ""
+ },
+ "paper": {
+  "ipa": "/ˈpeɪpɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "part": {
+  "ipa": "/ˈpɑɹt/",
+  "pos": "",
+  "full": ""
+ },
+ "paste": {
+  "ipa": "/ˈpeɪst/",
+  "pos": "",
+  "full": ""
+ },
+ "payment": {
+  "ipa": "/ˈpeɪmənt/",
+  "pos": "",
+  "full": ""
+ },
+ "peace": {
+  "ipa": "/ˈpis/",
+  "pos": "",
+  "full": ""
+ },
+ "person": {
+  "ipa": "/ˈpɝsən/",
+  "pos": "",
+  "full": ""
+ },
+ "place": {
+  "ipa": "/ˈpɫeɪs/",
+  "pos": "",
+  "full": ""
+ },
+ "plant": {
+  "ipa": "/ˈpɫænt/",
+  "pos": "",
+  "full": ""
+ },
+ "play": {
+  "ipa": "/ˈpɫeɪ/",
+  "pos": "",
+  "full": ""
+ },
+ "pleasure": {
+  "ipa": "/ˈpɫɛʒɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "point": {
+  "ipa": "/ˈpɔɪnt/",
+  "pos": "",
+  "full": ""
+ },
+ "poison": {
+  "ipa": "/ˈpɔɪzən/",
+  "pos": "",
+  "full": ""
+ },
+ "polish": {
+  "ipa": "/ˈpɑɫɪʃ/",
+  "pos": "",
+  "full": ""
+ },
+ "porter": {
+  "ipa": "/ˈpɔɹtɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "position": {
+  "ipa": "/pəˈzɪʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "powder": {
+  "ipa": "/ˈpaʊdɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "power": {
+  "ipa": "/ˈpaʊɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "price": {
+  "ipa": "/ˈpɹaɪs/",
+  "pos": "",
+  "full": ""
+ },
+ "print": {
+  "ipa": "/ˈpɹɪnt/",
+  "pos": "",
+  "full": ""
+ },
+ "process": {
+  "ipa": "/ˈpɹɑˌsɛs/",
+  "pos": "",
+  "full": ""
+ },
+ "produce": {
+  "ipa": "/ˈpɹoʊdus/",
+  "pos": "",
+  "full": ""
+ },
+ "profit": {
+  "ipa": "/ˈpɹɑfət/",
+  "pos": "",
+  "full": ""
+ },
+ "property": {
+  "ipa": "/ˈpɹɑpɝti/",
+  "pos": "",
+  "full": ""
+ },
+ "prose": {
+  "ipa": "/ˈpɹoʊz/",
+  "pos": "",
+  "full": ""
+ },
+ "protest": {
+  "ipa": "/ˈpɹoʊˌtɛst/",
+  "pos": "",
+  "full": ""
+ },
+ "pull": {
+  "ipa": "/ˈpʊɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "punishment": {
+  "ipa": "/ˈpənɪʃmənt/",
+  "pos": "",
+  "full": ""
+ },
+ "purpose": {
+  "ipa": "/ˈpɝpəs/",
+  "pos": "",
+  "full": ""
+ },
+ "push": {
+  "ipa": "/ˈpʊʃ/",
+  "pos": "",
+  "full": ""
+ },
+ "quality": {
+  "ipa": "/ˈkwɑɫəti/",
+  "pos": "",
+  "full": ""
+ },
+ "question": {
+  "ipa": "/ˈkwɛstʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "rain": {
+  "ipa": "/ˈɹeɪn/",
+  "pos": "",
+  "full": ""
+ },
+ "range": {
+  "ipa": "/ˈɹeɪndʒ/",
+  "pos": "",
+  "full": ""
+ },
+ "rate": {
+  "ipa": "/ˈɹeɪt/",
+  "pos": "",
+  "full": ""
+ },
+ "ray": {
+  "ipa": "/ˈɹeɪ/",
+  "pos": "",
+  "full": ""
+ },
+ "reaction": {
+  "ipa": "/ɹiˈækʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "reading": {
+  "ipa": "/ˈɹɛdɪŋ/",
+  "pos": "",
+  "full": ""
+ },
+ "reason": {
+  "ipa": "/ˈɹizən/",
+  "pos": "",
+  "full": ""
+ },
+ "record": {
+  "ipa": "/ˈɹɛkɝd/",
+  "pos": "",
+  "full": ""
+ },
+ "regret": {
+  "ipa": "/ɹəˈɡɹɛt/",
+  "pos": "",
+  "full": ""
+ },
+ "relation": {
+  "ipa": "/ɹiˈɫeɪʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "religion": {
+  "ipa": "/ɹiˈɫɪdʒən/",
+  "pos": "",
+  "full": ""
+ },
+ "representative": {
+  "ipa": "/ˌɹɛpɹəˈzɛnətɪv/",
+  "pos": "",
+  "full": ""
+ },
+ "request": {
+  "ipa": "/ɹiˈkwɛst/",
+  "pos": "",
+  "full": ""
+ },
+ "respect": {
+  "ipa": "/ɹiˈspɛkt/",
+  "pos": "",
+  "full": ""
+ },
+ "rest": {
+  "ipa": "/ˈɹɛst/",
+  "pos": "",
+  "full": ""
+ },
+ "reward": {
+  "ipa": "/ɹiˈwɔɹd/",
+  "pos": "",
+  "full": ""
+ },
+ "rhythm": {
+  "ipa": "/ˈɹɪðəm/",
+  "pos": "",
+  "full": ""
+ },
+ "rice": {
+  "ipa": "/ˈɹaɪs/",
+  "pos": "",
+  "full": ""
+ },
+ "river": {
+  "ipa": "/ˈɹɪvɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "road": {
+  "ipa": "/ˈɹoʊd/",
+  "pos": "",
+  "full": ""
+ },
+ "roll": {
+  "ipa": "/ˈɹoʊɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "room": {
+  "ipa": "/ˈɹum/",
+  "pos": "",
+  "full": ""
+ },
+ "rub": {
+  "ipa": "/ˈɹəb/",
+  "pos": "",
+  "full": ""
+ },
+ "rule": {
+  "ipa": "/ˈɹuɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "run": {
+  "ipa": "/ˈɹən/",
+  "pos": "",
+  "full": ""
+ },
+ "salt": {
+  "ipa": "/ˈsɔɫt/",
+  "pos": "",
+  "full": ""
+ },
+ "sand": {
+  "ipa": "/ˈsænd/",
+  "pos": "",
+  "full": ""
+ },
+ "scale": {
+  "ipa": "/ˈskeɪɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "science": {
+  "ipa": "/ˈsaɪəns/",
+  "pos": "",
+  "full": ""
+ },
+ "sea": {
+  "ipa": "/ˈsi/",
+  "pos": "",
+  "full": ""
+ },
+ "seat": {
+  "ipa": "/ˈsit/",
+  "pos": "",
+  "full": ""
+ },
+ "secretary": {
+  "ipa": "/ˈsɛkɹəˌtɛɹi/",
+  "pos": "",
+  "full": ""
+ },
+ "selection": {
+  "ipa": "/səˈɫɛkʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "self": {
+  "ipa": "/ˈsɛɫf/",
+  "pos": "",
+  "full": ""
+ },
+ "sense": {
+  "ipa": "/ˈsɛns/",
+  "pos": "",
+  "full": ""
+ },
+ "servant": {
+  "ipa": "/ˈsɝvənt/",
+  "pos": "",
+  "full": ""
+ },
+ "sex": {
+  "ipa": "/ˈsɛks/",
+  "pos": "",
+  "full": ""
+ },
+ "shade": {
+  "ipa": "/ˈʃeɪd/",
+  "pos": "",
+  "full": ""
+ },
+ "shake": {
+  "ipa": "/ˈʃeɪk/",
+  "pos": "",
+  "full": ""
+ },
+ "shame": {
+  "ipa": "/ˈʃeɪm/",
+  "pos": "",
+  "full": ""
+ },
+ "shock": {
+  "ipa": "/ˈʃɑk/",
+  "pos": "",
+  "full": ""
+ },
+ "side": {
+  "ipa": "/ˈsaɪd/",
+  "pos": "",
+  "full": ""
+ },
+ "sign": {
+  "ipa": "/ˈsaɪn/",
+  "pos": "",
+  "full": ""
+ },
+ "silk": {
+  "ipa": "/ˈsɪɫk/",
+  "pos": "",
+  "full": ""
+ },
+ "silver": {
+  "ipa": "/ˈsɪɫvɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "sister": {
+  "ipa": "/ˈsɪstɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "size": {
+  "ipa": "/ˈsaɪz/",
+  "pos": "",
+  "full": ""
+ },
+ "sky": {
+  "ipa": "/ˈskaɪ/",
+  "pos": "",
+  "full": ""
+ },
+ "sleep": {
+  "ipa": "/ˈsɫip/",
+  "pos": "",
+  "full": ""
+ },
+ "slip": {
+  "ipa": "/ˈsɫɪp/",
+  "pos": "",
+  "full": ""
+ },
+ "slope": {
+  "ipa": "/ˈsɫoʊp/",
+  "pos": "",
+  "full": ""
+ },
+ "smash": {
+  "ipa": "/ˈsmæʃ/",
+  "pos": "",
+  "full": ""
+ },
+ "smell": {
+  "ipa": "/ˈsmɛɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "smile": {
+  "ipa": "/ˈsmaɪɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "smoke": {
+  "ipa": "/ˈsmoʊk/",
+  "pos": "",
+  "full": ""
+ },
+ "sneeze": {
+  "ipa": "/ˈsniz/",
+  "pos": "",
+  "full": ""
+ },
+ "snow": {
+  "ipa": "/ˈsnoʊ/",
+  "pos": "",
+  "full": ""
+ },
+ "soap": {
+  "ipa": "/ˈsoʊp/",
+  "pos": "",
+  "full": ""
+ },
+ "society": {
+  "ipa": "/səˈsaɪəti/",
+  "pos": "",
+  "full": ""
+ },
+ "son": {
+  "ipa": "/ˈsən/",
+  "pos": "",
+  "full": ""
+ },
+ "song": {
+  "ipa": "/ˈsɔŋ/",
+  "pos": "",
+  "full": ""
+ },
+ "sort": {
+  "ipa": "/ˈsɔɹt/",
+  "pos": "",
+  "full": ""
+ },
+ "sound": {
+  "ipa": "/ˈsaʊnd/",
+  "pos": "",
+  "full": ""
+ },
+ "soup": {
+  "ipa": "/ˈsup/",
+  "pos": "",
+  "full": ""
+ },
+ "space": {
+  "ipa": "/ˈspeɪs/",
+  "pos": "",
+  "full": ""
+ },
+ "stage": {
+  "ipa": "/ˈsteɪdʒ/",
+  "pos": "",
+  "full": ""
+ },
+ "start": {
+  "ipa": "/ˈstɑɹt/",
+  "pos": "",
+  "full": ""
+ },
+ "statement": {
+  "ipa": "/ˈsteɪtmənt/",
+  "pos": "",
+  "full": ""
+ },
+ "steam": {
+  "ipa": "/ˈstim/",
+  "pos": "",
+  "full": ""
+ },
+ "steel": {
+  "ipa": "/ˈstiɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "step": {
+  "ipa": "/ˈstɛp/",
+  "pos": "",
+  "full": ""
+ },
+ "stitch": {
+  "ipa": "/ˈstɪtʃ/",
+  "pos": "",
+  "full": ""
+ },
+ "stone": {
+  "ipa": "/ˈstoʊn/",
+  "pos": "",
+  "full": ""
+ },
+ "stop": {
+  "ipa": "/ˈstɑp/",
+  "pos": "",
+  "full": ""
+ },
+ "story": {
+  "ipa": "/ˈstɔɹi/",
+  "pos": "",
+  "full": ""
+ },
+ "stretch": {
+  "ipa": "/ˈstɹɛtʃ/",
+  "pos": "",
+  "full": ""
+ },
+ "structure": {
+  "ipa": "/ˈstɹəktʃɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "substance": {
+  "ipa": "/ˈsəbstəns/",
+  "pos": "",
+  "full": ""
+ },
+ "sugar": {
+  "ipa": "/ˈʃʊɡɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "suggestion": {
+  "ipa": "/səˈdʒɛstʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "summer": {
+  "ipa": "/ˈsəmɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "support": {
+  "ipa": "/səˈpɔɹt/",
+  "pos": "",
+  "full": ""
+ },
+ "surprise": {
+  "ipa": "/səˈpɹaɪz/",
+  "pos": "",
+  "full": ""
+ },
+ "swim": {
+  "ipa": "/ˈswɪm/",
+  "pos": "",
+  "full": ""
+ },
+ "system": {
+  "ipa": "/ˈsɪstəm/",
+  "pos": "",
+  "full": ""
+ },
+ "talk": {
+  "ipa": "/ˈtɔk/",
+  "pos": "",
+  "full": ""
+ },
+ "taste": {
+  "ipa": "/ˈteɪst/",
+  "pos": "",
+  "full": ""
+ },
+ "tax": {
+  "ipa": "/ˈtæks/",
+  "pos": "",
+  "full": ""
+ },
+ "teaching": {
+  "ipa": "/ˈtitʃɪŋ/",
+  "pos": "",
+  "full": ""
+ },
+ "tendency": {
+  "ipa": "/ˈtɛndənsi/",
+  "pos": "",
+  "full": ""
+ },
+ "test": {
+  "ipa": "/ˈtɛst/",
+  "pos": "",
+  "full": ""
+ },
+ "theory": {
+  "ipa": "/ˈθiɝi/",
+  "pos": "",
+  "full": ""
+ },
+ "thing": {
+  "ipa": "/ˈθɪŋ/",
+  "pos": "",
+  "full": ""
+ },
+ "thought": {
+  "ipa": "/ˈθɔt/",
+  "pos": "",
+  "full": ""
+ },
+ "thunder": {
+  "ipa": "/ˈθəndɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "time": {
+  "ipa": "/ˈtaɪm/",
+  "pos": "",
+  "full": ""
+ },
+ "tin": {
+  "ipa": "/ˈtɪn/",
+  "pos": "",
+  "full": ""
+ },
+ "top": {
+  "ipa": "/ˈtɑp/",
+  "pos": "",
+  "full": ""
+ },
+ "touch": {
+  "ipa": "/ˈtətʃ/",
+  "pos": "",
+  "full": ""
+ },
+ "trade": {
+  "ipa": "/ˈtɹeɪd/",
+  "pos": "",
+  "full": ""
+ },
+ "transport": {
+  "ipa": "/ˈtɹænspɔɹt/",
+  "pos": "",
+  "full": ""
+ },
+ "trick": {
+  "ipa": "/ˈtɹɪk/",
+  "pos": "",
+  "full": ""
+ },
+ "trouble": {
+  "ipa": "/ˈtɹəbəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "turn": {
+  "ipa": "/ˈtɝn/",
+  "pos": "",
+  "full": ""
+ },
+ "twist": {
+  "ipa": "/ˈtwɪst/",
+  "pos": "",
+  "full": ""
+ },
+ "unit": {
+  "ipa": "/ˈjunət/",
+  "pos": "",
+  "full": ""
+ },
+ "use": {
+  "ipa": "/ˈjus/",
+  "pos": "",
+  "full": ""
+ },
+ "value": {
+  "ipa": "/ˈvæɫju/",
+  "pos": "",
+  "full": ""
+ },
+ "verse": {
+  "ipa": "/ˈvɝs/",
+  "pos": "",
+  "full": ""
+ },
+ "vessel": {
+  "ipa": "/ˈvɛsəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "view": {
+  "ipa": "/ˈvju/",
+  "pos": "",
+  "full": ""
+ },
+ "voice": {
+  "ipa": "/ˈvɔɪs/",
+  "pos": "",
+  "full": ""
+ },
+ "walk": {
+  "ipa": "/ˈwɑk/",
+  "pos": "",
+  "full": ""
+ },
+ "war": {
+  "ipa": "/ˈwɔɹ/",
+  "pos": "",
+  "full": ""
+ },
+ "wash": {
+  "ipa": "/ˈwɑʃ/",
+  "pos": "",
+  "full": ""
+ },
+ "waste": {
+  "ipa": "/ˈweɪst/",
+  "pos": "",
+  "full": ""
+ },
+ "water": {
+  "ipa": "/ˈwɔtɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "wave": {
+  "ipa": "/ˈweɪv/",
+  "pos": "",
+  "full": ""
+ },
+ "wax": {
+  "ipa": "/ˈwæks/",
+  "pos": "",
+  "full": ""
+ },
+ "way": {
+  "ipa": "/ˈweɪ/",
+  "pos": "",
+  "full": ""
+ },
+ "weather": {
+  "ipa": "/ˈwɛðɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "week": {
+  "ipa": "/ˈwik/",
+  "pos": "",
+  "full": ""
+ },
+ "weight": {
+  "ipa": "/ˈweɪt/",
+  "pos": "",
+  "full": ""
+ },
+ "wind": {
+  "ipa": "/ˈwaɪnd/",
+  "pos": "",
+  "full": ""
+ },
+ "wine": {
+  "ipa": "/ˈwaɪn/",
+  "pos": "",
+  "full": ""
+ },
+ "winter": {
+  "ipa": "/ˈwɪntɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "woman": {
+  "ipa": "/ˈwʊmən/",
+  "pos": "",
+  "full": ""
+ },
+ "wood": {
+  "ipa": "/ˈwʊd/",
+  "pos": "",
+  "full": ""
+ },
+ "wool": {
+  "ipa": "/ˈwʊɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "word": {
+  "ipa": "/ˈwɝd/",
+  "pos": "",
+  "full": ""
+ },
+ "work": {
+  "ipa": "/ˈwɝk/",
+  "pos": "",
+  "full": ""
+ },
+ "wound": {
+  "ipa": "/ˈwaʊnd/",
+  "pos": "",
+  "full": ""
+ },
+ "writing": {
+  "ipa": "/ˈɹaɪtɪŋ/",
+  "pos": "",
+  "full": ""
+ },
+ "year": {
+  "ipa": "/ˈjɪɹ/",
+  "pos": "",
+  "full": ""
+ },
+ "angle": {
+  "ipa": "/ˈæŋɡəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "ant": {
+  "ipa": "/ˈænt/",
+  "pos": "",
+  "full": ""
+ },
+ "apple": {
+  "ipa": "/ˈæpəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "arch": {
+  "ipa": "/ˈɑɹtʃ/",
+  "pos": "",
+  "full": ""
+ },
+ "arm": {
+  "ipa": "/ˈɑɹm/",
+  "pos": "",
+  "full": ""
+ },
+ "army": {
+  "ipa": "/ˈɑɹmi/",
+  "pos": "",
+  "full": ""
+ },
+ "baby": {
+  "ipa": "/ˈbeɪbi/",
+  "pos": "",
+  "full": ""
+ },
+ "bag": {
+  "ipa": "/ˈbæɡ/",
+  "pos": "",
+  "full": ""
+ },
+ "ball": {
+  "ipa": "/ˈbɔɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "band": {
+  "ipa": "/ˈbænd/",
+  "pos": "",
+  "full": ""
+ },
+ "basin": {
+  "ipa": "/ˈbeɪsən/",
+  "pos": "",
+  "full": ""
+ },
+ "basket": {
+  "ipa": "/ˈbæskət/",
+  "pos": "",
+  "full": ""
+ },
+ "bath": {
+  "ipa": "/ˈbæθ/",
+  "pos": "",
+  "full": ""
+ },
+ "bed": {
+  "ipa": "/ˈbɛd/",
+  "pos": "",
+  "full": ""
+ },
+ "bee": {
+  "ipa": "/ˈbi/",
+  "pos": "",
+  "full": ""
+ },
+ "bell": {
+  "ipa": "/ˈbɛɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "berry": {
+  "ipa": "/ˈbɛɹi/",
+  "pos": "",
+  "full": ""
+ },
+ "bird": {
+  "ipa": "/ˈbɝd/",
+  "pos": "",
+  "full": ""
+ },
+ "blade": {
+  "ipa": "/ˈbɫeɪd/",
+  "pos": "",
+  "full": ""
+ },
+ "board": {
+  "ipa": "/ˈbɔɹd/",
+  "pos": "",
+  "full": ""
+ },
+ "boat": {
+  "ipa": "/ˈboʊt/",
+  "pos": "",
+  "full": ""
+ },
+ "bone": {
+  "ipa": "/ˈboʊn/",
+  "pos": "",
+  "full": ""
+ },
+ "book": {
+  "ipa": "/ˈbʊk/",
+  "pos": "",
+  "full": ""
+ },
+ "boot": {
+  "ipa": "/ˈbut/",
+  "pos": "",
+  "full": ""
+ },
+ "bottle": {
+  "ipa": "/ˈbɑtəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "box": {
+  "ipa": "/ˈbɑks/",
+  "pos": "",
+  "full": ""
+ },
+ "boy": {
+  "ipa": "/ˈbɔɪ/",
+  "pos": "",
+  "full": ""
+ },
+ "brain": {
+  "ipa": "/ˈbɹeɪn/",
+  "pos": "",
+  "full": ""
+ },
+ "brake": {
+  "ipa": "/ˈbɹeɪk/",
+  "pos": "",
+  "full": ""
+ },
+ "branch": {
+  "ipa": "/ˈbɹæntʃ/",
+  "pos": "",
+  "full": ""
+ },
+ "brick": {
+  "ipa": "/ˈbɹɪk/",
+  "pos": "",
+  "full": ""
+ },
+ "bridge": {
+  "ipa": "/ˈbɹɪdʒ/",
+  "pos": "",
+  "full": ""
+ },
+ "brush": {
+  "ipa": "/ˈbɹəʃ/",
+  "pos": "",
+  "full": ""
+ },
+ "bucket": {
+  "ipa": "/ˈbəkət/",
+  "pos": "",
+  "full": ""
+ },
+ "bulb": {
+  "ipa": "/ˈbəɫb/",
+  "pos": "",
+  "full": ""
+ },
+ "button": {
+  "ipa": "/ˈbətən/",
+  "pos": "",
+  "full": ""
+ },
+ "cake": {
+  "ipa": "/ˈkeɪk/",
+  "pos": "",
+  "full": ""
+ },
+ "camera": {
+  "ipa": "/ˈkæmɝə/",
+  "pos": "",
+  "full": ""
+ },
+ "card": {
+  "ipa": "/ˈkɑɹd/",
+  "pos": "",
+  "full": ""
+ },
+ "cart": {
+  "ipa": "/ˈkɑɹt/",
+  "pos": "",
+  "full": ""
+ },
+ "carriage": {
+  "ipa": "/ˈkæɹɪdʒ/",
+  "pos": "",
+  "full": ""
+ },
+ "cat": {
+  "ipa": "/ˈkæt/",
+  "pos": "",
+  "full": ""
+ },
+ "chain": {
+  "ipa": "/ˈtʃeɪn/",
+  "pos": "",
+  "full": ""
+ },
+ "cheese": {
+  "ipa": "/ˈtʃiz/",
+  "pos": "",
+  "full": ""
+ },
+ "chest": {
+  "ipa": "/ˈtʃɛst/",
+  "pos": "",
+  "full": ""
+ },
+ "chin": {
+  "ipa": "/ˈtʃɪn/",
+  "pos": "",
+  "full": ""
+ },
+ "church": {
+  "ipa": "/ˈtʃɝtʃ/",
+  "pos": "",
+  "full": ""
+ },
+ "circle": {
+  "ipa": "/ˈsɝkəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "clock": {
+  "ipa": "/ˈkɫɑk/",
+  "pos": "",
+  "full": ""
+ },
+ "cloud": {
+  "ipa": "/ˈkɫaʊd/",
+  "pos": "",
+  "full": ""
+ },
+ "coat": {
+  "ipa": "/ˈkoʊt/",
+  "pos": "",
+  "full": ""
+ },
+ "collar": {
+  "ipa": "/ˈkɑɫɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "comb": {
+  "ipa": "/ˈkoʊm/",
+  "pos": "",
+  "full": ""
+ },
+ "cord": {
+  "ipa": "/ˈkɔɹd/",
+  "pos": "",
+  "full": ""
+ },
+ "cow": {
+  "ipa": "/ˈkaʊ/",
+  "pos": "",
+  "full": ""
+ },
+ "cup": {
+  "ipa": "/ˈkəp/",
+  "pos": "",
+  "full": ""
+ },
+ "curtain": {
+  "ipa": "/ˈkɝtən/",
+  "pos": "",
+  "full": ""
+ },
+ "cushion": {
+  "ipa": "/ˈkʊʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "dog": {
+  "ipa": "/ˈdɔɡ/",
+  "pos": "",
+  "full": ""
+ },
+ "door": {
+  "ipa": "/ˈdɔɹ/",
+  "pos": "",
+  "full": ""
+ },
+ "drain": {
+  "ipa": "/ˈdɹeɪn/",
+  "pos": "",
+  "full": ""
+ },
+ "drawer": {
+  "ipa": "/ˈdɹɔɹ/",
+  "pos": "",
+  "full": ""
+ },
+ "dress": {
+  "ipa": "/ˈdɹɛs/",
+  "pos": "",
+  "full": ""
+ },
+ "drop": {
+  "ipa": "/ˈdɹɑp/",
+  "pos": "",
+  "full": ""
+ },
+ "ear": {
+  "ipa": "/ˈiɹ/",
+  "pos": "",
+  "full": ""
+ },
+ "egg": {
+  "ipa": "/ˈɛɡ/",
+  "pos": "",
+  "full": ""
+ },
+ "engine": {
+  "ipa": "/ˈɛndʒən/",
+  "pos": "",
+  "full": ""
+ },
+ "eye": {
+  "ipa": "/ˈaɪ/",
+  "pos": "",
+  "full": ""
+ },
+ "face": {
+  "ipa": "/ˈfeɪs/",
+  "pos": "",
+  "full": ""
+ },
+ "farm": {
+  "ipa": "/ˈfɑɹm/",
+  "pos": "",
+  "full": ""
+ },
+ "feather": {
+  "ipa": "/ˈfɛðɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "finger": {
+  "ipa": "/ˈfɪŋɡɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "fish": {
+  "ipa": "/ˈfɪʃ/",
+  "pos": "",
+  "full": ""
+ },
+ "flag": {
+  "ipa": "/ˈfɫæɡ/",
+  "pos": "",
+  "full": ""
+ },
+ "floor": {
+  "ipa": "/ˈfɫɔɹ/",
+  "pos": "",
+  "full": ""
+ },
+ "fly": {
+  "ipa": "/ˈfɫaɪ/",
+  "pos": "",
+  "full": ""
+ },
+ "foot": {
+  "ipa": "/ˈfʊt/",
+  "pos": "",
+  "full": ""
+ },
+ "fork": {
+  "ipa": "/ˈfɔɹk/",
+  "pos": "",
+  "full": ""
+ },
+ "fowl": {
+  "ipa": "/ˈfaʊɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "frame": {
+  "ipa": "/ˈfɹeɪm/",
+  "pos": "",
+  "full": ""
+ },
+ "garden": {
+  "ipa": "/ˈɡɑɹdən/",
+  "pos": "",
+  "full": ""
+ },
+ "girl": {
+  "ipa": "/ˈɡɝɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "glove": {
+  "ipa": "/ˈɡɫəv/",
+  "pos": "",
+  "full": ""
+ },
+ "goat": {
+  "ipa": "/ˈɡoʊt/",
+  "pos": "",
+  "full": ""
+ },
+ "gun": {
+  "ipa": "/ˈɡən/",
+  "pos": "",
+  "full": ""
+ },
+ "hair": {
+  "ipa": "/ˈhɛɹ/",
+  "pos": "",
+  "full": ""
+ },
+ "hammer": {
+  "ipa": "/ˈhæmɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "hand": {
+  "ipa": "/ˈhænd/",
+  "pos": "",
+  "full": ""
+ },
+ "hat": {
+  "ipa": "/ˈhæt/",
+  "pos": "",
+  "full": ""
+ },
+ "head": {
+  "ipa": "/ˈhɛd/",
+  "pos": "",
+  "full": ""
+ },
+ "heart": {
+  "ipa": "/ˈhɑɹt/",
+  "pos": "",
+  "full": ""
+ },
+ "hook": {
+  "ipa": "/ˈhʊk/",
+  "pos": "",
+  "full": ""
+ },
+ "horn": {
+  "ipa": "/ˈhɔɹn/",
+  "pos": "",
+  "full": ""
+ },
+ "horse": {
+  "ipa": "/ˈhɔɹs/",
+  "pos": "",
+  "full": ""
+ },
+ "hospital": {
+  "ipa": "/ˈhɑˌspɪtəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "house": {
+  "ipa": "/ˈhaʊs/",
+  "pos": "",
+  "full": ""
+ },
+ "island": {
+  "ipa": "/ˈaɪɫənd/",
+  "pos": "",
+  "full": ""
+ },
+ "jewel": {
+  "ipa": "/ˈdʒuəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "kettle": {
+  "ipa": "/ˈkɛtəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "key": {
+  "ipa": "/ˈki/",
+  "pos": "",
+  "full": ""
+ },
+ "knee": {
+  "ipa": "/ˈni/",
+  "pos": "",
+  "full": ""
+ },
+ "knife": {
+  "ipa": "/ˈnaɪf/",
+  "pos": "",
+  "full": ""
+ },
+ "knot": {
+  "ipa": "/ˈnɑt/",
+  "pos": "",
+  "full": ""
+ },
+ "leaf": {
+  "ipa": "/ˈɫif/",
+  "pos": "",
+  "full": ""
+ },
+ "leg": {
+  "ipa": "/ˈɫɛɡ/",
+  "pos": "",
+  "full": ""
+ },
+ "library": {
+  "ipa": "/ˈɫaɪbɹɛˌɹi/",
+  "pos": "",
+  "full": ""
+ },
+ "line": {
+  "ipa": "/ˈɫaɪn/",
+  "pos": "",
+  "full": ""
+ },
+ "lip": {
+  "ipa": "/ˈɫɪp/",
+  "pos": "",
+  "full": ""
+ },
+ "lock": {
+  "ipa": "/ˈɫɑk/",
+  "pos": "",
+  "full": ""
+ },
+ "map": {
+  "ipa": "/ˈmæp/",
+  "pos": "",
+  "full": ""
+ },
+ "match": {
+  "ipa": "/ˈmætʃ/",
+  "pos": "",
+  "full": ""
+ },
+ "monkey": {
+  "ipa": "/ˈməŋki/",
+  "pos": "",
+  "full": ""
+ },
+ "moon": {
+  "ipa": "/ˈmun/",
+  "pos": "",
+  "full": ""
+ },
+ "mouth": {
+  "ipa": "/ˈmaʊθ/",
+  "pos": "",
+  "full": ""
+ },
+ "muscle": {
+  "ipa": "/ˈməsəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "nail": {
+  "ipa": "/ˈneɪɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "neck": {
+  "ipa": "/ˈnɛk/",
+  "pos": "",
+  "full": ""
+ },
+ "needle": {
+  "ipa": "/ˈnidəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "nerve": {
+  "ipa": "/ˈnɝv/",
+  "pos": "",
+  "full": ""
+ },
+ "net": {
+  "ipa": "/ˈnɛt/",
+  "pos": "",
+  "full": ""
+ },
+ "nose": {
+  "ipa": "/ˈnoʊz/",
+  "pos": "",
+  "full": ""
+ },
+ "nut": {
+  "ipa": "/ˈnət/",
+  "pos": "",
+  "full": ""
+ },
+ "office": {
+  "ipa": "/ˈɔfɪs/",
+  "pos": "",
+  "full": ""
+ },
+ "orange": {
+  "ipa": "/ˈɔɹəndʒ/",
+  "pos": "",
+  "full": ""
+ },
+ "oven": {
+  "ipa": "/ˈəvən/",
+  "pos": "",
+  "full": ""
+ },
+ "parcel": {
+  "ipa": "/ˈpɑɹsəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "pen": {
+  "ipa": "/ˈpɛn/",
+  "pos": "",
+  "full": ""
+ },
+ "pencil": {
+  "ipa": "/ˈpɛnsəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "picture": {
+  "ipa": "/ˈpɪktʃɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "pig": {
+  "ipa": "/ˈpɪɡ/",
+  "pos": "",
+  "full": ""
+ },
+ "pin": {
+  "ipa": "/ˈpɪn/",
+  "pos": "",
+  "full": ""
+ },
+ "pipe": {
+  "ipa": "/ˈpaɪp/",
+  "pos": "",
+  "full": ""
+ },
+ "plane": {
+  "ipa": "/ˈpɫeɪn/",
+  "pos": "",
+  "full": ""
+ },
+ "plate": {
+  "ipa": "/ˈpɫeɪt/",
+  "pos": "",
+  "full": ""
+ },
+ "plough": {
+  "ipa": "/ˈpɫaʊ/",
+  "pos": "",
+  "full": ""
+ },
+ "pocket": {
+  "ipa": "/ˈpɑkət/",
+  "pos": "",
+  "full": ""
+ },
+ "pot": {
+  "ipa": "/ˈpɑt/",
+  "pos": "",
+  "full": ""
+ },
+ "potato": {
+  "ipa": "/pəˈteɪˌtoʊ/",
+  "pos": "",
+  "full": ""
+ },
+ "prison": {
+  "ipa": "/ˈpɹɪzən/",
+  "pos": "",
+  "full": ""
+ },
+ "pump": {
+  "ipa": "/ˈpəmp/",
+  "pos": "",
+  "full": ""
+ },
+ "rail": {
+  "ipa": "/ˈɹeɪɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "rat": {
+  "ipa": "/ˈɹæt/",
+  "pos": "",
+  "full": ""
+ },
+ "receipt": {
+  "ipa": "/ɹiˈsit/",
+  "pos": "",
+  "full": ""
+ },
+ "ring": {
+  "ipa": "/ˈɹɪŋ/",
+  "pos": "",
+  "full": ""
+ },
+ "rod": {
+  "ipa": "/ˈɹɑd/",
+  "pos": "",
+  "full": ""
+ },
+ "roof": {
+  "ipa": "/ˈɹuf/",
+  "pos": "",
+  "full": ""
+ },
+ "root": {
+  "ipa": "/ˈɹut/",
+  "pos": "",
+  "full": ""
+ },
+ "sail": {
+  "ipa": "/ˈseɪɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "school": {
+  "ipa": "/ˈskuɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "scissors": {
+  "ipa": "/ˈsɪzɝz/",
+  "pos": "",
+  "full": ""
+ },
+ "screw": {
+  "ipa": "/ˈskɹu/",
+  "pos": "",
+  "full": ""
+ },
+ "seed": {
+  "ipa": "/ˈsid/",
+  "pos": "",
+  "full": ""
+ },
+ "sheep": {
+  "ipa": "/ˈʃip/",
+  "pos": "",
+  "full": ""
+ },
+ "shelf": {
+  "ipa": "/ˈʃɛɫf/",
+  "pos": "",
+  "full": ""
+ },
+ "ship": {
+  "ipa": "/ˈʃɪp/",
+  "pos": "",
+  "full": ""
+ },
+ "shirt": {
+  "ipa": "/ˈʃɝt/",
+  "pos": "",
+  "full": ""
+ },
+ "shoe": {
+  "ipa": "/ˈʃu/",
+  "pos": "",
+  "full": ""
+ },
+ "skin": {
+  "ipa": "/ˈskɪn/",
+  "pos": "",
+  "full": ""
+ },
+ "skirt": {
+  "ipa": "/ˈskɝt/",
+  "pos": "",
+  "full": ""
+ },
+ "snake": {
+  "ipa": "/ˈsneɪk/",
+  "pos": "",
+  "full": ""
+ },
+ "sock": {
+  "ipa": "/ˈsɑk/",
+  "pos": "",
+  "full": ""
+ },
+ "spade": {
+  "ipa": "/ˈspeɪd/",
+  "pos": "",
+  "full": ""
+ },
+ "sponge": {
+  "ipa": "/ˈspəndʒ/",
+  "pos": "",
+  "full": ""
+ },
+ "spoon": {
+  "ipa": "/ˈspun/",
+  "pos": "",
+  "full": ""
+ },
+ "spring": {
+  "ipa": "/ˈspɹɪŋ/",
+  "pos": "",
+  "full": ""
+ },
+ "square": {
+  "ipa": "/ˈskwɛɹ/",
+  "pos": "",
+  "full": ""
+ },
+ "stamp": {
+  "ipa": "/ˈstæmp/",
+  "pos": "",
+  "full": ""
+ },
+ "star": {
+  "ipa": "/ˈstɑɹ/",
+  "pos": "",
+  "full": ""
+ },
+ "station": {
+  "ipa": "/ˈsteɪʃən/",
+  "pos": "",
+  "full": ""
+ },
+ "stem": {
+  "ipa": "/ˈstɛm/",
+  "pos": "",
+  "full": ""
+ },
+ "stick": {
+  "ipa": "/ˈstɪk/",
+  "pos": "",
+  "full": ""
+ },
+ "stocking": {
+  "ipa": "/ˈstɑkɪŋ/",
+  "pos": "",
+  "full": ""
+ },
+ "stomach": {
+  "ipa": "/ˈstəmək/",
+  "pos": "",
+  "full": ""
+ },
+ "store": {
+  "ipa": "/ˈstɔɹ/",
+  "pos": "",
+  "full": ""
+ },
+ "street": {
+  "ipa": "/ˈstɹit/",
+  "pos": "",
+  "full": ""
+ },
+ "sun": {
+  "ipa": "/ˈsən/",
+  "pos": "",
+  "full": ""
+ },
+ "table": {
+  "ipa": "/ˈteɪbəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "tail": {
+  "ipa": "/ˈteɪɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "thread": {
+  "ipa": "/ˈθɹɛd/",
+  "pos": "",
+  "full": ""
+ },
+ "throat": {
+  "ipa": "/ˈθɹoʊt/",
+  "pos": "",
+  "full": ""
+ },
+ "thumb": {
+  "ipa": "/ˈθəm/",
+  "pos": "",
+  "full": ""
+ },
+ "ticket": {
+  "ipa": "/ˈtɪkət/",
+  "pos": "",
+  "full": ""
+ },
+ "toe": {
+  "ipa": "/ˈtoʊ/",
+  "pos": "",
+  "full": ""
+ },
+ "tongue": {
+  "ipa": "/ˈtəŋ/",
+  "pos": "",
+  "full": ""
+ },
+ "tooth": {
+  "ipa": "/ˈtuθ/",
+  "pos": "",
+  "full": ""
+ },
+ "town": {
+  "ipa": "/ˈtaʊn/",
+  "pos": "",
+  "full": ""
+ },
+ "train": {
+  "ipa": "/ˈtɹeɪn/",
+  "pos": "",
+  "full": ""
+ },
+ "tray": {
+  "ipa": "/ˈtɹeɪ/",
+  "pos": "",
+  "full": ""
+ },
+ "tree": {
+  "ipa": "/ˈtɹi/",
+  "pos": "",
+  "full": ""
+ },
+ "trousers": {
+  "ipa": "/ˈtɹaʊzɝz/",
+  "pos": "",
+  "full": ""
+ },
+ "umbrella": {
+  "ipa": "/ˈəmˌbɹɛɫə/",
+  "pos": "",
+  "full": ""
+ },
+ "wall": {
+  "ipa": "/ˈwɔɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "watch": {
+  "ipa": "/ˈwɑtʃ/",
+  "pos": "",
+  "full": ""
+ },
+ "wheel": {
+  "ipa": "/ˈhwiɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "whip": {
+  "ipa": "/ˈhwɪp/",
+  "pos": "",
+  "full": ""
+ },
+ "whistle": {
+  "ipa": "/ˈhwɪsəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "window": {
+  "ipa": "/ˈwɪndoʊ/",
+  "pos": "",
+  "full": ""
+ },
+ "wing": {
+  "ipa": "/ˈwɪŋ/",
+  "pos": "",
+  "full": ""
+ },
+ "wire": {
+  "ipa": "/ˈwaɪɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "worm": {
+  "ipa": "/ˈwɝm/",
+  "pos": "",
+  "full": ""
+ },
+ "able": {
+  "ipa": "/ˈeɪbəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "acid": {
+  "ipa": "/ˈæsəd/",
+  "pos": "",
+  "full": ""
+ },
+ "angry": {
+  "ipa": "/ˈæŋɡɹi/",
+  "pos": "",
+  "full": ""
+ },
+ "automatic": {
+  "ipa": "/ˌɔtəˈmætɪk/",
+  "pos": "",
+  "full": ""
+ },
+ "beautiful": {
+  "ipa": "/ˈbjutəfəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "black": {
+  "ipa": "/ˈbɫæk/",
+  "pos": "",
+  "full": ""
+ },
+ "boiling": {
+  "ipa": "/ˈbɔɪɫɪŋ/",
+  "pos": "",
+  "full": ""
+ },
+ "bright": {
+  "ipa": "/ˈbɹaɪt/",
+  "pos": "",
+  "full": ""
+ },
+ "broken": {
+  "ipa": "/ˈbɹoʊkən/",
+  "pos": "",
+  "full": ""
+ },
+ "brown": {
+  "ipa": "/ˈbɹaʊn/",
+  "pos": "",
+  "full": ""
+ },
+ "cheap": {
+  "ipa": "/ˈtʃip/",
+  "pos": "",
+  "full": ""
+ },
+ "chemical": {
+  "ipa": "/ˈkɛməkəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "chief": {
+  "ipa": "/ˈtʃif/",
+  "pos": "",
+  "full": ""
+ },
+ "clean": {
+  "ipa": "/ˈkɫin/",
+  "pos": "",
+  "full": ""
+ },
+ "clear": {
+  "ipa": "/ˈkɫɪɹ/",
+  "pos": "",
+  "full": ""
+ },
+ "common": {
+  "ipa": "/ˈkɑmən/",
+  "pos": "",
+  "full": ""
+ },
+ "complex": {
+  "ipa": "/ˈkɑmpɫɛks/",
+  "pos": "",
+  "full": ""
+ },
+ "conscious": {
+  "ipa": "/ˈkɑnʃəs/",
+  "pos": "",
+  "full": ""
+ },
+ "cut": {
+  "ipa": "/ˈkət/",
+  "pos": "",
+  "full": ""
+ },
+ "deep": {
+  "ipa": "/ˈdip/",
+  "pos": "",
+  "full": ""
+ },
+ "dependent": {
+  "ipa": "/dɪˈpɛndənt/",
+  "pos": "",
+  "full": ""
+ },
+ "early": {
+  "ipa": "/ˈɝɫi/",
+  "pos": "",
+  "full": ""
+ },
+ "elastic": {
+  "ipa": "/ɪˈɫæstɪk/",
+  "pos": "",
+  "full": ""
+ },
+ "electric": {
+  "ipa": "/ɪˈɫɛktɹɪk/",
+  "pos": "",
+  "full": ""
+ },
+ "equal": {
+  "ipa": "/ˈikwəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "fat": {
+  "ipa": "/ˈfæt/",
+  "pos": "",
+  "full": ""
+ },
+ "fertile": {
+  "ipa": "/ˈfɝtəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "first": {
+  "ipa": "/ˈfɝst/",
+  "pos": "",
+  "full": ""
+ },
+ "fixed": {
+  "ipa": "/ˈfɪkst/",
+  "pos": "",
+  "full": ""
+ },
+ "flat": {
+  "ipa": "/ˈfɫæt/",
+  "pos": "",
+  "full": ""
+ },
+ "free": {
+  "ipa": "/ˈfɹi/",
+  "pos": "",
+  "full": ""
+ },
+ "frequent": {
+  "ipa": "/ˈfɹiˌkwɛnt/",
+  "pos": "",
+  "full": ""
+ },
+ "full": {
+  "ipa": "/ˈfʊɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "general": {
+  "ipa": "/ˈdʒɛnɝəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "good": {
+  "ipa": "/ˈɡʊd/",
+  "pos": "",
+  "full": ""
+ },
+ "great": {
+  "ipa": "/ˈɡɹeɪt/",
+  "pos": "",
+  "full": ""
+ },
+ "grey": {
+  "ipa": "/ˈɡɹeɪ/",
+  "pos": "",
+  "full": ""
+ },
+ "hanging": {
+  "ipa": "/ˈhæŋɡɪŋ/",
+  "pos": "",
+  "full": ""
+ },
+ "happy": {
+  "ipa": "/ˈhæpi/",
+  "pos": "",
+  "full": ""
+ },
+ "hard": {
+  "ipa": "/ˈhɑɹd/",
+  "pos": "",
+  "full": ""
+ },
+ "healthy": {
+  "ipa": "/ˈhɛɫθi/",
+  "pos": "",
+  "full": ""
+ },
+ "high": {
+  "ipa": "/ˈhaɪ/",
+  "pos": "",
+  "full": ""
+ },
+ "hollow": {
+  "ipa": "/ˈhɑɫoʊ/",
+  "pos": "",
+  "full": ""
+ },
+ "important": {
+  "ipa": "/ˌɪmˈpɔɹtənt/",
+  "pos": "",
+  "full": ""
+ },
+ "kind": {
+  "ipa": "/ˈkaɪnd/",
+  "pos": "",
+  "full": ""
+ },
+ "like": {
+  "ipa": "/ˈɫaɪk/",
+  "pos": "",
+  "full": ""
+ },
+ "living": {
+  "ipa": "/ˈɫɪvɪŋ/",
+  "pos": "",
+  "full": ""
+ },
+ "long": {
+  "ipa": "/ˈɫɔŋ/",
+  "pos": "",
+  "full": ""
+ },
+ "male": {
+  "ipa": "/ˈmeɪɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "married": {
+  "ipa": "/ˈmɛɹid/",
+  "pos": "",
+  "full": ""
+ },
+ "material": {
+  "ipa": "/məˈtɪɹiəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "medical": {
+  "ipa": "/ˈmɛdəkəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "military": {
+  "ipa": "/ˈmɪɫəˌtɛɹi/",
+  "pos": "",
+  "full": ""
+ },
+ "natural": {
+  "ipa": "/ˈnætʃɝəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "necessary": {
+  "ipa": "/ˈnɛsəˌsɛɹi/",
+  "pos": "",
+  "full": ""
+ },
+ "new": {
+  "ipa": "/ˈnju/",
+  "pos": "",
+  "full": ""
+ },
+ "normal": {
+  "ipa": "/ˈnɔɹməɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "open": {
+  "ipa": "/ˈoʊpən/",
+  "pos": "",
+  "full": ""
+ },
+ "parallel": {
+  "ipa": "/ˈpɛɹəˌɫɛɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "past": {
+  "ipa": "/ˈpæst/",
+  "pos": "",
+  "full": ""
+ },
+ "physical": {
+  "ipa": "/ˈfɪzɪkəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "political": {
+  "ipa": "/pəˈɫɪtəkəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "poor": {
+  "ipa": "/ˈpuɹ/",
+  "pos": "",
+  "full": ""
+ },
+ "possible": {
+  "ipa": "/ˈpɑsəbəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "present": {
+  "ipa": "/ˈpɹɛzənt/",
+  "pos": "",
+  "full": ""
+ },
+ "private": {
+  "ipa": "/ˈpɹaɪvət/",
+  "pos": "",
+  "full": ""
+ },
+ "probable": {
+  "ipa": "/ˈpɹɑbəbəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "quick": {
+  "ipa": "/ˈkwɪk/",
+  "pos": "",
+  "full": ""
+ },
+ "quiet": {
+  "ipa": "/ˈkwaɪət/",
+  "pos": "",
+  "full": ""
+ },
+ "ready": {
+  "ipa": "/ˈɹɛdi/",
+  "pos": "",
+  "full": ""
+ },
+ "red": {
+  "ipa": "/ˈɹɛd/",
+  "pos": "",
+  "full": ""
+ },
+ "regular": {
+  "ipa": "/ˈɹeɪɡjəɫɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "responsible": {
+  "ipa": "/ɹiˈspɑnsəbəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "right": {
+  "ipa": "/ˈɹaɪt/",
+  "pos": "",
+  "full": ""
+ },
+ "round": {
+  "ipa": "/ˈɹaʊnd/",
+  "pos": "",
+  "full": ""
+ },
+ "same": {
+  "ipa": "/ˈseɪm/",
+  "pos": "",
+  "full": ""
+ },
+ "second": {
+  "ipa": "/ˈsɛkənd/",
+  "pos": "",
+  "full": ""
+ },
+ "separate": {
+  "ipa": "/ˈsɛpɝˌeɪt/",
+  "pos": "",
+  "full": ""
+ },
+ "serious": {
+  "ipa": "/ˈsɪɹiəs/",
+  "pos": "",
+  "full": ""
+ },
+ "sharp": {
+  "ipa": "/ˈʃɑɹp/",
+  "pos": "",
+  "full": ""
+ },
+ "smooth": {
+  "ipa": "/ˈsmuð/",
+  "pos": "",
+  "full": ""
+ },
+ "sticky": {
+  "ipa": "/ˈstɪki/",
+  "pos": "",
+  "full": ""
+ },
+ "stiff": {
+  "ipa": "/ˈstɪf/",
+  "pos": "",
+  "full": ""
+ },
+ "straight": {
+  "ipa": "/ˈstɹeɪt/",
+  "pos": "",
+  "full": ""
+ },
+ "strong": {
+  "ipa": "/ˈstɹɔŋ/",
+  "pos": "",
+  "full": ""
+ },
+ "sudden": {
+  "ipa": "/ˈsədən/",
+  "pos": "",
+  "full": ""
+ },
+ "sweet": {
+  "ipa": "/ˈswit/",
+  "pos": "",
+  "full": ""
+ },
+ "tall": {
+  "ipa": "/ˈtɔɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "thick": {
+  "ipa": "/ˈθɪk/",
+  "pos": "",
+  "full": ""
+ },
+ "tight": {
+  "ipa": "/ˈtaɪt/",
+  "pos": "",
+  "full": ""
+ },
+ "tired": {
+  "ipa": "/ˈtaɪɝd/",
+  "pos": "",
+  "full": ""
+ },
+ "true": {
+  "ipa": "/ˈtɹu/",
+  "pos": "",
+  "full": ""
+ },
+ "violent": {
+  "ipa": "/ˈvaɪəɫənt/",
+  "pos": "",
+  "full": ""
+ },
+ "waiting": {
+  "ipa": "/ˈweɪtɪŋ/",
+  "pos": "",
+  "full": ""
+ },
+ "warm": {
+  "ipa": "/ˈwɔɹm/",
+  "pos": "",
+  "full": ""
+ },
+ "wet": {
+  "ipa": "/ˈwɛt/",
+  "pos": "",
+  "full": ""
+ },
+ "wide": {
+  "ipa": "/ˈwaɪd/",
+  "pos": "",
+  "full": ""
+ },
+ "wise": {
+  "ipa": "/ˈwaɪz/",
+  "pos": "",
+  "full": ""
+ },
+ "yellow": {
+  "ipa": "/ˈjɛɫoʊ/",
+  "pos": "",
+  "full": ""
+ },
+ "young": {
+  "ipa": "/ˈjəŋ/",
+  "pos": "",
+  "full": ""
+ },
+ "awake": {
+  "ipa": "/əˈweɪk/",
+  "pos": "",
+  "full": ""
+ },
+ "bad": {
+  "ipa": "/ˈbæd/",
+  "pos": "",
+  "full": ""
+ },
+ "bent": {
+  "ipa": "/ˈbɛnt/",
+  "pos": "",
+  "full": ""
+ },
+ "bitter": {
+  "ipa": "/ˈbɪtɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "blue": {
+  "ipa": "/ˈbɫu/",
+  "pos": "",
+  "full": ""
+ },
+ "certain": {
+  "ipa": "/ˈsɝtən/",
+  "pos": "",
+  "full": ""
+ },
+ "cold": {
+  "ipa": "/ˈkoʊɫd/",
+  "pos": "",
+  "full": ""
+ },
+ "complete": {
+  "ipa": "/kəmˈpɫit/",
+  "pos": "",
+  "full": ""
+ },
+ "cruel": {
+  "ipa": "/ˈkɹuəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "dark": {
+  "ipa": "/ˈdɑɹk/",
+  "pos": "",
+  "full": ""
+ },
+ "dead": {
+  "ipa": "/ˈdɛd/",
+  "pos": "",
+  "full": ""
+ },
+ "dear": {
+  "ipa": "/ˈdɪɹ/",
+  "pos": "",
+  "full": ""
+ },
+ "delicate": {
+  "ipa": "/ˈdɛɫəkət/",
+  "pos": "",
+  "full": ""
+ },
+ "different": {
+  "ipa": "/ˈdɪfɝənt/",
+  "pos": "",
+  "full": ""
+ },
+ "dirty": {
+  "ipa": "/ˈdɝti/",
+  "pos": "",
+  "full": ""
+ },
+ "dry": {
+  "ipa": "/ˈdɹaɪ/",
+  "pos": "",
+  "full": ""
+ },
+ "false": {
+  "ipa": "/ˈfɔɫs/",
+  "pos": "",
+  "full": ""
+ },
+ "feeble": {
+  "ipa": "/ˈfibəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "female": {
+  "ipa": "/ˈfiˌmeɪɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "foolish": {
+  "ipa": "/ˈfuɫɪʃ/",
+  "pos": "",
+  "full": ""
+ },
+ "future": {
+  "ipa": "/ˈfjutʃɝ/",
+  "pos": "",
+  "full": ""
+ },
+ "green": {
+  "ipa": "/ˈɡɹin/",
+  "pos": "",
+  "full": ""
+ },
+ "ill": {
+  "ipa": "/ˈɪɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "last": {
+  "ipa": "/ˈɫæs/",
+  "pos": "",
+  "full": ""
+ },
+ "late": {
+  "ipa": "/ˈɫeɪt/",
+  "pos": "",
+  "full": ""
+ },
+ "left": {
+  "ipa": "/ˈɫɛft/",
+  "pos": "",
+  "full": ""
+ },
+ "loose": {
+  "ipa": "/ˈɫus/",
+  "pos": "",
+  "full": ""
+ },
+ "loud": {
+  "ipa": "/ˈɫaʊd/",
+  "pos": "",
+  "full": ""
+ },
+ "low": {
+  "ipa": "/ˈɫoʊ/",
+  "pos": "",
+  "full": ""
+ },
+ "mixed": {
+  "ipa": "/ˈmɪkst/",
+  "pos": "",
+  "full": ""
+ },
+ "narrow": {
+  "ipa": "/ˈnæɹoʊ/",
+  "pos": "",
+  "full": ""
+ },
+ "old": {
+  "ipa": "/ˈoʊɫd/",
+  "pos": "",
+  "full": ""
+ },
+ "opposite": {
+  "ipa": "/ˈɑpəzət/",
+  "pos": "",
+  "full": ""
+ },
+ "public": {
+  "ipa": "/ˈpəbɫɪk/",
+  "pos": "",
+  "full": ""
+ },
+ "rough": {
+  "ipa": "/ˈɹəf/",
+  "pos": "",
+  "full": ""
+ },
+ "sad": {
+  "ipa": "/ˈsæd/",
+  "pos": "",
+  "full": ""
+ },
+ "safe": {
+  "ipa": "/ˈseɪf/",
+  "pos": "",
+  "full": ""
+ },
+ "secret": {
+  "ipa": "/ˈsikɹət/",
+  "pos": "",
+  "full": ""
+ },
+ "short": {
+  "ipa": "/ˈʃɔɹt/",
+  "pos": "",
+  "full": ""
+ },
+ "shut": {
+  "ipa": "/ˈʃət/",
+  "pos": "",
+  "full": ""
+ },
+ "simple": {
+  "ipa": "/ˈsɪmpəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "slow": {
+  "ipa": "/ˈsɫoʊ/",
+  "pos": "",
+  "full": ""
+ },
+ "small": {
+  "ipa": "/ˈsmɔɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "soft": {
+  "ipa": "/ˈsɑft/",
+  "pos": "",
+  "full": ""
+ },
+ "solid": {
+  "ipa": "/ˈsɑɫəd/",
+  "pos": "",
+  "full": ""
+ },
+ "special": {
+  "ipa": "/ˈspɛʃəɫ/",
+  "pos": "",
+  "full": ""
+ },
+ "strange": {
+  "ipa": "/ˈstɹeɪndʒ/",
+  "pos": "",
+  "full": ""
+ },
+ "thin": {
+  "ipa": "/ˈθɪn/",
+  "pos": "",
+  "full": ""
+ },
+ "white": {
+  "ipa": "/ˈhwaɪt/",
+  "pos": "",
+  "full": ""
+ },
+ "wrong": {
+  "ipa": "/ˈɹɔŋ/",
+  "pos": "",
+  "full": ""
+ }
+}
