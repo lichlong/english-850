@@ -104,14 +104,18 @@
     var learned = window.Exercises.learnedSet();
     var strict = strictMode(opts.practice);
 
-    var titleEl = el("div", "ex-title", data.read.title);
-    if (strict) {
-      var simpleAll = data.read.blocks.every(function (b) {
-        return window.Exercises.allKnown(b.simple, learned);
-      });
-      if (!simpleAll) titleEl.appendChild(el("span", "ex-tag", "含未学词"));
+    // 英文大标题（文章名）只在"学习模式读整篇"时给上下文；
+    // 练习模式与前几天的一屏预览里它是噪音，去掉（v9.7）
+    if (!opts.lite && !opts.practice) {
+      var titleEl = el("div", "ex-title", data.read.title);
+      if (strict) {
+        var simpleAll = data.read.blocks.every(function (b) {
+          return window.Exercises.allKnown(b.simple, learned);
+        });
+        if (!simpleAll) titleEl.appendChild(el("span", "ex-tag", "含未学词"));
+      }
+      container.appendChild(titleEl);
     }
-    container.appendChild(titleEl);
 
     var body = el("div", "ex-read");
     var blocks = opts.lite ? data.read.blocks.slice(0, 1) : data.read.blocks;
@@ -175,7 +179,6 @@
     (notes || []).forEach(function (n) {
       container.appendChild(el("div", "ex-tip", n));
     });
-    container.appendChild(el("div", "ex-tip", "先在心里说一遍，再点参考答案对照。"));
   }
 
   window.Toast = toast;

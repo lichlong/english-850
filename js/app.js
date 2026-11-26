@@ -295,6 +295,8 @@
     fillQuiz(wrap2, false);
     quizPage.appendChild(wrap2);
 
+    quizPage.appendChild(quoteEl(2));
+
     var next = document.createElement("button");
     next.className = "next";
     next.type = "button";
@@ -332,12 +334,10 @@
     wrap.appendChild(quizWrap);
     fillQuiz(quizWrap, true);
 
-    var tip = document.createElement("div");
-    tip.className = "ex-tip";
-    tip.textContent = "前 5 天拓展与练习合为一屏，各一条；第 6 天起各占一屏。";
-    wrap.appendChild(tip);
-
     page.appendChild(wrap);
+
+    // 谚语 + 按钮一起钉在屏底：.quote 有 margin-top:auto（v9.7）
+    page.appendChild(quoteEl(2));
 
     var next = document.createElement("button");
     next.className = "next";

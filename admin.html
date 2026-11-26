@@ -148,14 +148,6 @@ tr.detail[hidden] { display: none; }
   <div id="view"></div>
 </div>
 
-<script src="../data/words.js"></script>
-<script src="../data/glossary.js"></script>
-<script src="../data/contractions.js"></script>
-<script src="../data/units.js"></script>
-<script src="../data/extras.js"></script>
-<script src="../data/exercises.js"></script>
-<script src="../js/exercises.js"></script>
-<script src="./checks.js"></script>
 <script>
 (function () {
   "use strict";
@@ -179,13 +171,52 @@ tr.detail[hidden] { display: none; }
   }
 
   // ---------- 数据 ----------
+  function missing() {
+    var box = el("div", "err");
+    box.appendChild(el("b", null, "读不到 data/（内容文件没加载上来）。"));
+
+    var p1 = el("p");
+    p1.textContent = "先说原因：网页不许跨文件读本地磁盘，能不能读到 data/ 取决于「怎么打开」这个页面，不取决于文件放在哪。";
+    box.appendChild(p1);
+
+    var ul = el("ul");
+    ul.style.margin = "8px 0 10px";
+    ul.style.paddingLeft = "18px";
+
+    var li1 = el("li");
+    li1.appendChild(el("b", null, "用 Chrome / Edge 双击打开这个文件"));
+    li1.appendChild(document.createTextNode("（最省事，推荐）。路径在你机器上应该是："));
+    var code = el("div", "mono");
+    code.style.margin = "4px 0";
+    code.textContent = "C:\\Users\\lichl\\WorkBuddy\\spaces\\2026_11_25_14-14-35\\english-850\\admin.html";
+    li1.appendChild(code);
+    ul.appendChild(li1);
+
+    var li2 = el("li");
+    li2.appendChild(el("b", null, "或者在项目目录起个本地服务"));
+    var c2 = el("div", "mono");
+    c2.style.margin = "4px 0";
+    c2.textContent = "cd english-850\npython -m http.server 8080";
+    li2.appendChild(c2);
+    li2.appendChild(document.createTextNode("然后开 http://localhost:8080/admin.html"));
+    ul.appendChild(li2);
+
+    box.appendChild(ul);
+
+    var p3 = el("p");
+    p3.textContent = "如果你是点右侧预览面板打开的这个报错：面板只把当前这一个文件拿给浏览器看，同目录的 data/ 拿不到，这是面板的限制，不是文件坏了。换成上面两种方式任一种即可。";
+    box.appendChild(p3);
+
+    var p4 = el("p");
+    p4.textContent = "还不行就核对两点：① admin.html 与 data/ 是同级（都在 english-850 根目录）；② data/words.js、data/units.js 确实存在。";
+    box.appendChild(p4);
+    return box;
+  }
+
   function boot() {
     if (!window.Checks || !window.UNITS || !window.WORDS) {
       view.innerHTML = "";
-      var box = el("div", "err");
-      box.appendChild(el("b", null, "读不到 data/。"));
-      box.appendChild(el("div", null, "这个页面要跟 data/、js/ 放在同一个仓库里，从 english-850/tools/admin.html 打开。如果文件是单独拷出来的，把整个 english-850 文件夹一起带走。"));
-      view.appendChild(box);
+      view.appendChild(missing());
       return;
     }
 
@@ -534,8 +565,48 @@ tr.detail[hidden] { display: none; }
     render();
   }
 
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
-  else boot();
+  // ---- 载入器 ----
+  // 为什么要自己载：<script src> 是相对路径，页面被"单个文件"方式打开时（预览面板）
+  // 相对路径会落到别的地方。这里按顺序试几个可能的 data/ 位置，全失败也照样渲染，只显示说明卡。
+  var DATA_BASES = ["data/", "./data/", "../data/", "../../english-850/data/"];
+  var DATA_FILES = ["words.js", "glossary.js", "contractions.js", "units.js", "extras.js", "exercises.js"];
+  var FIXED = ["js/exercises.js", "tools/checks.js"];
+
+  function script(src, ok, fail) {
+    var s = document.createElement("script");
+    s.src = src;
+    s.onload = ok;
+    s.onerror = fail;
+    document.head.appendChild(s);
+  }
+
+  function seq(list, done) {
+    var i = 0;
+    (function next() {
+      if (i >= list.length) { done(); return; }
+      var f = list[i++];
+      script(f, next, next);
+    })();
+  }
+
+  function loadData(bi, done) {
+    if (bi >= DATA_BASES.length) { done(); return; }
+    var base = DATA_BASES[bi];
+    script(base + "words.js", function () {
+      seq(DATA_FILES.slice(1).map(function (f) { return base + f; }), done);
+    }, function () {
+      loadData(bi + 1, done);
+    });
+  }
+
+  function start() {
+    loadData(0, function () {
+      seq(FIXED, function () { boot(); });
+    });
+  }
+
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
+  else start();
 })();
 </script>
 </body>
