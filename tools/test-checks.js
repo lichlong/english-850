@@ -61,9 +61,9 @@ const U = Checks.checkUnits(V.UNITS || [], clk);
     if (r.fresh.length !== fresh.length) bad++;
     if (r.missing.length !== new Set(tokensOf(unitText(u)).filter((t) => !lk.lookup(t))).size) bad++;
   }
-  ok("13 个单元的词数/去重/新词/超纲 与 node 侧一致", bad === 0, bad ? bad + " 处不一致" : "");
+  ok("15 个单元的词数/去重/新词/超纲 与 node 侧一致", bad === 0, bad ? bad + " 处不一致" : "");
   eq("累计覆盖", U.coveredCount, seen.size);
-  eq("覆盖 = 367（当前实测，内容变了要一起改）", U.coveredCount, 367);
+  eq("覆盖 = 411（当前实测，内容变了要一起改）", U.coveredCount, 411);
   eq("词表总数", U.wordTotal, 850);
   ok("超纲 0", U.rows.every((r) => r.missing.length === 0));
   eq("新词不合规的单元数", U.badFresh.length, 4);
@@ -84,9 +84,9 @@ const E = Checks.checkExercises(V.EXERCISES || [], clk);
     if (!!r.problems.find((p) => p.type === "level") !== shouldFail) bad++;
     if (r.words !== n) bad++;
   }
-  ok("96 句的词数/句数判定与 node 侧一致", bad === 0, bad ? bad + " 处不一致" : "");
-  eq("练习句总数", E.total, 96);
-  eq("低阶 / 当阶 / 进阶", [E.byLevel.low, E.byLevel.mid, E.byLevel.high].join("/"), "32/32/32");
+  ok("144 句的词数/句数判定与 node 侧一致", bad === 0, bad ? bad + " 处不一致" : "");
+  eq("练习句总数", E.total, 144);
+  eq("低阶 / 当阶 / 进阶", [E.byLevel.low, E.byLevel.mid, E.byLevel.high].join("/"), "48/48/48");
   ok("练习超纲 0", E.badWords.length === 0, E.badWords.join(" "));
 }
 

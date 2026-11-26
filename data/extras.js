@@ -286,5 +286,49 @@ window.EXTRAS = {
           }
         ]
       }
+    },
+    "u014": {
+      "read": {
+        "title": "A Record of the Island",
+        "blocks": [
+          {
+            "std": "You want the truth? The truth is nobody leaves. They come here for a week, and then a year has gone, and the road home looks longer than it did.",
+            "zh": "你想听真话？真话是没人走。他们来待一周，然后一年就没了，回家的路看着比从前更长。",
+            "simple": "You have a need of the true story? The true story is that no person goes. They come here for a week, and then a year has gone, and the road back seems longer than before."
+          },
+          {
+            "std": "The island had been good to no one, and it had never asked to be loved; it simply went on being there, in all weathers, and that was the whole of its character.",
+            "zh": "这座岛对谁都不算好，也从不求人喜欢；它只是一直在那儿，什么天气都在，这就是它全部的性情。",
+            "simple": "The island was not good to any person, and it had no need of love. It was there, in every sort of weather, and that was all of its self."
+          },
+          {
+            "std": "The island council has approved a plan to record every high tide for a decade, calling it the most complete set of sea data in the region.",
+            "zh": "该岛议会通过一项计划：把十年里每一次高潮都记录下来，称其为该地区最完整的一套海洋数据。",
+            "simple": "The island group said yes to one thing: put every high water of the coming ten years in a book. They say that no other place has a record like it."
+          }
+        ]
+      }
+    },
+    "u015": {
+      "read": {
+        "title": "A Year Later",
+        "blocks": [
+          {
+            "std": "Don't tell me about the numbers. Tell me who didn't come back this week, and why, and what we're going to do about it.",
+            "zh": "别跟我说数字。告诉我这周谁没再来、为什么、我们打算怎么办。",
+            "simple": "No numbers. Give me the name of the person who didn't come back this week, and why, and what we will do about it."
+          },
+          {
+            "std": "He kept his losses in a separate book, not out of shame, but because a loss tells you more about a man than a profit ever will.",
+            "zh": "他把亏空记在另一本册子里，不是出于羞耻，而是因为亏损比盈利更能说明一个人。",
+            "simple": "He kept his losses in a second book, not because they gave him pain, but because a loss says more about a person than a profit does."
+          },
+          {
+            "std": "The chain said on Friday that it would close four stores in the north, blaming higher rents and a fall in footfall since the spring.",
+            "zh": "该连锁周五表示将关闭北部四家门店，理由是租金上涨、入春以来客流下滑。",
+            "simple": "The store group said on Friday that it would put an end to four stores in the north. The reason: the price of the buildings went up, and not as many persons came in after the spring."
+          }
+        ]
+      }
     }
 };

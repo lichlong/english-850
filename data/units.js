@@ -1776,5 +1776,298 @@ window.UNITS = [
       "down",
       "same"
     ]
+  },
+{
+    "id": "u014",
+    "mnemonic": "岛上一份记录",
+    "short": [
+      {
+        "en": "The island has green land and gold under it.",
+        "zh": "这岛上有绿色的地，底下还有金。"
+      },
+      {
+        "en": "The weather here has no one form.",
+        "zh": "这里的天气没有固定的样子。"
+      },
+      {
+        "en": "He can watch the road from here.",
+        "zh": "他从这儿能看着那条路。"
+      },
+      {
+        "en": "This is a fact, not a statement.",
+        "zh": "这是事实，不是一句说法。"
+      },
+      {
+        "en": "The amount is small, but it's true.",
+        "zh": "数目不大，可是真的。"
+      }
+    ],
+    "long": [
+      {
+        "en": "The society on the island is able to make a trade with the south, and every person in it has a part in the work.",
+        "zh": "岛上这些人能和南边做买卖。"
+      },
+      {
+        "en": "There's a record of the weather in a book of many pages, and every mark on the page is a day of rain or sun.",
+        "zh": "有一本很多页的书记着天气，页上每一个记号就是一天下雨或出太阳。"
+      },
+      {
+        "en": "The material of the cover is common, but the man who has it now keeps it as a natural thing of great value.",
+        "zh": "封面用的料子很普通，可如今拿着它的人，把它当成一件天生的贵重东西收着。"
+      }
+    ],
+    "passage": {
+      "title": "A Record of the Island",
+      "paragraphs": [
+        {
+          "en": "On this island the land is green for eight months and gold for four. No person ever says the weather is the same as last year. It's the first fact a young person learns here.",
+          "zh": "在这座岛上，地绿八个月，黄四个月。没人说今年的天气和去年一样。这是这里的年轻人学到的头一件事。"
+        },
+        {
+          "en": "A man keeps a record in a book of many pages. Every morning he puts a mark for the rain, and under it the amount of water. The cover is common material, and the present page is small and grey.",
+          "zh": "有个人在一本很多页的书里记账。每天早上他给雨画一个记号，底下写水量。封面是普通料子，眼下这页又小又灰。"
+        },
+        {
+          "en": "The book is a statement of one unit of time: a year. It's able to say what no person says: that the weather has a form, and the form comes back.",
+          "zh": "这本书是对一段时间——一年——的说法。它能说出没人说得出的事：天气有个样子，那样子会回来。"
+        },
+        {
+          "en": "Now the book is in a box, and persons come to put their eyes on it. They put a hand on the box and say the name of a year. The island keeps the record, and the record keeps the island.",
+          "zh": "如今这本书放在一个匣子里，人们来看它。他们把手按在匣子上，说出一年的名字。岛留着这份记录，这份记录也留着这座岛。"
+        }
+      ]
+    },
+    "words": [
+      "the",
+      "island",
+      "have",
+      "green",
+      "land",
+      "and",
+      "gold",
+      "under",
+      "weather",
+      "here",
+      "no",
+      "form",
+      "he",
+      "watch",
+      "road",
+      "from",
+      "this",
+      "be",
+      "a",
+      "fact",
+      "not",
+      "statement",
+      "amount",
+      "small",
+      "but",
+      "true",
+      "society",
+      "on",
+      "able",
+      "to",
+      "make",
+      "trade",
+      "with",
+      "south",
+      "record",
+      "of",
+      "in",
+      "book",
+      "page",
+      "every",
+      "mark",
+      "day",
+      "rain",
+      "or",
+      "sun",
+      "material",
+      "cover",
+      "common",
+      "man",
+      "who",
+      "now",
+      "keep",
+      "as",
+      "natural",
+      "thing",
+      "great",
+      "value",
+      "for",
+      "month",
+      "person",
+      "ever",
+      "say",
+      "same",
+      "last",
+      "year",
+      "first",
+      "young",
+      "morning",
+      "put",
+      "water",
+      "present",
+      "grey",
+      "unit",
+      "time",
+      "that",
+      "come",
+      "back",
+      "box",
+      "eye",
+      "hand",
+      "name"
+    ]
+  },
+{
+    "id": "u015",
+    "mnemonic": "一次亏损",
+    "short": [
+      {
+        "en": "The manager puts the book on the table.",
+        "zh": "经理把账本放在桌上。"
+      },
+      {
+        "en": "The loss is small, though the news is bad.",
+        "zh": "亏得不多，虽说消息不好。"
+      },
+      {
+        "en": "Her knowledge of the trade is clear.",
+        "zh": "她懂这行，懂得很清楚。"
+      },
+      {
+        "en": "He has a good position in the town.",
+        "zh": "他在城里有个不错的位子。"
+      },
+      {
+        "en": "A quick word is better than a long one.",
+        "zh": "一句快话好过一长串。"
+      }
+    ],
+    "long": [
+      {
+        "en": "There's a bit of oil on the page, and the writing under it is hard to see.",
+        "zh": "页上沾了点油，底下的字看不清了。"
+      },
+      {
+        "en": "The base of the growth is one small sort of work: a copy of every order, kept by hand.",
+        "zh": "增长的基础是一件很小的活儿：每一笔订单都留一份抄件，全靠手写。"
+      },
+      {
+        "en": "The heart of it is this: an increase of weight on the persons who work is a political thing, not a question of money.",
+        "zh": "问题的核心在这儿：给干活的人加担子，这是政治，不是钱的事。"
+      }
+    ],
+    "passage": {
+      "title": "A Year Later",
+      "paragraphs": [
+        {
+          "en": "After one year the man in the manager's position puts the book on the table and says one word: loss. It's a small loss, though no person in the room is happy about it.",
+          "zh": "一年之后，坐在经理位子上的人把账本放到桌上，说了一个词：亏。亏得不大，可屋里没人高兴。"
+        },
+        {
+          "en": "Among the reasons there's one he doesn't say: the yellow church on the road takes the eye of every person who comes to the town.",
+          "zh": "原因里头有一条他没说：路上那座黄色的教堂，把每个进城的人的眼睛都吸走了。"
+        },
+        {
+          "en": "He has knowledge of the trade, and his writing is clear. But the work is hard: the weight of a box, the quick step, the long day. There's a bit of oil on the page where his hand was.",
+          "zh": "他懂这行，字也写得清楚。可活儿很重：箱子的分量、赶的那几步、熬的那一天。他手放过的地方，页上有一小片油。"
+        },
+        {
+          "en": "Growth doesn't come from one good year. The base is small, the increase is not quick, and any death in the family puts it back. He puts the book in its place and says the old word: tomorrow.",
+          "zh": "增长不是靠一个好年成。底子薄，涨得也不快，家里走一个人就能把它打回去。他把账本放回原处，说了那句老话：明天。"
+        }
+      ]
+    },
+    "words": [
+      "the",
+      "manager",
+      "put",
+      "book",
+      "on",
+      "table",
+      "loss",
+      "be",
+      "small",
+      "though",
+      "news",
+      "bad",
+      "knowledge",
+      "of",
+      "trade",
+      "clear",
+      "he",
+      "have",
+      "a",
+      "good",
+      "position",
+      "in",
+      "town",
+      "quick",
+      "word",
+      "than",
+      "long",
+      "bit",
+      "oil",
+      "page",
+      "and",
+      "writing",
+      "under",
+      "hard",
+      "to",
+      "see",
+      "base",
+      "growth",
+      "sort",
+      "work",
+      "copy",
+      "every",
+      "order",
+      "keep",
+      "by",
+      "hand",
+      "heart",
+      "question",
+      "this",
+      "increase",
+      "weight",
+      "person",
+      "who",
+      "political",
+      "thing",
+      "not",
+      "money",
+      "after",
+      "year",
+      "man",
+      "say",
+      "no",
+      "room",
+      "happy",
+      "about",
+      "among",
+      "reason",
+      "yellow",
+      "church",
+      "road",
+      "take",
+      "eye",
+      "come",
+      "but",
+      "box",
+      "step",
+      "day",
+      "where",
+      "from",
+      "any",
+      "death",
+      "family",
+      "back",
+      "place",
+      "old",
+      "tomorrow"
+    ]
   }
 ];
