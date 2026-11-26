@@ -2069,5 +2069,296 @@ window.UNITS = [
       "old",
       "tomorrow"
     ]
+  },
+{
+    "id": "u016",
+    "mnemonic": "发动机与一封信",
+    "short": [
+      {
+        "en": "The engine is old, but it still has force.",
+        "zh": "发动机旧了，可还有劲。"
+      },
+      {
+        "en": "The dog is in the middle of the road.",
+        "zh": "狗在路中间。"
+      },
+      {
+        "en": "I have a letter for the band.",
+        "zh": "我有一封给乐队的信。"
+      },
+      {
+        "en": "The exchange is quick, and it's certain.",
+        "zh": "这笔交换很快，而且是定的。"
+      },
+      {
+        "en": "It's a small kind of hope, but it's hope.",
+        "zh": "这是一种很小的希望，可它到底是希望。"
+      }
+    ],
+    "long": [
+      {
+        "en": "The organization makes the selection in the middle of the year, and its decision isn't necessary for us.",
+        "zh": "这个机构在年中做挑选，它的决定对我们不是必需的。"
+      },
+      {
+        "en": "Across the road there's a military band, and its effect on the town is clear.",
+        "zh": "路对面有支军乐队，它对这座城的影响很明显。"
+      },
+      {
+        "en": "In addition, the condition of the engine is bad, and there's a division of work that no person has made clear; the lead is in other hands.",
+        "zh": "另外，发动机的状况很糟，还有一份没人说清楚的分工；带头的那个位置落在了别人手里。"
+      }
+    ],
+    "passage": {
+      "title": "A Letter for the Band",
+      "paragraphs": [
+        {
+          "en": "The band comes to this town two times a year. The engine of their cart is old and has no more force than a good dog, but they come across the middle of the country and don't give up.",
+          "zh": "这支乐队一年来这城两次。他们那辆车的发动机很旧，劲还不如一条好狗，可他们横穿国土中部，从不放弃。"
+        },
+        {
+          "en": "This year a letter comes before them. A woman in the south has hope that they will come to her town: her son has made a selection of music, and he has no way of getting it to the band.",
+          "zh": "今年有一封信先到了。南边有位妇人盼着他们去她那个镇：她儿子挑了一段音乐，可他没有办法把它送到乐队手里。"
+        },
+        {
+          "en": "The head of the band puts the letter on the table. In addition to the music there's a silver thing, and a line in a bad hand: please.",
+          "zh": "乐队长把信放在桌上。除了那段音乐，还有一件银的东西，和一行写得很差的字：请。"
+        },
+        {
+          "en": "It's a small thing, and the decision isn't necessary for them: they have no money and the road is long. But in the morning the engine has force again, and the cart is across the river before the sun is high.",
+          "zh": "这是件小事，决定本来也不必做：他们没钱，路又远。可到了早上，发动机又有了劲，太阳还没升高，车已经到了河对岸。"
+        }
+      ]
+    },
+    "words": [
+      "the",
+      "engine",
+      "be",
+      "old",
+      "but",
+      "still",
+      "have",
+      "force",
+      "dog",
+      "in",
+      "middle",
+      "of",
+      "road",
+      "i",
+      "a",
+      "letter",
+      "for",
+      "band",
+      "exchange",
+      "quick",
+      "and",
+      "certain",
+      "small",
+      "kind",
+      "hope",
+      "organization",
+      "make",
+      "selection",
+      "year",
+      "decision",
+      "necessary",
+      "across",
+      "military",
+      "effect",
+      "on",
+      "town",
+      "clear",
+      "addition",
+      "condition",
+      "bad",
+      "division",
+      "work",
+      "that",
+      "no",
+      "person",
+      "lead",
+      "other",
+      "hand",
+      "come",
+      "to",
+      "this",
+      "time",
+      "cart",
+      "much",
+      "than",
+      "good",
+      "country",
+      "give",
+      "up",
+      "before",
+      "woman",
+      "south",
+      "will",
+      "son",
+      "music",
+      "he",
+      "way",
+      "get",
+      "head",
+      "put",
+      "table",
+      "silver",
+      "thing",
+      "line",
+      "please",
+      "money",
+      "long",
+      "morning",
+      "again",
+      "river",
+      "sun",
+      "high"
+    ]
+  },
+{
+    "id": "u017",
+    "mnemonic": "一间病房",
+    "short": [
+      {
+        "en": "The button is by the bed.",
+        "zh": "按钮就在床边。"
+      },
+      {
+        "en": "Her voice is low, but it's clear.",
+        "zh": "她声音不大，可很清楚。"
+      },
+      {
+        "en": "Spring is short here, and summer is long.",
+        "zh": "这里春天短，夏天长。"
+      },
+      {
+        "en": "The fall makes the road brown.",
+        "zh": "秋天把路染成褐色。"
+      },
+      {
+        "en": "The glass is safe in her hand.",
+        "zh": "杯子在她手里稳稳的。"
+      }
+    ],
+    "long": [
+      {
+        "en": "A male person and a female person come to the room, and the cause of her bad night still isn't clear.",
+        "zh": "一个男的和一个女的进了屋，可她那一夜为什么难受，还是不清楚。"
+      },
+      {
+        "en": "The structure of the song is simple: one voice, one idea, and no more than three lines.",
+        "zh": "这首歌的结构很简单：一个声音、一个念头，不超过三行。"
+      },
+      {
+        "en": "It's his purpose to be ready before the physical test, and he's responsible for the distribution of the papers.",
+        "zh": "他的目标是在体检之前准备好，而分发那些纸由他负责。"
+      }
+    ],
+    "passage": {
+      "title": "A Room with a Window",
+      "paragraphs": [
+        {
+          "en": "The room has one bed and one window. In spring the light comes in at six; in summer it comes at five, and the brown wall turns gold. There's no animal here, only the light.",
+          "zh": "这间屋子一张床、一扇窗。春天六点光进来；夏天五点就进来，褐色的墙变成金色。这里没有动物，只有光。"
+        },
+        {
+          "en": "She has a button by her hand for the person who gives care. Her voice is small, but every word is clear: she has a purpose, and the purpose is to be ready for the physical test.",
+          "zh": "她手边有一个按钮，用来叫照顾她的人。她声音很小，可每个字都清楚：她有个目标，就是在体检之前准备好。"
+        },
+        {
+          "en": "The one with the book is a woman; the one with the water is a man. No person says this is of any degree of interest. The cause of her bad night isn't clear, and no person gives an answer.",
+          "zh": "拿本子的是女人，端水的是男人。没人觉得这有什么稀奇。她那一夜为什么难受，不清楚，也没人给得出答案。"
+        },
+        {
+          "en": "In the fall she goes home. The glass in the window is the same. She says: the room gave me one idea, and the idea is this. A person is safe when some other person is responsible.",
+          "zh": "秋天她回家了。窗上的玻璃还是那块。她说：这屋子给了我一个念头，就是这个——有人担着责任，人才安全。"
+        }
+      ]
+    },
+    "words": [
+      "the",
+      "button",
+      "be",
+      "by",
+      "bed",
+      "voice",
+      "low",
+      "but",
+      "clear",
+      "spring",
+      "short",
+      "here",
+      "and",
+      "summer",
+      "long",
+      "fall",
+      "make",
+      "road",
+      "brown",
+      "glass",
+      "safe",
+      "in",
+      "hand",
+      "a",
+      "male",
+      "person",
+      "female",
+      "come",
+      "to",
+      "room",
+      "cause",
+      "of",
+      "bad",
+      "night",
+      "still",
+      "structure",
+      "song",
+      "simple",
+      "idea",
+      "no",
+      "much",
+      "than",
+      "line",
+      "purpose",
+      "ready",
+      "before",
+      "physical",
+      "test",
+      "responsible",
+      "for",
+      "distribution",
+      "paper",
+      "have",
+      "window",
+      "light",
+      "at",
+      "wall",
+      "turn",
+      "gold",
+      "animal",
+      "only",
+      "who",
+      "give",
+      "care",
+      "small",
+      "every",
+      "word",
+      "with",
+      "book",
+      "woman",
+      "water",
+      "man",
+      "say",
+      "this",
+      "any",
+      "degree",
+      "interest",
+      "answer",
+      "go",
+      "same",
+      "when",
+      "some",
+      "other"
+    ]
   }
 ];

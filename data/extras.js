@@ -330,5 +330,49 @@ window.EXTRAS = {
           }
         ]
       }
+    },
+    "u016": {
+      "read": {
+        "title": "A Letter for the Band",
+        "blocks": [
+          {
+            "std": "You think I'm doing this for the money? There's no money. There's a road, an engine that won't start, and forty people waiting in a cold hall.",
+            "zh": "你以为我干这个是图钱？没钱。只有一条路、一台打不着的发动机，和四十个在冷屋子里等着的人。",
+            "simple": "You have the idea that I do this for money? There's no money. There's a road, an engine that won't go, and forty persons waiting in a cold room."
+          },
+          {
+            "std": "The engine had been repaired so often that no two parts of it were of the same age, and he loved it the way a man loves an old dog that no longer hunts.",
+            "zh": "这台发动机修过太多次，没有两个零件是同一年份的；他爱它，就像一个人爱一条不再打猎的老狗。",
+            "simple": "The engine had been put right so many times that no two parts of it came from the same year. He had a love for it, the way a person has a love for an old dog that doesn't go after birds any more."
+          },
+          {
+            "std": "The band's summer tour will cover eleven towns across the north, with a stop in the capital on the last weekend of August.",
+            "zh": "该乐队夏季巡演将覆盖北部十一座城镇，八月最后一个周末在首都停一站。",
+            "simple": "The band will go to eleven towns across the north this summer, and will be in the great town at the end of August."
+          }
+        ]
+      }
+    },
+    "u017": {
+      "read": {
+        "title": "A Room with a Window",
+        "blocks": [
+          {
+            "std": "You don't have to be kind to me. Just be here when the light goes out, and don't let the machine make that sound again.",
+            "zh": "你不用对我好。灯灭的时候你在这儿就行，别再让那台机器响那个声音。",
+            "simple": "You have no need to be kind to me. Be here when the light goes out, and don't let the machine make that sound again."
+          },
+          {
+            "std": "In summer the ward was hot and the windows were painted shut, and she counted the days by the sound of the cart that came at four.",
+            "zh": "夏天病房里很热，窗户漆死了打不开；她靠四点那辆车的响动数日子。",
+            "simple": "In summer the room was hot and the windows were shut with paint. She kept the number of the days by the sound of the cart at four."
+          },
+          {
+            "std": "The hospital said the new wing will open in the spring, adding forty beds and a second lift for the north side of the building.",
+            "zh": "医院说新楼春天启用，增加四十张床，并在楼北侧加第二部电梯。",
+            "simple": "The medical building said that the new part will be open in the spring. It will have forty more beds and a second lift on the north side."
+          }
+        ]
+      }
     }
 };
