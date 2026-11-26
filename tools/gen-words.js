@@ -233,6 +233,12 @@ const ALLOWED_GROUPS = {
     monday: "星期一", tuesday: "星期二", wednesday: "星期三", thursday: "星期四",
     friday: "星期五", saturday: "星期六", sunday: "星期日",
   },
+  // 原文：「单位、货币、月份、日子、年份、钟点同一般英语形式」
+  "单位": {
+    kilometre: "公里", kilometer: "公里", metre: "米", meter: "米", centimetre: "厘米",
+    mile: "英里", kilo: "公斤", kilogram: "千克", gram: "克", litre: "升", liter: "升",
+    pound: "磅；英镑", dollar: "元", cent: "分", percent: "百分之……",
+  },
 };
 // may 已是 850 表内词（可以），月份 May 撞车，故日历月份单独处理
 const MONTHS = {

@@ -124,23 +124,34 @@
     return page;
   }
 
-  function buildExtrasPage(unit, practice) {
-    var page = document.createElement("section");
-    page.className = "page page-ext";
+  // 课外两块各占一屏：第 3 屏 拓展，第 4 屏 练习
+  function buildExtrasPages(unit, practice) {
+    var out = [];
 
-    var wrap = document.createElement("div");
-    wrap.className = "ex-wrap";
-    window.Extras.render(wrap, unit.id, practice);
-    page.appendChild(wrap);
+    var readPage = document.createElement("section");
+    readPage.className = "page page-ext";
+    var wrap1 = document.createElement("div");
+    wrap1.className = "ex-wrap";
+    window.Extras.renderRead(wrap1, unit.id, practice);
+    readPage.appendChild(wrap1);
+    out.push(readPage);
+
+    var quizPage = document.createElement("section");
+    quizPage.className = "page page-ext";
+    var wrap2 = document.createElement("div");
+    wrap2.className = "ex-wrap";
+    window.Extras.renderQuiz(wrap2, unit.id, practice);
+    quizPage.appendChild(wrap2);
 
     var next = document.createElement("button");
     next.className = "next";
     next.type = "button";
     next.textContent = practice ? "换一篇" : "再学一篇";
     next.addEventListener("click", advance);
-    page.appendChild(next);
+    quizPage.appendChild(next);
+    out.push(quizPage);
 
-    return page;
+    return out;
   }
 
   function renderDots(count) {
@@ -177,9 +188,10 @@
     pages.innerHTML = "";
 
     if (practice) {
-      // 练习模式：整屏只有「课外拓展 + 课外练习」
-      pages.appendChild(buildExtrasPage(unit, true));
-      renderDots(1);
+      // 练习模式：两屏，只有「课外拓展」和「课外练习」
+      var pp = buildExtrasPages(unit, true);
+      pp.forEach(function (p) { pages.appendChild(p); });
+      renderDots(pp.length);
       pages.scrollLeft = 0;
       document.getElementById("idx").textContent = "练习";
       document.getElementById("eta").textContent = "";
@@ -191,8 +203,9 @@
 
     var count = 2;
     if (extrasUnlocked() && window.EXTRAS && window.EXTRAS[unit.id]) {
-      pages.appendChild(buildExtrasPage(unit, false));
-      count = 3;
+      var ep = buildExtrasPages(unit, false);
+      ep.forEach(function (p) { pages.appendChild(p); });
+      count = 2 + ep.length;
     }
 
     pages.scrollLeft = 0;
@@ -355,6 +368,9 @@
         window.Store.setModeOverride(on ? "learn" : "practice");
         syncModeRow();
         render();
+        if (window.Toast) {
+          window.Toast(on ? "已切换到学习模式" : "已切换到练习模式");
+        }
       });
     }
     syncModeRow();

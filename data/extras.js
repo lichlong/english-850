@@ -1,26 +1,25 @@
 // 课外拓展 + 课外练习（SPEC §11）
-// 拓展三段结构：std = 标准英语原文（可含超纲词，按文体写）／zh = 中文／simple = 850 简说
-// 文体：电影台词 / 新闻 / 文学。简说与练习答案只用 850 表内词 + 允许项 + 偏离词
+// 拓展三段：std = 原文（全量英文，不做词汇限制，但不出现专业术语）／zh = 中文／simple = 850 简说
+// 纪律：简说不是缩句。原句的信息点必须逐个交代，只是换成 850 词的说法。
 window.EXTRAS = {
   u001: {
     read: {
-      genre: "电影台词",
       title: "Ten Minutes",
       blocks: [
         {
-          std: "You want to know how I got this garden? Ten minutes a day. That's it. Not an hour on Sunday \u2014 ten minutes, every single morning.",
-          zh: "你想知道这花园是怎么来的？每天十分钟，就这些。不是周日干一小时——是每天早上十分钟。",
-          simple: "You may be saying, how did I get this garden? Ten minutes every day. Not one hour on Sunday. Ten minutes, every morning."
+          std: "You're wondering how this garden happened, aren't you? It wasn't talent, and it certainly wasn't money. Ten minutes a day is all it ever took. Not a heroic Sunday afternoon \u2014 ten minutes, every single morning, whether I felt like it or not.",
+          zh: "你在想这花园是怎么来的吧？不是天赋，当然也不是钱。每天十分钟，就这么点。不是周日狠狠干一下午——是每天早上十分钟，不管我想不想动。",
+          simple: "You may be saying: how did this garden come? It was not a special power, and it was not money. Ten minutes every day was enough. Not one long Sunday. Ten minutes, every morning, when I had the feeling for it and when I had not."
         },
         {
-          std: "Everybody asks me for the secret. There isn't one. The only thing I do is show up \u2014 rain or shine.",
-          zh: "人人都问我要秘诀。没有秘诀。我唯一做的事就是出现——风雨无阻。",
-          simple: "Every person puts the question to me: what is the secret? There is no secret. The only thing I do is come, on a cold day and on a warm day."
+          std: "People keep asking me to let them in on the secret. There isn't one. The whole trick is that I turn up. Rain, wind, a bad back \u2014 I still turn up.",
+          zh: "总有人让我把秘诀说出来。没有秘诀。全部的门道就是我出现。下雨、刮风、腰疼——我还是出现。",
+          simple: "Person after person puts the question to me: what is the secret? There is no secret. The one trick is this: I come. On a wet day, on a cold day, with a bad back \u2014 I come."
         },
         {
-          std: "People think it's about discipline. It isn't. It's about not stopping long enough to forget.",
-          zh: "人以为是自律。不是。是别停太久，久到忘了。",
-          simple: "Some persons may be saying it is about control. It is not. It is about not stopping for a long time, long enough to have no memory of it."
+          std: "They assume it's discipline. It's nothing of the sort. It's simply that I never let enough time pass to forget what I was doing.",
+          zh: "他们以为这是自律。根本不是。只是我从不让时间过去太久，久到忘了自己在干什么。",
+          simple: "They may be saying it is control. It is not that. It is only this: I did not ever let enough time go by for me to have no memory of it."
         }
       ]
     },
@@ -32,23 +31,22 @@ window.EXTRAS = {
 
   u002: {
     read: {
-      genre: "新闻",
       title: "One Town at a Time",
       blocks: [
         {
-          std: "A 72-year-old man has walked more than 3,000 kilometres in the past year, one small town at a time.",
-          zh: "一位 72 岁的老人过去一年走了 3000 多公里，一个小镇接着一个小镇。",
-          simple: "An old man of seventy-two years went a very long way in one year. He went from town to town, and he did not go quickly."
+          std: "A 72-year-old retired teacher has covered more than 3,000 kilometres on foot over the past twelve months, moving from one small town to the next, and he has done it without a trainer, a sponsor or a plan of any kind.",
+          zh: "一位 72 岁的退休教师过去十二个月徒步走了 3000 多公里，一个小镇接着一个小镇；他做这件事，没有教练、没有赞助、也没有任何计划。",
+          simple: "An old man of seventy-two years went more than three thousand kilometres on foot in one year. This man gave teaching before, but he has no work now. He went from town to town. No person made him ready. No person gave him money. He had no design."
         },
         {
-          std: "He says he has no special training, no coach and no plan \u2014 only a pair of boots and a habit of getting up early.",
-          zh: "他说自己没有专门训练、没有教练、也没有计划——只有一双靴子和早起的习惯。",
-          simple: "He says he has no special learning and no guide. Only boots on his feet, and the rule of early hours."
+          std: "What he does have is a pair of worn boots and an unshakeable habit of rising before six, whatever the weather happens to be doing.",
+          zh: "他真正有的，是一双磨旧的靴子，和无论天气如何都要在六点前起床的习惯。",
+          simple: "He has two old boots, and he has one hard rule: he gets up before six every morning. Rain or sun, cold or warm, he does the same."
         },
         {
-          std: "Asked what keeps him going, he laughed: \u201cThe road doesn't care how old you are.\u201d",
-          zh: "被问到是什么让他一直走下去，他笑了：“路不在乎你多大年纪。”",
-          simple: "I put the question to him: what keeps you going? He gave a smile and said, \u201cThe road does not take interest in your years.\u201d"
+          std: "Asked what keeps him walking, he shrugged and said that in all those miles the road had never once asked him his age.",
+          zh: "被问到是什么让他一直走下去，他耸耸肩说：走了这么多路，路从来没有问过他多大岁数。",
+          simple: "I put the question to him: what keeps you going? He gave a small smile and said: the road did not ever put the question to me about my years."
         }
       ]
     },
@@ -60,23 +58,22 @@ window.EXTRAS = {
 
   u003: {
     read: {
-      genre: "文学",
       title: "The Fourth Seat",
       blocks: [
         {
-          std: "The table was laid for four, but only three of them sat down; the fourth place stayed empty, as it had every evening since spring.",
-          zh: "桌上摆了四个人的位置，但只有三个人坐下；第四个位子一直空着，从春天起每晚如此。",
-          simple: "The table had a seat for four persons, but only three took their seats. The other seat had no person in it, every evening after the first day of spring."
+          std: "Four places had been laid at the table that evening, as on every other, yet only three of them were taken; the fourth stayed exactly as it was, untouched, and no one reached across to move it.",
+          zh: "那天晚上桌上摆了四个人的位子，跟别的晚上一样，但只有三个被坐下了；第四个就那么原样待着，没人伸手去挪它。",
+          simple: "There were four seats at the table that evening, as on every other evening. But only three persons took their seats. The other seat was as it was, and no hand went across to move it."
         },
         {
-          std: "Nobody mentioned it. Nobody ever did. The empty chair had become a kind of guest, and they had learned to set a plate for it.",
-          zh: "没人提起。从来没人提。那把空椅子成了一个客人，他们学会了给它摆一副餐具。",
-          simple: "No person said a word about it. That seat was now a sort of friend, and they put a plate before it every night."
+          std: "No one spoke of it. No one ever had. The empty place had slowly turned into a kind of guest, and they had learned to set a plate in front of it without noticing that they did.",
+          zh: "没人提这件事。从来没人提过。那个空位慢慢变成了一个客人，他们学会在它面前摆一副餐具，自己都没注意到。",
+          simple: "No person said a word about it. No person ever did. In time, that seat was a sort of friend to them, and they put a plate before it and did not see that they were doing it."
         },
         {
-          std: "When the youngest finally asked, her mother only said, \u201cWe keep it for the days that might come back.\u201d",
-          zh: "最小的孩子终于问起时，母亲只说：“我们留着它，给那些也许会回来的日子。”",
-          simple: "At last the smallest girl put the question to her mother. Her mother said only this: \u201cWe keep it for the days that may come back.\u201d"
+          std: "When the youngest finally asked why, her mother did not look up. \u201cFor the days that might still come back,\u201d she said, and went on serving.",
+          zh: "最小的孩子终于问为什么的时候，母亲没有抬头。“留给那些也许还会回来的日子。”她说完，继续盛菜。",
+          simple: "At last the smallest girl put the question: why? Her mother did not put her eyes up. She said: \u201cFor the days that may still come back.\u201d And she went on putting food on the plates."
         }
       ]
     },
