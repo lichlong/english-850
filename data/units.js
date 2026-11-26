@@ -4168,5 +4168,300 @@ window.UNITS = [
       "keep",
       "like"
     ]
+  },
+{
+    "id": "u030",
+    "mnemonic": "拱门下的集市",
+    "short": [
+      {
+        "en": "The arch is over the road.",
+        "zh": "拱门横在路上。"
+      },
+      {
+        "en": "Her skirt is of thick cloth.",
+        "zh": "她的裙子是厚布做的。"
+      },
+      {
+        "en": "The sheep are on the green.",
+        "zh": "羊在草地上。"
+      },
+      {
+        "en": "The bee is on the paste.",
+        "zh": "蜜蜂落在浆糊上。"
+      },
+      {
+        "en": "The flame is under the vessel.",
+        "zh": "火苗在容器底下。"
+      }
+    ],
+    "long": [
+      {
+        "en": "His nose is a frequent suggestion of a cold, and his tongue is dry from the dust of the grain.",
+        "zh": "他鼻子老是不通气，舌头上因为粮食的灰发干。"
+      },
+      {
+        "en": "The brush and the nail are hanging by the brake of the cart, and the stamp on the box is not clear.",
+        "zh": "刷子和钉子挂在车闸旁边，箱子上的印不清楚。"
+      },
+      {
+        "en": "The monkey at the market puts a fold of butter on the bread and swims across the water for more.",
+        "zh": "集市上那只猴子把一片黄油放在面包上，又游过水去再拿。"
+      }
+    ],
+    "passage": {
+      "title": "Under the Arch",
+      "paragraphs": [
+        {
+          "en": "The market is under an arch of old stone, and the light comes down through it in one long line. A frequent wind comes from the river and takes the dust of the grain with it.",
+          "zh": "市集在一道老石拱门底下，光从那上头照下来，成一条长线。风常从河上来，把粮食的灰一起带走。"
+        },
+        {
+          "en": "There's a sheep at the edge of the market with a red mark on its back, and a woman in a skirt of thick cloth who puts a stamp on every box.",
+          "zh": "市集边上有一只羊，背上有一道红记号；还有个穿厚布裙子的女人，给每个箱子盖印。"
+        },
+        {
+          "en": "A bee goes from the butter to the paste, and back again, and no person puts it out. The flame under the vessel is small and blue, and the soup in it is not for money.",
+          "zh": "一只蜜蜂从黄油飞到浆糊，又飞回来，谁也没赶它。容器底下的火苗又小又蓝，里头的汤不卖钱。"
+        },
+        {
+          "en": "He puts the brush down, takes the nail out of his mouth, and makes a fold in the canvas. Then he swims out to the boat, and the arch is the last thing he sees.",
+          "zh": "他放下刷子，把嘴里的钉子拿出来，把帆布折了一道。然后他游到船那边去，拱门是他最后看见的东西。"
+        }
+      ]
+    },
+    "words": [
+      "the",
+      "arch",
+      "be",
+      "over",
+      "road",
+      "skirt",
+      "of",
+      "thick",
+      "cloth",
+      "sheep",
+      "on",
+      "green",
+      "bee",
+      "paste",
+      "flame",
+      "under",
+      "vessel",
+      "nose",
+      "a",
+      "frequent",
+      "suggestion",
+      "cold",
+      "and",
+      "tongue",
+      "dry",
+      "from",
+      "dust",
+      "grain",
+      "brush",
+      "nail",
+      "hanging",
+      "by",
+      "brake",
+      "cart",
+      "stamp",
+      "box",
+      "not",
+      "clear",
+      "monkey",
+      "at",
+      "market",
+      "put",
+      "fold",
+      "butter",
+      "bread",
+      "swim",
+      "across",
+      "water",
+      "for",
+      "much",
+      "old",
+      "stone",
+      "light",
+      "come",
+      "down",
+      "through",
+      "in",
+      "long",
+      "line",
+      "wind",
+      "river",
+      "take",
+      "with",
+      "edge",
+      "red",
+      "mark",
+      "back",
+      "woman",
+      "who",
+      "every",
+      "go",
+      "to",
+      "again",
+      "no",
+      "person",
+      "out",
+      "small",
+      "blue",
+      "soup",
+      "money",
+      "he",
+      "mouth",
+      "make",
+      "canvas",
+      "then",
+      "boat",
+      "last",
+      "thing",
+      "see"
+    ]
+  },
+{
+    "id": "u031",
+    "mnemonic": "一把锤子",
+    "short": [
+      {
+        "en": "The hammer is on the tray.",
+        "zh": "锤子在托盘上。"
+      },
+      {
+        "en": "The cow is by the brick wall.",
+        "zh": "奶牛在砖墙边。"
+      },
+      {
+        "en": "He has a screw in his knee.",
+        "zh": "他膝盖里有一颗螺丝。"
+      },
+      {
+        "en": "Her collar is of soft wool.",
+        "zh": "她的领子是软羊毛的。"
+      },
+      {
+        "en": "The snake is under the fork.",
+        "zh": "蛇在叉子底下。"
+      }
+    ],
+    "long": [
+      {
+        "en": "The invention is a small one: a grip of wood with a screw, and a horn for the hand.",
+        "zh": "这发明不大：一块带螺丝的木柄，加一个给手握的角。"
+      },
+      {
+        "en": "The protest was about the punishment, and the verse on the wall gave the town a bad feeling.",
+        "zh": "抗议是针对那个惩罚的，墙上那几句诗让全镇心里都不舒服。"
+      },
+      {
+        "en": "There's a berry on the tray, a twist of wool by the lip, and a reward for the person with the cow.",
+        "zh": "托盘上有一颗浆果，杯口边有一缕羊毛，还有给把奶牛找回来的人的赏钱。"
+      }
+    ],
+    "passage": {
+      "title": "One Hammer",
+      "paragraphs": [
+        {
+          "en": "The man has one hammer, one fork, and a screw that is not straight. His knee is bad from thirty years of work, and his grip is still the best in the town.",
+          "zh": "这个人有一把锤子、一把叉子，还有一颗拧不直的螺丝。三十年干活把他的膝盖弄坏了，可他的手劲还是全镇最好的。"
+        },
+        {
+          "en": "The invention came to him in the night: a small brick of wood, a screw through it, and a horn of metal for the hand. He says it's a help, and no person puts money on it.",
+          "zh": "这发明是他夜里想出来的：一小块木头、一颗穿过去的螺丝，再加一个金属的把手。他说这是个帮手，没人给它投钱。"
+        },
+        {
+          "en": "In the spring the cow is out, and there's a reward on the wall for the person with the trick of getting it back. A berry, a tray of eggs, a verse from his daughter: small things keep a house in harmony.",
+          "zh": "春天奶牛跑出去了，墙上贴着赏格，给有本事把它找回来的人。一颗浆果、一盘鸡蛋、女儿写的一句诗——小事让一个家还和气。"
+        },
+        {
+          "en": "The punishment for the snake in the wool is a twist of the fork and a quick move of the hand. He says: no protest, no words. The work is the answer.",
+          "zh": "对钻进羊毛里那条蛇的处置，是用叉子一绞、手一快。他说：不抗议，不废话。活儿就是回答。"
+        }
+      ]
+    },
+    "words": [
+      "the",
+      "hammer",
+      "be",
+      "on",
+      "tray",
+      "cow",
+      "by",
+      "brick",
+      "wall",
+      "he",
+      "have",
+      "a",
+      "screw",
+      "in",
+      "knee",
+      "collar",
+      "of",
+      "soft",
+      "wool",
+      "snake",
+      "under",
+      "fork",
+      "invention",
+      "small",
+      "grip",
+      "wood",
+      "with",
+      "and",
+      "horn",
+      "for",
+      "hand",
+      "protest",
+      "about",
+      "punishment",
+      "verse",
+      "give",
+      "town",
+      "bad",
+      "feeling",
+      "berry",
+      "twist",
+      "lip",
+      "glass",
+      "reward",
+      "person",
+      "who",
+      "man",
+      "that",
+      "not",
+      "straight",
+      "from",
+      "year",
+      "work",
+      "still",
+      "good",
+      "come",
+      "to",
+      "night",
+      "through",
+      "metal",
+      "say",
+      "help",
+      "no",
+      "put",
+      "money",
+      "spring",
+      "out",
+      "trick",
+      "get",
+      "back",
+      "egg",
+      "daughter",
+      "thing",
+      "keep",
+      "house",
+      "harmony",
+      "quick",
+      "move",
+      "word",
+      "answer"
+    ]
   }
 ];

@@ -682,5 +682,49 @@ window.EXTRAS = {
           }
         ]
       }
+    },
+    "u030": {
+      "read": {
+        "title": "Under the Arch",
+        "blocks": [
+          {
+            "std": "You see this? Forty years of stamps, and the ink is still wet on the last one. That's not a market. That's a man who won't stop.",
+            "zh": "看见没？四十年的印章，最后那个上面的墨还没干。这不叫市集，这叫一个不肯停的人。",
+            "simple": "You see this? Forty years of stamps, and the ink is still wet on the last one. That's not a market. That's a man who will not come to a stop."
+          },
+          {
+            "std": "The sheep had come down from the green every morning for as long as anyone could remember, and the arch was the only door they had ever used.",
+            "zh": "从谁都记得起的时候，那群羊每天早上都从草地下来，那道拱门是它们唯一走过的门。",
+            "simple": "The sheep had come down from the green every morning for as long as any person had it in mind, and the arch was the only door they ever used."
+          },
+          {
+            "std": "Traders said the market under the arch would move indoors next year, after the council said the old stone was no longer safe.",
+            "zh": "商贩们说，拱门下的市集明年要搬进室内——议会说那片老石头不再安全。",
+            "simple": "The persons with stores said that the market under the arch would go inside the building next year, after the group said that the old stone was not safe."
+          }
+        ]
+      }
+    },
+    "u031": {
+      "read": {
+        "title": "One Hammer",
+        "blocks": [
+          {
+            "std": "Give me the hammer. Not that one, but the one with the wood grip. A man who has no grip on his work has no grip on a thing.",
+            "zh": "把锤子给我。不是那把——带木柄的那把。连工具都理不清的人，什么都理不清。",
+            "simple": "Give me the hammer. Not that one, but the one with the wood grip. A man who has no grip on his work has no grip on a thing."
+          },
+          {
+            "std": "The cow had been in his family for eleven years, and the reward on the wall was his own money, put there by a man too proud to say he was afraid.",
+            "zh": "那头奶牛在他家十一年了，墙上那笔赏钱是他自己的钱——一个太要强、不肯说自己害怕的人放上去的。",
+            "simple": "The cow had been in his family for eleven years. The reward on the wall was his money, put there by a man who was not able to say that he had fear."
+          },
+          {
+            "std": "The farm persons said the protest over the new punishment would go to the office of the county, and that a decision was not likely before the summer.",
+            "zh": "农场主们说，反对新处罚的抗议会上报到县里，夏天之前大概不会有结果。",
+            "simple": "The farm persons said that the protest about the new punishment would go to the office of the country, and that a decision was not like to come before the summer."
+          }
+        ]
+      }
     }
 };
