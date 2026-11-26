@@ -9,6 +9,7 @@
   var K_MARKS = "e850.marks";
   var K_MODE = "e850.mode";
   var K_EXQ = "e850.exq"; // 练习池：最近抽到过的句子 id（滑动窗口，SPEC §14.3.2）
+  var K_BANNER = "e850.bannerOff"; // 练习模式提示条关闭的日期（同一天不再弹）
 
   var mem = {};
   var usable = (function () {
@@ -142,14 +143,29 @@
       return load(K_PROG, { done: [] }).done || [];
     },
 
-    // ---- 模式：null=自动（读完自动进练习模式） / "learn" / "practice" ----
+    // ---- 模式覆盖：只记"当天"，隔天自动失效（SPEC §11.4）
+    //      null = 自动（学完 850 进练习，否则学习）
+    //      { d: "2026-11-26", v: "learn" | "practice" } = 今天手动选过
     modeOverride: function () {
-      return load(K_MODE, null);
+      var raw = load(K_MODE, null);
+      if (!raw || typeof raw !== "object") return null; // 旧版存的是字符串，升级时直接作废
+      return raw.d === todayKey() ? raw.v : null;
     },
 
     setModeOverride: function (v) {
-      if (v === null) save(K_MODE, null);
-      else save(K_MODE, v);
+      save(K_MODE, v === null ? null : { d: todayKey(), v: v });
+    },
+
+    // ---- 练习模式提示条：关一次，当天不再出现（SPEC §11.4） ----
+    bannerDismissedToday: function () { return load(K_BANNER, null) === todayKey(); },
+
+    dismissBanner: function () { save(K_BANNER, todayKey()); },
+
+    resetBanner: function () {
+      if (usable) {
+        try { localStorage.removeItem(K_BANNER); } catch (e) {}
+      }
+      delete mem[K_BANNER];
     },
 
     // ---- 练习池窗口：最近抽到过的句子 id ----
@@ -173,7 +189,7 @@
     },
 
     devWipe: function () {
-      var keys = [K_STATS, K_EVENTS, K_READ, K_PROG, K_MARKS, K_MODE, K_EXQ, "e850.cur"];
+      var keys = [K_STATS, K_EVENTS, K_READ, K_PROG, K_MARKS, K_MODE, K_EXQ, K_BANNER, "e850.cur"];
       keys.forEach(function (k) {
         if (usable) {
           try { localStorage.removeItem(k); } catch (e) {}

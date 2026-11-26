@@ -22,8 +22,7 @@ through
 order
 company
 group
-payment
-# 手改：sex 换 payment（词频稍后，内容更可用；待你确认）
+sex
 general
 map
 part

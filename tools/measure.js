@@ -5,7 +5,8 @@ const fs = require("fs");
 const path = require("path");
 const { ROOT, loadData, wordCount, tokensOf, makeLookup, wordsIn, unitText } = require("./lib/vocab");
 
-const V = loadData();
+// 多带一个 js/exercises.js：练习池的"解锁课时"用的就是网页那套逻辑，不另写一份
+const V = loadData(["data/words.js", "data/glossary.js", "data/units.js", "data/extras.js", "data/exercises.js", "js/exercises.js"]);
 const { lookup, WORDS, FORMS, ALLOWED, DEVIATION } = makeLookup(V);
 const UNITS = V.UNITS || [];
 const EXTRAS = V.EXTRAS || {};
@@ -166,7 +167,28 @@ console.log("\n== 课外拓展体检（简说只用 850 内） ==");
   }
 }
 
-// ===================== 5. 练习池体检（SPEC §14） =====================
+// ===================== 5. 课外原文用词（SPEC §11.1.1） =====================
+// 原文不限词，但每个词都得能点开看中文（否则显示"还没有注解"）
+console.log("\n== 课外原文用词体检（点词必须有中文） ==");
+{
+  const bad = new Map();
+  let total = 0, viaGlossary = 0;
+  for (const [id, d] of Object.entries(EXTRAS)) {
+    for (const b of d.read.blocks) {
+      for (const tok of tokensOf(b.std)) {
+        total++;
+        const hit = lookup(tok);
+        if (hit && hit.kind === "glossary") viaGlossary++;
+        if (!hit) bad.set(tok, (bad.get(tok) || 0) + 1);
+      }
+    }
+  }
+  console.log(`原文共 ${total} 个词次 · 由 GLOSSARY 兜住 ${viaGlossary} 次 · 仍未注解 ${bad.size} 个词`);
+  if (bad.size) console.log("  待补进 data/glossary.js：" + [...bad.keys()].sort().join("  "));
+  else console.log("结果：原文每个词都能点开看中文 ✓");
+}
+
+// ===================== 6. 练习池体检（SPEC §14） =====================
 console.log("\n== 练习池体检（SPEC §14 / §11.3 档位长度） ==");
 {
   const LIMIT = {
@@ -200,4 +222,20 @@ console.log("\n== 练习池体检（SPEC §14 / §11.3 档位长度） ==");
   console.log(bad.length ? "档位/编号不合规：" + bad.length + "\n  " + bad.join("\n  ") : "档位与编号合规 ✓");
   if (!badWords.size) console.log("超纲 0 ✓");
   else console.log("超纲 " + badWords.size + " → " + [...badWords.keys()].join(" "));
+
+  // 解锁课时：未学完时只出"已解锁"的题（SPEC §14.7）
+  const table = (V.Exercises && V.Exercises.unlockTable()) || [];
+  if (table.length) {
+    const byUnit = {};
+    const never = [];
+    for (const t of table) {
+      if (t.unit === null) never.push(t.id);
+      else (byUnit[t.unit] = byUnit[t.unit] || []).push(t.id);
+    }
+    const parts = Object.keys(byUnit).sort((a, b) => a - b)
+      .map((k) => `u${String(+k + 1).padStart(3, "0")} ${byUnit[k].length} 句`);
+    console.log("解锁分布：" + parts.join(" · "));
+    console.log(`已解锁 ${table.length - never.length} 句 · 还要等内容覆盖 ${never.length} 句`);
+    if (never.length) console.log("  待覆盖：" + never.join(" "));
+  }
 }

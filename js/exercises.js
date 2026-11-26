@@ -1,5 +1,8 @@
 // 练习池抽取（SPEC §14）——纯逻辑，不碰页面，方便单独验（tools/test-draw.js）
-// 规则：随机抽、近 10 次不重复、按已学词过滤、一轮抽完再洗牌
+//
+// 两条口径：
+//   未学完 850 → 只出「已解锁课时」的题（题里每个词都在读过的那几课里出现过）
+//   学完 850   → 全池随机，不再区分课时
 (function () {
   "use strict";
 
@@ -37,7 +40,7 @@
     return null;
   }
 
-  // 已学词 = 词频表里累计次数 ≥ 1 的词
+  // 已学词 = 词频表里累计次数 ≥ 1 的词（只给拓展标题的「含未学词」标签用）
   function learnedSet() {
     var stats = (window.Store && window.Store.wordStats()) || {};
     var set = {};
@@ -54,6 +57,49 @@
     });
   }
 
+  // ---- 课时解锁：每个词第一次出现在第几课 ----
+  var unitMap = null;
+  function buildUnitMap() {
+    var map = {};
+    var units = window.UNITS || [];
+    var W = window.WORDS || {};
+    for (var i = 0; i < units.length; i++) {
+      var u = units[i];
+      var text = []
+        .concat(u.short.map(function (s) { return s.en; }),
+                u.long.map(function (s) { return s.en; }),
+                u.passage.paragraphs.map(function (p) { return p.en; }))
+        .join(" ");
+      var toks = tokensOf(text);
+      for (var j = 0; j < toks.length; j++) {
+        var b = baseOf(toks[j]);
+        if (b && W[b] && map[b] === undefined) map[b] = i;
+      }
+    }
+    return map;
+  }
+
+  // 一句练习的解锁课时 = 它所有词里最晚出现的那个词所在课时
+  // 返回 null 表示还有词没被任何课时覆盖（内容补齐前不会出现在未学完的池子里）
+  function unlockIndex(q) {
+    if (q._unlock !== undefined) return q._unlock;
+    if (!unitMap) unitMap = buildUnitMap();
+    var idx = -1;
+    var toks = tokensOf(q.en);
+    for (var i = 0; i < toks.length; i++) {
+      var b = baseOf(toks[i]);
+      if (!b) continue;
+      var u = unitMap[b];
+      if (u === undefined) {
+        q._unlock = null;
+        return null;
+      }
+      if (u > idx) idx = u;
+    }
+    q._unlock = idx;
+    return idx;
+  }
+
   // §11.3 每日题量：按已学词占比配档；学完 850 固定 1+1+1（§14.2）
   function planLevels(ratio, done) {
     if (done) return ["low", "mid", "high"];
@@ -64,34 +110,44 @@
   }
 
   // 抽一轮
-  // opts: { levels, seen, learned, strict, rand }
+  // opts: { levels, seen, allLearned, unitIndex, preview, rand }
+  //   allLearned  学完 850 → 全池，不看课时
+  //   unitIndex   当前课时下标（未学完时用来卡"已解锁"）
+  //   preview     前 5 天轻量预览：池子空时兜底一道低阶（可能含未学词）
   // 返回: { items, seen, notes }
   function draw(opts) {
     opts = opts || {};
     var levels = opts.levels || ["low", "mid", "high"];
     var seen = (opts.seen || []).slice();
-    var learned = opts.learned || {};
-    var strict = !!opts.strict;
     var rand = opts.rand || Math.random;
-    var items = pool();
     var notes = [];
 
-    // 可用池：同档 + 本轮没抽过 + 若收窄口径则只留全是已学词的
+    var all = pool();
+    var base = all;
+    if (!opts.allLearned && typeof opts.unitIndex === "number") {
+      base = all.filter(function (q) {
+        var u = unlockIndex(q);
+        return u !== null && u <= opts.unitIndex;
+      });
+      if (!base.length && opts.preview) {
+        base = all.filter(function (q) { return q.level === "low"; });
+        notes.push("课外练习为预览，句子里可能有还没学到的词");
+      }
+    }
+
+    var usedIds = {};
+
     function cands(level) {
-      return items.filter(function (q) {
-        if (q.level !== level) return false;
-        if (usedIds[q.id]) return false;
-        if (strict && !allKnown(q.en, learned)) return false;
-        return true;
+      return base.filter(function (q) {
+        return q.level === level && !usedIds[q.id];
       });
     }
     function idsOf(level) {
       var m = {};
-      items.forEach(function (q) { if (q.level === level) m[q.id] = 1; });
+      base.forEach(function (q) { if (q.level === level) m[q.id] = 1; });
       return m;
     }
 
-    var usedIds = {};
     var out = [];
 
     levels.forEach(function (level) {
@@ -99,12 +155,11 @@
       if (!list.length) {
         // 该档要么一轮抽完了，要么这个阶段没题 → 先洗牌，再降级
         var ids = idsOf(level);
-        var afterReset = seen.filter(function (id) { return !ids[id]; });
-        var again = items.filter(function (q) {
-          return q.level === level && !usedIds[q.id] && (!strict || allKnown(q.en, learned));
+        var again = base.filter(function (q) {
+          return q.level === level && !usedIds[q.id];
         });
         if (again.length) {
-          seen = afterReset; // 该档已轮完一遍，重置窗口重新开始（§14.3.4）
+          seen = seen.filter(function (id) { return !ids[id]; }); // 该档已轮完一遍，重置窗口（§14.3.4）
           list = again;
         }
       }
@@ -129,15 +184,22 @@
 
       // 去掉窗口内的，再从剩下里随机拿一个
       var fresh = list.filter(function (q) { return seen.indexOf(q.id) === -1; });
-      var pick = (fresh.length ? fresh : list)[Math.floor(rand() * (fresh.length ? fresh.length : list.length))];
+      var src = fresh.length ? fresh : list;
+      var pick = src[Math.floor(rand() * src.length)];
       usedIds[pick.id] = 1;
       out.push(pick);
       seen.push(pick.id);
     });
 
-    // 窗口只留最近 WINDOW 条
     if (seen.length > WINDOW) seen = seen.slice(seen.length - WINDOW);
     return { items: out, seen: seen, notes: notes };
+  }
+
+  // 诊断：每句解锁在第几课（null = 还没被内容覆盖）
+  function unlockTable() {
+    return pool().map(function (q) {
+      return { id: q.id, level: q.level, unit: unlockIndex(q) };
+    });
   }
 
   window.Exercises = {
@@ -146,6 +208,8 @@
     baseOf: baseOf,
     learnedSet: learnedSet,
     allKnown: allKnown,
+    unlockIndex: unlockIndex,
+    unlockTable: unlockTable,
     draw: draw
   };
 })();

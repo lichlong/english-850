@@ -4,6 +4,13 @@
 (function () {
   "use strict";
 
+  function tagRow(num, text, extraCls) {
+    var row = el("div", "ex-tagrow");
+    row.appendChild(el("span", "ex-no", num == null ? "" : num));
+    row.appendChild(el("span", "ex-tag" + (extraCls ? " " + extraCls : ""), text));
+    return row;
+  }
+
   function el(tag, cls, text) {
     var e = document.createElement(tag);
     if (cls) e.className = cls;
@@ -44,6 +51,8 @@
     close.setAttribute("aria-label", "关闭提示");
 
     close.addEventListener("click", function () {
+      // 今天别再弹（刷新也不弹）；明天进来如果仍是自动练习模式，会再提示一次
+      window.Store.dismissBanner();
       bar.remove();
     });
 
@@ -76,7 +85,9 @@
   }
 
   // ---- 第一屏：课外拓展（原文 / 中文 / 简说） ----
-  function renderRead(container, unitId, practiceMode) {
+  // opts = { practice: 练习模式, lite: 前 5 天预览, banner: 是否显示"已学完"提示条 }
+  function renderRead(container, unitId, opts) {
+    opts = opts || {};
     var data = (window.EXTRAS || {})[unitId];
     container.innerHTML = "";
     if (!data) {
@@ -84,12 +95,14 @@
       return;
     }
 
-    if (practiceMode) banner(container);
+    if (opts.banner) banner(container);
 
-    container.appendChild(el("h3", "ex-h", "课外拓展"));
+    var h = el("h3", "ex-h", "课外拓展");
+    if (opts.lite) h.appendChild(el("span", "ex-tag", "预览"));
+    container.appendChild(h);
 
     var learned = window.Exercises.learnedSet();
-    var strict = strictMode(practiceMode);
+    var strict = strictMode(opts.practice);
 
     var titleEl = el("div", "ex-title", data.read.title);
     if (strict) {
@@ -101,13 +114,14 @@
     container.appendChild(titleEl);
 
     var body = el("div", "ex-read");
-    data.read.blocks.forEach(function (b, i) {
+    var blocks = opts.lite ? data.read.blocks.slice(0, 1) : data.read.blocks;
+    blocks.forEach(function (b, i) {
       if (i > 0) body.appendChild(el("hr", "ex-sep"));
       var block = el("div", "ex-block");
-      block.appendChild(el("span", "ex-tag", "原文"));
+      block.appendChild(tagRow(i + 1, "原文"));
       block.appendChild(window.Reader.textBlock(b.std, "ex-std"));
       block.appendChild(el("p", "ex-zh-s", b.zh));
-      block.appendChild(el("span", "ex-tag ex-tag-say", "简说"));
+      block.appendChild(tagRow("", "简说", "ex-tag-say"));
       block.appendChild(window.Reader.textBlock(b.simple, "ex-simple"));
       body.appendChild(block);
     });
@@ -118,9 +132,10 @@
   function quizItem(item, i) {
     var wrap = el("div", "ex-item");
     wrap.setAttribute("data-qid", item.id);
-    wrap.appendChild(el("span", "ex-no", i + 1));
 
+    // 序号与题面同一行（v8.2）：序号放在行内，不再单独占一行
     var line = el("div", "ex-line");
+    line.appendChild(el("span", "ex-no", i + 1));
     var zh = el("span", "ex-zh", item.zh);
     var en = el("span", "ex-en", item.en);
     en.hidden = true;
@@ -143,9 +158,11 @@
   }
 
   // items: 本轮抽到的题目；notes: 降级/收起说明；info: 池子概况
-  function renderQuiz(container, items, notes, info) {
+  function renderQuiz(container, items, notes, lite) {
     container.innerHTML = "";
-    container.appendChild(el("h3", "ex-h", "课外练习"));
+    var h = el("h3", "ex-h", "课外练习");
+    if (lite) h.appendChild(el("span", "ex-tag", "预览"));
+    container.appendChild(h);
 
     var list = items || [];
     var box = el("div", "ex-quiz");
@@ -158,7 +175,6 @@
     (notes || []).forEach(function (n) {
       container.appendChild(el("div", "ex-tip", n));
     });
-    if (info) container.appendChild(el("div", "ex-tip", info));
     container.appendChild(el("div", "ex-tip", "先在心里说一遍，再点参考答案对照。"));
   }
 

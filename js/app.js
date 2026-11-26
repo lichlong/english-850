@@ -47,6 +47,17 @@
     return wordTotal() > 0 && learnedCount() >= wordTotal();
   }
 
+  // 练习模式提示条的出现条件（SPEC §11.4）：
+  //   1. 真的学完 850（不是手动切进来的）
+  //   2. 模式是"自动"判定出来的，手动覆盖过就不弹
+  //   3. 今天没关过
+  function showModeBanner() {
+    if (!allLearned()) return false;
+    if (window.Store.modeOverride() !== null) return false;
+    if (window.Store.bannerDismissedToday()) return false;
+    return true;
+  }
+
   function isPracticeMode() {
     var override = window.Store.modeOverride();
     if (override === "practice") return true;
@@ -124,27 +135,26 @@
     return page;
   }
 
-  // 从练习池抽一轮（SPEC §14）。池子跟课时无关，每次打开重新抽。
-  function drawQuiz() {
+  // 从练习池抽一轮（SPEC §14）。每次打开重新抽。
+  // 未学完 850 → 只出已解锁课时的题；学完 → 全池，不再看课时（§14.7）
+  function drawQuiz(lite) {
     var total = wordTotal();
     var done = allLearned();
     var ratio = total ? learnedCount() / total : 0;
     var res = window.Exercises.draw({
       levels: window.Exercises.planLevels(ratio, done),
-      learned: window.Exercises.learnedSet(),
       seen: window.Store.exSeen(),
-      // 未学完 850 却手动切进练习模式：题面收窄到已学词（§11.4）
-      strict: isPracticeMode() && !done
+      allLearned: done,
+      unitIndex: current,
+      preview: !!lite
     });
     window.Store.setExSeen(res.seen);
     return res;
   }
 
-  function fillQuiz(wrap) {
-    var res = drawQuiz();
-    var poolN = (window.EXERCISES || []).length;
-    var info = "本次 " + res.items.length + " 句 · 池内共 " + poolN + " 句";
-    window.Extras.renderQuiz(wrap, res.items, res.notes, info);
+  function fillQuiz(wrap, lite) {
+    var res = drawQuiz(lite);
+    window.Extras.renderQuiz(wrap, res.items, res.notes, lite);
   }
 
   // 课外两块各占一屏：第 3 屏 拓展，第 4 屏 练习
@@ -155,7 +165,11 @@
     readPage.className = "page page-ext";
     var wrap1 = document.createElement("div");
     wrap1.className = "ex-wrap";
-    window.Extras.renderRead(wrap1, unit.id, practice);
+    window.Extras.renderRead(wrap1, unit.id, {
+      practice: practice,
+      lite: false,
+      banner: practice && showModeBanner()
+    });
     readPage.appendChild(wrap1);
     out.push(readPage);
 
@@ -163,7 +177,7 @@
     quizPage.className = "page page-ext";
     var wrap2 = document.createElement("div");
     wrap2.className = "ex-wrap";
-    fillQuiz(wrap2);
+    fillQuiz(wrap2, false);
     quizPage.appendChild(wrap2);
 
     var next = document.createElement("button");
@@ -173,7 +187,7 @@
       // 练习模式下"换一篇"没意义（池子跟课时无关），改成重抽（SPEC §14.3.1）
       next.textContent = "换一批";
       next.addEventListener("click", function () {
-        fillQuiz(wrap2);
+        fillQuiz(wrap2, false);
         var pages = document.getElementById("pages");
         pages.scrollTo({ left: pages.clientWidth, behavior: "smooth" });
         if (window.Toast) window.Toast("已换一批");
@@ -186,6 +200,42 @@
     out.push(quizPage);
 
     return out;
+  }
+
+  // 前 5 天：拓展 + 练习合成一屏，各给一条（SPEC §11.2）
+  // 目的：别让新用户以为功能缺失
+  function buildLitePage(unit) {
+    var page = document.createElement("section");
+    page.className = "page page-ext";
+
+    var wrap = document.createElement("div");
+    wrap.className = "ex-wrap";
+    window.Extras.renderRead(wrap, unit.id, { practice: false, lite: true, banner: false });
+
+    var sep = document.createElement("hr");
+    sep.className = "ex-sep";
+    wrap.appendChild(sep);
+
+    // 练习要单独一层：renderQuiz 会清空自己那个容器，不能直接传给 wrap
+    var quizWrap = document.createElement("div");
+    wrap.appendChild(quizWrap);
+    fillQuiz(quizWrap, true);
+
+    var tip = document.createElement("div");
+    tip.className = "ex-tip";
+    tip.textContent = "前 5 天拓展与练习合为一屏，各一条；第 6 天起各占一屏。";
+    wrap.appendChild(tip);
+
+    page.appendChild(wrap);
+
+    var next = document.createElement("button");
+    next.className = "next";
+    next.type = "button";
+    next.textContent = "再学一篇";
+    next.addEventListener("click", advance);
+    page.appendChild(next);
+
+    return page;
   }
 
   function renderDots(count) {
@@ -236,10 +286,15 @@
     pages.appendChild(buildPage2(unit, total + 1));
 
     var count = 2;
-    if (extrasUnlocked() && window.EXTRAS && window.EXTRAS[unit.id]) {
-      var ep = buildExtrasPages(unit, false);
-      ep.forEach(function (p) { pages.appendChild(p); });
-      count = 2 + ep.length;
+    if (window.EXTRAS && window.EXTRAS[unit.id]) {
+      if (extrasUnlocked()) {
+        var ep = buildExtrasPages(unit, false);
+        ep.forEach(function (p) { pages.appendChild(p); });
+        count = 2 + ep.length;
+      } else {
+        pages.appendChild(buildLitePage(unit));
+        count = 3;
+      }
     }
 
     pages.scrollLeft = 0;
@@ -274,10 +329,11 @@
 
     if (kind === "word") {
       var w = id.slice(2);
-      var info = (window.WORDS || {})[w] || (window.WORD_ALLOWED || {})[w] || (window.WORD_DEVIATION || {})[w];
+      var info = (window.WORDS || {})[w] || (window.WORD_ALLOWED || {})[w] ||
+        (window.WORD_DEVIATION || {})[w] || (window.GLOSSARY || {})[w];
       color = "var(--story)";
       en = w;
-      zh = info ? ((info.ipa ? info.ipa + "\u3000" : "") + info.zh) : "";
+      zh = info ? info.zh : "";
     } else if (index[id]) {
       var it = index[id];
       color = it.kind === "short" ? "var(--short)" : (it.kind === "long" ? "var(--long)" : "var(--story)");
@@ -348,11 +404,8 @@
   // 「我的」里的模式开关：显示当前状态
   function syncModeRow() {
     var row = document.getElementById("row-mode");
-    var label = document.getElementById("mode-state");
     if (!row) return;
-    var on = isPracticeMode();
-    row.classList.toggle("on", on);
-    if (label) label.textContent = on ? "开" : "关";
+    row.setAttribute("aria-checked", isPracticeMode() ? "true" : "false");
   }
 
   function boot() {
@@ -429,6 +482,7 @@
       render();
     },
     isPracticeMode: isPracticeMode,
+    showModeBanner: showModeBanner,
     allLearned: allLearned,
     learnedCount: learnedCount,
     wordTotal: wordTotal,

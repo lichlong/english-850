@@ -6,7 +6,7 @@ const vm = require("vm");
 
 const ROOT = path.join(__dirname, "..", "..");
 
-const DATA_FILES = ["data/words.js", "data/units.js", "data/extras.js", "data/exercises.js"];
+const DATA_FILES = ["data/words.js", "data/units.js", "data/extras.js", "data/exercises.js", "data/glossary.js"];
 
 // 在沙箱里执行 data/*.js，取回 window 上的表
 function loadData(files) {
@@ -31,6 +31,7 @@ function makeLookup(V) {
   const FORMS = V.WORD_FORMS || {};
   const ALLOWED = V.WORD_ALLOWED || {};
   const DEVIATION = V.WORD_DEVIATION || {};
+  const GLOSSARY = V.GLOSSARY || {};
 
   function lookup(raw) {
     let w = String(raw).toLowerCase();
@@ -39,10 +40,12 @@ function makeLookup(V) {
     if (WORDS[w]) return { base: w, kind: "word" };
     if (ALLOWED[w]) return { base: w, kind: "allowed" };
     if (DEVIATION[w]) return { base: w, kind: "deviation" };
+    if (GLOSSARY[w]) return { base: w, kind: "glossary" };
     if (FORMS[w]) {
       const b = FORMS[w];
       if (WORDS[b]) return { base: b, kind: "word" };
       if (DEVIATION[b]) return { base: b, kind: "deviation" };
+      if (GLOSSARY[b]) return { base: b, kind: "glossary" };
     }
     const cands = [
       w.replace(/ies$/, "y"), w.replace(/es$/, ""), w.replace(/s$/, ""),
@@ -54,11 +57,12 @@ function makeLookup(V) {
       if (WORDS[c]) return { base: c, kind: "word" };
       if (ALLOWED[c]) return { base: c, kind: "allowed" };
       if (DEVIATION[c]) return { base: c, kind: "deviation" };
+      if (GLOSSARY[c]) return { base: c, kind: "glossary" };
     }
     return null;
   }
 
-  return { lookup, WORDS, FORMS, ALLOWED, DEVIATION };
+  return { lookup, WORDS, FORMS, ALLOWED, DEVIATION, GLOSSARY };
 }
 
 // 一段文本里出现的 850 表内词（已还原、去重）

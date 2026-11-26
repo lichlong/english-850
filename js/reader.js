@@ -71,19 +71,19 @@
     closePopup();
     var info = (window.WORDS && window.WORDS[word]) ||
       (window.WORD_ALLOWED && window.WORD_ALLOWED[word]) ||
-      (window.WORD_DEVIATION && window.WORD_DEVIATION[word]);
+      (window.WORD_DEVIATION && window.WORD_DEVIATION[word]) ||
+      (window.GLOSSARY && window.GLOSSARY[word]);
     var id = "w:" + word;
     var saved = window.Store.getMark(id, "save");
 
     popup = el("div", "popup");
+    // 注解格式统一（SPEC §11.6.1）：只显示中文，不在部分词上多出音标/词性行
     var html = '<div class="pop-top"><span class="pop-word">' + esc(word) + "</span>";
-    if (info && info.ipa) html += '<span class="pop-ipa">' + esc(info.ipa) + "</span>";
     html += '<button class="pop-save-mini' + (saved ? " on" : "") +
       '" type="button" aria-label="收藏">' + SVG_SAVE + "</button></div>";
 
     if (info) {
       html += '<div class="pop-zh">' + esc(info.zh) + "</div>";
-      if (info.full) html += '<div class="pop-full">' + esc(info.full) + "</div>";
     } else {
       html += '<div class="pop-empty">这个词还不在词表里。</div>';
     }

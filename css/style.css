@@ -560,6 +560,65 @@ body { display: flex; justify-content: center; }
   font-size: 15px;
 }
 
+/* 模式开关：拟物滑块。这一行是"开关"，不是"跳转"，所以不能有 › 箭头 */
+.row-mode {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 13px 2px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  font-size: 14px;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.row-mode .switch {
+  position: relative;
+  flex: 0 0 auto;
+  margin-left: auto;
+  width: 46px;
+  height: 27px;
+  border-radius: 999px;
+  background: var(--soft);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, .22), inset 0 -1px 0 rgba(255, 255, 255, .55);
+  transition: background .18s ease;
+}
+
+.row-mode .switch i {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: linear-gradient(#ffffff, #f1efe8);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .3), 0 0 0 .5px rgba(0, 0, 0, .06);
+  transition: transform .18s ease;
+}
+
+.row-mode[aria-checked="true"] .switch {
+  background: var(--accent);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, .28);
+}
+
+.row-mode[aria-checked="true"] .switch i { transform: translateX(19px); }
+
+/* 拓展：序号与标签同一行，两个标签左边缘对齐 */
+.ex-tagrow {
+  display: flex;
+  align-items: baseline;
+}
+.ex-tagrow .ex-no {
+  flex: 0 0 15px;
+  width: 15px;
+  margin: 0;
+}
+.ex-tagrow .ex-tag { margin-bottom: 2px; }
+
 /* 次级列表 */
 .sub {
   position: absolute;
@@ -663,7 +722,8 @@ body { display: flex; justify-content: center; }
   display: inline-block;
   font-size: 11px;
   color: var(--muted);
-  margin-bottom: 4px;
+  margin: 0 6px 0 0;
+  vertical-align: 1px;
 }
 
 .ex-line {
