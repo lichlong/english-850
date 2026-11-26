@@ -277,7 +277,7 @@ window.EXTRAS = {
           {
             "std": "He had a respect for land that came from his father, and his father had it from a man who had lost everything in a war and never spoke of it.",
             "zh": "他对土地的那份敬重是从父亲那儿来的；父亲的敬重又来自一个人——那人在一场战争里丢了一切，从此不提。",
-            "simple": "His respect for land came from his father. The father had it from a man who had nothing after a war, and who did not say a word about it."
+            "simple": "His respect for land came from his father. The father had it from a man who had nothing after a war, and who didn't say a word about it."
           },
           {
             "std": "The committee said on Wednesday that the meeting on the field would be moved to the school hall, after a request from families with small children.",

@@ -1191,7 +1191,7 @@ window.UNITS = [
     ],
     "long": [
       {
-        "en": "The law gives every person the right to go on the public road, and no person may take it from them because of sex or money.",
+        "en": "The law gives every person the right to go on the public road; no person may take it because of sex or money.",
         "zh": "法律给每个人走上公共道路的权利，谁也不能因为性别或钱把它拿走。"
       },
       {
@@ -1661,7 +1661,7 @@ window.UNITS = [
         "zh": "比方说，一场战争会拿走一座城的未来，再多讨论也拿不回来。"
       },
       {
-        "en": "There is a wide range of interest in the event, and the agreement comes after one month of talks.",
+        "en": "There's a wide range of interest in the event, and the agreement comes after one month of talks.",
         "zh": "这件事引起的兴趣范围很宽，而协议是在一个月的商谈之后才成的。"
       }
     ],
