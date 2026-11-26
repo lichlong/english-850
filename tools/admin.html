@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>english-850 内容工作台（只读）</title>
+<style>
+:root {
+  --bg: #fbf9f4;
+  --card: #ffffff;
+  --ink: #23262a;
+  --muted: #8a8f96;
+  --line: #e8e3d8;
+  --soft: #f2efe7;
+  --accent: #2f6f5e;
+  --ok: #2f7d5d;
+  --ok-bg: #e8f3ee;
+  --warn: #a2701c;
+  --warn-bg: #fbf1de;
+  --bad: #a8402f;
+  --bad-bg: #fbeae6;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17191c; --card: #1d2024; --ink: #e7e4de; --muted: #93999f; --line: #2a2e34;
+    --soft: #202429; --accent: #6cc09a; --ok: #6cc09a; --ok-bg: #1b2a24;
+    --warn: #d9a154; --warn-bg: #2b2418; --bad: #e08b7b; --bad-bg: #2c1f1c;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); }
+body {
+  font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 1080px; margin: 0 auto; padding: 28px 20px 64px; }
+
+h1 { font-size: 18px; font-weight: 500; margin: 0 0 4px; letter-spacing: .01em; }
+.sub { color: var(--muted); font-size: 13px; margin: 0; }
+.top { display: flex; align-items: flex-start; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+.top-act { margin-left: auto; display: flex; gap: 8px; align-items: center; }
+.tag {
+  display: inline-block; padding: 1px 8px; border-radius: 999px;
+  font-size: 12px; line-height: 18px; border: 1px solid var(--line); color: var(--muted);
+}
+.tag-ro { color: var(--warn); border-color: var(--warn); }
+
+button {
+  font-family: inherit; font-size: 13px; color: var(--ink);
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 8px; padding: 7px 13px; cursor: pointer;
+}
+button:hover { border-color: var(--muted); }
+button:active { background: var(--soft); }
+
+.tabs { display: flex; gap: 6px; flex-wrap: wrap; border-bottom: 1px solid var(--line); margin-bottom: 22px; }
+.tab {
+  border: 0; border-bottom: 2px solid transparent; border-radius: 0;
+  background: transparent; color: var(--muted); padding: 9px 12px 10px;
+}
+.tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+.tab .n { color: var(--muted); font-size: 12px; margin-left: 6px; }
+
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 24px; }
+.stat { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 13px 14px; }
+.stat b { display: block; font-size: 22px; font-weight: 500; line-height: 1.25; }
+.stat span { color: var(--muted); font-size: 12px; }
+.stat em { font-style: normal; color: var(--muted); font-size: 12px; margin-left: 4px; }
+
+h2 { font-size: 14px; font-weight: 500; margin: 26px 0 10px; }
+h2 .hint { color: var(--muted); font-weight: 400; font-size: 12px; margin-left: 8px; }
+
+.rules { border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--card); }
+.rule { display: flex; gap: 12px; padding: 12px 14px; border-bottom: 1px solid var(--line); align-items: flex-start; }
+.rule:last-child { border-bottom: 0; }
+.rule .dot { flex: 0 0 auto; width: 7px; height: 7px; border-radius: 50%; margin-top: 8px; background: var(--muted); }
+.rule.ok .dot { background: var(--ok); }
+.rule.bad .dot { background: var(--bad); }
+.rule.todo .dot { background: var(--warn); }
+.rule .body { flex: 1; min-width: 0; }
+.rule .name { font-size: 13px; }
+.rule .state { font-size: 12px; color: var(--muted); }
+.rule.ok .state { color: var(--ok); }
+.rule.bad .state { color: var(--bad); }
+.rule.todo .state { color: var(--warn); }
+.rule .detail { color: var(--muted); font-size: 12px; margin-top: 2px; word-break: break-word; }
+.rule .go { flex: 0 0 auto; }
+
+.tablewrap { border: 1px solid var(--line); border-radius: 10px; background: var(--card); overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { padding: 9px 10px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-weight: 500; color: var(--muted); font-size: 12px; white-space: nowrap; background: var(--soft); }
+tr:last-child td { border-bottom: 0; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.id { font-variant-numeric: tabular-nums; color: var(--muted); white-space: nowrap; }
+tr.row { cursor: pointer; }
+tr.row:hover td { background: var(--soft); }
+tr.row.bad td:first-child { box-shadow: inset 2px 0 0 var(--bad); }
+td.bad { color: var(--bad); font-weight: 500; }
+td.ok { color: var(--ok); }
+td.nw { white-space: nowrap; }
+td .why { display: block; color: var(--muted); font-size: 11px; font-weight: 400; }
+tr.detail td { background: var(--soft); font-size: 12px; color: var(--muted); }
+tr.detail[hidden] { display: none; }
+.chips { display: flex; flex-wrap: wrap; gap: 5px; margin: 4px 0 8px; }
+.chip { border: 1px solid var(--line); border-radius: 6px; padding: 1px 7px; font-size: 12px; background: var(--card); color: var(--ink); }
+.chip.bad { color: var(--bad); border-color: var(--bad); }
+.dlabel { color: var(--ink); font-size: 12px; }
+.probs { margin: 0 0 8px; padding-left: 16px; }
+.probs li { margin-bottom: 2px; }
+.probs li.bad { color: var(--bad); }
+
+.filters { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; align-items: center; }
+.filters .lbl { color: var(--muted); font-size: 12px; margin-right: 2px; }
+.fchip { padding: 5px 11px; font-size: 12px; }
+.fchip[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
+.empty { color: var(--muted); font-size: 13px; padding: 18px 2px; }
+.err { background: var(--bad-bg); border: 1px solid var(--bad); color: var(--ink); border-radius: 10px; padding: 16px 18px; }
+.err b { color: var(--bad); }
+.note { color: var(--muted); font-size: 12px; margin: 10px 0 0; }
+.mono { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 12px; }
+.en { color: var(--ink); }
+.zh { color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div>
+      <h1>english-850 内容工作台</h1>
+      <p class="sub">读 <span class="mono">data/</span> 里的内容，当场按 SPEC 口径体检。数字应与 <span class="mono">node tools/measure.js</span> 一致。</p>
+    </div>
+    <div class="top-act">
+      <span class="tag tag-ro">只读版</span>
+      <button id="btn-reload" type="button">重新读一次</button>
+    </div>
+  </div>
+
+  <div class="tabs" role="tablist" id="tabs">
+    <button class="tab" role="tab" data-view="overview" aria-selected="true" type="button">总览</button>
+    <button class="tab" role="tab" data-view="unit" aria-selected="false" type="button">单元 <span class="n" id="n-unit"></span></button>
+    <button class="tab" role="tab" data-view="ex" aria-selected="false" type="button">练习池 <span class="n" id="n-ex"></span></button>
+    <button class="tab" role="tab" data-view="extra" aria-selected="false" type="button">拓展 <span class="n" id="n-extra"></span></button>
+  </div>
+
+  <div id="view"></div>
+</div>
+
+<script src="../data/words.js"></script>
+<script src="../data/glossary.js"></script>
+<script src="../data/contractions.js"></script>
+<script src="../data/units.js"></script>
+<script src="../data/extras.js"></script>
+<script src="../data/exercises.js"></script>
+<script src="../js/exercises.js"></script>
+<script src="./checks.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var view = document.getElementById("view");
+
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  }
+
+  function stat(value, label, sub) {
+    var d = el("div", "stat");
+    var b = el("b", null, value);
+    if (sub) b.appendChild(el("em", null, sub));
+    d.appendChild(b);
+    d.appendChild(el("span", null, label));
+    return d;
+  }
+
+  // ---------- 数据 ----------
+  function boot() {
+    if (!window.Checks || !window.UNITS || !window.WORDS) {
+      view.innerHTML = "";
+      var box = el("div", "err");
+      box.appendChild(el("b", null, "读不到 data/。"));
+      box.appendChild(el("div", null, "这个页面要跟 data/、js/ 放在同一个仓库里，从 english-850/tools/admin.html 打开。如果文件是单独拷出来的，把整个 english-850 文件夹一起带走。"));
+      view.appendChild(box);
+      return;
+    }
+
+    var lk = window.Checks.makeLookup({
+      WORDS: window.WORDS,
+      WORD_FORMS: window.WORD_FORMS,
+      WORD_ALLOWED: window.WORD_ALLOWED,
+      WORD_DEVIATION: window.WORD_DEVIATION,
+      GLOSSARY: window.GLOSSARY,
+      CONTRACTIONS: window.CONTRACTIONS
+    });
+
+    var U = window.Checks.checkUnits(window.UNITS, lk);
+    var E = window.Checks.checkExercises(window.EXERCISES || [], lk);
+    var X = window.Checks.checkExtras(window.EXTRAS || {}, lk);
+    var R = window.Checks.rules(U, E, X);
+
+    // 解锁课时：直接用网页那套逻辑，不另写一份（SPEC §14.7）
+    var unlock = {};
+    try {
+      var table = (window.Exercises && window.Exercises.unlockTable()) || [];
+      table.forEach(function (t) { unlock[t.id] = t.unit; });
+    } catch (e) { /* 拿不到就显示 — */ }
+
+    var state = { view: "overview", filter: "all", level: "all", open: {} };
+
+    // 视图可以直接用地址栏锚点定位：#unit / #ex / #extra（也能当书签）
+    var HASHES = { overview: 1, unit: 1, ex: 1, extra: 1 };
+    var h0 = (window.location.hash || "").replace("#", "");
+    if (HASHES[h0]) state.view = h0;
+
+    document.getElementById("n-unit").textContent = String(U.rows.length);
+    document.getElementById("n-ex").textContent = String(E.total);
+    document.getElementById("n-extra").textContent = String(X.rows.length);
+
+    var tabs = document.getElementById("tabs");
+    tabs.addEventListener("click", function (e) {
+      var b = e.target.closest ? e.target.closest(".tab") : null;
+      if (!b) return;
+      go(b.getAttribute("data-view"));
+    });
+
+    function go(name) {
+      state.view = name;
+      Array.prototype.forEach.call(tabs.children, function (b) {
+        b.setAttribute("aria-selected", b.getAttribute("data-view") === name ? "true" : "false");
+      });
+      if (window.location.hash !== "#" + name) window.location.hash = name;
+      render();
+    }
+
+    window.addEventListener("hashchange", function () {
+      var h = (window.location.hash || "").replace("#", "");
+      if (HASHES[h] && h !== state.view) go(h);
+    });
+
+    document.getElementById("btn-reload").addEventListener("click", function () {
+      window.location.reload();
+    });
+
+    // ---------- 总览 ----------
+    function viewOverview() {
+      var box = el("div");
+
+      var grid = el("div", "stats");
+      grid.appendChild(stat(String(U.wordTotal), "词表总词数", "850 口径"));
+      grid.appendChild(stat(U.coveredCount, "已覆盖词", U.pct + "%"));
+      grid.appendChild(stat(U.rows.length, "单元", "u001–u" + String(U.rows.length).padStart(3, "0")));
+      grid.appendChild(stat(E.total, "练习句", "目标 150"));
+      box.appendChild(grid);
+
+      var st = el("div", "stats");
+      st.appendChild(stat(String(U.state.fresh), "新词", "1–4 次"));
+      st.appendChild(stat(String(U.state.mid), "巩固中", "5–14 次"));
+      st.appendChild(stat(String(U.state.firm), "已巩固", "≥15 次"));
+      st.appendChild(stat(String(X.stdTotal), "原文词次", "glossary " + X.viaGlossary));
+      box.appendChild(st);
+
+      box.appendChild(el("h2", null, "校验清单"));
+      var rules = el("div", "rules");
+      R.forEach(function (r) {
+        var cls = r.todo ? "todo" : (r.pass ? "ok" : "bad");
+        var row = el("div", "rule " + cls);
+        row.appendChild(el("i", "dot"));
+        var body = el("div", "body");
+        body.appendChild(el("div", "name", r.name));
+        body.appendChild(el("div", "state", r.todo ? "进行中（内容线的事，不算错）" : (r.pass ? "通过" : "不通过")));
+        if (r.detail && r.detail.length) {
+          var d = el("div", "detail");
+          d.textContent = r.detail.length > 3
+            ? r.detail.slice(0, 3).join(" · ") + " …共 " + r.detail.length + " 条"
+            : r.detail.join(" · ");
+          body.appendChild(d);
+        }
+        row.appendChild(body);
+        var btn = el("button", "go", "去看");
+        btn.type = "button";
+        btn.addEventListener("click", function () { go(r.go); });
+        row.appendChild(btn);
+        rules.appendChild(row);
+      });
+      box.appendChild(rules);
+
+      var note = el("p", "note");
+      note.textContent = "口径来自 SPEC §4.1 / §4.4 / §11.3 / §14。这一版只读：改动请在 data/*.js 里做，改完点右上角「重新读一次」。";
+      box.appendChild(note);
+      return box;
+    }
+
+    // ---------- 单元 ----------
+    function cellNum(v, ok, why) {
+      var td = el("td", "num" + (ok ? "" : " bad"), String(v));
+      if (!ok && why) td.appendChild(el("span", "why", why));
+      return td;
+    }
+
+    function viewUnits() {
+      var box = el("div");
+      box.appendChild(el("h2", null, "单元体检", "短句 5–8 · 长句 3–5 · 短文 150–250 词 · 合计 300–450 词 · 超纲 0 · 新词 20–25"));
+
+      var wrap = el("div", "tablewrap");
+      var t = el("table");
+      var thead = el("thead");
+      var hr = el("tr");
+      ["单元", "主题", "短句", "长句", "短文段", "短文词", "合计", "去重", "新词", "超纲", "状态"].forEach(function (h, i) {
+        var th = el("th", i >= 2 && i <= 9 ? "num" : null, h);
+        hr.appendChild(th);
+      });
+      thead.appendChild(hr);
+      t.appendChild(thead);
+
+      var tb = el("tbody");
+      U.rows.forEach(function (r) {
+        var tr = el("tr", "row" + (r.problems.length ? " bad" : ""));
+        tr.appendChild(el("td", "id", r.id));
+        tr.appendChild(el("td", null, r.name));
+        tr.appendChild(cellNum(r.short, r.short >= 5 && r.short <= 8, "应 5–8"));
+        tr.appendChild(cellNum(r.long, r.long >= 3 && r.long <= 5, "应 3–5"));
+        tr.appendChild(cellNum(r.para, true));
+        tr.appendChild(cellNum(r.passWords, r.passWords >= 150 && r.passWords <= 250, "应 150–250"));
+        tr.appendChild(cellNum(r.total, r.total >= 300 && r.total <= 450, "应 300–450"));
+        tr.appendChild(cellNum(r.uniq, true));
+        tr.appendChild(cellNum(r.fresh.length, r.fresh.length >= 20 && r.fresh.length <= 25, "应 20–25"));
+        tr.appendChild(cellNum(r.missing.length, r.missing.length === 0, r.missing.length ? "要 0" : ""));
+        var st = el("td", null);
+        if (!r.problems.length) { st.textContent = "✓"; st.className = "ok"; }
+        else { st.textContent = r.problems.length + " 项"; st.className = "bad"; }
+        tr.appendChild(st);
+
+        tr.addEventListener("click", function () {
+          var i = U.rows.indexOf(r);
+          state.open[i] = !state.open[i];
+          render();
+        });
+        tb.appendChild(tr);
+
+        if (state.open[U.rows.indexOf(r)]) {
+          var dtr = el("tr", "detail");
+          var td = el("td");
+          td.setAttribute("colspan", "11");
+
+          if (r.problems.length) {
+            var ul = el("ul", "probs");
+            r.problems.forEach(function (p) {
+              ul.appendChild(el("li", p.type === "missing" ? "bad" : null, p.text));
+            });
+            td.appendChild(ul);
+          } else {
+            td.appendChild(el("div", null, "这个单元各项都合规。"));
+          }
+
+          if (r.fresh.length) {
+            td.appendChild(el("div", "dlabel", "本单元新词 " + r.fresh.length + " 个（按单元顺序首次出现）"));
+            var chips = el("div", "chips");
+            r.fresh.forEach(function (w) { chips.appendChild(el("span", "chip", w)); });
+            td.appendChild(chips);
+          }
+          if (r.missing.length) {
+            td.appendChild(el("div", "dlabel", "超纲词"));
+            var mc = el("div", "chips");
+            r.missing.forEach(function (m) { mc.appendChild(el("span", "chip bad", m.w + " ×" + m.n)); });
+            td.appendChild(mc);
+          }
+          td.appendChild(el("div", "dlabel", "短文标题：" + (r.title || "—") + " · 允许项 " + r.allowed + " 次 · 偏离词 " + r.deviation + " 次"));
+
+          dtr.appendChild(td);
+          tb.appendChild(dtr);
+        }
+      });
+      t.appendChild(tb);
+      wrap.appendChild(t);
+      box.appendChild(wrap);
+      box.appendChild(el("p", "note", "点任意一行看明细（新词 / 超纲 / 具体不合规项）。"));
+      return box;
+    }
+
+    // ---------- 练习池 ----------
+    var LEVEL_NAME = { low: "低阶", mid: "当阶", high: "进阶" };
+
+    function viewEx() {
+      var box = el("div");
+      box.appendChild(el("h2", null, "练习池", "低 ≤8 词 / 当 8–18 词 / 进阶 20–40 词 · 只用 850 内 · 目标 150 句"));
+
+      var filt = el("div", "filters");
+      filt.appendChild(el("span", "lbl", "看"));
+      [["all", "全部 " + E.total], ["bad", "有问题 " + E.badRows.length], ["lock", "未解锁 " + countNever()]].forEach(function (p) {
+        var b = el("button", "fchip", p[1]);
+        b.type = "button";
+        b.setAttribute("aria-pressed", state.filter === p[0] ? "true" : "false");
+        b.addEventListener("click", function () { state.filter = p[0]; render(); });
+        filt.appendChild(b);
+      });
+      filt.appendChild(el("span", "lbl", "档位"));
+      [["all", "全部"], ["low", "低阶 " + E.byLevel.low], ["mid", "当阶 " + E.byLevel.mid], ["high", "进阶 " + E.byLevel.high]].forEach(function (p) {
+        var b = el("button", "fchip", p[1]);
+        b.type = "button";
+        b.setAttribute("aria-pressed", state.level === p[0] ? "true" : "false");
+        b.addEventListener("click", function () { state.level = p[0]; render(); });
+        filt.appendChild(b);
+      });
+      box.appendChild(filt);
+
+      function countNever() {
+        return E.rows.filter(function (r) { return unlock[r.id] === null || unlock[r.id] === undefined; }).length;
+      }
+
+      var rows = E.rows.filter(function (r) {
+        if (state.level !== "all" && r.level !== state.level) return false;
+        if (state.filter === "bad") return r.problems.length > 0;
+        if (state.filter === "lock") return unlock[r.id] === null || unlock[r.id] === undefined;
+        return true;
+      });
+
+      var wrap = el("div", "tablewrap");
+      var t = el("table");
+      var thead = el("thead");
+      var hr = el("tr");
+      ["编号", "档位", "词数", "句数", "解锁", "英文", "中文", "状态"].forEach(function (h, i) {
+        hr.appendChild(el("th", i === 2 || i === 3 ? "num" : null, h));
+      });
+      thead.appendChild(hr);
+      t.appendChild(thead);
+
+      var tb = el("tbody");
+      rows.forEach(function (r) {
+        var tr = el("tr", "row" + (r.problems.length ? " bad" : ""));
+        tr.appendChild(el("td", "id", r.id));
+        tr.appendChild(el("td", "nw", LEVEL_NAME[r.level] || (r.level || "—")));
+        var okW = !r.problems.some(function (p) { return p.type === "level" && /词/.test(p.text); });
+        tr.appendChild(cellNum(r.words, okW));
+        tr.appendChild(cellNum(r.sentences, true));
+
+        var u = unlock[r.id];
+        var tdU = el("td", "id nw");
+        if (u === null || u === undefined) { tdU.textContent = "等内容"; tdU.style.color = "var(--warn)"; }
+        else tdU.textContent = "u" + String(u + 1).padStart(3, "0");
+        tr.appendChild(tdU);
+
+        tr.appendChild(el("td", "en", r.en));
+        tr.appendChild(el("td", "zh", r.zh));
+
+        var st = el("td");
+        if (!r.problems.length) st.textContent = "✓";
+        else {
+          st.className = "bad";
+          st.textContent = r.problems.map(function (p) { return p.text; }).join("；");
+        }
+        tr.appendChild(st);
+        tb.appendChild(tr);
+      });
+      t.appendChild(tb);
+      wrap.appendChild(t);
+      box.appendChild(wrap);
+
+      if (!rows.length) box.appendChild(el("div", "empty", "这个筛选下没有句子。"));
+      box.appendChild(el("p", "note", "「解锁」= 这句里最晚出现的那个词在第几课（SPEC §14.7）。显示「等内容」= 还有词没被任何单元覆盖。"));
+      return box;
+    }
+
+    // ---------- 拓展 ----------
+    function viewExtra() {
+      var box = el("div");
+      box.appendChild(el("h2", null, "课外拓展", "简说只用 850 内 · 原文不限词但每个词都要能点开中文"));
+
+      var wrap = el("div", "tablewrap");
+      var t = el("table");
+      var hr = el("tr");
+      ["单元", "标题", "简说段", "简说词", "简说超纲", "原文字次", "glossary", "未注解"].forEach(function (h, i) {
+        hr.appendChild(el("th", i >= 2 ? "num" : null, h));
+      });
+      var thead = el("thead");
+      thead.appendChild(hr);
+      t.appendChild(thead);
+
+      var tb = el("tbody");
+      X.rows.forEach(function (r) {
+        var bad = r.simpleBad.length || r.stdMissing.length;
+        var tr = el("tr", "row" + (bad ? " bad" : ""));
+        tr.appendChild(el("td", "id", r.id));
+        tr.appendChild(el("td", null, r.title || "—"));
+        tr.appendChild(cellNum(r.blocks, true));
+        tr.appendChild(cellNum(r.simpleWords, true));
+        tr.appendChild(cellNum(r.simpleBad.length, r.simpleBad.length === 0));
+        tr.appendChild(cellNum(r.stdWords, true));
+        tr.appendChild(cellNum(r.stdGloss, true));
+        tr.appendChild(cellNum(r.stdMissing.length, r.stdMissing.length === 0));
+        tb.appendChild(tr);
+
+        if (bad) {
+          var dtr = el("tr", "detail");
+          var td = el("td");
+          td.setAttribute("colspan", "8");
+          if (r.simpleBad.length) {
+            td.appendChild(el("div", "dlabel", "简说里超纲（简说必须 850 内）"));
+            var c1 = el("div", "chips");
+            r.simpleBad.forEach(function (w) { c1.appendChild(el("span", "chip bad", w)); });
+            td.appendChild(c1);
+          }
+          if (r.stdMissing.length) {
+            td.appendChild(el("div", "dlabel", "原文里点开没有中文（补进 data/glossary.js）"));
+            var c2 = el("div", "chips");
+            r.stdMissing.forEach(function (w) { c2.appendChild(el("span", "chip bad", w)); });
+            td.appendChild(c2);
+          }
+          dtr.appendChild(td);
+          tb.appendChild(dtr);
+        }
+      });
+      t.appendChild(tb);
+      wrap.appendChild(t);
+      box.appendChild(wrap);
+
+      box.appendChild(el("p", "note", "原文共 " + X.stdTotal + " 词次，其中 " + X.viaGlossary + " 次靠 glossary 兜住。这一项要求「点开有中文」，不要求 850 内。"));
+      return box;
+    }
+
+    function render() {
+      view.innerHTML = "";
+      if (state.view === "overview") view.appendChild(viewOverview());
+      else if (state.view === "unit") view.appendChild(viewUnits());
+      else if (state.view === "ex") view.appendChild(viewEx());
+      else view.appendChild(viewExtra());
+      window.scrollTo(0, 0);
+    }
+
+    render();
+  }
+
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
+  else boot();
+})();
+</script>
+</body>
+</html>

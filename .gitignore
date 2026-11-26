@@ -23,3 +23,6 @@ _*.html
 _*.txt
 _*.py
 _*.json
+
+# RedSkill 成品包（本地产物，不进仓库；要留档走 GitHub Release）
+dist/
