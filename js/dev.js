@@ -117,6 +117,21 @@
     ]);
 
     // 危险操作走"再点一次确认"，不用系统弹窗（SPEC 红线 4）
+    group("离线缓存", [
+      ["清空离线缓存并注销", function () {
+        if (window.caches) {
+          caches.keys().then(function (ks) {
+            ks.forEach(function (k) { caches.delete(k); });
+          });
+        }
+        if (navigator.serviceWorker) {
+          navigator.serviceWorker.getRegistrations().then(function (rs) {
+            rs.forEach(function (r) { r.unregister(); });
+          });
+        }
+      }]
+    ]);
+
     group("危险", [
       ["清空全部本地数据", function (btn) {
         if (btn.getAttribute("data-armed") === "1") {
