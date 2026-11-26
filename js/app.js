@@ -29,12 +29,30 @@
     return readDays() >= EXTRAS_START_DAYS;
   }
 
+  // 「学完」的判定：词表里每个词都至少接触过 1 次（按 §4.4 的词频累计）
+  function wordTotal() {
+    return Object.keys(window.WORDS || {}).length;
+  }
+
+  function learnedCount() {
+    var stats = window.Store.wordStats();
+    var n = 0;
+    Object.keys(stats).forEach(function (w) {
+      if (stats[w] && stats[w].n > 0 && (window.WORDS || {})[w]) n++;
+    });
+    return n;
+  }
+
+  function allLearned() {
+    return wordTotal() > 0 && learnedCount() >= wordTotal();
+  }
+
   function isPracticeMode() {
     var override = window.Store.modeOverride();
     if (override === "practice") return true;
     if (override === "learn") return false;
-    // 自动：所有单元都读完就进练习模式
-    return units.length > 0 && window.Store.doneList().length >= units.length;
+    // 自动：850 词全部学过才进练习模式（不是"读完单元"）
+    return allLearned();
   }
 
   function buildIndex() {
@@ -186,7 +204,14 @@
   }
 
   function advance() {
-    if (units[current]) window.Store.markDone(units[current].id);
+    var unit = units[current];
+    if (unit) {
+      window.Store.markDone(unit.id);
+      // 读过一个单元 = 这些词各接触了一次，计入词频（切模式不会清空）
+      (unit.words || []).forEach(function (w) {
+        if (/^[a-z]+$/.test(w)) window.Store.touchWord(w);
+      });
+    }
     current = (current + 1) % units.length;
     window.Store.setCur(current);
     render();
@@ -354,6 +379,9 @@
       render();
     },
     isPracticeMode: isPracticeMode,
+    allLearned: allLearned,
+    learnedCount: learnedCount,
+    wordTotal: wordTotal,
     units: units
   };
 

@@ -37,6 +37,7 @@
     var state = el("div", "dev-state");
     state.textContent =
       "已读天数 " + readDays() +
+      " · 已学词 " + (window.App ? window.App.learnedCount() + "/" + window.App.wordTotal() : "?") +
       " · 已读单元 " + window.Store.doneList().length + "/" + (window.App ? window.App.units.length : "?") +
       " · 模式 " + (window.App && window.App.isPracticeMode() ? "练习" : "学习") +
       " · 覆盖 " + (window.Store.modeOverride() || "自动");
@@ -61,7 +62,18 @@
       ["30 天", function () { window.Store.devSetReadDays(30); }]
     ]);
 
-    group("单元进度（全部读完 = 自动进练习模式）", [
+    group("词频（850 词全学过才会自动进练习模式）", [
+      ["把 850 词全标已学", function () {
+        var stats = {};
+        Object.keys(window.WORDS || {}).forEach(function (w) {
+          stats[w] = { n: 1, last: window.Store.todayKey() };
+        });
+        window.Store.setWordStats(stats);
+      }],
+      ["清空词频", function () { window.Store.setWordStats({}); }]
+    ]);
+
+    group("单元进度", [
       ["用第 2 个单元验收", function () {
         window.Store.devMarkAllDone([]);
         window.Store.setCur(1);

@@ -71,6 +71,8 @@
 
     wordStats: function () { return load(K_STATS, {}); },
 
+    setWordStats: function (s) { save(K_STATS, s); },
+
     touchWord: function (word) {
       var all = load(K_STATS, {});
       var cur = all[word] || { n: 0, last: todayKey() };
