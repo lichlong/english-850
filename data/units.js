@@ -1315,5 +1315,315 @@ window.UNITS = [
       "before",
       "same"
     ]
+  },
+{
+    "id": "u011",
+    "mnemonic": "一张表格",
+    "short": [
+      {
+        "en": "Please put your name on this form.",
+        "zh": "请把名字写在这张表上。"
+      },
+      {
+        "en": "The card is on the left of the table.",
+        "zh": "卡在桌子的左边。"
+      },
+      {
+        "en": "I have no credit card.",
+        "zh": "我没有信用卡。"
+      },
+      {
+        "en": "The rate is not the same every year.",
+        "zh": "这个利率每年都不一样。"
+      },
+      {
+        "en": "He does this work for love.",
+        "zh": "他干这活儿是因为喜欢。"
+      }
+    ],
+    "long": [
+      {
+        "en": "The government has a board of five persons who keep the level of the rate and make the rules.",
+        "zh": "政府设了一个五人委员会，管着利率的高低，也定规矩。"
+      },
+      {
+        "en": "Put your name in the form, give your card, and the process is over; the print of your name comes after that.",
+        "zh": "把名字写进表里、把卡递进去，手续就完了；你的名字印出来是之后的事。"
+      },
+      {
+        "en": "The value of the property is in the account, and insurance takes some of the fear from you when the number is high.",
+        "zh": "房产的价值记在账上；数字高的时候，保险能替你拿走一部分担心。"
+      }
+    ],
+    "passage": {
+      "title": "One Form",
+      "paragraphs": [
+        {
+          "en": "The man from the west of the country comes to the office with one form in his hand. He has no account and no card. The person at the table says: put your name here, and the print of your name is enough.",
+          "zh": "这个从国家西部来的男人，手里拿着一张表走进办公室。他没有账户，也没有卡。桌边的人说：名字写这儿，印出来的名就够了。"
+        },
+        {
+          "en": "The rate is on the board. It is not the same every year. One point he does not take in: why the number is not the same. He puts his hand on one line, and the person at the table says yes.",
+          "zh": "利率挂在牌子上。它每年都不一样。有一点他想不通：这个数为什么不一样。他把手放在一行上，桌边的人说可以。"
+        },
+        {
+          "en": "Science gives the numbers, but the process is old: a name, a value, a private word. The quality of the paper is not good and the print is grey.",
+          "zh": "数字是科学给的，可手续是老一套：一个名字、一个数、一句只有你知道的话。纸的质量不好，印出来是灰的。"
+        },
+        {
+          "en": "At the end he is west of the road with a card in his hand: a small thing, and a new level of care. Insurance is the next form, the person says; he does not join it today. He will come back when the property is his.",
+          "zh": "最后他站在路的西边，手里捏着一张卡：小东西，却是一层新的照顾。桌边的人说，下一张表是保险；他今天不参加。等他自己有了房产，他会再来。"
+        }
+      ]
+    },
+    "words": [
+      "please",
+      "put",
+      "name",
+      "on",
+      "this",
+      "form",
+      "the",
+      "card",
+      "be",
+      "left",
+      "of",
+      "table",
+      "i",
+      "have",
+      "no",
+      "credit",
+      "rate",
+      "not",
+      "same",
+      "every",
+      "year",
+      "he",
+      "do",
+      "work",
+      "for",
+      "love",
+      "government",
+      "a",
+      "board",
+      "person",
+      "who",
+      "keep",
+      "level",
+      "and",
+      "make",
+      "rule",
+      "in",
+      "give",
+      "process",
+      "over",
+      "print",
+      "come",
+      "after",
+      "that",
+      "value",
+      "property",
+      "account",
+      "insurance",
+      "take",
+      "some",
+      "fear",
+      "from",
+      "you",
+      "when",
+      "number",
+      "high",
+      "man",
+      "west",
+      "country",
+      "office",
+      "with",
+      "hand",
+      "at",
+      "say",
+      "here",
+      "enough",
+      "point",
+      "why",
+      "line",
+      "yes",
+      "science",
+      "but",
+      "old",
+      "private",
+      "word",
+      "quality",
+      "paper",
+      "good",
+      "grey",
+      "end",
+      "road",
+      "small",
+      "thing",
+      "new",
+      "care",
+      "join",
+      "will",
+      "back"
+    ]
+  },
+{
+    "id": "u012",
+    "mnemonic": "小剧场的一晚",
+    "short": [
+      {
+        "en": "The play has three acts.",
+        "zh": "这出戏有三幕。"
+      },
+      {
+        "en": "The key is under the cart.",
+        "zh": "钥匙在车底下。"
+      },
+      {
+        "en": "He puts a note in the book.",
+        "zh": "他在书里夹了一张纸条。"
+      },
+      {
+        "en": "The library is open late.",
+        "zh": "图书馆开到很晚。"
+      },
+      {
+        "en": "Her body is young and full of power.",
+        "zh": "她身体年轻，满是力气。"
+      }
+    ],
+    "long": [
+      {
+        "en": "The young man goes to the market every morning and puts a note on the cart with the price of the day.",
+        "zh": "那个年轻人每天早上上市集，在车上挂一张纸条，写着当天的价钱。"
+      },
+      {
+        "en": "The medical test is complete, and the answer is good: his body is well.",
+        "zh": "体检做完了，结果不错：他的身体没事。"
+      },
+      {
+        "en": "Against the wall there is a library of small books, and the language in them is not the language of this town.",
+        "zh": "靠墙有一个小书库，书里的语言不是这座城的语言。"
+      }
+    ],
+    "passage": {
+      "title": "One Night at the Play",
+      "paragraphs": [
+        {
+          "en": "At the side of the market there is an old building with a small room for plays. Every week a young group comes there and acts a story; the thread is the same, but the words are new.",
+          "zh": "市集边上有一栋老房子，里面有个演小戏的房间。每周有一群年轻人来演一个故事；线索是老的，词是新的。"
+        },
+        {
+          "en": "This night the story is about a man who puts a tax on light and on water. His friend says no, the town says yes, and the play is complete in three acts.",
+          "zh": "这一夜的故事，讲一个人对灯和水收税。他的朋友说不该，城里人说该，三幕戏就完了。"
+        },
+        {
+          "en": "The language is simple, the notes of the music are not many, and the bodies of the persons in the room do all the work. No great industry is needed to make a night like this.",
+          "zh": "台词很简单，音乐只有几个音，全靠屋里这些人的身体在使劲。要造出这样一晚，用不着什么大工业。"
+        },
+        {
+          "en": "After the play the old man takes a key from his coat and puts the payment in a box. He says: experience is the only test, and that is the important point. Then he puts the light out.",
+          "zh": "散场后老人从外套里摸出钥匙，把票钱放进一个盒子。他说：经验是唯一的考试，要紧的就是这一条。然后他把灯关了。"
+        }
+      ]
+    },
+    "words": [
+      "the",
+      "play",
+      "have",
+      "act",
+      "key",
+      "be",
+      "under",
+      "cart",
+      "he",
+      "put",
+      "a",
+      "note",
+      "in",
+      "book",
+      "library",
+      "open",
+      "late",
+      "body",
+      "young",
+      "and",
+      "full",
+      "of",
+      "power",
+      "man",
+      "go",
+      "to",
+      "market",
+      "every",
+      "morning",
+      "on",
+      "with",
+      "price",
+      "day",
+      "medical",
+      "test",
+      "complete",
+      "answer",
+      "good",
+      "well",
+      "against",
+      "wall",
+      "there",
+      "small",
+      "language",
+      "not",
+      "this",
+      "town",
+      "at",
+      "side",
+      "old",
+      "building",
+      "room",
+      "for",
+      "week",
+      "group",
+      "come",
+      "story",
+      "thread",
+      "same",
+      "but",
+      "word",
+      "new",
+      "night",
+      "about",
+      "who",
+      "tax",
+      "light",
+      "water",
+      "friend",
+      "say",
+      "no",
+      "yes",
+      "simple",
+      "music",
+      "person",
+      "do",
+      "all",
+      "work",
+      "great",
+      "industry",
+      "need",
+      "make",
+      "like",
+      "after",
+      "take",
+      "from",
+      "coat",
+      "payment",
+      "box",
+      "experience",
+      "only",
+      "that",
+      "important",
+      "point",
+      "then",
+      "out"
+    ]
   }
 ];

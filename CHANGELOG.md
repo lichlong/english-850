@@ -3,6 +3,15 @@
 > SPEC 只放**当前口径**，历史理由与流水放这里。
 > 只在想查"当初为什么这么定"时读，日常开工不用看。
 
+## v10.2（2026-11-26）u011 + u012
+
+- **u011「一张表格」**：短 5 / 长 3 / 短文 4 段 161 词；新词 22/22；超纲 0
+- **u012「小剧场的一晚」**：短 5 / 长 3 / 短文 4 段 145 词；新词 22/22；超纲 0
+- 覆盖 301 → **345 / 850 = 41%**；单元 12 个；原文段 12 × 3 = 36 段
+- **口径再收紧一处**：`draft-check.js` 现在与 measure/checks 同口径（`dict` 与 `glossary` 都算超纲），u011 的两个 glossary 词（into / own）就是这样被抓出来的
+- 补注解 13 个（figure / lose / lost / season / claim / clap / which / until / weekday / trader / closing / takings / away / someone）
+- `?v=25`、`sw.js` CACHE `e850-v25`
+
 ## v10.1（2026-11-26）词表一步到位 + u010
 
 - **850 词音标补齐 850/850**：新增 `tools/build-vocab-extra.js`，音标取自 open-dict-data/ipa-dict（MIT），写 `tools/vocab-extra.json`，由 `gen-words.js` 合进 `data/words.js`；音标与词性字段进词表，`docs/vocab-850.md` 加两列

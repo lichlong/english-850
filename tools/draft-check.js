@@ -20,9 +20,11 @@ const text = unitText(draft);
 
 const bad = new Map();
 const extraNew = new Map();
+const OK_KINDS = ["word", "allowed", "deviation", "contraction"];
 for (const t of tokensOf(text)) {
   const hit = lk.lookup(t);
-  if (!hit) bad.set(t, (bad.get(t) || 0) + 1);
+  // 与 measure/checks 同口径：dict 与 glossary 都算超纲
+  if (!hit || OK_KINDS.indexOf(hit.kind) === -1) bad.set(t, (bad.get(t) || 0) + 1);
   else if (hit.kind === "word" && !covered.has(hit.base) && !PLAN.has(hit.base)) {
     extraNew.set(hit.base, (extraNew.get(hit.base) || 0) + 1);
   }

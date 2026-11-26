@@ -220,5 +220,49 @@ window.EXTRAS = {
           }
         ]
       }
+    },
+    "u011": {
+      "read": {
+        "title": "One Form",
+        "blocks": [
+          {
+            "std": "Nobody reads the small print. That's the whole business: they put their name down, you give a smile, and the number at the end is yours for twenty years.",
+            "zh": "没人读那堆小字。生意就是这么做的：他们签下名字，你笑一笑，最下面那个数字就归你二十年。",
+            "simple": "No person puts their eyes on the small print. That is the way the work goes: they put their name down, you give a smile, and the number at the end is yours for twenty years."
+          },
+          {
+            "std": "He had counted his money so many times that the figures had lost their meaning, and still he counted, as a man touches a wound to be certain it is real.",
+            "zh": "他把钱数了太多遍，那些数字已经失去意义，可他还是数——像一个人去摸伤口，好确认它是真的。",
+            "simple": "He had put the number of his money together so many times that the numbers had no more sense for him. He did it again, the way a person puts a hand on a wound to be certain that it is there."
+          },
+          {
+            "std": "Insurance companies say the price of cover will go up again next year, after two hard seasons of claims.",
+            "zh": "保险公司说，在经历两个理赔高峰季后，明年的保费还会再涨。",
+            "simple": "The insurance companies say that the price will go up again in the coming year, after two hard winters."
+          }
+        ]
+      }
+    },
+    "u012": {
+      "read": {
+        "title": "One Night at the Play",
+        "blocks": [
+          {
+            "std": "You don't clap for the play. You clap for the fact that forty people came out on a wet night and sat in the dark together.",
+            "zh": "你不是为这出戏鼓掌。你鼓掌，是因为四十个人在雨夜出门，一起坐在黑里。",
+            "simple": "You do not put your hands together for the play. You do it because forty persons came out on a wet night and took their seats in the dark together."
+          },
+          {
+            "std": "The library smelled of dust and rain, and every book in it had been read by someone who is now dead, which is the only kind of company he had ever wanted.",
+            "zh": "图书馆里有尘土和雨的气味，每一本书都被一个如今已不在的人读过——他要的就是这种陪伴。",
+            "simple": "The library had the smell of dust and rain. Every book in it had been read by a person who is now dead. That is the only sort of company he ever had need of."
+          },
+          {
+            "std": "The market will stay open until ten on weekdays, the town said on Monday, after traders said the early closing had cut their takings by a third.",
+            "zh": "市集周一说，工作日将营业到十点——此前商贩反映提前关门让他们少了三分之一收入。",
+            "simple": "The market will be open till ten on all days but Sunday, the town said on Monday. Before this, the persons with stores said that the early ending of the day took a great part of their money."
+          }
+        ]
+      }
     }
 };
