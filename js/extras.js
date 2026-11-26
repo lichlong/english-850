@@ -104,19 +104,35 @@
       container.appendChild(banner);
     }
 
-    // 课外拓展
+    // 课外拓展：原文 / 中文 / 简说 三段一组
     container.appendChild(el("h3", "ex-h", "课外拓展"));
     var learned = learnedSet();
     var strict = practiceMode && window.App && window.App.allLearned && !window.App.allLearned();
+
     var titleEl = el("div", "ex-title", data.read.title);
+    if (data.read.genre) titleEl.appendChild(el("span", "ex-genre", data.read.genre));
     if (strict) {
-      var readAll = data.read.paragraphs.every(function (p) { return allKnown(p.en, learned); });
-      if (!readAll) titleEl.appendChild(el("span", "ex-tag", "含未学词"));
+      var simpleAll = data.read.blocks.every(function (b) { return allKnown(b.simple, learned); });
+      if (!simpleAll) titleEl.appendChild(el("span", "ex-tag", "含未学词"));
     }
     container.appendChild(titleEl);
+
     var body = el("div", "ex-read");
-    data.read.paragraphs.forEach(function (p) {
-      body.appendChild(el("p", null, p.en));
+    data.read.blocks.forEach(function (b) {
+      var block = el("div", "ex-block");
+
+      var tStd = el("span", "ex-tag", "原文");
+      var pStd = el("p", "ex-std", b.std);
+      var pZh = el("p", "ex-zh-s", b.zh);
+      var tSim = el("span", "ex-tag ex-tag-say", "简说");
+      var pSim = el("p", "ex-simple", b.simple);
+
+      block.appendChild(tStd);
+      block.appendChild(pStd);
+      block.appendChild(pZh);
+      block.appendChild(tSim);
+      block.appendChild(pSim);
+      body.appendChild(block);
     });
     container.appendChild(body);
 

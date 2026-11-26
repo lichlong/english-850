@@ -801,3 +801,54 @@ body { display: flex; justify-content: center; }
   padding: 1px 7px;
   vertical-align: middle;
 }
+
+/* 课外拓展：原文 / 中文 / 简说 */
+.ex-genre {
+  margin-left: 8px;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--story);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1px 6px;
+  vertical-align: middle;
+}
+
+.ex-block {
+  margin: 0 0 18px;
+  padding-bottom: 4px;
+}
+
+.ex-tag {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-size: 10px;
+  letter-spacing: .08em;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 0 5px;
+  line-height: 16px;
+}
+.ex-tag-say { color: var(--accent); }
+
+.ex-std {
+  margin: 0 0 6px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--ink);
+}
+
+.ex-zh-s {
+  margin: 0 0 8px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.ex-simple {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--accent);
+}

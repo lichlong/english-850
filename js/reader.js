@@ -17,7 +17,11 @@
     else w = w.replace(/'+$/, "");
     if (window.WORDS[w]) return w;
     if (window.WORD_ALLOWED && window.WORD_ALLOWED[w]) return w;
-    if (window.WORD_FORMS[w] && window.WORDS[window.WORD_FORMS[w]]) return window.WORD_FORMS[w];
+    if (window.WORD_DEVIATION && window.WORD_DEVIATION[w]) return w;
+    if (window.WORD_FORMS[w]) {
+      var b = window.WORD_FORMS[w];
+      if (window.WORDS[b] || (window.WORD_DEVIATION && window.WORD_DEVIATION[b])) return b;
+    }
 
     var cands = [
       w.replace(/ies$/, "y"), w.replace(/es$/, ""), w.replace(/s$/, ""),
@@ -66,7 +70,8 @@
   function showPopup(word, x, y) {
     closePopup();
     var info = (window.WORDS && window.WORDS[word]) ||
-      (window.WORD_ALLOWED && window.WORD_ALLOWED[word]);
+      (window.WORD_ALLOWED && window.WORD_ALLOWED[word]) ||
+      (window.WORD_DEVIATION && window.WORD_DEVIATION[word]);
     var id = "w:" + word;
     var saved = window.Store.getMark(id, "save");
 

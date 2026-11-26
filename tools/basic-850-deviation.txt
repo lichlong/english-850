@@ -1,5 +1,5 @@
 # 与原版 Basic English 的偏离清单（SPEC §11.10）
-# STATUS: PENDING        ← 待用户确认。改成 ENABLED 后，tools/gen-words.js 会把这些词并入 WORD_DEVIATION
+# STATUS: ENABLED        ← 用户已确认放行（2026-11-26）。tools/gen-words.js 读取本文件生成 WORD_DEVIATION
 # 性质：这些词不在 Ogden 850 原表内。放行 = 可用于内容，但仍不占 850 名额、不计入词表。
 # 格式：word|中文|放行理由
 #

@@ -81,6 +81,25 @@ for (let i = 0; i < GROUP_COUNT; i++) {
   idx += size;
 }
 
+// ---------- 4b. 偏离词（用户确认放行的表外词，单独立表） ----------
+const baseWords = new Set(rows.map((r) => r.w));
+let deviation = new Map();
+try {
+  const raw = read("tools/basic-850-deviation.txt");
+  const enabled = /STATUS:\s*ENABLED/i.test(raw);
+  if (enabled) {
+    raw.split(/\r?\n/).forEach((l) => {
+      if (!l.trim() || l.trim().startsWith("#")) return;
+      const [w, zh, why] = l.split("|").map((s) => (s || "").trim());
+      if (w && zh && !baseWords.has(w.toLowerCase())) {
+        deviation.set(w.toLowerCase(), { zh, why: why || "与原版偏离，已放行" });
+      }
+    });
+  }
+} catch (e) {
+  deviation = new Map();
+}
+
 // ---------- 5. 变形表 ----------
 const IRREGULAR = {
   be: "am is are was were been being",
@@ -101,6 +120,7 @@ const IRREGULAR = {
   seem: "seemed seeming",
   may: "might",
   will: "would",
+  can: "could",
   man: "men",
   woman: "women",
   foot: "feet",
@@ -136,7 +156,7 @@ const baseSet = new Set(rows.map((r) => r.w));
 const forms = new Map(Object.entries(old.forms).filter(([k]) => k !== ""));
 
 for (const [w, list] of Object.entries(IRREGULAR)) {
-  if (!baseSet.has(w)) continue;
+  if (!baseSet.has(w) && !deviation.has(w)) continue;
   for (const f of list.split(/\s+/)) if (f) forms.set(f, w);
 }
 
@@ -175,6 +195,14 @@ for (const w of baseSet) {
     if (f === w) continue;
     if (baseSet.has(f)) continue; // 变形本身是原形词，不抢
     if (!forms.has(f)) forms.set(f, w);
+  }
+}
+
+// 偏离词的变形也要能归到原形（ate → eat、told → tell）
+for (const w of deviation.keys()) {
+  for (const f of regularForms(w)) {
+    if (f === w || baseSet.has(f) || deviation.has(f) || forms.has(f)) continue;
+    forms.set(f, w);
   }
 }
 
@@ -278,6 +306,15 @@ out.push("window.WORD_ALLOWED = {");
 for (const k of [...allowed.keys()].sort()) {
   const a = allowed.get(k);
   out.push("  " + (k + ":").padEnd(KEY_W) + ' { zh: "' + a.zh + '", why: "' + a.why + '" },');
+}
+out.push("};");
+out.push("");
+out.push("// 偏离词：不在 850 原表内，经确认放行。属本项目与原版 Basic English 的细微区别。");
+out.push("// 不占 850 名额、不计入词表，统计上与允许项分开。见 tools/basic-850-deviation.txt");
+out.push("window.WORD_DEVIATION = {");
+for (const k of [...deviation.keys()].sort()) {
+  const d = deviation.get(k);
+  out.push("  " + (k + ":").padEnd(KEY_W) + ' { zh: "' + d.zh + '", why: "' + d.why + '" },');
 }
 out.push("};");
 out.push("");
